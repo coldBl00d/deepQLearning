@@ -106,7 +106,7 @@ public:
 	void play(){
 		// cout<<"**"<<qmap.size()<<endl;
 		vector<pair<int,int>> actions;
-		int max=0;		
+		int max=-400;		
 		for(int i=0;i<t.getN();i++){
 			for(int j=0;j<t.getN();j++){
 				int qua=q(t.arr,t.getN(),*(new pair<int,int>(i,j)));
@@ -151,9 +151,7 @@ public:
 		// cout<<s<<"^^"<<act.first<<"^^"<<act.second<<"^^"<<sn<<endl;
 		if(qmap.find(s)==qmap.end())
 			qmap[s]=new int[n*n];
-		int z=r(state,n,act);
-		if((qmap[s][act.first*n+act.second]=z)>=0)
-			state[act.first][act.second]=0;
+		qmap[s][act.first*n+act.second]=r(state,n,act);
 		// cout<<sn<<"$$"<<endl;
 		int max=0;
 		for(int i=1;i<=n*n;i++){
@@ -182,35 +180,57 @@ public:
 		if(state[act.first][act.second]!=0)
 			return -200;
 		state[act.first][act.second]=move;
+		if(checkWinner(state,n,move)){
+			state[act.first][act.second]=0;
+			return 100;
+		}
+		for(int i=0;i<n;i++)
+			for(int j=0;j<n;j++){
+				if(state[i][j]!=0)
+					continue;
+				int m=(move==1)?2:1;
+
+				state[i][j]=m;
+				if(checkWinner(state,n,m)){
+					state[i][j]=0;
+					state[act.first][act.second]=0;
+					return -100;
+				}
+				state[i][j]=0;
+			}
+		state[act.first][act.second]=0;
+		return 0;
+
+	}
+	bool checkWinner(int state[][10],int n,int m){
 		for(int i=0;i<n;i++){
 			int j;
 			for(j=0;j<n;j++)
-				if(state[i][j]!=move)
+				if(state[i][j]!=m)
 					break;
 			if(j>=n)
-				return 100;
+				return true;
 		}
 		for(int i=0;i<n;i++){
 			int j;
 			for(j=0;j<n;j++)
-				if(state[j][i]!=move)
+				if(state[j][i]!=m)
 					break;
 			if(j>=n)
-				return 100;
+				return true;
 		}
 		int i;
 		for(i=0;i<n;i++)
-			if(state[i][i]!=move)
+			if(state[i][i]!=m)
 				break;
 		if(i>=n)
-			return 100;
+			return true;
 		for(i=0;i<n;i++)
-			if(state[i][n-i-1]!=move)
+			if(state[i][n-i-1]!=m)
 				break;
 		if(i>=n)
-			return 100;
-		return 0;
-
+			return true;
+		return false;
 	}
 };
 int main(){
@@ -231,7 +251,6 @@ int main(){
 		}
 		t.clear();
 	}
-	// p1.print();
 	while(1){
 		t.clear();
 		while(1){
@@ -249,16 +268,4 @@ int main(){
 				break;
 		}
 	}
-	// t.set(*(new pair<int, int>(0, 2)),1);
-	// t.set(*(new pair<int, int>(2, 2)),2);
-	// t.set(*(new pair<int, int>(0, 1)),1);
-	// t.set(*(new pair<int, int>(1, 2)),2);
-	// p1.play();
-	// p1.print();
-	// t.clear();
-	// t.set(*(new pair<int, int>(0, 2)),1);
-	// t.set(*(new pair<int, int>(2, 2)),2);
-	// t.print();
-	// p1.play();
-	// p1.print();
 }
