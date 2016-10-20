@@ -235,7 +235,7 @@ public:
 };
 int main(){
 	QPlayer p1(1),p2(2);
-	int i=10000;
+	int i=1000;
 	while(i-->0){
 		while(1){
 			p1.play();
