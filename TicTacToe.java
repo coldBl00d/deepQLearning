@@ -74,6 +74,10 @@ public class TicTacToe{
 			board[lastI][lastJ] = 0;
 			turn = !turn;
 		}
+		void unSet(Position pos){
+			board[pos.i][pos.j] = 0;
+			turn = !turn;
+		}
 		void set(){
 			board[lastI][lastJ] = nextMove();
 		} 
@@ -133,14 +137,13 @@ public class TicTacToe{
 					System.out.print("----");
 				System.out.println();
 			}
-			// System.out.println("State : "+getState());
 		}
 		String getState(){
 			StringBuilder sb = new StringBuilder();
 			for(char[] arr : board){
 				for(char b:arr){
 					if(b==0)
-						sb.append(' ');
+						sb.append('-');
 					else
 						sb.append(b);	
 				}
@@ -181,8 +184,7 @@ public class TicTacToe{
 				int[][] map = new int[board.getSize()][board.getSize()];
 				for(int i=0;i<board.getSize();i++)
 					for(int j=0;j<board.getSize();j++){
-						Board x=new Board(board);
-						map[i][j]=findReward(x,new Position(i,j));
+						map[i][j]=findReward(board,new Position(i,j));
 					}
 				qMap.put(state,map);
 			}
@@ -198,11 +200,8 @@ public class TicTacToe{
 					}
 				}
 			}
-			// System.out.println("Action"+action.i+action.j);
 			if(!lastState.isEmpty()){
 				qMap.get(lastState)[lastAction.i][lastAction.j] = (int)(qMap.get(lastState)[lastAction.i][lastAction.j]*(1-ALPHA)+ALPHA*(lastReward+0.9*qMax));
-				// System.out.println("Prev action"+lastAction.i+lastAction.j+"lastState"+lastState+"lastReward"+lastReward);
-				// System.out.println(qMap.get(lastState)[lastAction.i][lastAction.j]);
 			}
 			if(!chooseToPlay()){
 				int l = random.nextInt(board.getSize());
@@ -213,7 +212,7 @@ public class TicTacToe{
 				}
 				action = new Position(l,m);
 			}
-			lastReward=findReward(new Board(board),action);
+			lastReward=findReward(board,action);
 			lastState=state;
 			lastAction=action;
 			board.set(action.i,action.j,mark);
@@ -231,29 +230,28 @@ public class TicTacToe{
 					if(board.set(i,j,mark2)){
 						if(board.hasWon(mark2)){
 							board.unSet();
+							board.unSet(action);
 							return -100;
 						}
 						board.unSet();
 					}
 				}
 			}
-
+			board.unSet(action);
 			return 0;
 		}
 	}
 
 	
 	public static void main(String args[]){
-		// new Test(3).testBoard();
 		Board board = new Board(size);
 		QPlayer x = new QPlayer(Mark.x);
 		QPlayer o = new QPlayer(Mark.o);
-		for(int i=0;i<500000;i++){
+		for(int i=0;i<50000;i++){
 			board.clear();
 			while(true){
 				if(board.isTurn(Mark.x)){
 					x.play(board);
-					// board.print();
 					if(board.hasWon(Mark.x)){
 						System.out.println("X Wins!!");
 						break;
