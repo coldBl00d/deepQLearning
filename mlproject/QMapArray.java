@@ -3,11 +3,11 @@ import java.util.HashMap;
 
 public class QMapArray implements QMap{
 
-	private Map<Integer,int[]> qTable;
+	private Map<Integer,double[]> qTable;
 	int n;
 
 	public QMapArray(int n){
-		qTable = new HashMap<Integer,int[]>();
+		qTable = new HashMap<Integer,double[]>();
 		this.n = n;
 	}
 
@@ -18,10 +18,10 @@ public class QMapArray implements QMap{
 		return key;
 	}
 
-	public int[] get(int[] state){
+	public double[] get(int[] state){
 		int key = getKey(state);
 		if(!qTable.containsKey(key)){
-			int[] map = new int[n*n];
+			double[] map = new double[n*n];
 			for(int i=0;i<n*n;i++)
 				map[i] = 0;
 			qTable.put(key,map);
@@ -29,8 +29,8 @@ public class QMapArray implements QMap{
 		return qTable.get(key);
 	}
 
-	public void update(int[] lastState,Position lastAction,int qVal){
-		int[] values = get(lastState);
+	public void update(int[] lastState,Position lastAction,double qVal){
+		double[] values = get(lastState);
 		values[lastAction.i*n+lastAction.j] = qVal;
 	}
 

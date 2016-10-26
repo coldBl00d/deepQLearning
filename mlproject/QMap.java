@@ -1,4 +1,4 @@
 public interface QMap{
-	int[] get(int[] state);
-	void update(int[] lastState,Position lastAction,int qVal);
+	double[] get(int[] state);
+	void update(int[] lastState,Position lastAction,double qVal);
 }
