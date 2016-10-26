@@ -9,7 +9,7 @@ public class QMapNeural implements QMap{
 	public QMapNeural(int boardSize){
 		this.boardSize = boardSize;
 		stateSize = boardSize*boardSize;
-		network = new NNetwork(stateSize,stateSize+1,stateSize,0.7,0.9);
+		network = new NNetwork(stateSize,3,stateSize,0.5,0.7);
 	}
 
 	public double[] get(int[] state){

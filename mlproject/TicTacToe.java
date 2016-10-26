@@ -6,7 +6,9 @@ public class TicTacToe{
 		Board board = new Board(3);
 		QPlayer x = new QPlayer(board,Mark.x);
 		QPlayer o = new QPlayer(board,Mark.o);
-		for(int i=0;i<50000;i++){
+		// x.setQMap(new QMapNeural(3));
+		// o.setQMap(new QMapArray(3));
+		for(int i=0;i<500000;i++){
 			board.clear();
 			while(true){
 				if(board.isTurn(Mark.x)){
@@ -29,7 +31,7 @@ public class TicTacToe{
 					}
 				}
 			}
-			if(i%5000==0)
+			if(i%50000==0)
 				QPlayer.increaseProb();
 		}
 		System.out.println();

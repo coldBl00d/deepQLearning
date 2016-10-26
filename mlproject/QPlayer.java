@@ -19,6 +19,9 @@ public class QPlayer{
 		qMap = new QMapNeural(board.getSize());
 		this.board = board;
 	}
+	void setQMap(QMap map){
+		qMap = map;
+	}
 	Board getBoard(){
 		return board;
 	}
