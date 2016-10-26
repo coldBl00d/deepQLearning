@@ -11,13 +11,6 @@ public class Board{
 		board = new char[n][n];
 		turn = new Random().nextBoolean();
 	}
-	Board(final Board b){
-		n = b.n;
-		turn = b.turn;
-		board = new char[n][];
-		for(int i=0;i<n;i++)
-			board[i] = b.board[i].clone();
-	}
 	int getSize(){
 		return n;
 	}

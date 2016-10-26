@@ -27,8 +27,9 @@ public class TicTacToe{
 			return new Random().nextDouble() < prob;
 		}
 
-		void increaseProb(){
-			prob+=0.1;
+		static void increaseProb(){
+			if(prob<1)
+				prob+=0.1;
 		}
 
 		void play(Board board){
@@ -112,7 +113,6 @@ public class TicTacToe{
 					}
 				}else{
 					o.play(board);
-					// board.print();
 					if(board.hasWon(Mark.o)){
 						System.out.println("O Wins!!");
 						break;
@@ -122,6 +122,8 @@ public class TicTacToe{
 					}
 				}
 			}
+			if(i%5000==0)
+				QPlayer.increaseProb();
 		}
 		System.out.println();
 		QPlayer.prob=1.0;
