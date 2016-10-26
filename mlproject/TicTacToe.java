@@ -36,33 +36,7 @@ public class TicTacToe{
 				QPlayer.increaseProb();
 		}
 		System.out.println();
-		QPlayer.prob=1.0;
-		Scanner scanner = new Scanner(System.in);
-		for(int i=0;i<10;i++){
-			board.clear();
-			while(true){
-				if(board.isTurn(Mark.x)){
-					x.play();
-					board.print();
-					System.out.println();
-					if(board.hasWon(Mark.x)){
-						System.out.println("X Wins!!");
-						break;
-					}else if(board.isGameOver()){
-						System.out.println("Draw!!");
-						break;
-					}
-				}else{
-					int h,m;
-					h = scanner.nextInt()-1;
-					m = scanner.nextInt()-1;
-					board.play(h,m);
-					board.print();
-					System.out.println();
-				}
-			}
-		}
-		Test test = new Test(x,3);
+		Test test = new Test(x);
 		while(true)
 			test.testQ();
 	}
@@ -73,63 +47,62 @@ public class TicTacToe{
 		Test(int n){
 			board = new Board(n);
 		}
-		Test(QPlayer qPlayer,int n){
+		Test(QPlayer qPlayer){
 			this.qPlayer = qPlayer;
-			board = new Board(n);
+			board = qPlayer.getBoard();
 		}
 		void testBoard(){
-			// Scanner scanner = new Scanner(System.in);
-			// while (!board.isGameOver()) {
-			// 	if(board.isTurn(Mark.x)){
-			// 		System.out.print("Enter player "+1 + " : ");
-			// 	}else
-			// 		System.out.print("Enter player "+2 + " : ");
-			// 	int i,j;
-			// 	i = scanner.nextInt()-1;
-			// 	j = scanner.nextInt()-1;
-			// 	board.play(i,j);
-			// 	if(board.hasWon(Mark.x)){
-			// 		System.out.println("X wins");
-			// 		board.print();
-			// 		return;
-			// 	}else if(board.hasWon(Mark.o)){
-			// 		System.out.println("O wins");
-			// 		board.print();
-			// 		return;
-			// 	}
-			// 	board.print();
-			// }
-			// System.out.println("Draw!");
+			Scanner scanner = new Scanner(System.in);
+			while (!board.isGameOver()) {
+				if(board.isTurn(Mark.x)){
+					System.out.print("Enter player "+1 + " : ");
+				}else
+					System.out.print("Enter player "+2 + " : ");
+				int i,j;
+				i = scanner.nextInt()-1;
+				j = scanner.nextInt()-1;
+				board.play(i,j);
+				if(board.hasWon(Mark.x)){
+					System.out.println("X wins");
+					board.print();
+					return;
+				}else if(board.hasWon(Mark.o)){
+					System.out.println("O wins");
+					board.print();
+					return;
+				}
+				board.print();
+			}
+			System.out.println("Draw!");
 		}
 
 		void testQ(){
-			// QPlayer.prob=1;
-			// board.clear();
-			// qPlayer = new QPlayer(Mark.x);
-			// Scanner scanner = new Scanner(System.in);
-			// while (!board.isGameOver()) {
-			// 	if(board.isTurn(Mark.x)){
-			// 		System.out.println("Player 1 : ");
-			// 		qPlayer.play(board);
-			// 	}else{
-			// 		System.out.print("Enter player "+2 + " : ");
-			// 		int i,j;
-			// 		i = scanner.nextInt()-1;
-			// 		j = scanner.nextInt()-1;
-			// 		board.play(i,j);
-			// 	}
-			// 	if(board.hasWon(Mark.x)){
-			// 		System.out.println("X wins");
-			// 		board.print();
-			// 		return;
-			// 	}else if(board.hasWon(Mark.o)){
-			// 		System.out.println("O wins");
-			// 		board.print();
-			// 		return;
-			// 	}
-			// 	board.print();
-			// }
-			// System.out.println("Draw!");
+			QPlayer.prob=1;
+			board.clear();
+			Scanner scanner = new Scanner(System.in);
+			while (!board.isGameOver()) {
+				if(board.isTurn(Mark.x)){
+					System.out.println("Player 1 : ");
+					qPlayer.play();
+				}else{
+					System.out.print("Enter player "+2 + " : ");
+					int i,j;
+					i = scanner.nextInt()-1;
+					j = scanner.nextInt()-1;
+					board.play(i,j);
+				}
+				if(board.hasWon(Mark.x)){
+					System.out.println("X wins");
+					board.print();
+					return;
+				}else if(board.hasWon(Mark.o)){
+					System.out.println("O wins");
+					board.print();
+					return;
+				}
+				board.print();
+			}
+			System.out.println("Draw!");
 		}
 
 	}

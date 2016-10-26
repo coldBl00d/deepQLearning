@@ -18,7 +18,9 @@ public class QPlayer{
 		qMap = new HashMap<String,int[][]>();
 		this.board = board;
 	}
-
+	Board getBoard(){
+		return board;
+	}
 	boolean chooseToPlay(){
 		return new Random().nextDouble() < prob;
 	}
