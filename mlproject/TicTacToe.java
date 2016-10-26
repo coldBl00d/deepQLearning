@@ -8,7 +8,8 @@ public class TicTacToe{
 		QPlayer o = new QPlayer(board,Mark.o);
 		// x.setQMap(new QMapNeural(3));
 		// o.setQMap(new QMapArray(3));
-		for(int i=0;i<500000;i++){
+		int testSize = 5000000;
+		for(int i=0;i<testSize;i++){
 			board.clear();
 			while(true){
 				if(board.isTurn(Mark.x)){
@@ -31,9 +32,10 @@ public class TicTacToe{
 					}
 				}
 			}
-			if(i%50000==0)
+			if(i%(testSize/10)==0)
 				QPlayer.increaseProb();
 		}
+		QPlayer.increaseProb();
 		System.out.println();
 		Test test = new Test(x);
 		while(true)
