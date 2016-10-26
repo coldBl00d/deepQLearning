@@ -3,20 +3,21 @@ import java.util.HashMap;
 import java.util.Random;
 
 public class QPlayer{
-	char mark,mark2;
-	Map<String,int[][]> qMap;
+	int mark,mark2;
+	QMap qMap;
 	Position lastAction;
 	int lastReward=0;
-	String lastState="";
+	int[] lastState;
 	static double prob = 0.5;
 	static final double ALPHA = 0.5;
 	static final double GAMMA = 0.9;
 	Board board;
 
-	QPlayer(Board board,char mark){
+	QPlayer(Board board,int mark){
 		this.mark = mark;
 		this.mark2 = mark==Mark.x ? Mark.o : Mark.x;
-		qMap = new HashMap<String,int[][]>();
+		// qMap = new HashMap<String,int[][]>();
+		qMap = new QMapArray(board.getSize());
 		this.board = board;
 	}
 	Board getBoard(){
@@ -32,31 +33,27 @@ public class QPlayer{
 	}
 
 	void play(){
-		String state = board.getState();
-		Position action = new Position(0,0);
+		int[] state = board.getState();
+		Position action = new Position();
 		Random random = new Random();
-		if(!qMap.containsKey(state)){
-			int[][] map = new int[board.getSize()][board.getSize()];
-			for(int i=0;i<board.getSize();i++)
-				for(int j=0;j<board.getSize();j++){
-					map[i][j]=findReward(new Position(i,j));
-				}
-			qMap.put(state,map);
-		}
 		int qMax = -500;
-		int[][] qValues = qMap.get(state);
+		int[] qValues = qMap.get(state);
 		for(int i=0;i<board.getSize();i++){
 			for(int j=0;j<board.getSize();j++){
 				if(board.isBlank(i,j)){
-					if(qValues[i][j]>qMax){
-						qMax = qValues[i][j];
+					if(qValues[i*board.getSize()+j]>qMax){
+						qMax = qValues[i*board.getSize()+j];
 						action = new Position(i,j);
 					}
 				}
 			}
 		}
-		if(!lastState.isEmpty()){
-			qMap.get(lastState)[lastAction.i][lastAction.j] = (int)(qMap.get(lastState)[lastAction.i][lastAction.j]*(1-ALPHA)+ALPHA*(lastReward+GAMMA*qMax));
+
+		if(lastState!=null){
+			int[] lastQvals = qMap.get(lastState);
+			int lastQval = lastQvals[lastAction.i*board.getSize()+lastAction.j];
+			int newQVal = (int) (lastQval*(1-ALPHA)+ALPHA*(lastReward+GAMMA*qMax));
+			qMap.update(lastState,lastAction,newQVal);
 		}
 		if(!chooseToPlay()){
 			int l = random.nextInt(board.getSize());

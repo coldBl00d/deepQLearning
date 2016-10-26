@@ -3,12 +3,12 @@ import java.util.Arrays;
 
 public class Board{
 
-	private char[][] board;
+	private int[][] board;
 	private int lastJ,lastI,n;
 	private boolean turn;
 	Board(int n){
 		this.n = n;
-		board = new char[n][n];
+		board = new int[n][n];
 		turn = new Random().nextBoolean();
 	}
 	int getSize(){
@@ -17,14 +17,12 @@ public class Board{
 	boolean getTurn(){
 		return turn;
 	}
-	boolean isTurn(char mark){
+	boolean isTurn(int mark){
 		return (turn&&mark==Mark.x||mark==Mark.o&&!turn);
 	}
 	void clear(){
 		turn = new Random().nextBoolean();
-		for(char[] arr : board){
-			Arrays.fill(arr,Mark.blank);
-		}
+		board = new int[n][n];
 	}
 	char nextMove(){
 		if(turn)
@@ -56,8 +54,8 @@ public class Board{
 	boolean isGameOver(){
 		if(hasWon())
 			return true;
-		for(char[] arr:board)
-			for(char b:arr)
+		for(int[] arr:board)
+			for(int b:arr)
 				if(b==Mark.blank)
 					return false;
 		return true;
@@ -65,7 +63,7 @@ public class Board{
 	boolean willWin(Position action){
 		if(!isBlank(action))
 			return false;
-		char mark = nextMove();
+		int mark = nextMove();
 		board[action.i][action.j] = mark;
 		boolean willWin = false;
 		if(hasWon(mark))
@@ -74,11 +72,11 @@ public class Board{
 		return willWin;
 	}
 	boolean hasWon(){
-		char mark = nextMove();
+		int mark = nextMove();
 		mark = mark==Mark.x ? Mark.o : Mark.x;
 		return hasWon(mark);
 	}
-	boolean hasWon(char mark){
+	boolean hasWon(int mark){
 		for(int i=0;i<n;i++){
 			int j;
 			for(j=0;j<n;j++)
@@ -109,11 +107,16 @@ public class Board{
 		return false;
 	}
 	void print(){
-		for(char[] arr : board){
+		for(int[] arr : board){
 			System.out.print("|");
-			for(char b:arr){
-				if(b==0)
+			for(int a:arr){
+				char b;
+				if(a==Mark.blank)
 					b = ' ';
+				else if(a==Mark.x)
+					b = 'X';
+				else
+					b = 'O';
 				System.out.print(" "+b+" |");
 			}
 			System.out.print("\n-");
@@ -122,16 +125,12 @@ public class Board{
 			System.out.println();
 		}
 	}
-	String getState(){
-		StringBuilder sb = new StringBuilder();
-		for(char[] arr : board){
-			for(char b:arr){
-				if(b==0)
-					sb.append('-');
-				else
-					sb.append(b);	
+	int[] getState(){
+		int[] state = new int[n*n];
+		for(int i=0;i<n;i++)
+			for(int j=0;j<n;j++){
+				state[i*n+j] = board[i][j];
 			}
-		}
-		return sb.toString();
+		return state;
 	}
 }
