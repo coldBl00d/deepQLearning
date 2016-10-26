@@ -2,11 +2,8 @@ import java.util.Scanner;
 
 public class TicTacToe{
 
-	static final int size = 3;
-	static final float alpha = 0.5f;
-
 	public static void main(String args[]){
-		Board board = new Board(size);
+		Board board = new Board(3);
 		QPlayer x = new QPlayer(board,Mark.x);
 		QPlayer o = new QPlayer(board,Mark.o);
 		for(int i=0;i<50000;i++){

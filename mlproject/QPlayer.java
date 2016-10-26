@@ -10,6 +10,7 @@ public class QPlayer{
 	String lastState="";
 	static double prob = 0.5;
 	static final double ALPHA = 0.5;
+	static final double GAMMA = 0.9;
 	Board board;
 
 	QPlayer(Board board,char mark){
@@ -55,7 +56,7 @@ public class QPlayer{
 			}
 		}
 		if(!lastState.isEmpty()){
-			qMap.get(lastState)[lastAction.i][lastAction.j] = (int)(qMap.get(lastState)[lastAction.i][lastAction.j]*(1-ALPHA)+ALPHA*(lastReward+0.9*qMax));
+			qMap.get(lastState)[lastAction.i][lastAction.j] = (int)(qMap.get(lastState)[lastAction.i][lastAction.j]*(1-ALPHA)+ALPHA*(lastReward+GAMMA*qMax));
 		}
 		if(!chooseToPlay()){
 			int l = random.nextInt(board.getSize());
