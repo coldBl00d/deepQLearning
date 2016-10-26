@@ -74,16 +74,15 @@ public class TicTacToe{
 			board[lastI][lastJ] = 0;
 			turn = !turn;
 		}
-		void unSet(Position pos){
-			board[pos.i][pos.j] = 0;
-			turn = !turn;
-		}
 		void set(){
 			board[lastI][lastJ] = nextMove();
 		} 
 		boolean isBlank(int i,int j){
 			return board[i][j] == Mark.blank;
 
+		}
+		boolean isBlank(Position pos){
+			return board[pos.i][pos.j] == Mark.blank;
 		}
 		boolean isGameOver(){
 			if(hasWon(Mark.x)||hasWon(Mark.o))
@@ -93,6 +92,17 @@ public class TicTacToe{
 					if(b==Mark.blank)
 						return false;
 			return true;
+		}
+		boolean willWin(Position action){
+			if(!isBlank(action))
+				return false;
+			char mark = turn ? Mark.x : Mark.o;
+			board[action.i][action.j] = mark;
+			boolean willWin = false;
+			if(hasWon(mark))
+				willWin = true;
+			board[action.i][action.j] = Mark.blank;
+			return willWin;
 		}
 		boolean hasWon(char mark){
 			for(int i=0;i<n;i++){
@@ -219,25 +229,21 @@ public class TicTacToe{
 		}
 
 		int findReward(Board board,Position action){
-			if(!board.set(action.i,action.j,mark))
+			if(!board.isBlank(action))
 				return -200;
-			if(board.hasWon(mark)){
-				board.unSet();
+			if(board.willWin(action)){
 				return 100;
 			}
+			board.set(action.i,action.j,mark);
 			for(int i=0;i<board.getSize();i++){
 				for(int j=0;j<board.getSize();j++){
-					if(board.set(i,j,mark2)){
-						if(board.hasWon(mark2)){
-							board.unSet();
-							board.unSet(action);
-							return -100;
-						}
+					if(board.willWin(new Position(i,j))){
 						board.unSet();
+						return -100;
 					}
 				}
 			}
-			board.unSet(action);
+			board.unSet();
 			return 0;
 		}
 	}
