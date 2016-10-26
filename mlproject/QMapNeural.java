@@ -23,7 +23,7 @@ public class QMapNeural implements QMap{
 	public void update(int[] state,Position action,double qVal){
 		double[] dState = new double[stateSize];
 		for(int i=0;i<stateSize;i++)
-			dState[i] = state[i]/2;
+			dState[i] = ((double)state[i])/2;
 		double[] out = network.computeOutputs(dState);
 		out[action.i*boardSize+action.j] = qVal;
 		network.calcError(out);
