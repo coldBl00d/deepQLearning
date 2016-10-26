@@ -17,7 +17,7 @@ public class QPlayer{
 		this.mark = mark;
 		this.mark2 = mark==Mark.x ? Mark.o : Mark.x;
 		// qMap = new HashMap<String,int[][]>();
-		qMap = new QMapArray(board.getSize());
+		qMap = new QMapNeural(board.getSize());
 		this.board = board;
 	}
 	Board getBoard(){
