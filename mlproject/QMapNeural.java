@@ -12,17 +12,13 @@ public class QMapNeural implements QMap{
 		network = new NNetwork(stateSize,stateSize+1,stateSize,0.7,0.9);
 	}
 
-	public int[] get(int[] state){
+	public double[] get(int[] state){
 		double[] dState = Arrays.stream(state).asDoubleStream().toArray();
 		double[] out = network.computeOutputs(dState);
-		int[] res = new int[stateSize];
-		for(int i=0;i<stateSize;i++){
-			res[i] = (int)(out[i]);
-		}
-		return res;
+		return out;
 	}
 
-	public void update(int[] state,Position action,int qVal){
+	public void update(int[] state,Position action,double qVal){
 		double[] dState = Arrays.stream(state).asDoubleStream().toArray();
 		network.computeOutputs(dState);
 		dState[action.i*boardSize+action.j] = qVal;

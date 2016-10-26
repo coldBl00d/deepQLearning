@@ -6,7 +6,7 @@ public class QPlayer{
 	int mark,mark2;
 	QMap qMap;
 	Position lastAction;
-	int lastReward=0;
+	double lastReward=0;
 	int[] lastState;
 	static double prob = 0.5;
 	static final double ALPHA = 0.5;
@@ -16,7 +16,6 @@ public class QPlayer{
 	QPlayer(Board board,int mark){
 		this.mark = mark;
 		this.mark2 = mark==Mark.x ? Mark.o : Mark.x;
-		// qMap = new HashMap<String,int[][]>();
 		qMap = new QMapNeural(board.getSize());
 		this.board = board;
 	}
@@ -36,8 +35,8 @@ public class QPlayer{
 		int[] state = board.getState();
 		Position action = new Position();
 		Random random = new Random();
-		int qMax = -500;
-		int[] qValues = qMap.get(state);
+		double qMax = -1;
+		double[] qValues = qMap.get(state);
 		for(int i=0;i<board.getSize();i++){
 			for(int j=0;j<board.getSize();j++){
 				if(board.isBlank(i,j)){
@@ -50,9 +49,9 @@ public class QPlayer{
 		}
 
 		if(lastState!=null){
-			int[] lastQvals = qMap.get(lastState);
-			int lastQval = lastQvals[lastAction.i*board.getSize()+lastAction.j];
-			int newQVal = (int) (lastQval*(1-ALPHA)+ALPHA*(lastReward+GAMMA*qMax));
+			double[] lastQvals = qMap.get(lastState);
+			double lastQval = lastQvals[lastAction.i*board.getSize()+lastAction.j];
+			double newQVal = lastQval*(1-ALPHA)+ALPHA*(lastReward+GAMMA*qMax);
 			qMap.update(lastState,lastAction,newQVal);
 		}
 		if(!chooseToPlay()){
@@ -70,18 +69,18 @@ public class QPlayer{
 		board.play(action.i,action.j);
 	}
 
-	int findReward(Position action){
+	double findReward(Position action){
 		if(!board.isBlank(action))
-			return -200;
+			return -0.2;
 		if(board.willWin(action)){
-			return 100;
+			return 0.1;
 		}
 		board.play(action.i,action.j);
 		for(int i=0;i<board.getSize();i++){
 			for(int j=0;j<board.getSize();j++){
 				if(board.willWin(new Position(i,j))){
 					board.undo();
-					return -100;
+					return -0.1;
 				}
 			}
 		}
