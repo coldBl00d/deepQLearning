@@ -73,7 +73,7 @@ public class Board{
 	}
 	boolean hasWon(){
 		int mark = nextMove();
-		mark = mark==Mark.x ? Mark.o : Mark.x;
+		mark = Mark.getOpposite(mark);
 		return hasWon(mark);
 	}
 	boolean hasWon(int mark){

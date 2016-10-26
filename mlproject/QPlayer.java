@@ -15,8 +15,9 @@ public class QPlayer{
 
 	QPlayer(Board board,int mark){
 		this.mark = mark;
-		this.mark2 = mark==Mark.x ? Mark.o : Mark.x;
+		this.mark2 = Mark.getOpposite(mark);
 		// qMap = new HashMap<String,int[][]>();
+		// qMap = new QMapArray(board.getSize());
 		qMap = new QMapNeural(board.getSize());
 		this.board = board;
 	}

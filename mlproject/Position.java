@@ -8,4 +8,9 @@ public class Position{
 		i=0;
 		j=0;
 	}
+	public Position(Position p)
+	{
+		this.i = p.i;
+		this.j = p.j;
+	}
 }
