@@ -58,25 +58,20 @@ public class TicTacToe{
 			else
 				return Mark.o;
 		}
-		boolean set(int i,int j,char mark){
+		boolean play(int i,int j){
 			if(board[i][j]!=Mark.blank)
 				return false;
-			if(mark==Mark.x&&!turn||mark==Mark.o&&turn)
-				return false;
-			board[i][j] = mark;
+			board[i][j] = nextMove();
 			lastI = i;
 			lastJ = j;
 			turn = !turn;
 			return true;
 		}
 
-		void unSet(){
+		void undo(){
 			board[lastI][lastJ] = 0;
 			turn = !turn;
 		}
-		void set(){
-			board[lastI][lastJ] = nextMove();
-		} 
 		boolean isBlank(int i,int j){
 			return board[i][j] == Mark.blank;
 
@@ -85,7 +80,7 @@ public class TicTacToe{
 			return board[pos.i][pos.j] == Mark.blank;
 		}
 		boolean isGameOver(){
-			if(hasWon(Mark.x)||hasWon(Mark.o))
+			if(hasWon())
 				return true;
 			for(char[] arr:board)
 				for(char b:arr)
@@ -96,13 +91,18 @@ public class TicTacToe{
 		boolean willWin(Position action){
 			if(!isBlank(action))
 				return false;
-			char mark = turn ? Mark.x : Mark.o;
+			char mark = nextMove();
 			board[action.i][action.j] = mark;
 			boolean willWin = false;
 			if(hasWon(mark))
 				willWin = true;
 			board[action.i][action.j] = Mark.blank;
 			return willWin;
+		}
+		boolean hasWon(){
+			char mark = nextMove();
+			mark = mark==Mark.x ? Mark.o : Mark.x;
+			return hasWon(mark);
 		}
 		boolean hasWon(char mark){
 			for(int i=0;i<n;i++){
@@ -225,7 +225,7 @@ public class TicTacToe{
 			lastReward=findReward(board,action);
 			lastState=state;
 			lastAction=action;
-			board.set(action.i,action.j,mark);
+			board.play(action.i,action.j);
 		}
 
 		int findReward(Board board,Position action){
@@ -234,16 +234,16 @@ public class TicTacToe{
 			if(board.willWin(action)){
 				return 100;
 			}
-			board.set(action.i,action.j,mark);
+			board.play(action.i,action.j);
 			for(int i=0;i<board.getSize();i++){
 				for(int j=0;j<board.getSize();j++){
 					if(board.willWin(new Position(i,j))){
-						board.unSet();
+						board.undo();
 						return -100;
 					}
 				}
 			}
-			board.unSet();
+			board.undo();
 			return 0;
 		}
 	}
@@ -299,7 +299,7 @@ public class TicTacToe{
 					int h,m;
 					h = scanner.nextInt()-1;
 					m = scanner.nextInt()-1;
-					board.set(h,m,board.nextMove());
+					board.play(h,m);
 					board.print();
 					System.out.println();
 				}
@@ -330,7 +330,7 @@ public class TicTacToe{
 				int i,j;
 				i = scanner.nextInt()-1;
 				j = scanner.nextInt()-1;
-				board.set(i,j,board.nextMove());
+				board.play(i,j);
 				if(board.hasWon(Mark.x)){
 					System.out.println("X wins");
 					board.print();
@@ -359,7 +359,7 @@ public class TicTacToe{
 					int i,j;
 					i = scanner.nextInt()-1;
 					j = scanner.nextInt()-1;
-					board.set(i,j,board.nextMove());
+					board.play(i,j);
 				}
 				if(board.hasWon(Mark.x)){
 					System.out.println("X wins");
