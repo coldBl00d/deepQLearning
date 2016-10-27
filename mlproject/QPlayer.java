@@ -24,6 +24,9 @@ public class QPlayer{
 	void setQMap(QMap map){
 		qMap = map;
 	}
+	QMap getQMap(){
+		return qMap;
+	}
 	Board getBoard(){
 		return board;
 	}

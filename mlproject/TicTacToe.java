@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.text.NumberFormat;
 
 public class TicTacToe{
 
@@ -8,26 +9,26 @@ public class TicTacToe{
 		QPlayer o = new QPlayer(board,Mark.o);
 		// x.setQMap(new QMapNeural(3));
 		// o.setQMap(new QMapArray(3));
-		int testSize = 5000000;
+		int testSize = 500000;
 		for(int i=0;i<testSize;i++){
 			board.clear();
 			while(true){
 				if(board.isTurn(Mark.x)){
 					x.play();
 					if(board.hasWon(Mark.x)){
-						System.out.println("X Wins!!");
+						System.out.println(i+" X Wins!!");
 						break;
 					}else if(board.isGameOver()){
-						System.out.println("Draw!!");
+						System.out.println(i+" Draw!!");
 						break;
 					}
 				}else{
 					o.play();
 					if(board.hasWon(Mark.o)){
-						System.out.println("O Wins!!");
+						System.out.println(i+" O Wins!!");
 						break;
 					}else if(board.isGameOver()){
-						System.out.println("Draw!!");
+						System.out.println(i+" Draw!!");
 						break;
 					}
 				}
@@ -38,6 +39,8 @@ public class TicTacToe{
 		QPlayer.increaseProb();
 		System.out.println();
 		Test test = new Test(x);
+		test.testNeural((QMapNeural) o.getQMap());
+		test.testNeural((QMapNeural) x.getQMap());
 		while(true)
 			test.testQ();
 	}
@@ -105,6 +108,24 @@ public class TicTacToe{
 			}
 			System.out.println("Draw!");
 		}
+		void testNeural(QMapNeural neural){
+			double[][] testCases = {
+				{1,1,0,2,0,0,0,0,0},
+				{2,2,0,1,0,0,0,0,0},
+				{1,1,0,1,0,0,0,2,2},
+				{0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,1,0,0,0,0}
+			};
+			NumberFormat percentFormat = NumberFormat.getPercentInstance();
+			percentFormat.setMinimumFractionDigits(4);
 
+			for(double[] test: testCases){
+				double[] out = neural.computeOutputs(test);
+				for(double o:out)
+					System.out.print(percentFormat.format(o)+" ");
+				System.out.println(); 
+			}
+			System.out.println(); 
+		}
 	}
 }

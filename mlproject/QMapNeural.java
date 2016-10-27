@@ -15,7 +15,7 @@ public class QMapNeural implements QMap{
 	public double[] get(int[] state){
 		double[] dState = new double[stateSize];
 		for(int i=0;i<stateSize;i++)
-			dState[i] = state[i]/2;
+			dState[i] = state[i]/2.0;
 		double[] out = network.computeOutputs(dState);
 		return out;
 	}
@@ -28,6 +28,9 @@ public class QMapNeural implements QMap{
 		out[action.i*boardSize+action.j] = qVal;
 		network.calcError(out);
 		network.learn();
+	}
+	double[] computeOutputs(double[] in){
+		return network.computeOutputs(in);
 	}
 
 }
