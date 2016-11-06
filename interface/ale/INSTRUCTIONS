@@ -1,0 +1,2 @@
+cmake -DUSE_SDL=ON -DUSE_RLGLUE=OFF -DBUILD_EXAMPLES=ON .
+sudo make install
