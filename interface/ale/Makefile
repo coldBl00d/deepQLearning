@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moonblade/workspace/project/interface/ale
+CMAKE_SOURCE_DIR = /home/moonblade/temp/j/Arcade-Learning-Environment
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moonblade/workspace/project/interface/ale
+CMAKE_BINARY_DIR = /home/moonblade/temp/j/Arcade-Learning-Environment
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,6 +67,18 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -78,11 +90,43 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moonblade/workspace/project/interface/ale/CMakeFiles /home/moonblade/workspace/project/interface/ale/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles /home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moonblade/workspace/project/interface/ale/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,43 +155,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named videoRecordingExample
+# Target rules for targets named sharedLibraryInterfaceExample
 
 # Build rule for target.
-videoRecordingExample: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 videoRecordingExample
-.PHONY : videoRecordingExample
+sharedLibraryInterfaceExample: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sharedLibraryInterfaceExample
+.PHONY : sharedLibraryInterfaceExample
 
 # fast build rule for target.
-videoRecordingExample/fast:
-	$(MAKE) -f CMakeFiles/videoRecordingExample.dir/build.make CMakeFiles/videoRecordingExample.dir/build
-.PHONY : videoRecordingExample/fast
-
-#=============================================================================
-# Target rules for targets named ale-lib
-
-# Build rule for target.
-ale-lib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ale-lib
-.PHONY : ale-lib
-
-# fast build rule for target.
-ale-lib/fast:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/build
-.PHONY : ale-lib/fast
-
-#=============================================================================
-# Target rules for targets named ale-bin
-
-# Build rule for target.
-ale-bin: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ale-bin
-.PHONY : ale-bin
-
-# fast build rule for target.
-ale-bin/fast:
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/build
-.PHONY : ale-bin/fast
+sharedLibraryInterfaceExample/fast:
+	$(MAKE) -f CMakeFiles/sharedLibraryInterfaceExample.dir/build.make CMakeFiles/sharedLibraryInterfaceExample.dir/build
+.PHONY : sharedLibraryInterfaceExample/fast
 
 #=============================================================================
 # Target rules for targets named ale-c-lib
@@ -163,17 +181,69 @@ ale-c-lib/fast:
 .PHONY : ale-c-lib/fast
 
 #=============================================================================
-# Target rules for targets named sharedLibraryInterfaceExample
+# Target rules for targets named ale-bin
 
 # Build rule for target.
-sharedLibraryInterfaceExample: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sharedLibraryInterfaceExample
-.PHONY : sharedLibraryInterfaceExample
+ale-bin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ale-bin
+.PHONY : ale-bin
 
 # fast build rule for target.
-sharedLibraryInterfaceExample/fast:
-	$(MAKE) -f CMakeFiles/sharedLibraryInterfaceExample.dir/build.make CMakeFiles/sharedLibraryInterfaceExample.dir/build
-.PHONY : sharedLibraryInterfaceExample/fast
+ale-bin/fast:
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/build
+.PHONY : ale-bin/fast
+
+#=============================================================================
+# Target rules for targets named ale-lib
+
+# Build rule for target.
+ale-lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ale-lib
+.PHONY : ale-lib
+
+# fast build rule for target.
+ale-lib/fast:
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/build
+.PHONY : ale-lib/fast
+
+#=============================================================================
+# Target rules for targets named uninstall
+
+# Build rule for target.
+uninstall: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uninstall
+.PHONY : uninstall
+
+# fast build rule for target.
+uninstall/fast:
+	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
+
+#=============================================================================
+# Target rules for targets named videoRecordingExample
+
+# Build rule for target.
+videoRecordingExample: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 videoRecordingExample
+.PHONY : videoRecordingExample
+
+# fast build rule for target.
+videoRecordingExample/fast:
+	$(MAKE) -f CMakeFiles/videoRecordingExample.dir/build.make CMakeFiles/videoRecordingExample.dir/build
+.PHONY : videoRecordingExample/fast
+
+#=============================================================================
+# Target rules for targets named fifoInterfaceExample
+
+# Build rule for target.
+fifoInterfaceExample: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fifoInterfaceExample
+.PHONY : fifoInterfaceExample
+
+# fast build rule for target.
+fifoInterfaceExample/fast:
+	$(MAKE) -f CMakeFiles/fifoInterfaceExample.dir/build.make CMakeFiles/fifoInterfaceExample.dir/build
+.PHONY : fifoInterfaceExample/fast
 
 ale_python_interface/ale_c_wrapper.o: ale_python_interface/ale_c_wrapper.cpp.o
 
@@ -201,6 +271,33 @@ ale_python_interface/ale_c_wrapper.s: ale_python_interface/ale_c_wrapper.cpp.s
 ale_python_interface/ale_c_wrapper.cpp.s:
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.s
 .PHONY : ale_python_interface/ale_c_wrapper.cpp.s
+
+doc/examples/fifoInterfaceExample.o: doc/examples/fifoInterfaceExample.cpp.o
+
+.PHONY : doc/examples/fifoInterfaceExample.o
+
+# target to build an object file
+doc/examples/fifoInterfaceExample.cpp.o:
+	$(MAKE) -f CMakeFiles/fifoInterfaceExample.dir/build.make CMakeFiles/fifoInterfaceExample.dir/doc/examples/fifoInterfaceExample.cpp.o
+.PHONY : doc/examples/fifoInterfaceExample.cpp.o
+
+doc/examples/fifoInterfaceExample.i: doc/examples/fifoInterfaceExample.cpp.i
+
+.PHONY : doc/examples/fifoInterfaceExample.i
+
+# target to preprocess a source file
+doc/examples/fifoInterfaceExample.cpp.i:
+	$(MAKE) -f CMakeFiles/fifoInterfaceExample.dir/build.make CMakeFiles/fifoInterfaceExample.dir/doc/examples/fifoInterfaceExample.cpp.i
+.PHONY : doc/examples/fifoInterfaceExample.cpp.i
+
+doc/examples/fifoInterfaceExample.s: doc/examples/fifoInterfaceExample.cpp.s
+
+.PHONY : doc/examples/fifoInterfaceExample.s
+
+# target to generate assembly for a file
+doc/examples/fifoInterfaceExample.cpp.s:
+	$(MAKE) -f CMakeFiles/fifoInterfaceExample.dir/build.make CMakeFiles/fifoInterfaceExample.dir/doc/examples/fifoInterfaceExample.cpp.s
+.PHONY : doc/examples/fifoInterfaceExample.cpp.s
 
 doc/examples/sharedLibraryInterfaceExample.o: doc/examples/sharedLibraryInterfaceExample.cpp.o
 
@@ -262,9 +359,9 @@ src/ale_interface.o: src/ale_interface.cpp.o
 
 # target to build an object file
 src/ale_interface.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/ale_interface.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/ale_interface.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/ale_interface.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/ale_interface.cpp.o
 .PHONY : src/ale_interface.cpp.o
 
 src/ale_interface.i: src/ale_interface.cpp.i
@@ -273,9 +370,9 @@ src/ale_interface.i: src/ale_interface.cpp.i
 
 # target to preprocess a source file
 src/ale_interface.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/ale_interface.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/ale_interface.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/ale_interface.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/ale_interface.cpp.i
 .PHONY : src/ale_interface.cpp.i
 
 src/ale_interface.s: src/ale_interface.cpp.s
@@ -284,9 +381,9 @@ src/ale_interface.s: src/ale_interface.cpp.s
 
 # target to generate assembly for a file
 src/ale_interface.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/ale_interface.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/ale_interface.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/ale_interface.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/ale_interface.cpp.s
 .PHONY : src/ale_interface.cpp.s
 
 src/common/ColourPalette.o: src/common/ColourPalette.cpp.o
@@ -295,9 +392,9 @@ src/common/ColourPalette.o: src/common/ColourPalette.cpp.o
 
 # target to build an object file
 src/common/ColourPalette.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/ColourPalette.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/ColourPalette.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/ColourPalette.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/ColourPalette.cpp.o
 .PHONY : src/common/ColourPalette.cpp.o
 
 src/common/ColourPalette.i: src/common/ColourPalette.cpp.i
@@ -306,9 +403,9 @@ src/common/ColourPalette.i: src/common/ColourPalette.cpp.i
 
 # target to preprocess a source file
 src/common/ColourPalette.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/ColourPalette.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/ColourPalette.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/ColourPalette.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/ColourPalette.cpp.i
 .PHONY : src/common/ColourPalette.cpp.i
 
 src/common/ColourPalette.s: src/common/ColourPalette.cpp.s
@@ -317,9 +414,9 @@ src/common/ColourPalette.s: src/common/ColourPalette.cpp.s
 
 # target to generate assembly for a file
 src/common/ColourPalette.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/ColourPalette.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/ColourPalette.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/ColourPalette.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/ColourPalette.cpp.s
 .PHONY : src/common/ColourPalette.cpp.s
 
 src/common/Constants.o: src/common/Constants.cpp.o
@@ -328,9 +425,9 @@ src/common/Constants.o: src/common/Constants.cpp.o
 
 # target to build an object file
 src/common/Constants.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/Constants.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/Constants.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/Constants.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/Constants.cpp.o
 .PHONY : src/common/Constants.cpp.o
 
 src/common/Constants.i: src/common/Constants.cpp.i
@@ -339,9 +436,9 @@ src/common/Constants.i: src/common/Constants.cpp.i
 
 # target to preprocess a source file
 src/common/Constants.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/Constants.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/Constants.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/Constants.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/Constants.cpp.i
 .PHONY : src/common/Constants.cpp.i
 
 src/common/Constants.s: src/common/Constants.cpp.s
@@ -350,9 +447,9 @@ src/common/Constants.s: src/common/Constants.cpp.s
 
 # target to generate assembly for a file
 src/common/Constants.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/Constants.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/Constants.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/Constants.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/Constants.cpp.s
 .PHONY : src/common/Constants.cpp.s
 
 src/common/Log.o: src/common/Log.cpp.o
@@ -361,9 +458,9 @@ src/common/Log.o: src/common/Log.cpp.o
 
 # target to build an object file
 src/common/Log.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/Log.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/Log.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/Log.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/Log.cpp.o
 .PHONY : src/common/Log.cpp.o
 
 src/common/Log.i: src/common/Log.cpp.i
@@ -372,9 +469,9 @@ src/common/Log.i: src/common/Log.cpp.i
 
 # target to preprocess a source file
 src/common/Log.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/Log.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/Log.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/Log.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/Log.cpp.i
 .PHONY : src/common/Log.cpp.i
 
 src/common/Log.s: src/common/Log.cpp.s
@@ -383,9 +480,9 @@ src/common/Log.s: src/common/Log.cpp.s
 
 # target to generate assembly for a file
 src/common/Log.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/Log.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/Log.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/Log.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/Log.cpp.s
 .PHONY : src/common/Log.cpp.s
 
 src/common/ScreenExporter.o: src/common/ScreenExporter.cpp.o
@@ -394,9 +491,9 @@ src/common/ScreenExporter.o: src/common/ScreenExporter.cpp.o
 
 # target to build an object file
 src/common/ScreenExporter.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/ScreenExporter.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/ScreenExporter.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/ScreenExporter.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/ScreenExporter.cpp.o
 .PHONY : src/common/ScreenExporter.cpp.o
 
 src/common/ScreenExporter.i: src/common/ScreenExporter.cpp.i
@@ -405,9 +502,9 @@ src/common/ScreenExporter.i: src/common/ScreenExporter.cpp.i
 
 # target to preprocess a source file
 src/common/ScreenExporter.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/ScreenExporter.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/ScreenExporter.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/ScreenExporter.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/ScreenExporter.cpp.i
 .PHONY : src/common/ScreenExporter.cpp.i
 
 src/common/ScreenExporter.s: src/common/ScreenExporter.cpp.s
@@ -416,9 +513,9 @@ src/common/ScreenExporter.s: src/common/ScreenExporter.cpp.s
 
 # target to generate assembly for a file
 src/common/ScreenExporter.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/ScreenExporter.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/ScreenExporter.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/ScreenExporter.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/ScreenExporter.cpp.s
 .PHONY : src/common/ScreenExporter.cpp.s
 
 src/common/SoundExporter.o: src/common/SoundExporter.cpp.o
@@ -427,9 +524,9 @@ src/common/SoundExporter.o: src/common/SoundExporter.cpp.o
 
 # target to build an object file
 src/common/SoundExporter.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundExporter.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundExporter.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundExporter.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundExporter.cpp.o
 .PHONY : src/common/SoundExporter.cpp.o
 
 src/common/SoundExporter.i: src/common/SoundExporter.cpp.i
@@ -438,9 +535,9 @@ src/common/SoundExporter.i: src/common/SoundExporter.cpp.i
 
 # target to preprocess a source file
 src/common/SoundExporter.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundExporter.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundExporter.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundExporter.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundExporter.cpp.i
 .PHONY : src/common/SoundExporter.cpp.i
 
 src/common/SoundExporter.s: src/common/SoundExporter.cpp.s
@@ -449,9 +546,9 @@ src/common/SoundExporter.s: src/common/SoundExporter.cpp.s
 
 # target to generate assembly for a file
 src/common/SoundExporter.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundExporter.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundExporter.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundExporter.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundExporter.cpp.s
 .PHONY : src/common/SoundExporter.cpp.s
 
 src/common/SoundNull.o: src/common/SoundNull.cxx.o
@@ -460,9 +557,9 @@ src/common/SoundNull.o: src/common/SoundNull.cxx.o
 
 # target to build an object file
 src/common/SoundNull.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundNull.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundNull.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundNull.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundNull.cxx.o
 .PHONY : src/common/SoundNull.cxx.o
 
 src/common/SoundNull.i: src/common/SoundNull.cxx.i
@@ -471,9 +568,9 @@ src/common/SoundNull.i: src/common/SoundNull.cxx.i
 
 # target to preprocess a source file
 src/common/SoundNull.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundNull.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundNull.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundNull.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundNull.cxx.i
 .PHONY : src/common/SoundNull.cxx.i
 
 src/common/SoundNull.s: src/common/SoundNull.cxx.s
@@ -482,9 +579,9 @@ src/common/SoundNull.s: src/common/SoundNull.cxx.s
 
 # target to generate assembly for a file
 src/common/SoundNull.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundNull.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundNull.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundNull.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundNull.cxx.s
 .PHONY : src/common/SoundNull.cxx.s
 
 src/common/SoundSDL.o: src/common/SoundSDL.cxx.o
@@ -493,9 +590,9 @@ src/common/SoundSDL.o: src/common/SoundSDL.cxx.o
 
 # target to build an object file
 src/common/SoundSDL.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundSDL.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundSDL.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundSDL.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundSDL.cxx.o
 .PHONY : src/common/SoundSDL.cxx.o
 
 src/common/SoundSDL.i: src/common/SoundSDL.cxx.i
@@ -504,9 +601,9 @@ src/common/SoundSDL.i: src/common/SoundSDL.cxx.i
 
 # target to preprocess a source file
 src/common/SoundSDL.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundSDL.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundSDL.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundSDL.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundSDL.cxx.i
 .PHONY : src/common/SoundSDL.cxx.i
 
 src/common/SoundSDL.s: src/common/SoundSDL.cxx.s
@@ -515,9 +612,9 @@ src/common/SoundSDL.s: src/common/SoundSDL.cxx.s
 
 # target to generate assembly for a file
 src/common/SoundSDL.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundSDL.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundSDL.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/SoundSDL.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/SoundSDL.cxx.s
 .PHONY : src/common/SoundSDL.cxx.s
 
 src/common/display_screen.o: src/common/display_screen.cpp.o
@@ -526,9 +623,9 @@ src/common/display_screen.o: src/common/display_screen.cpp.o
 
 # target to build an object file
 src/common/display_screen.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/display_screen.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/display_screen.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/display_screen.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/display_screen.cpp.o
 .PHONY : src/common/display_screen.cpp.o
 
 src/common/display_screen.i: src/common/display_screen.cpp.i
@@ -537,9 +634,9 @@ src/common/display_screen.i: src/common/display_screen.cpp.i
 
 # target to preprocess a source file
 src/common/display_screen.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/display_screen.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/display_screen.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/display_screen.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/display_screen.cpp.i
 .PHONY : src/common/display_screen.cpp.i
 
 src/common/display_screen.s: src/common/display_screen.cpp.s
@@ -548,9 +645,9 @@ src/common/display_screen.s: src/common/display_screen.cpp.s
 
 # target to generate assembly for a file
 src/common/display_screen.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/display_screen.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/display_screen.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/common/display_screen.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/common/display_screen.cpp.s
 .PHONY : src/common/display_screen.cpp.s
 
 src/controllers/ale_controller.o: src/controllers/ale_controller.cpp.o
@@ -559,9 +656,9 @@ src/controllers/ale_controller.o: src/controllers/ale_controller.cpp.o
 
 # target to build an object file
 src/controllers/ale_controller.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/ale_controller.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/ale_controller.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/ale_controller.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/ale_controller.cpp.o
 .PHONY : src/controllers/ale_controller.cpp.o
 
 src/controllers/ale_controller.i: src/controllers/ale_controller.cpp.i
@@ -570,9 +667,9 @@ src/controllers/ale_controller.i: src/controllers/ale_controller.cpp.i
 
 # target to preprocess a source file
 src/controllers/ale_controller.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/ale_controller.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/ale_controller.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/ale_controller.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/ale_controller.cpp.i
 .PHONY : src/controllers/ale_controller.cpp.i
 
 src/controllers/ale_controller.s: src/controllers/ale_controller.cpp.s
@@ -581,9 +678,9 @@ src/controllers/ale_controller.s: src/controllers/ale_controller.cpp.s
 
 # target to generate assembly for a file
 src/controllers/ale_controller.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/ale_controller.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/ale_controller.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/ale_controller.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/ale_controller.cpp.s
 .PHONY : src/controllers/ale_controller.cpp.s
 
 src/controllers/fifo_controller.o: src/controllers/fifo_controller.cpp.o
@@ -592,9 +689,9 @@ src/controllers/fifo_controller.o: src/controllers/fifo_controller.cpp.o
 
 # target to build an object file
 src/controllers/fifo_controller.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/fifo_controller.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/fifo_controller.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/fifo_controller.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/fifo_controller.cpp.o
 .PHONY : src/controllers/fifo_controller.cpp.o
 
 src/controllers/fifo_controller.i: src/controllers/fifo_controller.cpp.i
@@ -603,9 +700,9 @@ src/controllers/fifo_controller.i: src/controllers/fifo_controller.cpp.i
 
 # target to preprocess a source file
 src/controllers/fifo_controller.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/fifo_controller.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/fifo_controller.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/fifo_controller.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/fifo_controller.cpp.i
 .PHONY : src/controllers/fifo_controller.cpp.i
 
 src/controllers/fifo_controller.s: src/controllers/fifo_controller.cpp.s
@@ -614,9 +711,9 @@ src/controllers/fifo_controller.s: src/controllers/fifo_controller.cpp.s
 
 # target to generate assembly for a file
 src/controllers/fifo_controller.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/fifo_controller.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/fifo_controller.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/fifo_controller.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/fifo_controller.cpp.s
 .PHONY : src/controllers/fifo_controller.cpp.s
 
 src/controllers/rlglue_controller.o: src/controllers/rlglue_controller.cpp.o
@@ -625,9 +722,9 @@ src/controllers/rlglue_controller.o: src/controllers/rlglue_controller.cpp.o
 
 # target to build an object file
 src/controllers/rlglue_controller.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/rlglue_controller.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/rlglue_controller.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/rlglue_controller.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/rlglue_controller.cpp.o
 .PHONY : src/controllers/rlglue_controller.cpp.o
 
 src/controllers/rlglue_controller.i: src/controllers/rlglue_controller.cpp.i
@@ -636,9 +733,9 @@ src/controllers/rlglue_controller.i: src/controllers/rlglue_controller.cpp.i
 
 # target to preprocess a source file
 src/controllers/rlglue_controller.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/rlglue_controller.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/rlglue_controller.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/rlglue_controller.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/rlglue_controller.cpp.i
 .PHONY : src/controllers/rlglue_controller.cpp.i
 
 src/controllers/rlglue_controller.s: src/controllers/rlglue_controller.cpp.s
@@ -647,9 +744,9 @@ src/controllers/rlglue_controller.s: src/controllers/rlglue_controller.cpp.s
 
 # target to generate assembly for a file
 src/controllers/rlglue_controller.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/rlglue_controller.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/rlglue_controller.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/controllers/rlglue_controller.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/controllers/rlglue_controller.cpp.s
 .PHONY : src/controllers/rlglue_controller.cpp.s
 
 src/emucore/AtariVox.o: src/emucore/AtariVox.cxx.o
@@ -658,9 +755,9 @@ src/emucore/AtariVox.o: src/emucore/AtariVox.cxx.o
 
 # target to build an object file
 src/emucore/AtariVox.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/AtariVox.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/AtariVox.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/AtariVox.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/AtariVox.cxx.o
 .PHONY : src/emucore/AtariVox.cxx.o
 
 src/emucore/AtariVox.i: src/emucore/AtariVox.cxx.i
@@ -669,9 +766,9 @@ src/emucore/AtariVox.i: src/emucore/AtariVox.cxx.i
 
 # target to preprocess a source file
 src/emucore/AtariVox.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/AtariVox.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/AtariVox.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/AtariVox.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/AtariVox.cxx.i
 .PHONY : src/emucore/AtariVox.cxx.i
 
 src/emucore/AtariVox.s: src/emucore/AtariVox.cxx.s
@@ -680,9 +777,9 @@ src/emucore/AtariVox.s: src/emucore/AtariVox.cxx.s
 
 # target to generate assembly for a file
 src/emucore/AtariVox.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/AtariVox.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/AtariVox.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/AtariVox.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/AtariVox.cxx.s
 .PHONY : src/emucore/AtariVox.cxx.s
 
 src/emucore/Booster.o: src/emucore/Booster.cxx.o
@@ -691,9 +788,9 @@ src/emucore/Booster.o: src/emucore/Booster.cxx.o
 
 # target to build an object file
 src/emucore/Booster.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Booster.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Booster.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Booster.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Booster.cxx.o
 .PHONY : src/emucore/Booster.cxx.o
 
 src/emucore/Booster.i: src/emucore/Booster.cxx.i
@@ -702,9 +799,9 @@ src/emucore/Booster.i: src/emucore/Booster.cxx.i
 
 # target to preprocess a source file
 src/emucore/Booster.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Booster.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Booster.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Booster.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Booster.cxx.i
 .PHONY : src/emucore/Booster.cxx.i
 
 src/emucore/Booster.s: src/emucore/Booster.cxx.s
@@ -713,9 +810,9 @@ src/emucore/Booster.s: src/emucore/Booster.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Booster.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Booster.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Booster.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Booster.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Booster.cxx.s
 .PHONY : src/emucore/Booster.cxx.s
 
 src/emucore/Cart.o: src/emucore/Cart.cxx.o
@@ -724,9 +821,9 @@ src/emucore/Cart.o: src/emucore/Cart.cxx.o
 
 # target to build an object file
 src/emucore/Cart.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart.cxx.o
 .PHONY : src/emucore/Cart.cxx.o
 
 src/emucore/Cart.i: src/emucore/Cart.cxx.i
@@ -735,9 +832,9 @@ src/emucore/Cart.i: src/emucore/Cart.cxx.i
 
 # target to preprocess a source file
 src/emucore/Cart.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart.cxx.i
 .PHONY : src/emucore/Cart.cxx.i
 
 src/emucore/Cart.s: src/emucore/Cart.cxx.s
@@ -746,9 +843,9 @@ src/emucore/Cart.s: src/emucore/Cart.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Cart.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart.cxx.s
 .PHONY : src/emucore/Cart.cxx.s
 
 src/emucore/Cart0840.o: src/emucore/Cart0840.cxx.o
@@ -757,9 +854,9 @@ src/emucore/Cart0840.o: src/emucore/Cart0840.cxx.o
 
 # target to build an object file
 src/emucore/Cart0840.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart0840.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart0840.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart0840.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart0840.cxx.o
 .PHONY : src/emucore/Cart0840.cxx.o
 
 src/emucore/Cart0840.i: src/emucore/Cart0840.cxx.i
@@ -768,9 +865,9 @@ src/emucore/Cart0840.i: src/emucore/Cart0840.cxx.i
 
 # target to preprocess a source file
 src/emucore/Cart0840.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart0840.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart0840.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart0840.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart0840.cxx.i
 .PHONY : src/emucore/Cart0840.cxx.i
 
 src/emucore/Cart0840.s: src/emucore/Cart0840.cxx.s
@@ -779,9 +876,9 @@ src/emucore/Cart0840.s: src/emucore/Cart0840.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Cart0840.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart0840.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart0840.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart0840.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart0840.cxx.s
 .PHONY : src/emucore/Cart0840.cxx.s
 
 src/emucore/Cart2K.o: src/emucore/Cart2K.cxx.o
@@ -790,9 +887,9 @@ src/emucore/Cart2K.o: src/emucore/Cart2K.cxx.o
 
 # target to build an object file
 src/emucore/Cart2K.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart2K.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart2K.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart2K.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart2K.cxx.o
 .PHONY : src/emucore/Cart2K.cxx.o
 
 src/emucore/Cart2K.i: src/emucore/Cart2K.cxx.i
@@ -801,9 +898,9 @@ src/emucore/Cart2K.i: src/emucore/Cart2K.cxx.i
 
 # target to preprocess a source file
 src/emucore/Cart2K.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart2K.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart2K.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart2K.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart2K.cxx.i
 .PHONY : src/emucore/Cart2K.cxx.i
 
 src/emucore/Cart2K.s: src/emucore/Cart2K.cxx.s
@@ -812,9 +909,9 @@ src/emucore/Cart2K.s: src/emucore/Cart2K.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Cart2K.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart2K.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart2K.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart2K.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart2K.cxx.s
 .PHONY : src/emucore/Cart2K.cxx.s
 
 src/emucore/Cart3E.o: src/emucore/Cart3E.cxx.o
@@ -823,9 +920,9 @@ src/emucore/Cart3E.o: src/emucore/Cart3E.cxx.o
 
 # target to build an object file
 src/emucore/Cart3E.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart3E.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart3E.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart3E.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart3E.cxx.o
 .PHONY : src/emucore/Cart3E.cxx.o
 
 src/emucore/Cart3E.i: src/emucore/Cart3E.cxx.i
@@ -834,9 +931,9 @@ src/emucore/Cart3E.i: src/emucore/Cart3E.cxx.i
 
 # target to preprocess a source file
 src/emucore/Cart3E.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart3E.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart3E.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart3E.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart3E.cxx.i
 .PHONY : src/emucore/Cart3E.cxx.i
 
 src/emucore/Cart3E.s: src/emucore/Cart3E.cxx.s
@@ -845,9 +942,9 @@ src/emucore/Cart3E.s: src/emucore/Cart3E.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Cart3E.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart3E.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart3E.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart3E.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart3E.cxx.s
 .PHONY : src/emucore/Cart3E.cxx.s
 
 src/emucore/Cart3F.o: src/emucore/Cart3F.cxx.o
@@ -856,9 +953,9 @@ src/emucore/Cart3F.o: src/emucore/Cart3F.cxx.o
 
 # target to build an object file
 src/emucore/Cart3F.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart3F.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart3F.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart3F.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart3F.cxx.o
 .PHONY : src/emucore/Cart3F.cxx.o
 
 src/emucore/Cart3F.i: src/emucore/Cart3F.cxx.i
@@ -867,9 +964,9 @@ src/emucore/Cart3F.i: src/emucore/Cart3F.cxx.i
 
 # target to preprocess a source file
 src/emucore/Cart3F.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart3F.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart3F.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart3F.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart3F.cxx.i
 .PHONY : src/emucore/Cart3F.cxx.i
 
 src/emucore/Cart3F.s: src/emucore/Cart3F.cxx.s
@@ -878,9 +975,9 @@ src/emucore/Cart3F.s: src/emucore/Cart3F.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Cart3F.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart3F.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart3F.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart3F.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart3F.cxx.s
 .PHONY : src/emucore/Cart3F.cxx.s
 
 src/emucore/Cart4A50.o: src/emucore/Cart4A50.cxx.o
@@ -889,9 +986,9 @@ src/emucore/Cart4A50.o: src/emucore/Cart4A50.cxx.o
 
 # target to build an object file
 src/emucore/Cart4A50.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart4A50.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart4A50.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart4A50.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart4A50.cxx.o
 .PHONY : src/emucore/Cart4A50.cxx.o
 
 src/emucore/Cart4A50.i: src/emucore/Cart4A50.cxx.i
@@ -900,9 +997,9 @@ src/emucore/Cart4A50.i: src/emucore/Cart4A50.cxx.i
 
 # target to preprocess a source file
 src/emucore/Cart4A50.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart4A50.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart4A50.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart4A50.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart4A50.cxx.i
 .PHONY : src/emucore/Cart4A50.cxx.i
 
 src/emucore/Cart4A50.s: src/emucore/Cart4A50.cxx.s
@@ -911,9 +1008,9 @@ src/emucore/Cart4A50.s: src/emucore/Cart4A50.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Cart4A50.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart4A50.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart4A50.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart4A50.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart4A50.cxx.s
 .PHONY : src/emucore/Cart4A50.cxx.s
 
 src/emucore/Cart4K.o: src/emucore/Cart4K.cxx.o
@@ -922,9 +1019,9 @@ src/emucore/Cart4K.o: src/emucore/Cart4K.cxx.o
 
 # target to build an object file
 src/emucore/Cart4K.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart4K.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart4K.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart4K.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart4K.cxx.o
 .PHONY : src/emucore/Cart4K.cxx.o
 
 src/emucore/Cart4K.i: src/emucore/Cart4K.cxx.i
@@ -933,9 +1030,9 @@ src/emucore/Cart4K.i: src/emucore/Cart4K.cxx.i
 
 # target to preprocess a source file
 src/emucore/Cart4K.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart4K.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart4K.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart4K.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart4K.cxx.i
 .PHONY : src/emucore/Cart4K.cxx.i
 
 src/emucore/Cart4K.s: src/emucore/Cart4K.cxx.s
@@ -944,9 +1041,9 @@ src/emucore/Cart4K.s: src/emucore/Cart4K.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Cart4K.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart4K.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart4K.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Cart4K.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Cart4K.cxx.s
 .PHONY : src/emucore/Cart4K.cxx.s
 
 src/emucore/CartAR.o: src/emucore/CartAR.cxx.o
@@ -955,9 +1052,9 @@ src/emucore/CartAR.o: src/emucore/CartAR.cxx.o
 
 # target to build an object file
 src/emucore/CartAR.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartAR.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartAR.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartAR.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartAR.cxx.o
 .PHONY : src/emucore/CartAR.cxx.o
 
 src/emucore/CartAR.i: src/emucore/CartAR.cxx.i
@@ -966,9 +1063,9 @@ src/emucore/CartAR.i: src/emucore/CartAR.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartAR.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartAR.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartAR.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartAR.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartAR.cxx.i
 .PHONY : src/emucore/CartAR.cxx.i
 
 src/emucore/CartAR.s: src/emucore/CartAR.cxx.s
@@ -977,9 +1074,9 @@ src/emucore/CartAR.s: src/emucore/CartAR.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartAR.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartAR.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartAR.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartAR.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartAR.cxx.s
 .PHONY : src/emucore/CartAR.cxx.s
 
 src/emucore/CartCV.o: src/emucore/CartCV.cxx.o
@@ -988,9 +1085,9 @@ src/emucore/CartCV.o: src/emucore/CartCV.cxx.o
 
 # target to build an object file
 src/emucore/CartCV.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartCV.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartCV.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartCV.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartCV.cxx.o
 .PHONY : src/emucore/CartCV.cxx.o
 
 src/emucore/CartCV.i: src/emucore/CartCV.cxx.i
@@ -999,9 +1096,9 @@ src/emucore/CartCV.i: src/emucore/CartCV.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartCV.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartCV.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartCV.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartCV.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartCV.cxx.i
 .PHONY : src/emucore/CartCV.cxx.i
 
 src/emucore/CartCV.s: src/emucore/CartCV.cxx.s
@@ -1010,9 +1107,9 @@ src/emucore/CartCV.s: src/emucore/CartCV.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartCV.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartCV.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartCV.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartCV.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartCV.cxx.s
 .PHONY : src/emucore/CartCV.cxx.s
 
 src/emucore/CartDPC.o: src/emucore/CartDPC.cxx.o
@@ -1021,9 +1118,9 @@ src/emucore/CartDPC.o: src/emucore/CartDPC.cxx.o
 
 # target to build an object file
 src/emucore/CartDPC.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartDPC.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartDPC.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartDPC.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartDPC.cxx.o
 .PHONY : src/emucore/CartDPC.cxx.o
 
 src/emucore/CartDPC.i: src/emucore/CartDPC.cxx.i
@@ -1032,9 +1129,9 @@ src/emucore/CartDPC.i: src/emucore/CartDPC.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartDPC.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartDPC.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartDPC.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartDPC.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartDPC.cxx.i
 .PHONY : src/emucore/CartDPC.cxx.i
 
 src/emucore/CartDPC.s: src/emucore/CartDPC.cxx.s
@@ -1043,9 +1140,9 @@ src/emucore/CartDPC.s: src/emucore/CartDPC.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartDPC.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartDPC.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartDPC.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartDPC.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartDPC.cxx.s
 .PHONY : src/emucore/CartDPC.cxx.s
 
 src/emucore/CartE0.o: src/emucore/CartE0.cxx.o
@@ -1054,9 +1151,9 @@ src/emucore/CartE0.o: src/emucore/CartE0.cxx.o
 
 # target to build an object file
 src/emucore/CartE0.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartE0.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartE0.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartE0.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartE0.cxx.o
 .PHONY : src/emucore/CartE0.cxx.o
 
 src/emucore/CartE0.i: src/emucore/CartE0.cxx.i
@@ -1065,9 +1162,9 @@ src/emucore/CartE0.i: src/emucore/CartE0.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartE0.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartE0.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartE0.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartE0.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartE0.cxx.i
 .PHONY : src/emucore/CartE0.cxx.i
 
 src/emucore/CartE0.s: src/emucore/CartE0.cxx.s
@@ -1076,9 +1173,9 @@ src/emucore/CartE0.s: src/emucore/CartE0.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartE0.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartE0.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartE0.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartE0.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartE0.cxx.s
 .PHONY : src/emucore/CartE0.cxx.s
 
 src/emucore/CartE7.o: src/emucore/CartE7.cxx.o
@@ -1087,9 +1184,9 @@ src/emucore/CartE7.o: src/emucore/CartE7.cxx.o
 
 # target to build an object file
 src/emucore/CartE7.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartE7.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartE7.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartE7.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartE7.cxx.o
 .PHONY : src/emucore/CartE7.cxx.o
 
 src/emucore/CartE7.i: src/emucore/CartE7.cxx.i
@@ -1098,9 +1195,9 @@ src/emucore/CartE7.i: src/emucore/CartE7.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartE7.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartE7.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartE7.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartE7.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartE7.cxx.i
 .PHONY : src/emucore/CartE7.cxx.i
 
 src/emucore/CartE7.s: src/emucore/CartE7.cxx.s
@@ -1109,9 +1206,9 @@ src/emucore/CartE7.s: src/emucore/CartE7.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartE7.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartE7.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartE7.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartE7.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartE7.cxx.s
 .PHONY : src/emucore/CartE7.cxx.s
 
 src/emucore/CartF4.o: src/emucore/CartF4.cxx.o
@@ -1120,9 +1217,9 @@ src/emucore/CartF4.o: src/emucore/CartF4.cxx.o
 
 # target to build an object file
 src/emucore/CartF4.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF4.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF4.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF4.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF4.cxx.o
 .PHONY : src/emucore/CartF4.cxx.o
 
 src/emucore/CartF4.i: src/emucore/CartF4.cxx.i
@@ -1131,9 +1228,9 @@ src/emucore/CartF4.i: src/emucore/CartF4.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartF4.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF4.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF4.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF4.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF4.cxx.i
 .PHONY : src/emucore/CartF4.cxx.i
 
 src/emucore/CartF4.s: src/emucore/CartF4.cxx.s
@@ -1142,9 +1239,9 @@ src/emucore/CartF4.s: src/emucore/CartF4.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartF4.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF4.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF4.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF4.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF4.cxx.s
 .PHONY : src/emucore/CartF4.cxx.s
 
 src/emucore/CartF4SC.o: src/emucore/CartF4SC.cxx.o
@@ -1153,9 +1250,9 @@ src/emucore/CartF4SC.o: src/emucore/CartF4SC.cxx.o
 
 # target to build an object file
 src/emucore/CartF4SC.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF4SC.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF4SC.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF4SC.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF4SC.cxx.o
 .PHONY : src/emucore/CartF4SC.cxx.o
 
 src/emucore/CartF4SC.i: src/emucore/CartF4SC.cxx.i
@@ -1164,9 +1261,9 @@ src/emucore/CartF4SC.i: src/emucore/CartF4SC.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartF4SC.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF4SC.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF4SC.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF4SC.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF4SC.cxx.i
 .PHONY : src/emucore/CartF4SC.cxx.i
 
 src/emucore/CartF4SC.s: src/emucore/CartF4SC.cxx.s
@@ -1175,9 +1272,9 @@ src/emucore/CartF4SC.s: src/emucore/CartF4SC.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartF4SC.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF4SC.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF4SC.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF4SC.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF4SC.cxx.s
 .PHONY : src/emucore/CartF4SC.cxx.s
 
 src/emucore/CartF6.o: src/emucore/CartF6.cxx.o
@@ -1186,9 +1283,9 @@ src/emucore/CartF6.o: src/emucore/CartF6.cxx.o
 
 # target to build an object file
 src/emucore/CartF6.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF6.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF6.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF6.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF6.cxx.o
 .PHONY : src/emucore/CartF6.cxx.o
 
 src/emucore/CartF6.i: src/emucore/CartF6.cxx.i
@@ -1197,9 +1294,9 @@ src/emucore/CartF6.i: src/emucore/CartF6.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartF6.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF6.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF6.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF6.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF6.cxx.i
 .PHONY : src/emucore/CartF6.cxx.i
 
 src/emucore/CartF6.s: src/emucore/CartF6.cxx.s
@@ -1208,9 +1305,9 @@ src/emucore/CartF6.s: src/emucore/CartF6.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartF6.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF6.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF6.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF6.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF6.cxx.s
 .PHONY : src/emucore/CartF6.cxx.s
 
 src/emucore/CartF6SC.o: src/emucore/CartF6SC.cxx.o
@@ -1219,9 +1316,9 @@ src/emucore/CartF6SC.o: src/emucore/CartF6SC.cxx.o
 
 # target to build an object file
 src/emucore/CartF6SC.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF6SC.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF6SC.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF6SC.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF6SC.cxx.o
 .PHONY : src/emucore/CartF6SC.cxx.o
 
 src/emucore/CartF6SC.i: src/emucore/CartF6SC.cxx.i
@@ -1230,9 +1327,9 @@ src/emucore/CartF6SC.i: src/emucore/CartF6SC.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartF6SC.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF6SC.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF6SC.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF6SC.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF6SC.cxx.i
 .PHONY : src/emucore/CartF6SC.cxx.i
 
 src/emucore/CartF6SC.s: src/emucore/CartF6SC.cxx.s
@@ -1241,9 +1338,9 @@ src/emucore/CartF6SC.s: src/emucore/CartF6SC.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartF6SC.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF6SC.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF6SC.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF6SC.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF6SC.cxx.s
 .PHONY : src/emucore/CartF6SC.cxx.s
 
 src/emucore/CartF8.o: src/emucore/CartF8.cxx.o
@@ -1252,9 +1349,9 @@ src/emucore/CartF8.o: src/emucore/CartF8.cxx.o
 
 # target to build an object file
 src/emucore/CartF8.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF8.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF8.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF8.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF8.cxx.o
 .PHONY : src/emucore/CartF8.cxx.o
 
 src/emucore/CartF8.i: src/emucore/CartF8.cxx.i
@@ -1263,9 +1360,9 @@ src/emucore/CartF8.i: src/emucore/CartF8.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartF8.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF8.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF8.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF8.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF8.cxx.i
 .PHONY : src/emucore/CartF8.cxx.i
 
 src/emucore/CartF8.s: src/emucore/CartF8.cxx.s
@@ -1274,9 +1371,9 @@ src/emucore/CartF8.s: src/emucore/CartF8.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartF8.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF8.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF8.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF8.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF8.cxx.s
 .PHONY : src/emucore/CartF8.cxx.s
 
 src/emucore/CartF8SC.o: src/emucore/CartF8SC.cxx.o
@@ -1285,9 +1382,9 @@ src/emucore/CartF8SC.o: src/emucore/CartF8SC.cxx.o
 
 # target to build an object file
 src/emucore/CartF8SC.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF8SC.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF8SC.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF8SC.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF8SC.cxx.o
 .PHONY : src/emucore/CartF8SC.cxx.o
 
 src/emucore/CartF8SC.i: src/emucore/CartF8SC.cxx.i
@@ -1296,9 +1393,9 @@ src/emucore/CartF8SC.i: src/emucore/CartF8SC.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartF8SC.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF8SC.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF8SC.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF8SC.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF8SC.cxx.i
 .PHONY : src/emucore/CartF8SC.cxx.i
 
 src/emucore/CartF8SC.s: src/emucore/CartF8SC.cxx.s
@@ -1307,9 +1404,9 @@ src/emucore/CartF8SC.s: src/emucore/CartF8SC.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartF8SC.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF8SC.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF8SC.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartF8SC.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartF8SC.cxx.s
 .PHONY : src/emucore/CartF8SC.cxx.s
 
 src/emucore/CartFASC.o: src/emucore/CartFASC.cxx.o
@@ -1318,9 +1415,9 @@ src/emucore/CartFASC.o: src/emucore/CartFASC.cxx.o
 
 # target to build an object file
 src/emucore/CartFASC.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartFASC.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartFASC.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartFASC.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartFASC.cxx.o
 .PHONY : src/emucore/CartFASC.cxx.o
 
 src/emucore/CartFASC.i: src/emucore/CartFASC.cxx.i
@@ -1329,9 +1426,9 @@ src/emucore/CartFASC.i: src/emucore/CartFASC.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartFASC.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartFASC.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartFASC.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartFASC.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartFASC.cxx.i
 .PHONY : src/emucore/CartFASC.cxx.i
 
 src/emucore/CartFASC.s: src/emucore/CartFASC.cxx.s
@@ -1340,9 +1437,9 @@ src/emucore/CartFASC.s: src/emucore/CartFASC.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartFASC.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartFASC.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartFASC.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartFASC.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartFASC.cxx.s
 .PHONY : src/emucore/CartFASC.cxx.s
 
 src/emucore/CartFE.o: src/emucore/CartFE.cxx.o
@@ -1351,9 +1448,9 @@ src/emucore/CartFE.o: src/emucore/CartFE.cxx.o
 
 # target to build an object file
 src/emucore/CartFE.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartFE.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartFE.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartFE.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartFE.cxx.o
 .PHONY : src/emucore/CartFE.cxx.o
 
 src/emucore/CartFE.i: src/emucore/CartFE.cxx.i
@@ -1362,9 +1459,9 @@ src/emucore/CartFE.i: src/emucore/CartFE.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartFE.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartFE.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartFE.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartFE.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartFE.cxx.i
 .PHONY : src/emucore/CartFE.cxx.i
 
 src/emucore/CartFE.s: src/emucore/CartFE.cxx.s
@@ -1373,9 +1470,9 @@ src/emucore/CartFE.s: src/emucore/CartFE.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartFE.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartFE.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartFE.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartFE.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartFE.cxx.s
 .PHONY : src/emucore/CartFE.cxx.s
 
 src/emucore/CartMB.o: src/emucore/CartMB.cxx.o
@@ -1384,9 +1481,9 @@ src/emucore/CartMB.o: src/emucore/CartMB.cxx.o
 
 # target to build an object file
 src/emucore/CartMB.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartMB.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartMB.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartMB.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartMB.cxx.o
 .PHONY : src/emucore/CartMB.cxx.o
 
 src/emucore/CartMB.i: src/emucore/CartMB.cxx.i
@@ -1395,9 +1492,9 @@ src/emucore/CartMB.i: src/emucore/CartMB.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartMB.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartMB.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartMB.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartMB.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartMB.cxx.i
 .PHONY : src/emucore/CartMB.cxx.i
 
 src/emucore/CartMB.s: src/emucore/CartMB.cxx.s
@@ -1406,9 +1503,9 @@ src/emucore/CartMB.s: src/emucore/CartMB.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartMB.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartMB.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartMB.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartMB.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartMB.cxx.s
 .PHONY : src/emucore/CartMB.cxx.s
 
 src/emucore/CartMC.o: src/emucore/CartMC.cxx.o
@@ -1417,9 +1514,9 @@ src/emucore/CartMC.o: src/emucore/CartMC.cxx.o
 
 # target to build an object file
 src/emucore/CartMC.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartMC.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartMC.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartMC.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartMC.cxx.o
 .PHONY : src/emucore/CartMC.cxx.o
 
 src/emucore/CartMC.i: src/emucore/CartMC.cxx.i
@@ -1428,9 +1525,9 @@ src/emucore/CartMC.i: src/emucore/CartMC.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartMC.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartMC.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartMC.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartMC.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartMC.cxx.i
 .PHONY : src/emucore/CartMC.cxx.i
 
 src/emucore/CartMC.s: src/emucore/CartMC.cxx.s
@@ -1439,9 +1536,9 @@ src/emucore/CartMC.s: src/emucore/CartMC.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartMC.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartMC.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartMC.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartMC.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartMC.cxx.s
 .PHONY : src/emucore/CartMC.cxx.s
 
 src/emucore/CartUA.o: src/emucore/CartUA.cxx.o
@@ -1450,9 +1547,9 @@ src/emucore/CartUA.o: src/emucore/CartUA.cxx.o
 
 # target to build an object file
 src/emucore/CartUA.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartUA.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartUA.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartUA.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartUA.cxx.o
 .PHONY : src/emucore/CartUA.cxx.o
 
 src/emucore/CartUA.i: src/emucore/CartUA.cxx.i
@@ -1461,9 +1558,9 @@ src/emucore/CartUA.i: src/emucore/CartUA.cxx.i
 
 # target to preprocess a source file
 src/emucore/CartUA.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartUA.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartUA.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartUA.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartUA.cxx.i
 .PHONY : src/emucore/CartUA.cxx.i
 
 src/emucore/CartUA.s: src/emucore/CartUA.cxx.s
@@ -1472,9 +1569,9 @@ src/emucore/CartUA.s: src/emucore/CartUA.cxx.s
 
 # target to generate assembly for a file
 src/emucore/CartUA.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartUA.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartUA.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/CartUA.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/CartUA.cxx.s
 .PHONY : src/emucore/CartUA.cxx.s
 
 src/emucore/Console.o: src/emucore/Console.cxx.o
@@ -1483,9 +1580,9 @@ src/emucore/Console.o: src/emucore/Console.cxx.o
 
 # target to build an object file
 src/emucore/Console.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Console.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Console.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Console.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Console.cxx.o
 .PHONY : src/emucore/Console.cxx.o
 
 src/emucore/Console.i: src/emucore/Console.cxx.i
@@ -1494,9 +1591,9 @@ src/emucore/Console.i: src/emucore/Console.cxx.i
 
 # target to preprocess a source file
 src/emucore/Console.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Console.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Console.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Console.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Console.cxx.i
 .PHONY : src/emucore/Console.cxx.i
 
 src/emucore/Console.s: src/emucore/Console.cxx.s
@@ -1505,9 +1602,9 @@ src/emucore/Console.s: src/emucore/Console.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Console.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Console.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Console.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Console.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Console.cxx.s
 .PHONY : src/emucore/Console.cxx.s
 
 src/emucore/Control.o: src/emucore/Control.cxx.o
@@ -1516,9 +1613,9 @@ src/emucore/Control.o: src/emucore/Control.cxx.o
 
 # target to build an object file
 src/emucore/Control.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Control.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Control.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Control.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Control.cxx.o
 .PHONY : src/emucore/Control.cxx.o
 
 src/emucore/Control.i: src/emucore/Control.cxx.i
@@ -1527,9 +1624,9 @@ src/emucore/Control.i: src/emucore/Control.cxx.i
 
 # target to preprocess a source file
 src/emucore/Control.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Control.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Control.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Control.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Control.cxx.i
 .PHONY : src/emucore/Control.cxx.i
 
 src/emucore/Control.s: src/emucore/Control.cxx.s
@@ -1538,9 +1635,9 @@ src/emucore/Control.s: src/emucore/Control.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Control.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Control.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Control.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Control.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Control.cxx.s
 .PHONY : src/emucore/Control.cxx.s
 
 src/emucore/Deserializer.o: src/emucore/Deserializer.cxx.o
@@ -1549,9 +1646,9 @@ src/emucore/Deserializer.o: src/emucore/Deserializer.cxx.o
 
 # target to build an object file
 src/emucore/Deserializer.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Deserializer.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Deserializer.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Deserializer.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Deserializer.cxx.o
 .PHONY : src/emucore/Deserializer.cxx.o
 
 src/emucore/Deserializer.i: src/emucore/Deserializer.cxx.i
@@ -1560,9 +1657,9 @@ src/emucore/Deserializer.i: src/emucore/Deserializer.cxx.i
 
 # target to preprocess a source file
 src/emucore/Deserializer.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Deserializer.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Deserializer.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Deserializer.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Deserializer.cxx.i
 .PHONY : src/emucore/Deserializer.cxx.i
 
 src/emucore/Deserializer.s: src/emucore/Deserializer.cxx.s
@@ -1571,9 +1668,9 @@ src/emucore/Deserializer.s: src/emucore/Deserializer.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Deserializer.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Deserializer.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Deserializer.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Deserializer.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Deserializer.cxx.s
 .PHONY : src/emucore/Deserializer.cxx.s
 
 src/emucore/Driving.o: src/emucore/Driving.cxx.o
@@ -1582,9 +1679,9 @@ src/emucore/Driving.o: src/emucore/Driving.cxx.o
 
 # target to build an object file
 src/emucore/Driving.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Driving.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Driving.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Driving.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Driving.cxx.o
 .PHONY : src/emucore/Driving.cxx.o
 
 src/emucore/Driving.i: src/emucore/Driving.cxx.i
@@ -1593,9 +1690,9 @@ src/emucore/Driving.i: src/emucore/Driving.cxx.i
 
 # target to preprocess a source file
 src/emucore/Driving.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Driving.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Driving.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Driving.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Driving.cxx.i
 .PHONY : src/emucore/Driving.cxx.i
 
 src/emucore/Driving.s: src/emucore/Driving.cxx.s
@@ -1604,9 +1701,9 @@ src/emucore/Driving.s: src/emucore/Driving.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Driving.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Driving.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Driving.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Driving.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Driving.cxx.s
 .PHONY : src/emucore/Driving.cxx.s
 
 src/emucore/Event.o: src/emucore/Event.cxx.o
@@ -1615,9 +1712,9 @@ src/emucore/Event.o: src/emucore/Event.cxx.o
 
 # target to build an object file
 src/emucore/Event.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Event.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Event.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Event.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Event.cxx.o
 .PHONY : src/emucore/Event.cxx.o
 
 src/emucore/Event.i: src/emucore/Event.cxx.i
@@ -1626,9 +1723,9 @@ src/emucore/Event.i: src/emucore/Event.cxx.i
 
 # target to preprocess a source file
 src/emucore/Event.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Event.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Event.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Event.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Event.cxx.i
 .PHONY : src/emucore/Event.cxx.i
 
 src/emucore/Event.s: src/emucore/Event.cxx.s
@@ -1637,9 +1734,9 @@ src/emucore/Event.s: src/emucore/Event.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Event.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Event.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Event.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Event.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Event.cxx.s
 .PHONY : src/emucore/Event.cxx.s
 
 src/emucore/FSNode.o: src/emucore/FSNode.cxx.o
@@ -1648,9 +1745,9 @@ src/emucore/FSNode.o: src/emucore/FSNode.cxx.o
 
 # target to build an object file
 src/emucore/FSNode.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/FSNode.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/FSNode.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/FSNode.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/FSNode.cxx.o
 .PHONY : src/emucore/FSNode.cxx.o
 
 src/emucore/FSNode.i: src/emucore/FSNode.cxx.i
@@ -1659,9 +1756,9 @@ src/emucore/FSNode.i: src/emucore/FSNode.cxx.i
 
 # target to preprocess a source file
 src/emucore/FSNode.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/FSNode.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/FSNode.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/FSNode.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/FSNode.cxx.i
 .PHONY : src/emucore/FSNode.cxx.i
 
 src/emucore/FSNode.s: src/emucore/FSNode.cxx.s
@@ -1670,9 +1767,9 @@ src/emucore/FSNode.s: src/emucore/FSNode.cxx.s
 
 # target to generate assembly for a file
 src/emucore/FSNode.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/FSNode.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/FSNode.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/FSNode.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/FSNode.cxx.s
 .PHONY : src/emucore/FSNode.cxx.s
 
 src/emucore/Joystick.o: src/emucore/Joystick.cxx.o
@@ -1681,9 +1778,9 @@ src/emucore/Joystick.o: src/emucore/Joystick.cxx.o
 
 # target to build an object file
 src/emucore/Joystick.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Joystick.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Joystick.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Joystick.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Joystick.cxx.o
 .PHONY : src/emucore/Joystick.cxx.o
 
 src/emucore/Joystick.i: src/emucore/Joystick.cxx.i
@@ -1692,9 +1789,9 @@ src/emucore/Joystick.i: src/emucore/Joystick.cxx.i
 
 # target to preprocess a source file
 src/emucore/Joystick.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Joystick.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Joystick.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Joystick.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Joystick.cxx.i
 .PHONY : src/emucore/Joystick.cxx.i
 
 src/emucore/Joystick.s: src/emucore/Joystick.cxx.s
@@ -1703,9 +1800,9 @@ src/emucore/Joystick.s: src/emucore/Joystick.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Joystick.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Joystick.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Joystick.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Joystick.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Joystick.cxx.s
 .PHONY : src/emucore/Joystick.cxx.s
 
 src/emucore/Keyboard.o: src/emucore/Keyboard.cxx.o
@@ -1714,9 +1811,9 @@ src/emucore/Keyboard.o: src/emucore/Keyboard.cxx.o
 
 # target to build an object file
 src/emucore/Keyboard.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Keyboard.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Keyboard.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Keyboard.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Keyboard.cxx.o
 .PHONY : src/emucore/Keyboard.cxx.o
 
 src/emucore/Keyboard.i: src/emucore/Keyboard.cxx.i
@@ -1725,9 +1822,9 @@ src/emucore/Keyboard.i: src/emucore/Keyboard.cxx.i
 
 # target to preprocess a source file
 src/emucore/Keyboard.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Keyboard.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Keyboard.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Keyboard.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Keyboard.cxx.i
 .PHONY : src/emucore/Keyboard.cxx.i
 
 src/emucore/Keyboard.s: src/emucore/Keyboard.cxx.s
@@ -1736,9 +1833,9 @@ src/emucore/Keyboard.s: src/emucore/Keyboard.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Keyboard.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Keyboard.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Keyboard.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Keyboard.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Keyboard.cxx.s
 .PHONY : src/emucore/Keyboard.cxx.s
 
 src/emucore/M6532.o: src/emucore/M6532.cxx.o
@@ -1747,9 +1844,9 @@ src/emucore/M6532.o: src/emucore/M6532.cxx.o
 
 # target to build an object file
 src/emucore/M6532.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/M6532.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/M6532.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/M6532.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/M6532.cxx.o
 .PHONY : src/emucore/M6532.cxx.o
 
 src/emucore/M6532.i: src/emucore/M6532.cxx.i
@@ -1758,9 +1855,9 @@ src/emucore/M6532.i: src/emucore/M6532.cxx.i
 
 # target to preprocess a source file
 src/emucore/M6532.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/M6532.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/M6532.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/M6532.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/M6532.cxx.i
 .PHONY : src/emucore/M6532.cxx.i
 
 src/emucore/M6532.s: src/emucore/M6532.cxx.s
@@ -1769,9 +1866,9 @@ src/emucore/M6532.s: src/emucore/M6532.cxx.s
 
 # target to generate assembly for a file
 src/emucore/M6532.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/M6532.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/M6532.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/M6532.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/M6532.cxx.s
 .PHONY : src/emucore/M6532.cxx.s
 
 src/emucore/MD5.o: src/emucore/MD5.cxx.o
@@ -1780,9 +1877,9 @@ src/emucore/MD5.o: src/emucore/MD5.cxx.o
 
 # target to build an object file
 src/emucore/MD5.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/MD5.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/MD5.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/MD5.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/MD5.cxx.o
 .PHONY : src/emucore/MD5.cxx.o
 
 src/emucore/MD5.i: src/emucore/MD5.cxx.i
@@ -1791,9 +1888,9 @@ src/emucore/MD5.i: src/emucore/MD5.cxx.i
 
 # target to preprocess a source file
 src/emucore/MD5.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/MD5.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/MD5.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/MD5.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/MD5.cxx.i
 .PHONY : src/emucore/MD5.cxx.i
 
 src/emucore/MD5.s: src/emucore/MD5.cxx.s
@@ -1802,9 +1899,9 @@ src/emucore/MD5.s: src/emucore/MD5.cxx.s
 
 # target to generate assembly for a file
 src/emucore/MD5.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/MD5.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/MD5.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/MD5.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/MD5.cxx.s
 .PHONY : src/emucore/MD5.cxx.s
 
 src/emucore/MediaSrc.o: src/emucore/MediaSrc.cxx.o
@@ -1813,9 +1910,9 @@ src/emucore/MediaSrc.o: src/emucore/MediaSrc.cxx.o
 
 # target to build an object file
 src/emucore/MediaSrc.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/MediaSrc.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/MediaSrc.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/MediaSrc.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/MediaSrc.cxx.o
 .PHONY : src/emucore/MediaSrc.cxx.o
 
 src/emucore/MediaSrc.i: src/emucore/MediaSrc.cxx.i
@@ -1824,9 +1921,9 @@ src/emucore/MediaSrc.i: src/emucore/MediaSrc.cxx.i
 
 # target to preprocess a source file
 src/emucore/MediaSrc.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/MediaSrc.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/MediaSrc.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/MediaSrc.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/MediaSrc.cxx.i
 .PHONY : src/emucore/MediaSrc.cxx.i
 
 src/emucore/MediaSrc.s: src/emucore/MediaSrc.cxx.s
@@ -1835,9 +1932,9 @@ src/emucore/MediaSrc.s: src/emucore/MediaSrc.cxx.s
 
 # target to generate assembly for a file
 src/emucore/MediaSrc.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/MediaSrc.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/MediaSrc.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/MediaSrc.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/MediaSrc.cxx.s
 .PHONY : src/emucore/MediaSrc.cxx.s
 
 src/emucore/OSystem.o: src/emucore/OSystem.cxx.o
@@ -1846,9 +1943,9 @@ src/emucore/OSystem.o: src/emucore/OSystem.cxx.o
 
 # target to build an object file
 src/emucore/OSystem.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/OSystem.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/OSystem.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/OSystem.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/OSystem.cxx.o
 .PHONY : src/emucore/OSystem.cxx.o
 
 src/emucore/OSystem.i: src/emucore/OSystem.cxx.i
@@ -1857,9 +1954,9 @@ src/emucore/OSystem.i: src/emucore/OSystem.cxx.i
 
 # target to preprocess a source file
 src/emucore/OSystem.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/OSystem.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/OSystem.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/OSystem.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/OSystem.cxx.i
 .PHONY : src/emucore/OSystem.cxx.i
 
 src/emucore/OSystem.s: src/emucore/OSystem.cxx.s
@@ -1868,9 +1965,9 @@ src/emucore/OSystem.s: src/emucore/OSystem.cxx.s
 
 # target to generate assembly for a file
 src/emucore/OSystem.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/OSystem.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/OSystem.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/OSystem.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/OSystem.cxx.s
 .PHONY : src/emucore/OSystem.cxx.s
 
 src/emucore/Paddles.o: src/emucore/Paddles.cxx.o
@@ -1879,9 +1976,9 @@ src/emucore/Paddles.o: src/emucore/Paddles.cxx.o
 
 # target to build an object file
 src/emucore/Paddles.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Paddles.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Paddles.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Paddles.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Paddles.cxx.o
 .PHONY : src/emucore/Paddles.cxx.o
 
 src/emucore/Paddles.i: src/emucore/Paddles.cxx.i
@@ -1890,9 +1987,9 @@ src/emucore/Paddles.i: src/emucore/Paddles.cxx.i
 
 # target to preprocess a source file
 src/emucore/Paddles.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Paddles.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Paddles.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Paddles.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Paddles.cxx.i
 .PHONY : src/emucore/Paddles.cxx.i
 
 src/emucore/Paddles.s: src/emucore/Paddles.cxx.s
@@ -1901,9 +1998,9 @@ src/emucore/Paddles.s: src/emucore/Paddles.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Paddles.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Paddles.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Paddles.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Paddles.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Paddles.cxx.s
 .PHONY : src/emucore/Paddles.cxx.s
 
 src/emucore/Props.o: src/emucore/Props.cxx.o
@@ -1912,9 +2009,9 @@ src/emucore/Props.o: src/emucore/Props.cxx.o
 
 # target to build an object file
 src/emucore/Props.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Props.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Props.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Props.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Props.cxx.o
 .PHONY : src/emucore/Props.cxx.o
 
 src/emucore/Props.i: src/emucore/Props.cxx.i
@@ -1923,9 +2020,9 @@ src/emucore/Props.i: src/emucore/Props.cxx.i
 
 # target to preprocess a source file
 src/emucore/Props.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Props.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Props.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Props.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Props.cxx.i
 .PHONY : src/emucore/Props.cxx.i
 
 src/emucore/Props.s: src/emucore/Props.cxx.s
@@ -1934,9 +2031,9 @@ src/emucore/Props.s: src/emucore/Props.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Props.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Props.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Props.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Props.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Props.cxx.s
 .PHONY : src/emucore/Props.cxx.s
 
 src/emucore/PropsSet.o: src/emucore/PropsSet.cxx.o
@@ -1945,9 +2042,9 @@ src/emucore/PropsSet.o: src/emucore/PropsSet.cxx.o
 
 # target to build an object file
 src/emucore/PropsSet.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/PropsSet.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/PropsSet.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/PropsSet.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/PropsSet.cxx.o
 .PHONY : src/emucore/PropsSet.cxx.o
 
 src/emucore/PropsSet.i: src/emucore/PropsSet.cxx.i
@@ -1956,9 +2053,9 @@ src/emucore/PropsSet.i: src/emucore/PropsSet.cxx.i
 
 # target to preprocess a source file
 src/emucore/PropsSet.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/PropsSet.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/PropsSet.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/PropsSet.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/PropsSet.cxx.i
 .PHONY : src/emucore/PropsSet.cxx.i
 
 src/emucore/PropsSet.s: src/emucore/PropsSet.cxx.s
@@ -1967,9 +2064,9 @@ src/emucore/PropsSet.s: src/emucore/PropsSet.cxx.s
 
 # target to generate assembly for a file
 src/emucore/PropsSet.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/PropsSet.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/PropsSet.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/PropsSet.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/PropsSet.cxx.s
 .PHONY : src/emucore/PropsSet.cxx.s
 
 src/emucore/Random.o: src/emucore/Random.cxx.o
@@ -1978,9 +2075,9 @@ src/emucore/Random.o: src/emucore/Random.cxx.o
 
 # target to build an object file
 src/emucore/Random.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Random.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Random.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Random.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Random.cxx.o
 .PHONY : src/emucore/Random.cxx.o
 
 src/emucore/Random.i: src/emucore/Random.cxx.i
@@ -1989,9 +2086,9 @@ src/emucore/Random.i: src/emucore/Random.cxx.i
 
 # target to preprocess a source file
 src/emucore/Random.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Random.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Random.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Random.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Random.cxx.i
 .PHONY : src/emucore/Random.cxx.i
 
 src/emucore/Random.s: src/emucore/Random.cxx.s
@@ -2000,9 +2097,9 @@ src/emucore/Random.s: src/emucore/Random.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Random.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Random.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Random.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Random.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Random.cxx.s
 .PHONY : src/emucore/Random.cxx.s
 
 src/emucore/Serializer.o: src/emucore/Serializer.cxx.o
@@ -2011,9 +2108,9 @@ src/emucore/Serializer.o: src/emucore/Serializer.cxx.o
 
 # target to build an object file
 src/emucore/Serializer.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Serializer.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Serializer.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Serializer.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Serializer.cxx.o
 .PHONY : src/emucore/Serializer.cxx.o
 
 src/emucore/Serializer.i: src/emucore/Serializer.cxx.i
@@ -2022,9 +2119,9 @@ src/emucore/Serializer.i: src/emucore/Serializer.cxx.i
 
 # target to preprocess a source file
 src/emucore/Serializer.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Serializer.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Serializer.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Serializer.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Serializer.cxx.i
 .PHONY : src/emucore/Serializer.cxx.i
 
 src/emucore/Serializer.s: src/emucore/Serializer.cxx.s
@@ -2033,9 +2130,9 @@ src/emucore/Serializer.s: src/emucore/Serializer.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Serializer.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Serializer.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Serializer.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Serializer.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Serializer.cxx.s
 .PHONY : src/emucore/Serializer.cxx.s
 
 src/emucore/Settings.o: src/emucore/Settings.cxx.o
@@ -2044,9 +2141,9 @@ src/emucore/Settings.o: src/emucore/Settings.cxx.o
 
 # target to build an object file
 src/emucore/Settings.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Settings.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Settings.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Settings.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Settings.cxx.o
 .PHONY : src/emucore/Settings.cxx.o
 
 src/emucore/Settings.i: src/emucore/Settings.cxx.i
@@ -2055,9 +2152,9 @@ src/emucore/Settings.i: src/emucore/Settings.cxx.i
 
 # target to preprocess a source file
 src/emucore/Settings.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Settings.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Settings.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Settings.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Settings.cxx.i
 .PHONY : src/emucore/Settings.cxx.i
 
 src/emucore/Settings.s: src/emucore/Settings.cxx.s
@@ -2066,9 +2163,9 @@ src/emucore/Settings.s: src/emucore/Settings.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Settings.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Settings.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Settings.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Settings.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Settings.cxx.s
 .PHONY : src/emucore/Settings.cxx.s
 
 src/emucore/SpeakJet.o: src/emucore/SpeakJet.cxx.o
@@ -2077,9 +2174,9 @@ src/emucore/SpeakJet.o: src/emucore/SpeakJet.cxx.o
 
 # target to build an object file
 src/emucore/SpeakJet.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/SpeakJet.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/SpeakJet.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/SpeakJet.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/SpeakJet.cxx.o
 .PHONY : src/emucore/SpeakJet.cxx.o
 
 src/emucore/SpeakJet.i: src/emucore/SpeakJet.cxx.i
@@ -2088,9 +2185,9 @@ src/emucore/SpeakJet.i: src/emucore/SpeakJet.cxx.i
 
 # target to preprocess a source file
 src/emucore/SpeakJet.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/SpeakJet.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/SpeakJet.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/SpeakJet.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/SpeakJet.cxx.i
 .PHONY : src/emucore/SpeakJet.cxx.i
 
 src/emucore/SpeakJet.s: src/emucore/SpeakJet.cxx.s
@@ -2099,9 +2196,9 @@ src/emucore/SpeakJet.s: src/emucore/SpeakJet.cxx.s
 
 # target to generate assembly for a file
 src/emucore/SpeakJet.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/SpeakJet.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/SpeakJet.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/SpeakJet.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/SpeakJet.cxx.s
 .PHONY : src/emucore/SpeakJet.cxx.s
 
 src/emucore/Switches.o: src/emucore/Switches.cxx.o
@@ -2110,9 +2207,9 @@ src/emucore/Switches.o: src/emucore/Switches.cxx.o
 
 # target to build an object file
 src/emucore/Switches.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Switches.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Switches.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Switches.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Switches.cxx.o
 .PHONY : src/emucore/Switches.cxx.o
 
 src/emucore/Switches.i: src/emucore/Switches.cxx.i
@@ -2121,9 +2218,9 @@ src/emucore/Switches.i: src/emucore/Switches.cxx.i
 
 # target to preprocess a source file
 src/emucore/Switches.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Switches.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Switches.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Switches.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Switches.cxx.i
 .PHONY : src/emucore/Switches.cxx.i
 
 src/emucore/Switches.s: src/emucore/Switches.cxx.s
@@ -2132,9 +2229,9 @@ src/emucore/Switches.s: src/emucore/Switches.cxx.s
 
 # target to generate assembly for a file
 src/emucore/Switches.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Switches.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Switches.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/Switches.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/Switches.cxx.s
 .PHONY : src/emucore/Switches.cxx.s
 
 src/emucore/TIA.o: src/emucore/TIA.cxx.o
@@ -2143,9 +2240,9 @@ src/emucore/TIA.o: src/emucore/TIA.cxx.o
 
 # target to build an object file
 src/emucore/TIA.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/TIA.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/TIA.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/TIA.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/TIA.cxx.o
 .PHONY : src/emucore/TIA.cxx.o
 
 src/emucore/TIA.i: src/emucore/TIA.cxx.i
@@ -2154,9 +2251,9 @@ src/emucore/TIA.i: src/emucore/TIA.cxx.i
 
 # target to preprocess a source file
 src/emucore/TIA.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/TIA.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/TIA.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/TIA.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/TIA.cxx.i
 .PHONY : src/emucore/TIA.cxx.i
 
 src/emucore/TIA.s: src/emucore/TIA.cxx.s
@@ -2165,9 +2262,9 @@ src/emucore/TIA.s: src/emucore/TIA.cxx.s
 
 # target to generate assembly for a file
 src/emucore/TIA.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/TIA.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/TIA.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/TIA.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/TIA.cxx.s
 .PHONY : src/emucore/TIA.cxx.s
 
 src/emucore/TIASnd.o: src/emucore/TIASnd.cxx.o
@@ -2176,9 +2273,9 @@ src/emucore/TIASnd.o: src/emucore/TIASnd.cxx.o
 
 # target to build an object file
 src/emucore/TIASnd.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/TIASnd.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/TIASnd.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/TIASnd.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/TIASnd.cxx.o
 .PHONY : src/emucore/TIASnd.cxx.o
 
 src/emucore/TIASnd.i: src/emucore/TIASnd.cxx.i
@@ -2187,9 +2284,9 @@ src/emucore/TIASnd.i: src/emucore/TIASnd.cxx.i
 
 # target to preprocess a source file
 src/emucore/TIASnd.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/TIASnd.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/TIASnd.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/TIASnd.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/TIASnd.cxx.i
 .PHONY : src/emucore/TIASnd.cxx.i
 
 src/emucore/TIASnd.s: src/emucore/TIASnd.cxx.s
@@ -2198,9 +2295,9 @@ src/emucore/TIASnd.s: src/emucore/TIASnd.cxx.s
 
 # target to generate assembly for a file
 src/emucore/TIASnd.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/TIASnd.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/TIASnd.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/TIASnd.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/TIASnd.cxx.s
 .PHONY : src/emucore/TIASnd.cxx.s
 
 src/emucore/m6502/src/Device.o: src/emucore/m6502/src/Device.cxx.o
@@ -2209,9 +2306,9 @@ src/emucore/m6502/src/Device.o: src/emucore/m6502/src/Device.cxx.o
 
 # target to build an object file
 src/emucore/m6502/src/Device.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/Device.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/Device.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/Device.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/Device.cxx.o
 .PHONY : src/emucore/m6502/src/Device.cxx.o
 
 src/emucore/m6502/src/Device.i: src/emucore/m6502/src/Device.cxx.i
@@ -2220,9 +2317,9 @@ src/emucore/m6502/src/Device.i: src/emucore/m6502/src/Device.cxx.i
 
 # target to preprocess a source file
 src/emucore/m6502/src/Device.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/Device.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/Device.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/Device.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/Device.cxx.i
 .PHONY : src/emucore/m6502/src/Device.cxx.i
 
 src/emucore/m6502/src/Device.s: src/emucore/m6502/src/Device.cxx.s
@@ -2231,9 +2328,9 @@ src/emucore/m6502/src/Device.s: src/emucore/m6502/src/Device.cxx.s
 
 # target to generate assembly for a file
 src/emucore/m6502/src/Device.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/Device.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/Device.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/Device.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/Device.cxx.s
 .PHONY : src/emucore/m6502/src/Device.cxx.s
 
 src/emucore/m6502/src/M6502.o: src/emucore/m6502/src/M6502.cxx.o
@@ -2242,9 +2339,9 @@ src/emucore/m6502/src/M6502.o: src/emucore/m6502/src/M6502.cxx.o
 
 # target to build an object file
 src/emucore/m6502/src/M6502.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502.cxx.o
 .PHONY : src/emucore/m6502/src/M6502.cxx.o
 
 src/emucore/m6502/src/M6502.i: src/emucore/m6502/src/M6502.cxx.i
@@ -2253,9 +2350,9 @@ src/emucore/m6502/src/M6502.i: src/emucore/m6502/src/M6502.cxx.i
 
 # target to preprocess a source file
 src/emucore/m6502/src/M6502.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502.cxx.i
 .PHONY : src/emucore/m6502/src/M6502.cxx.i
 
 src/emucore/m6502/src/M6502.s: src/emucore/m6502/src/M6502.cxx.s
@@ -2264,9 +2361,9 @@ src/emucore/m6502/src/M6502.s: src/emucore/m6502/src/M6502.cxx.s
 
 # target to generate assembly for a file
 src/emucore/m6502/src/M6502.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502.cxx.s
 .PHONY : src/emucore/m6502/src/M6502.cxx.s
 
 src/emucore/m6502/src/M6502Hi.o: src/emucore/m6502/src/M6502Hi.cxx.o
@@ -2275,9 +2372,9 @@ src/emucore/m6502/src/M6502Hi.o: src/emucore/m6502/src/M6502Hi.cxx.o
 
 # target to build an object file
 src/emucore/m6502/src/M6502Hi.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502Hi.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502Hi.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.o
 .PHONY : src/emucore/m6502/src/M6502Hi.cxx.o
 
 src/emucore/m6502/src/M6502Hi.i: src/emucore/m6502/src/M6502Hi.cxx.i
@@ -2286,9 +2383,9 @@ src/emucore/m6502/src/M6502Hi.i: src/emucore/m6502/src/M6502Hi.cxx.i
 
 # target to preprocess a source file
 src/emucore/m6502/src/M6502Hi.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502Hi.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502Hi.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.i
 .PHONY : src/emucore/m6502/src/M6502Hi.cxx.i
 
 src/emucore/m6502/src/M6502Hi.s: src/emucore/m6502/src/M6502Hi.cxx.s
@@ -2297,9 +2394,9 @@ src/emucore/m6502/src/M6502Hi.s: src/emucore/m6502/src/M6502Hi.cxx.s
 
 # target to generate assembly for a file
 src/emucore/m6502/src/M6502Hi.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502Hi.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502Hi.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.s
 .PHONY : src/emucore/m6502/src/M6502Hi.cxx.s
 
 src/emucore/m6502/src/M6502Low.o: src/emucore/m6502/src/M6502Low.cxx.o
@@ -2308,9 +2405,9 @@ src/emucore/m6502/src/M6502Low.o: src/emucore/m6502/src/M6502Low.cxx.o
 
 # target to build an object file
 src/emucore/m6502/src/M6502Low.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502Low.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502Low.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502Low.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502Low.cxx.o
 .PHONY : src/emucore/m6502/src/M6502Low.cxx.o
 
 src/emucore/m6502/src/M6502Low.i: src/emucore/m6502/src/M6502Low.cxx.i
@@ -2319,9 +2416,9 @@ src/emucore/m6502/src/M6502Low.i: src/emucore/m6502/src/M6502Low.cxx.i
 
 # target to preprocess a source file
 src/emucore/m6502/src/M6502Low.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502Low.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502Low.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502Low.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502Low.cxx.i
 .PHONY : src/emucore/m6502/src/M6502Low.cxx.i
 
 src/emucore/m6502/src/M6502Low.s: src/emucore/m6502/src/M6502Low.cxx.s
@@ -2330,9 +2427,9 @@ src/emucore/m6502/src/M6502Low.s: src/emucore/m6502/src/M6502Low.cxx.s
 
 # target to generate assembly for a file
 src/emucore/m6502/src/M6502Low.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502Low.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502Low.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/M6502Low.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/M6502Low.cxx.s
 .PHONY : src/emucore/m6502/src/M6502Low.cxx.s
 
 src/emucore/m6502/src/NullDev.o: src/emucore/m6502/src/NullDev.cxx.o
@@ -2341,9 +2438,9 @@ src/emucore/m6502/src/NullDev.o: src/emucore/m6502/src/NullDev.cxx.o
 
 # target to build an object file
 src/emucore/m6502/src/NullDev.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/NullDev.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/NullDev.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/NullDev.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/NullDev.cxx.o
 .PHONY : src/emucore/m6502/src/NullDev.cxx.o
 
 src/emucore/m6502/src/NullDev.i: src/emucore/m6502/src/NullDev.cxx.i
@@ -2352,9 +2449,9 @@ src/emucore/m6502/src/NullDev.i: src/emucore/m6502/src/NullDev.cxx.i
 
 # target to preprocess a source file
 src/emucore/m6502/src/NullDev.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/NullDev.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/NullDev.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/NullDev.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/NullDev.cxx.i
 .PHONY : src/emucore/m6502/src/NullDev.cxx.i
 
 src/emucore/m6502/src/NullDev.s: src/emucore/m6502/src/NullDev.cxx.s
@@ -2363,9 +2460,9 @@ src/emucore/m6502/src/NullDev.s: src/emucore/m6502/src/NullDev.cxx.s
 
 # target to generate assembly for a file
 src/emucore/m6502/src/NullDev.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/NullDev.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/NullDev.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/NullDev.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/NullDev.cxx.s
 .PHONY : src/emucore/m6502/src/NullDev.cxx.s
 
 src/emucore/m6502/src/System.o: src/emucore/m6502/src/System.cxx.o
@@ -2374,9 +2471,9 @@ src/emucore/m6502/src/System.o: src/emucore/m6502/src/System.cxx.o
 
 # target to build an object file
 src/emucore/m6502/src/System.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/System.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/System.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/System.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/System.cxx.o
 .PHONY : src/emucore/m6502/src/System.cxx.o
 
 src/emucore/m6502/src/System.i: src/emucore/m6502/src/System.cxx.i
@@ -2385,9 +2482,9 @@ src/emucore/m6502/src/System.i: src/emucore/m6502/src/System.cxx.i
 
 # target to preprocess a source file
 src/emucore/m6502/src/System.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/System.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/System.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/System.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/System.cxx.i
 .PHONY : src/emucore/m6502/src/System.cxx.i
 
 src/emucore/m6502/src/System.s: src/emucore/m6502/src/System.cxx.s
@@ -2396,9 +2493,9 @@ src/emucore/m6502/src/System.s: src/emucore/m6502/src/System.cxx.s
 
 # target to generate assembly for a file
 src/emucore/m6502/src/System.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/System.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/System.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/m6502/src/System.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/m6502/src/System.cxx.s
 .PHONY : src/emucore/m6502/src/System.cxx.s
 
 src/emucore/unzip.o: src/emucore/unzip.c.o
@@ -2407,9 +2504,9 @@ src/emucore/unzip.o: src/emucore/unzip.c.o
 
 # target to build an object file
 src/emucore/unzip.c.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/unzip.c.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/unzip.c.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/unzip.c.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/unzip.c.o
 .PHONY : src/emucore/unzip.c.o
 
 src/emucore/unzip.i: src/emucore/unzip.c.i
@@ -2418,9 +2515,9 @@ src/emucore/unzip.i: src/emucore/unzip.c.i
 
 # target to preprocess a source file
 src/emucore/unzip.c.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/unzip.c.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/unzip.c.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/unzip.c.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/unzip.c.i
 .PHONY : src/emucore/unzip.c.i
 
 src/emucore/unzip.s: src/emucore/unzip.c.s
@@ -2429,9 +2526,9 @@ src/emucore/unzip.s: src/emucore/unzip.c.s
 
 # target to generate assembly for a file
 src/emucore/unzip.c.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/unzip.c.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/unzip.c.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/emucore/unzip.c.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/emucore/unzip.c.s
 .PHONY : src/emucore/unzip.c.s
 
 src/environment/ale_state.o: src/environment/ale_state.cpp.o
@@ -2440,9 +2537,9 @@ src/environment/ale_state.o: src/environment/ale_state.cpp.o
 
 # target to build an object file
 src/environment/ale_state.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/ale_state.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/ale_state.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/ale_state.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/ale_state.cpp.o
 .PHONY : src/environment/ale_state.cpp.o
 
 src/environment/ale_state.i: src/environment/ale_state.cpp.i
@@ -2451,9 +2548,9 @@ src/environment/ale_state.i: src/environment/ale_state.cpp.i
 
 # target to preprocess a source file
 src/environment/ale_state.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/ale_state.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/ale_state.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/ale_state.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/ale_state.cpp.i
 .PHONY : src/environment/ale_state.cpp.i
 
 src/environment/ale_state.s: src/environment/ale_state.cpp.s
@@ -2462,9 +2559,9 @@ src/environment/ale_state.s: src/environment/ale_state.cpp.s
 
 # target to generate assembly for a file
 src/environment/ale_state.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/ale_state.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/ale_state.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/ale_state.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/ale_state.cpp.s
 .PHONY : src/environment/ale_state.cpp.s
 
 src/environment/phosphor_blend.o: src/environment/phosphor_blend.cpp.o
@@ -2473,9 +2570,9 @@ src/environment/phosphor_blend.o: src/environment/phosphor_blend.cpp.o
 
 # target to build an object file
 src/environment/phosphor_blend.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/phosphor_blend.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/phosphor_blend.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/phosphor_blend.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/phosphor_blend.cpp.o
 .PHONY : src/environment/phosphor_blend.cpp.o
 
 src/environment/phosphor_blend.i: src/environment/phosphor_blend.cpp.i
@@ -2484,9 +2581,9 @@ src/environment/phosphor_blend.i: src/environment/phosphor_blend.cpp.i
 
 # target to preprocess a source file
 src/environment/phosphor_blend.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/phosphor_blend.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/phosphor_blend.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/phosphor_blend.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/phosphor_blend.cpp.i
 .PHONY : src/environment/phosphor_blend.cpp.i
 
 src/environment/phosphor_blend.s: src/environment/phosphor_blend.cpp.s
@@ -2495,9 +2592,9 @@ src/environment/phosphor_blend.s: src/environment/phosphor_blend.cpp.s
 
 # target to generate assembly for a file
 src/environment/phosphor_blend.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/phosphor_blend.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/phosphor_blend.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/phosphor_blend.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/phosphor_blend.cpp.s
 .PHONY : src/environment/phosphor_blend.cpp.s
 
 src/environment/stella_environment.o: src/environment/stella_environment.cpp.o
@@ -2506,9 +2603,9 @@ src/environment/stella_environment.o: src/environment/stella_environment.cpp.o
 
 # target to build an object file
 src/environment/stella_environment.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/stella_environment.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/stella_environment.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/stella_environment.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/stella_environment.cpp.o
 .PHONY : src/environment/stella_environment.cpp.o
 
 src/environment/stella_environment.i: src/environment/stella_environment.cpp.i
@@ -2517,9 +2614,9 @@ src/environment/stella_environment.i: src/environment/stella_environment.cpp.i
 
 # target to preprocess a source file
 src/environment/stella_environment.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/stella_environment.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/stella_environment.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/stella_environment.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/stella_environment.cpp.i
 .PHONY : src/environment/stella_environment.cpp.i
 
 src/environment/stella_environment.s: src/environment/stella_environment.cpp.s
@@ -2528,9 +2625,9 @@ src/environment/stella_environment.s: src/environment/stella_environment.cpp.s
 
 # target to generate assembly for a file
 src/environment/stella_environment.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/stella_environment.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/stella_environment.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/environment/stella_environment.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/environment/stella_environment.cpp.s
 .PHONY : src/environment/stella_environment.cpp.s
 
 src/external/TinyMT/tinymt32.o: src/external/TinyMT/tinymt32.c.o
@@ -2539,9 +2636,9 @@ src/external/TinyMT/tinymt32.o: src/external/TinyMT/tinymt32.c.o
 
 # target to build an object file
 src/external/TinyMT/tinymt32.c.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/external/TinyMT/tinymt32.c.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/external/TinyMT/tinymt32.c.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/external/TinyMT/tinymt32.c.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/external/TinyMT/tinymt32.c.o
 .PHONY : src/external/TinyMT/tinymt32.c.o
 
 src/external/TinyMT/tinymt32.i: src/external/TinyMT/tinymt32.c.i
@@ -2550,9 +2647,9 @@ src/external/TinyMT/tinymt32.i: src/external/TinyMT/tinymt32.c.i
 
 # target to preprocess a source file
 src/external/TinyMT/tinymt32.c.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/external/TinyMT/tinymt32.c.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/external/TinyMT/tinymt32.c.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/external/TinyMT/tinymt32.c.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/external/TinyMT/tinymt32.c.i
 .PHONY : src/external/TinyMT/tinymt32.c.i
 
 src/external/TinyMT/tinymt32.s: src/external/TinyMT/tinymt32.c.s
@@ -2561,9 +2658,9 @@ src/external/TinyMT/tinymt32.s: src/external/TinyMT/tinymt32.c.s
 
 # target to generate assembly for a file
 src/external/TinyMT/tinymt32.c.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/external/TinyMT/tinymt32.c.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/external/TinyMT/tinymt32.c.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/external/TinyMT/tinymt32.c.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/external/TinyMT/tinymt32.c.s
 .PHONY : src/external/TinyMT/tinymt32.c.s
 
 src/games/RomSettings.o: src/games/RomSettings.cpp.o
@@ -2572,9 +2669,9 @@ src/games/RomSettings.o: src/games/RomSettings.cpp.o
 
 # target to build an object file
 src/games/RomSettings.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/RomSettings.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/RomSettings.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/RomSettings.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/RomSettings.cpp.o
 .PHONY : src/games/RomSettings.cpp.o
 
 src/games/RomSettings.i: src/games/RomSettings.cpp.i
@@ -2583,9 +2680,9 @@ src/games/RomSettings.i: src/games/RomSettings.cpp.i
 
 # target to preprocess a source file
 src/games/RomSettings.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/RomSettings.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/RomSettings.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/RomSettings.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/RomSettings.cpp.i
 .PHONY : src/games/RomSettings.cpp.i
 
 src/games/RomSettings.s: src/games/RomSettings.cpp.s
@@ -2594,9 +2691,9 @@ src/games/RomSettings.s: src/games/RomSettings.cpp.s
 
 # target to generate assembly for a file
 src/games/RomSettings.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/RomSettings.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/RomSettings.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/RomSettings.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/RomSettings.cpp.s
 .PHONY : src/games/RomSettings.cpp.s
 
 src/games/RomUtils.o: src/games/RomUtils.cpp.o
@@ -2605,9 +2702,9 @@ src/games/RomUtils.o: src/games/RomUtils.cpp.o
 
 # target to build an object file
 src/games/RomUtils.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/RomUtils.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/RomUtils.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/RomUtils.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/RomUtils.cpp.o
 .PHONY : src/games/RomUtils.cpp.o
 
 src/games/RomUtils.i: src/games/RomUtils.cpp.i
@@ -2616,9 +2713,9 @@ src/games/RomUtils.i: src/games/RomUtils.cpp.i
 
 # target to preprocess a source file
 src/games/RomUtils.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/RomUtils.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/RomUtils.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/RomUtils.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/RomUtils.cpp.i
 .PHONY : src/games/RomUtils.cpp.i
 
 src/games/RomUtils.s: src/games/RomUtils.cpp.s
@@ -2627,9 +2724,9 @@ src/games/RomUtils.s: src/games/RomUtils.cpp.s
 
 # target to generate assembly for a file
 src/games/RomUtils.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/RomUtils.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/RomUtils.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/RomUtils.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/RomUtils.cpp.s
 .PHONY : src/games/RomUtils.cpp.s
 
 src/games/Roms.o: src/games/Roms.cpp.o
@@ -2638,9 +2735,9 @@ src/games/Roms.o: src/games/Roms.cpp.o
 
 # target to build an object file
 src/games/Roms.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/Roms.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/Roms.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/Roms.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/Roms.cpp.o
 .PHONY : src/games/Roms.cpp.o
 
 src/games/Roms.i: src/games/Roms.cpp.i
@@ -2649,9 +2746,9 @@ src/games/Roms.i: src/games/Roms.cpp.i
 
 # target to preprocess a source file
 src/games/Roms.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/Roms.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/Roms.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/Roms.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/Roms.cpp.i
 .PHONY : src/games/Roms.cpp.i
 
 src/games/Roms.s: src/games/Roms.cpp.s
@@ -2660,9 +2757,9 @@ src/games/Roms.s: src/games/Roms.cpp.s
 
 # target to generate assembly for a file
 src/games/Roms.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/Roms.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/Roms.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/Roms.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/Roms.cpp.s
 .PHONY : src/games/Roms.cpp.s
 
 src/games/supported/AirRaid.o: src/games/supported/AirRaid.cpp.o
@@ -2671,9 +2768,9 @@ src/games/supported/AirRaid.o: src/games/supported/AirRaid.cpp.o
 
 # target to build an object file
 src/games/supported/AirRaid.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/AirRaid.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/AirRaid.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/AirRaid.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/AirRaid.cpp.o
 .PHONY : src/games/supported/AirRaid.cpp.o
 
 src/games/supported/AirRaid.i: src/games/supported/AirRaid.cpp.i
@@ -2682,9 +2779,9 @@ src/games/supported/AirRaid.i: src/games/supported/AirRaid.cpp.i
 
 # target to preprocess a source file
 src/games/supported/AirRaid.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/AirRaid.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/AirRaid.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/AirRaid.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/AirRaid.cpp.i
 .PHONY : src/games/supported/AirRaid.cpp.i
 
 src/games/supported/AirRaid.s: src/games/supported/AirRaid.cpp.s
@@ -2693,9 +2790,9 @@ src/games/supported/AirRaid.s: src/games/supported/AirRaid.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/AirRaid.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/AirRaid.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/AirRaid.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/AirRaid.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/AirRaid.cpp.s
 .PHONY : src/games/supported/AirRaid.cpp.s
 
 src/games/supported/Alien.o: src/games/supported/Alien.cpp.o
@@ -2704,9 +2801,9 @@ src/games/supported/Alien.o: src/games/supported/Alien.cpp.o
 
 # target to build an object file
 src/games/supported/Alien.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Alien.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Alien.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Alien.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Alien.cpp.o
 .PHONY : src/games/supported/Alien.cpp.o
 
 src/games/supported/Alien.i: src/games/supported/Alien.cpp.i
@@ -2715,9 +2812,9 @@ src/games/supported/Alien.i: src/games/supported/Alien.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Alien.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Alien.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Alien.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Alien.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Alien.cpp.i
 .PHONY : src/games/supported/Alien.cpp.i
 
 src/games/supported/Alien.s: src/games/supported/Alien.cpp.s
@@ -2726,9 +2823,9 @@ src/games/supported/Alien.s: src/games/supported/Alien.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Alien.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Alien.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Alien.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Alien.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Alien.cpp.s
 .PHONY : src/games/supported/Alien.cpp.s
 
 src/games/supported/Amidar.o: src/games/supported/Amidar.cpp.o
@@ -2737,9 +2834,9 @@ src/games/supported/Amidar.o: src/games/supported/Amidar.cpp.o
 
 # target to build an object file
 src/games/supported/Amidar.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Amidar.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Amidar.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Amidar.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Amidar.cpp.o
 .PHONY : src/games/supported/Amidar.cpp.o
 
 src/games/supported/Amidar.i: src/games/supported/Amidar.cpp.i
@@ -2748,9 +2845,9 @@ src/games/supported/Amidar.i: src/games/supported/Amidar.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Amidar.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Amidar.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Amidar.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Amidar.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Amidar.cpp.i
 .PHONY : src/games/supported/Amidar.cpp.i
 
 src/games/supported/Amidar.s: src/games/supported/Amidar.cpp.s
@@ -2759,9 +2856,9 @@ src/games/supported/Amidar.s: src/games/supported/Amidar.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Amidar.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Amidar.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Amidar.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Amidar.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Amidar.cpp.s
 .PHONY : src/games/supported/Amidar.cpp.s
 
 src/games/supported/Assault.o: src/games/supported/Assault.cpp.o
@@ -2770,9 +2867,9 @@ src/games/supported/Assault.o: src/games/supported/Assault.cpp.o
 
 # target to build an object file
 src/games/supported/Assault.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Assault.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Assault.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Assault.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Assault.cpp.o
 .PHONY : src/games/supported/Assault.cpp.o
 
 src/games/supported/Assault.i: src/games/supported/Assault.cpp.i
@@ -2781,9 +2878,9 @@ src/games/supported/Assault.i: src/games/supported/Assault.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Assault.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Assault.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Assault.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Assault.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Assault.cpp.i
 .PHONY : src/games/supported/Assault.cpp.i
 
 src/games/supported/Assault.s: src/games/supported/Assault.cpp.s
@@ -2792,9 +2889,9 @@ src/games/supported/Assault.s: src/games/supported/Assault.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Assault.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Assault.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Assault.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Assault.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Assault.cpp.s
 .PHONY : src/games/supported/Assault.cpp.s
 
 src/games/supported/Asterix.o: src/games/supported/Asterix.cpp.o
@@ -2803,9 +2900,9 @@ src/games/supported/Asterix.o: src/games/supported/Asterix.cpp.o
 
 # target to build an object file
 src/games/supported/Asterix.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Asterix.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Asterix.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Asterix.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Asterix.cpp.o
 .PHONY : src/games/supported/Asterix.cpp.o
 
 src/games/supported/Asterix.i: src/games/supported/Asterix.cpp.i
@@ -2814,9 +2911,9 @@ src/games/supported/Asterix.i: src/games/supported/Asterix.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Asterix.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Asterix.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Asterix.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Asterix.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Asterix.cpp.i
 .PHONY : src/games/supported/Asterix.cpp.i
 
 src/games/supported/Asterix.s: src/games/supported/Asterix.cpp.s
@@ -2825,9 +2922,9 @@ src/games/supported/Asterix.s: src/games/supported/Asterix.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Asterix.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Asterix.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Asterix.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Asterix.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Asterix.cpp.s
 .PHONY : src/games/supported/Asterix.cpp.s
 
 src/games/supported/Asteroids.o: src/games/supported/Asteroids.cpp.o
@@ -2836,9 +2933,9 @@ src/games/supported/Asteroids.o: src/games/supported/Asteroids.cpp.o
 
 # target to build an object file
 src/games/supported/Asteroids.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Asteroids.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Asteroids.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Asteroids.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Asteroids.cpp.o
 .PHONY : src/games/supported/Asteroids.cpp.o
 
 src/games/supported/Asteroids.i: src/games/supported/Asteroids.cpp.i
@@ -2847,9 +2944,9 @@ src/games/supported/Asteroids.i: src/games/supported/Asteroids.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Asteroids.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Asteroids.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Asteroids.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Asteroids.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Asteroids.cpp.i
 .PHONY : src/games/supported/Asteroids.cpp.i
 
 src/games/supported/Asteroids.s: src/games/supported/Asteroids.cpp.s
@@ -2858,9 +2955,9 @@ src/games/supported/Asteroids.s: src/games/supported/Asteroids.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Asteroids.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Asteroids.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Asteroids.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Asteroids.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Asteroids.cpp.s
 .PHONY : src/games/supported/Asteroids.cpp.s
 
 src/games/supported/Atlantis.o: src/games/supported/Atlantis.cpp.o
@@ -2869,9 +2966,9 @@ src/games/supported/Atlantis.o: src/games/supported/Atlantis.cpp.o
 
 # target to build an object file
 src/games/supported/Atlantis.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Atlantis.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Atlantis.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Atlantis.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Atlantis.cpp.o
 .PHONY : src/games/supported/Atlantis.cpp.o
 
 src/games/supported/Atlantis.i: src/games/supported/Atlantis.cpp.i
@@ -2880,9 +2977,9 @@ src/games/supported/Atlantis.i: src/games/supported/Atlantis.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Atlantis.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Atlantis.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Atlantis.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Atlantis.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Atlantis.cpp.i
 .PHONY : src/games/supported/Atlantis.cpp.i
 
 src/games/supported/Atlantis.s: src/games/supported/Atlantis.cpp.s
@@ -2891,9 +2988,9 @@ src/games/supported/Atlantis.s: src/games/supported/Atlantis.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Atlantis.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Atlantis.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Atlantis.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Atlantis.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Atlantis.cpp.s
 .PHONY : src/games/supported/Atlantis.cpp.s
 
 src/games/supported/BankHeist.o: src/games/supported/BankHeist.cpp.o
@@ -2902,9 +2999,9 @@ src/games/supported/BankHeist.o: src/games/supported/BankHeist.cpp.o
 
 # target to build an object file
 src/games/supported/BankHeist.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BankHeist.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BankHeist.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BankHeist.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BankHeist.cpp.o
 .PHONY : src/games/supported/BankHeist.cpp.o
 
 src/games/supported/BankHeist.i: src/games/supported/BankHeist.cpp.i
@@ -2913,9 +3010,9 @@ src/games/supported/BankHeist.i: src/games/supported/BankHeist.cpp.i
 
 # target to preprocess a source file
 src/games/supported/BankHeist.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BankHeist.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BankHeist.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BankHeist.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BankHeist.cpp.i
 .PHONY : src/games/supported/BankHeist.cpp.i
 
 src/games/supported/BankHeist.s: src/games/supported/BankHeist.cpp.s
@@ -2924,9 +3021,9 @@ src/games/supported/BankHeist.s: src/games/supported/BankHeist.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/BankHeist.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BankHeist.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BankHeist.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BankHeist.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BankHeist.cpp.s
 .PHONY : src/games/supported/BankHeist.cpp.s
 
 src/games/supported/BattleZone.o: src/games/supported/BattleZone.cpp.o
@@ -2935,9 +3032,9 @@ src/games/supported/BattleZone.o: src/games/supported/BattleZone.cpp.o
 
 # target to build an object file
 src/games/supported/BattleZone.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BattleZone.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BattleZone.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BattleZone.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BattleZone.cpp.o
 .PHONY : src/games/supported/BattleZone.cpp.o
 
 src/games/supported/BattleZone.i: src/games/supported/BattleZone.cpp.i
@@ -2946,9 +3043,9 @@ src/games/supported/BattleZone.i: src/games/supported/BattleZone.cpp.i
 
 # target to preprocess a source file
 src/games/supported/BattleZone.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BattleZone.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BattleZone.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BattleZone.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BattleZone.cpp.i
 .PHONY : src/games/supported/BattleZone.cpp.i
 
 src/games/supported/BattleZone.s: src/games/supported/BattleZone.cpp.s
@@ -2957,9 +3054,9 @@ src/games/supported/BattleZone.s: src/games/supported/BattleZone.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/BattleZone.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BattleZone.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BattleZone.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BattleZone.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BattleZone.cpp.s
 .PHONY : src/games/supported/BattleZone.cpp.s
 
 src/games/supported/BeamRider.o: src/games/supported/BeamRider.cpp.o
@@ -2968,9 +3065,9 @@ src/games/supported/BeamRider.o: src/games/supported/BeamRider.cpp.o
 
 # target to build an object file
 src/games/supported/BeamRider.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BeamRider.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BeamRider.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BeamRider.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BeamRider.cpp.o
 .PHONY : src/games/supported/BeamRider.cpp.o
 
 src/games/supported/BeamRider.i: src/games/supported/BeamRider.cpp.i
@@ -2979,9 +3076,9 @@ src/games/supported/BeamRider.i: src/games/supported/BeamRider.cpp.i
 
 # target to preprocess a source file
 src/games/supported/BeamRider.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BeamRider.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BeamRider.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BeamRider.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BeamRider.cpp.i
 .PHONY : src/games/supported/BeamRider.cpp.i
 
 src/games/supported/BeamRider.s: src/games/supported/BeamRider.cpp.s
@@ -2990,9 +3087,9 @@ src/games/supported/BeamRider.s: src/games/supported/BeamRider.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/BeamRider.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BeamRider.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BeamRider.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/BeamRider.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/BeamRider.cpp.s
 .PHONY : src/games/supported/BeamRider.cpp.s
 
 src/games/supported/Berzerk.o: src/games/supported/Berzerk.cpp.o
@@ -3001,9 +3098,9 @@ src/games/supported/Berzerk.o: src/games/supported/Berzerk.cpp.o
 
 # target to build an object file
 src/games/supported/Berzerk.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Berzerk.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Berzerk.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Berzerk.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Berzerk.cpp.o
 .PHONY : src/games/supported/Berzerk.cpp.o
 
 src/games/supported/Berzerk.i: src/games/supported/Berzerk.cpp.i
@@ -3012,9 +3109,9 @@ src/games/supported/Berzerk.i: src/games/supported/Berzerk.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Berzerk.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Berzerk.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Berzerk.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Berzerk.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Berzerk.cpp.i
 .PHONY : src/games/supported/Berzerk.cpp.i
 
 src/games/supported/Berzerk.s: src/games/supported/Berzerk.cpp.s
@@ -3023,9 +3120,9 @@ src/games/supported/Berzerk.s: src/games/supported/Berzerk.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Berzerk.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Berzerk.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Berzerk.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Berzerk.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Berzerk.cpp.s
 .PHONY : src/games/supported/Berzerk.cpp.s
 
 src/games/supported/Bowling.o: src/games/supported/Bowling.cpp.o
@@ -3034,9 +3131,9 @@ src/games/supported/Bowling.o: src/games/supported/Bowling.cpp.o
 
 # target to build an object file
 src/games/supported/Bowling.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Bowling.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Bowling.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Bowling.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Bowling.cpp.o
 .PHONY : src/games/supported/Bowling.cpp.o
 
 src/games/supported/Bowling.i: src/games/supported/Bowling.cpp.i
@@ -3045,9 +3142,9 @@ src/games/supported/Bowling.i: src/games/supported/Bowling.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Bowling.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Bowling.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Bowling.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Bowling.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Bowling.cpp.i
 .PHONY : src/games/supported/Bowling.cpp.i
 
 src/games/supported/Bowling.s: src/games/supported/Bowling.cpp.s
@@ -3056,9 +3153,9 @@ src/games/supported/Bowling.s: src/games/supported/Bowling.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Bowling.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Bowling.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Bowling.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Bowling.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Bowling.cpp.s
 .PHONY : src/games/supported/Bowling.cpp.s
 
 src/games/supported/Boxing.o: src/games/supported/Boxing.cpp.o
@@ -3067,9 +3164,9 @@ src/games/supported/Boxing.o: src/games/supported/Boxing.cpp.o
 
 # target to build an object file
 src/games/supported/Boxing.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Boxing.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Boxing.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Boxing.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Boxing.cpp.o
 .PHONY : src/games/supported/Boxing.cpp.o
 
 src/games/supported/Boxing.i: src/games/supported/Boxing.cpp.i
@@ -3078,9 +3175,9 @@ src/games/supported/Boxing.i: src/games/supported/Boxing.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Boxing.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Boxing.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Boxing.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Boxing.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Boxing.cpp.i
 .PHONY : src/games/supported/Boxing.cpp.i
 
 src/games/supported/Boxing.s: src/games/supported/Boxing.cpp.s
@@ -3089,9 +3186,9 @@ src/games/supported/Boxing.s: src/games/supported/Boxing.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Boxing.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Boxing.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Boxing.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Boxing.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Boxing.cpp.s
 .PHONY : src/games/supported/Boxing.cpp.s
 
 src/games/supported/Breakout.o: src/games/supported/Breakout.cpp.o
@@ -3100,9 +3197,9 @@ src/games/supported/Breakout.o: src/games/supported/Breakout.cpp.o
 
 # target to build an object file
 src/games/supported/Breakout.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Breakout.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Breakout.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Breakout.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Breakout.cpp.o
 .PHONY : src/games/supported/Breakout.cpp.o
 
 src/games/supported/Breakout.i: src/games/supported/Breakout.cpp.i
@@ -3111,9 +3208,9 @@ src/games/supported/Breakout.i: src/games/supported/Breakout.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Breakout.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Breakout.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Breakout.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Breakout.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Breakout.cpp.i
 .PHONY : src/games/supported/Breakout.cpp.i
 
 src/games/supported/Breakout.s: src/games/supported/Breakout.cpp.s
@@ -3122,9 +3219,9 @@ src/games/supported/Breakout.s: src/games/supported/Breakout.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Breakout.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Breakout.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Breakout.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Breakout.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Breakout.cpp.s
 .PHONY : src/games/supported/Breakout.cpp.s
 
 src/games/supported/Carnival.o: src/games/supported/Carnival.cpp.o
@@ -3133,9 +3230,9 @@ src/games/supported/Carnival.o: src/games/supported/Carnival.cpp.o
 
 # target to build an object file
 src/games/supported/Carnival.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Carnival.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Carnival.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Carnival.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Carnival.cpp.o
 .PHONY : src/games/supported/Carnival.cpp.o
 
 src/games/supported/Carnival.i: src/games/supported/Carnival.cpp.i
@@ -3144,9 +3241,9 @@ src/games/supported/Carnival.i: src/games/supported/Carnival.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Carnival.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Carnival.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Carnival.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Carnival.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Carnival.cpp.i
 .PHONY : src/games/supported/Carnival.cpp.i
 
 src/games/supported/Carnival.s: src/games/supported/Carnival.cpp.s
@@ -3155,9 +3252,9 @@ src/games/supported/Carnival.s: src/games/supported/Carnival.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Carnival.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Carnival.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Carnival.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Carnival.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Carnival.cpp.s
 .PHONY : src/games/supported/Carnival.cpp.s
 
 src/games/supported/Centipede.o: src/games/supported/Centipede.cpp.o
@@ -3166,9 +3263,9 @@ src/games/supported/Centipede.o: src/games/supported/Centipede.cpp.o
 
 # target to build an object file
 src/games/supported/Centipede.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Centipede.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Centipede.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Centipede.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Centipede.cpp.o
 .PHONY : src/games/supported/Centipede.cpp.o
 
 src/games/supported/Centipede.i: src/games/supported/Centipede.cpp.i
@@ -3177,9 +3274,9 @@ src/games/supported/Centipede.i: src/games/supported/Centipede.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Centipede.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Centipede.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Centipede.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Centipede.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Centipede.cpp.i
 .PHONY : src/games/supported/Centipede.cpp.i
 
 src/games/supported/Centipede.s: src/games/supported/Centipede.cpp.s
@@ -3188,9 +3285,9 @@ src/games/supported/Centipede.s: src/games/supported/Centipede.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Centipede.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Centipede.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Centipede.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Centipede.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Centipede.cpp.s
 .PHONY : src/games/supported/Centipede.cpp.s
 
 src/games/supported/ChopperCommand.o: src/games/supported/ChopperCommand.cpp.o
@@ -3199,9 +3296,9 @@ src/games/supported/ChopperCommand.o: src/games/supported/ChopperCommand.cpp.o
 
 # target to build an object file
 src/games/supported/ChopperCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/ChopperCommand.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/ChopperCommand.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/ChopperCommand.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/ChopperCommand.cpp.o
 .PHONY : src/games/supported/ChopperCommand.cpp.o
 
 src/games/supported/ChopperCommand.i: src/games/supported/ChopperCommand.cpp.i
@@ -3210,9 +3307,9 @@ src/games/supported/ChopperCommand.i: src/games/supported/ChopperCommand.cpp.i
 
 # target to preprocess a source file
 src/games/supported/ChopperCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/ChopperCommand.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/ChopperCommand.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/ChopperCommand.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/ChopperCommand.cpp.i
 .PHONY : src/games/supported/ChopperCommand.cpp.i
 
 src/games/supported/ChopperCommand.s: src/games/supported/ChopperCommand.cpp.s
@@ -3221,9 +3318,9 @@ src/games/supported/ChopperCommand.s: src/games/supported/ChopperCommand.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/ChopperCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/ChopperCommand.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/ChopperCommand.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/ChopperCommand.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/ChopperCommand.cpp.s
 .PHONY : src/games/supported/ChopperCommand.cpp.s
 
 src/games/supported/CrazyClimber.o: src/games/supported/CrazyClimber.cpp.o
@@ -3232,9 +3329,9 @@ src/games/supported/CrazyClimber.o: src/games/supported/CrazyClimber.cpp.o
 
 # target to build an object file
 src/games/supported/CrazyClimber.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/CrazyClimber.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/CrazyClimber.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/CrazyClimber.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/CrazyClimber.cpp.o
 .PHONY : src/games/supported/CrazyClimber.cpp.o
 
 src/games/supported/CrazyClimber.i: src/games/supported/CrazyClimber.cpp.i
@@ -3243,9 +3340,9 @@ src/games/supported/CrazyClimber.i: src/games/supported/CrazyClimber.cpp.i
 
 # target to preprocess a source file
 src/games/supported/CrazyClimber.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/CrazyClimber.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/CrazyClimber.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/CrazyClimber.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/CrazyClimber.cpp.i
 .PHONY : src/games/supported/CrazyClimber.cpp.i
 
 src/games/supported/CrazyClimber.s: src/games/supported/CrazyClimber.cpp.s
@@ -3254,9 +3351,9 @@ src/games/supported/CrazyClimber.s: src/games/supported/CrazyClimber.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/CrazyClimber.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/CrazyClimber.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/CrazyClimber.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/CrazyClimber.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/CrazyClimber.cpp.s
 .PHONY : src/games/supported/CrazyClimber.cpp.s
 
 src/games/supported/Defender.o: src/games/supported/Defender.cpp.o
@@ -3265,9 +3362,9 @@ src/games/supported/Defender.o: src/games/supported/Defender.cpp.o
 
 # target to build an object file
 src/games/supported/Defender.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Defender.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Defender.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Defender.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Defender.cpp.o
 .PHONY : src/games/supported/Defender.cpp.o
 
 src/games/supported/Defender.i: src/games/supported/Defender.cpp.i
@@ -3276,9 +3373,9 @@ src/games/supported/Defender.i: src/games/supported/Defender.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Defender.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Defender.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Defender.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Defender.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Defender.cpp.i
 .PHONY : src/games/supported/Defender.cpp.i
 
 src/games/supported/Defender.s: src/games/supported/Defender.cpp.s
@@ -3287,9 +3384,9 @@ src/games/supported/Defender.s: src/games/supported/Defender.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Defender.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Defender.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Defender.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Defender.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Defender.cpp.s
 .PHONY : src/games/supported/Defender.cpp.s
 
 src/games/supported/DemonAttack.o: src/games/supported/DemonAttack.cpp.o
@@ -3298,9 +3395,9 @@ src/games/supported/DemonAttack.o: src/games/supported/DemonAttack.cpp.o
 
 # target to build an object file
 src/games/supported/DemonAttack.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DemonAttack.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DemonAttack.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DemonAttack.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DemonAttack.cpp.o
 .PHONY : src/games/supported/DemonAttack.cpp.o
 
 src/games/supported/DemonAttack.i: src/games/supported/DemonAttack.cpp.i
@@ -3309,9 +3406,9 @@ src/games/supported/DemonAttack.i: src/games/supported/DemonAttack.cpp.i
 
 # target to preprocess a source file
 src/games/supported/DemonAttack.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DemonAttack.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DemonAttack.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DemonAttack.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DemonAttack.cpp.i
 .PHONY : src/games/supported/DemonAttack.cpp.i
 
 src/games/supported/DemonAttack.s: src/games/supported/DemonAttack.cpp.s
@@ -3320,10 +3417,43 @@ src/games/supported/DemonAttack.s: src/games/supported/DemonAttack.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/DemonAttack.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DemonAttack.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DemonAttack.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DemonAttack.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DemonAttack.cpp.s
 .PHONY : src/games/supported/DemonAttack.cpp.s
+
+src/games/supported/DonkeyKong.o: src/games/supported/DonkeyKong.cpp.o
+
+.PHONY : src/games/supported/DonkeyKong.o
+
+# target to build an object file
+src/games/supported/DonkeyKong.cpp.o:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DonkeyKong.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DonkeyKong.cpp.o
+.PHONY : src/games/supported/DonkeyKong.cpp.o
+
+src/games/supported/DonkeyKong.i: src/games/supported/DonkeyKong.cpp.i
+
+.PHONY : src/games/supported/DonkeyKong.i
+
+# target to preprocess a source file
+src/games/supported/DonkeyKong.cpp.i:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DonkeyKong.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DonkeyKong.cpp.i
+.PHONY : src/games/supported/DonkeyKong.cpp.i
+
+src/games/supported/DonkeyKong.s: src/games/supported/DonkeyKong.cpp.s
+
+.PHONY : src/games/supported/DonkeyKong.s
+
+# target to generate assembly for a file
+src/games/supported/DonkeyKong.cpp.s:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DonkeyKong.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DonkeyKong.cpp.s
+.PHONY : src/games/supported/DonkeyKong.cpp.s
 
 src/games/supported/DoubleDunk.o: src/games/supported/DoubleDunk.cpp.o
 
@@ -3331,9 +3461,9 @@ src/games/supported/DoubleDunk.o: src/games/supported/DoubleDunk.cpp.o
 
 # target to build an object file
 src/games/supported/DoubleDunk.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DoubleDunk.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DoubleDunk.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DoubleDunk.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DoubleDunk.cpp.o
 .PHONY : src/games/supported/DoubleDunk.cpp.o
 
 src/games/supported/DoubleDunk.i: src/games/supported/DoubleDunk.cpp.i
@@ -3342,9 +3472,9 @@ src/games/supported/DoubleDunk.i: src/games/supported/DoubleDunk.cpp.i
 
 # target to preprocess a source file
 src/games/supported/DoubleDunk.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DoubleDunk.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DoubleDunk.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DoubleDunk.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DoubleDunk.cpp.i
 .PHONY : src/games/supported/DoubleDunk.cpp.i
 
 src/games/supported/DoubleDunk.s: src/games/supported/DoubleDunk.cpp.s
@@ -3353,9 +3483,9 @@ src/games/supported/DoubleDunk.s: src/games/supported/DoubleDunk.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/DoubleDunk.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DoubleDunk.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DoubleDunk.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/DoubleDunk.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/DoubleDunk.cpp.s
 .PHONY : src/games/supported/DoubleDunk.cpp.s
 
 src/games/supported/ElevatorAction.o: src/games/supported/ElevatorAction.cpp.o
@@ -3364,9 +3494,9 @@ src/games/supported/ElevatorAction.o: src/games/supported/ElevatorAction.cpp.o
 
 # target to build an object file
 src/games/supported/ElevatorAction.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/ElevatorAction.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/ElevatorAction.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/ElevatorAction.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/ElevatorAction.cpp.o
 .PHONY : src/games/supported/ElevatorAction.cpp.o
 
 src/games/supported/ElevatorAction.i: src/games/supported/ElevatorAction.cpp.i
@@ -3375,9 +3505,9 @@ src/games/supported/ElevatorAction.i: src/games/supported/ElevatorAction.cpp.i
 
 # target to preprocess a source file
 src/games/supported/ElevatorAction.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/ElevatorAction.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/ElevatorAction.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/ElevatorAction.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/ElevatorAction.cpp.i
 .PHONY : src/games/supported/ElevatorAction.cpp.i
 
 src/games/supported/ElevatorAction.s: src/games/supported/ElevatorAction.cpp.s
@@ -3386,9 +3516,9 @@ src/games/supported/ElevatorAction.s: src/games/supported/ElevatorAction.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/ElevatorAction.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/ElevatorAction.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/ElevatorAction.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/ElevatorAction.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/ElevatorAction.cpp.s
 .PHONY : src/games/supported/ElevatorAction.cpp.s
 
 src/games/supported/Enduro.o: src/games/supported/Enduro.cpp.o
@@ -3397,9 +3527,9 @@ src/games/supported/Enduro.o: src/games/supported/Enduro.cpp.o
 
 # target to build an object file
 src/games/supported/Enduro.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Enduro.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Enduro.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Enduro.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Enduro.cpp.o
 .PHONY : src/games/supported/Enduro.cpp.o
 
 src/games/supported/Enduro.i: src/games/supported/Enduro.cpp.i
@@ -3408,9 +3538,9 @@ src/games/supported/Enduro.i: src/games/supported/Enduro.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Enduro.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Enduro.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Enduro.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Enduro.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Enduro.cpp.i
 .PHONY : src/games/supported/Enduro.cpp.i
 
 src/games/supported/Enduro.s: src/games/supported/Enduro.cpp.s
@@ -3419,9 +3549,9 @@ src/games/supported/Enduro.s: src/games/supported/Enduro.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Enduro.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Enduro.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Enduro.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Enduro.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Enduro.cpp.s
 .PHONY : src/games/supported/Enduro.cpp.s
 
 src/games/supported/FishingDerby.o: src/games/supported/FishingDerby.cpp.o
@@ -3430,9 +3560,9 @@ src/games/supported/FishingDerby.o: src/games/supported/FishingDerby.cpp.o
 
 # target to build an object file
 src/games/supported/FishingDerby.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/FishingDerby.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/FishingDerby.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/FishingDerby.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/FishingDerby.cpp.o
 .PHONY : src/games/supported/FishingDerby.cpp.o
 
 src/games/supported/FishingDerby.i: src/games/supported/FishingDerby.cpp.i
@@ -3441,9 +3571,9 @@ src/games/supported/FishingDerby.i: src/games/supported/FishingDerby.cpp.i
 
 # target to preprocess a source file
 src/games/supported/FishingDerby.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/FishingDerby.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/FishingDerby.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/FishingDerby.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/FishingDerby.cpp.i
 .PHONY : src/games/supported/FishingDerby.cpp.i
 
 src/games/supported/FishingDerby.s: src/games/supported/FishingDerby.cpp.s
@@ -3452,9 +3582,9 @@ src/games/supported/FishingDerby.s: src/games/supported/FishingDerby.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/FishingDerby.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/FishingDerby.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/FishingDerby.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/FishingDerby.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/FishingDerby.cpp.s
 .PHONY : src/games/supported/FishingDerby.cpp.s
 
 src/games/supported/Freeway.o: src/games/supported/Freeway.cpp.o
@@ -3463,9 +3593,9 @@ src/games/supported/Freeway.o: src/games/supported/Freeway.cpp.o
 
 # target to build an object file
 src/games/supported/Freeway.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Freeway.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Freeway.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Freeway.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Freeway.cpp.o
 .PHONY : src/games/supported/Freeway.cpp.o
 
 src/games/supported/Freeway.i: src/games/supported/Freeway.cpp.i
@@ -3474,9 +3604,9 @@ src/games/supported/Freeway.i: src/games/supported/Freeway.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Freeway.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Freeway.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Freeway.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Freeway.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Freeway.cpp.i
 .PHONY : src/games/supported/Freeway.cpp.i
 
 src/games/supported/Freeway.s: src/games/supported/Freeway.cpp.s
@@ -3485,10 +3615,43 @@ src/games/supported/Freeway.s: src/games/supported/Freeway.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Freeway.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Freeway.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Freeway.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Freeway.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Freeway.cpp.s
 .PHONY : src/games/supported/Freeway.cpp.s
+
+src/games/supported/Frogger.o: src/games/supported/Frogger.cpp.o
+
+.PHONY : src/games/supported/Frogger.o
+
+# target to build an object file
+src/games/supported/Frogger.cpp.o:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Frogger.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Frogger.cpp.o
+.PHONY : src/games/supported/Frogger.cpp.o
+
+src/games/supported/Frogger.i: src/games/supported/Frogger.cpp.i
+
+.PHONY : src/games/supported/Frogger.i
+
+# target to preprocess a source file
+src/games/supported/Frogger.cpp.i:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Frogger.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Frogger.cpp.i
+.PHONY : src/games/supported/Frogger.cpp.i
+
+src/games/supported/Frogger.s: src/games/supported/Frogger.cpp.s
+
+.PHONY : src/games/supported/Frogger.s
+
+# target to generate assembly for a file
+src/games/supported/Frogger.cpp.s:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Frogger.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Frogger.cpp.s
+.PHONY : src/games/supported/Frogger.cpp.s
 
 src/games/supported/Frostbite.o: src/games/supported/Frostbite.cpp.o
 
@@ -3496,9 +3659,9 @@ src/games/supported/Frostbite.o: src/games/supported/Frostbite.cpp.o
 
 # target to build an object file
 src/games/supported/Frostbite.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Frostbite.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Frostbite.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Frostbite.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Frostbite.cpp.o
 .PHONY : src/games/supported/Frostbite.cpp.o
 
 src/games/supported/Frostbite.i: src/games/supported/Frostbite.cpp.i
@@ -3507,9 +3670,9 @@ src/games/supported/Frostbite.i: src/games/supported/Frostbite.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Frostbite.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Frostbite.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Frostbite.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Frostbite.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Frostbite.cpp.i
 .PHONY : src/games/supported/Frostbite.cpp.i
 
 src/games/supported/Frostbite.s: src/games/supported/Frostbite.cpp.s
@@ -3518,10 +3681,43 @@ src/games/supported/Frostbite.s: src/games/supported/Frostbite.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Frostbite.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Frostbite.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Frostbite.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Frostbite.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Frostbite.cpp.s
 .PHONY : src/games/supported/Frostbite.cpp.s
+
+src/games/supported/Galaxian.o: src/games/supported/Galaxian.cpp.o
+
+.PHONY : src/games/supported/Galaxian.o
+
+# target to build an object file
+src/games/supported/Galaxian.cpp.o:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Galaxian.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Galaxian.cpp.o
+.PHONY : src/games/supported/Galaxian.cpp.o
+
+src/games/supported/Galaxian.i: src/games/supported/Galaxian.cpp.i
+
+.PHONY : src/games/supported/Galaxian.i
+
+# target to preprocess a source file
+src/games/supported/Galaxian.cpp.i:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Galaxian.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Galaxian.cpp.i
+.PHONY : src/games/supported/Galaxian.cpp.i
+
+src/games/supported/Galaxian.s: src/games/supported/Galaxian.cpp.s
+
+.PHONY : src/games/supported/Galaxian.s
+
+# target to generate assembly for a file
+src/games/supported/Galaxian.cpp.s:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Galaxian.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Galaxian.cpp.s
+.PHONY : src/games/supported/Galaxian.cpp.s
 
 src/games/supported/Gopher.o: src/games/supported/Gopher.cpp.o
 
@@ -3529,9 +3725,9 @@ src/games/supported/Gopher.o: src/games/supported/Gopher.cpp.o
 
 # target to build an object file
 src/games/supported/Gopher.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Gopher.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Gopher.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Gopher.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Gopher.cpp.o
 .PHONY : src/games/supported/Gopher.cpp.o
 
 src/games/supported/Gopher.i: src/games/supported/Gopher.cpp.i
@@ -3540,9 +3736,9 @@ src/games/supported/Gopher.i: src/games/supported/Gopher.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Gopher.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Gopher.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Gopher.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Gopher.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Gopher.cpp.i
 .PHONY : src/games/supported/Gopher.cpp.i
 
 src/games/supported/Gopher.s: src/games/supported/Gopher.cpp.s
@@ -3551,9 +3747,9 @@ src/games/supported/Gopher.s: src/games/supported/Gopher.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Gopher.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Gopher.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Gopher.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Gopher.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Gopher.cpp.s
 .PHONY : src/games/supported/Gopher.cpp.s
 
 src/games/supported/Gravitar.o: src/games/supported/Gravitar.cpp.o
@@ -3562,9 +3758,9 @@ src/games/supported/Gravitar.o: src/games/supported/Gravitar.cpp.o
 
 # target to build an object file
 src/games/supported/Gravitar.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Gravitar.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Gravitar.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Gravitar.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Gravitar.cpp.o
 .PHONY : src/games/supported/Gravitar.cpp.o
 
 src/games/supported/Gravitar.i: src/games/supported/Gravitar.cpp.i
@@ -3573,9 +3769,9 @@ src/games/supported/Gravitar.i: src/games/supported/Gravitar.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Gravitar.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Gravitar.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Gravitar.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Gravitar.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Gravitar.cpp.i
 .PHONY : src/games/supported/Gravitar.cpp.i
 
 src/games/supported/Gravitar.s: src/games/supported/Gravitar.cpp.s
@@ -3584,9 +3780,9 @@ src/games/supported/Gravitar.s: src/games/supported/Gravitar.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Gravitar.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Gravitar.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Gravitar.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Gravitar.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Gravitar.cpp.s
 .PHONY : src/games/supported/Gravitar.cpp.s
 
 src/games/supported/Hero.o: src/games/supported/Hero.cpp.o
@@ -3595,9 +3791,9 @@ src/games/supported/Hero.o: src/games/supported/Hero.cpp.o
 
 # target to build an object file
 src/games/supported/Hero.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Hero.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Hero.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Hero.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Hero.cpp.o
 .PHONY : src/games/supported/Hero.cpp.o
 
 src/games/supported/Hero.i: src/games/supported/Hero.cpp.i
@@ -3606,9 +3802,9 @@ src/games/supported/Hero.i: src/games/supported/Hero.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Hero.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Hero.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Hero.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Hero.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Hero.cpp.i
 .PHONY : src/games/supported/Hero.cpp.i
 
 src/games/supported/Hero.s: src/games/supported/Hero.cpp.s
@@ -3617,9 +3813,9 @@ src/games/supported/Hero.s: src/games/supported/Hero.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Hero.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Hero.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Hero.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Hero.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Hero.cpp.s
 .PHONY : src/games/supported/Hero.cpp.s
 
 src/games/supported/IceHockey.o: src/games/supported/IceHockey.cpp.o
@@ -3628,9 +3824,9 @@ src/games/supported/IceHockey.o: src/games/supported/IceHockey.cpp.o
 
 # target to build an object file
 src/games/supported/IceHockey.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/IceHockey.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/IceHockey.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/IceHockey.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/IceHockey.cpp.o
 .PHONY : src/games/supported/IceHockey.cpp.o
 
 src/games/supported/IceHockey.i: src/games/supported/IceHockey.cpp.i
@@ -3639,9 +3835,9 @@ src/games/supported/IceHockey.i: src/games/supported/IceHockey.cpp.i
 
 # target to preprocess a source file
 src/games/supported/IceHockey.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/IceHockey.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/IceHockey.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/IceHockey.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/IceHockey.cpp.i
 .PHONY : src/games/supported/IceHockey.cpp.i
 
 src/games/supported/IceHockey.s: src/games/supported/IceHockey.cpp.s
@@ -3650,9 +3846,9 @@ src/games/supported/IceHockey.s: src/games/supported/IceHockey.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/IceHockey.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/IceHockey.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/IceHockey.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/IceHockey.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/IceHockey.cpp.s
 .PHONY : src/games/supported/IceHockey.cpp.s
 
 src/games/supported/JamesBond.o: src/games/supported/JamesBond.cpp.o
@@ -3661,9 +3857,9 @@ src/games/supported/JamesBond.o: src/games/supported/JamesBond.cpp.o
 
 # target to build an object file
 src/games/supported/JamesBond.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/JamesBond.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/JamesBond.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/JamesBond.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/JamesBond.cpp.o
 .PHONY : src/games/supported/JamesBond.cpp.o
 
 src/games/supported/JamesBond.i: src/games/supported/JamesBond.cpp.i
@@ -3672,9 +3868,9 @@ src/games/supported/JamesBond.i: src/games/supported/JamesBond.cpp.i
 
 # target to preprocess a source file
 src/games/supported/JamesBond.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/JamesBond.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/JamesBond.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/JamesBond.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/JamesBond.cpp.i
 .PHONY : src/games/supported/JamesBond.cpp.i
 
 src/games/supported/JamesBond.s: src/games/supported/JamesBond.cpp.s
@@ -3683,9 +3879,9 @@ src/games/supported/JamesBond.s: src/games/supported/JamesBond.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/JamesBond.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/JamesBond.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/JamesBond.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/JamesBond.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/JamesBond.cpp.s
 .PHONY : src/games/supported/JamesBond.cpp.s
 
 src/games/supported/JourneyEscape.o: src/games/supported/JourneyEscape.cpp.o
@@ -3694,9 +3890,9 @@ src/games/supported/JourneyEscape.o: src/games/supported/JourneyEscape.cpp.o
 
 # target to build an object file
 src/games/supported/JourneyEscape.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/JourneyEscape.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/JourneyEscape.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/JourneyEscape.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/JourneyEscape.cpp.o
 .PHONY : src/games/supported/JourneyEscape.cpp.o
 
 src/games/supported/JourneyEscape.i: src/games/supported/JourneyEscape.cpp.i
@@ -3705,9 +3901,9 @@ src/games/supported/JourneyEscape.i: src/games/supported/JourneyEscape.cpp.i
 
 # target to preprocess a source file
 src/games/supported/JourneyEscape.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/JourneyEscape.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/JourneyEscape.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/JourneyEscape.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/JourneyEscape.cpp.i
 .PHONY : src/games/supported/JourneyEscape.cpp.i
 
 src/games/supported/JourneyEscape.s: src/games/supported/JourneyEscape.cpp.s
@@ -3716,9 +3912,9 @@ src/games/supported/JourneyEscape.s: src/games/supported/JourneyEscape.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/JourneyEscape.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/JourneyEscape.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/JourneyEscape.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/JourneyEscape.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/JourneyEscape.cpp.s
 .PHONY : src/games/supported/JourneyEscape.cpp.s
 
 src/games/supported/Kangaroo.o: src/games/supported/Kangaroo.cpp.o
@@ -3727,9 +3923,9 @@ src/games/supported/Kangaroo.o: src/games/supported/Kangaroo.cpp.o
 
 # target to build an object file
 src/games/supported/Kangaroo.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Kangaroo.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Kangaroo.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Kangaroo.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Kangaroo.cpp.o
 .PHONY : src/games/supported/Kangaroo.cpp.o
 
 src/games/supported/Kangaroo.i: src/games/supported/Kangaroo.cpp.i
@@ -3738,9 +3934,9 @@ src/games/supported/Kangaroo.i: src/games/supported/Kangaroo.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Kangaroo.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Kangaroo.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Kangaroo.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Kangaroo.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Kangaroo.cpp.i
 .PHONY : src/games/supported/Kangaroo.cpp.i
 
 src/games/supported/Kangaroo.s: src/games/supported/Kangaroo.cpp.s
@@ -3749,10 +3945,109 @@ src/games/supported/Kangaroo.s: src/games/supported/Kangaroo.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Kangaroo.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Kangaroo.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Kangaroo.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Kangaroo.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Kangaroo.cpp.s
 .PHONY : src/games/supported/Kangaroo.cpp.s
+
+src/games/supported/KeystoneKapers.o: src/games/supported/KeystoneKapers.cpp.o
+
+.PHONY : src/games/supported/KeystoneKapers.o
+
+# target to build an object file
+src/games/supported/KeystoneKapers.cpp.o:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/KeystoneKapers.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/KeystoneKapers.cpp.o
+.PHONY : src/games/supported/KeystoneKapers.cpp.o
+
+src/games/supported/KeystoneKapers.i: src/games/supported/KeystoneKapers.cpp.i
+
+.PHONY : src/games/supported/KeystoneKapers.i
+
+# target to preprocess a source file
+src/games/supported/KeystoneKapers.cpp.i:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/KeystoneKapers.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/KeystoneKapers.cpp.i
+.PHONY : src/games/supported/KeystoneKapers.cpp.i
+
+src/games/supported/KeystoneKapers.s: src/games/supported/KeystoneKapers.cpp.s
+
+.PHONY : src/games/supported/KeystoneKapers.s
+
+# target to generate assembly for a file
+src/games/supported/KeystoneKapers.cpp.s:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/KeystoneKapers.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/KeystoneKapers.cpp.s
+.PHONY : src/games/supported/KeystoneKapers.cpp.s
+
+src/games/supported/Kingkong.o: src/games/supported/Kingkong.cpp.o
+
+.PHONY : src/games/supported/Kingkong.o
+
+# target to build an object file
+src/games/supported/Kingkong.cpp.o:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Kingkong.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Kingkong.cpp.o
+.PHONY : src/games/supported/Kingkong.cpp.o
+
+src/games/supported/Kingkong.i: src/games/supported/Kingkong.cpp.i
+
+.PHONY : src/games/supported/Kingkong.i
+
+# target to preprocess a source file
+src/games/supported/Kingkong.cpp.i:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Kingkong.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Kingkong.cpp.i
+.PHONY : src/games/supported/Kingkong.cpp.i
+
+src/games/supported/Kingkong.s: src/games/supported/Kingkong.cpp.s
+
+.PHONY : src/games/supported/Kingkong.s
+
+# target to generate assembly for a file
+src/games/supported/Kingkong.cpp.s:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Kingkong.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Kingkong.cpp.s
+.PHONY : src/games/supported/Kingkong.cpp.s
+
+src/games/supported/Koolaid.o: src/games/supported/Koolaid.cpp.o
+
+.PHONY : src/games/supported/Koolaid.o
+
+# target to build an object file
+src/games/supported/Koolaid.cpp.o:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Koolaid.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Koolaid.cpp.o
+.PHONY : src/games/supported/Koolaid.cpp.o
+
+src/games/supported/Koolaid.i: src/games/supported/Koolaid.cpp.i
+
+.PHONY : src/games/supported/Koolaid.i
+
+# target to preprocess a source file
+src/games/supported/Koolaid.cpp.i:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Koolaid.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Koolaid.cpp.i
+.PHONY : src/games/supported/Koolaid.cpp.i
+
+src/games/supported/Koolaid.s: src/games/supported/Koolaid.cpp.s
+
+.PHONY : src/games/supported/Koolaid.s
+
+# target to generate assembly for a file
+src/games/supported/Koolaid.cpp.s:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Koolaid.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Koolaid.cpp.s
+.PHONY : src/games/supported/Koolaid.cpp.s
 
 src/games/supported/Krull.o: src/games/supported/Krull.cpp.o
 
@@ -3760,9 +4055,9 @@ src/games/supported/Krull.o: src/games/supported/Krull.cpp.o
 
 # target to build an object file
 src/games/supported/Krull.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Krull.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Krull.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Krull.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Krull.cpp.o
 .PHONY : src/games/supported/Krull.cpp.o
 
 src/games/supported/Krull.i: src/games/supported/Krull.cpp.i
@@ -3771,9 +4066,9 @@ src/games/supported/Krull.i: src/games/supported/Krull.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Krull.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Krull.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Krull.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Krull.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Krull.cpp.i
 .PHONY : src/games/supported/Krull.cpp.i
 
 src/games/supported/Krull.s: src/games/supported/Krull.cpp.s
@@ -3782,9 +4077,9 @@ src/games/supported/Krull.s: src/games/supported/Krull.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Krull.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Krull.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Krull.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Krull.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Krull.cpp.s
 .PHONY : src/games/supported/Krull.cpp.s
 
 src/games/supported/KungFuMaster.o: src/games/supported/KungFuMaster.cpp.o
@@ -3793,9 +4088,9 @@ src/games/supported/KungFuMaster.o: src/games/supported/KungFuMaster.cpp.o
 
 # target to build an object file
 src/games/supported/KungFuMaster.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/KungFuMaster.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/KungFuMaster.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/KungFuMaster.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/KungFuMaster.cpp.o
 .PHONY : src/games/supported/KungFuMaster.cpp.o
 
 src/games/supported/KungFuMaster.i: src/games/supported/KungFuMaster.cpp.i
@@ -3804,9 +4099,9 @@ src/games/supported/KungFuMaster.i: src/games/supported/KungFuMaster.cpp.i
 
 # target to preprocess a source file
 src/games/supported/KungFuMaster.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/KungFuMaster.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/KungFuMaster.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/KungFuMaster.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/KungFuMaster.cpp.i
 .PHONY : src/games/supported/KungFuMaster.cpp.i
 
 src/games/supported/KungFuMaster.s: src/games/supported/KungFuMaster.cpp.s
@@ -3815,10 +4110,76 @@ src/games/supported/KungFuMaster.s: src/games/supported/KungFuMaster.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/KungFuMaster.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/KungFuMaster.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/KungFuMaster.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/KungFuMaster.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/KungFuMaster.cpp.s
 .PHONY : src/games/supported/KungFuMaster.cpp.s
+
+src/games/supported/LaserGates.o: src/games/supported/LaserGates.cpp.o
+
+.PHONY : src/games/supported/LaserGates.o
+
+# target to build an object file
+src/games/supported/LaserGates.cpp.o:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/LaserGates.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/LaserGates.cpp.o
+.PHONY : src/games/supported/LaserGates.cpp.o
+
+src/games/supported/LaserGates.i: src/games/supported/LaserGates.cpp.i
+
+.PHONY : src/games/supported/LaserGates.i
+
+# target to preprocess a source file
+src/games/supported/LaserGates.cpp.i:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/LaserGates.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/LaserGates.cpp.i
+.PHONY : src/games/supported/LaserGates.cpp.i
+
+src/games/supported/LaserGates.s: src/games/supported/LaserGates.cpp.s
+
+.PHONY : src/games/supported/LaserGates.s
+
+# target to generate assembly for a file
+src/games/supported/LaserGates.cpp.s:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/LaserGates.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/LaserGates.cpp.s
+.PHONY : src/games/supported/LaserGates.cpp.s
+
+src/games/supported/LostLuggage.o: src/games/supported/LostLuggage.cpp.o
+
+.PHONY : src/games/supported/LostLuggage.o
+
+# target to build an object file
+src/games/supported/LostLuggage.cpp.o:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/LostLuggage.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/LostLuggage.cpp.o
+.PHONY : src/games/supported/LostLuggage.cpp.o
+
+src/games/supported/LostLuggage.i: src/games/supported/LostLuggage.cpp.i
+
+.PHONY : src/games/supported/LostLuggage.i
+
+# target to preprocess a source file
+src/games/supported/LostLuggage.cpp.i:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/LostLuggage.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/LostLuggage.cpp.i
+.PHONY : src/games/supported/LostLuggage.cpp.i
+
+src/games/supported/LostLuggage.s: src/games/supported/LostLuggage.cpp.s
+
+.PHONY : src/games/supported/LostLuggage.s
+
+# target to generate assembly for a file
+src/games/supported/LostLuggage.cpp.s:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/LostLuggage.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/LostLuggage.cpp.s
+.PHONY : src/games/supported/LostLuggage.cpp.s
 
 src/games/supported/MontezumaRevenge.o: src/games/supported/MontezumaRevenge.cpp.o
 
@@ -3826,9 +4187,9 @@ src/games/supported/MontezumaRevenge.o: src/games/supported/MontezumaRevenge.cpp
 
 # target to build an object file
 src/games/supported/MontezumaRevenge.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MontezumaRevenge.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MontezumaRevenge.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MontezumaRevenge.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MontezumaRevenge.cpp.o
 .PHONY : src/games/supported/MontezumaRevenge.cpp.o
 
 src/games/supported/MontezumaRevenge.i: src/games/supported/MontezumaRevenge.cpp.i
@@ -3837,9 +4198,9 @@ src/games/supported/MontezumaRevenge.i: src/games/supported/MontezumaRevenge.cpp
 
 # target to preprocess a source file
 src/games/supported/MontezumaRevenge.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MontezumaRevenge.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MontezumaRevenge.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MontezumaRevenge.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MontezumaRevenge.cpp.i
 .PHONY : src/games/supported/MontezumaRevenge.cpp.i
 
 src/games/supported/MontezumaRevenge.s: src/games/supported/MontezumaRevenge.cpp.s
@@ -3848,10 +4209,43 @@ src/games/supported/MontezumaRevenge.s: src/games/supported/MontezumaRevenge.cpp
 
 # target to generate assembly for a file
 src/games/supported/MontezumaRevenge.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MontezumaRevenge.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MontezumaRevenge.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MontezumaRevenge.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MontezumaRevenge.cpp.s
 .PHONY : src/games/supported/MontezumaRevenge.cpp.s
+
+src/games/supported/MrDo.o: src/games/supported/MrDo.cpp.o
+
+.PHONY : src/games/supported/MrDo.o
+
+# target to build an object file
+src/games/supported/MrDo.cpp.o:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MrDo.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MrDo.cpp.o
+.PHONY : src/games/supported/MrDo.cpp.o
+
+src/games/supported/MrDo.i: src/games/supported/MrDo.cpp.i
+
+.PHONY : src/games/supported/MrDo.i
+
+# target to preprocess a source file
+src/games/supported/MrDo.cpp.i:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MrDo.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MrDo.cpp.i
+.PHONY : src/games/supported/MrDo.cpp.i
+
+src/games/supported/MrDo.s: src/games/supported/MrDo.cpp.s
+
+.PHONY : src/games/supported/MrDo.s
+
+# target to generate assembly for a file
+src/games/supported/MrDo.cpp.s:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MrDo.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MrDo.cpp.s
+.PHONY : src/games/supported/MrDo.cpp.s
 
 src/games/supported/MsPacman.o: src/games/supported/MsPacman.cpp.o
 
@@ -3859,9 +4253,9 @@ src/games/supported/MsPacman.o: src/games/supported/MsPacman.cpp.o
 
 # target to build an object file
 src/games/supported/MsPacman.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MsPacman.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MsPacman.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MsPacman.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MsPacman.cpp.o
 .PHONY : src/games/supported/MsPacman.cpp.o
 
 src/games/supported/MsPacman.i: src/games/supported/MsPacman.cpp.i
@@ -3870,9 +4264,9 @@ src/games/supported/MsPacman.i: src/games/supported/MsPacman.cpp.i
 
 # target to preprocess a source file
 src/games/supported/MsPacman.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MsPacman.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MsPacman.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MsPacman.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MsPacman.cpp.i
 .PHONY : src/games/supported/MsPacman.cpp.i
 
 src/games/supported/MsPacman.s: src/games/supported/MsPacman.cpp.s
@@ -3881,9 +4275,9 @@ src/games/supported/MsPacman.s: src/games/supported/MsPacman.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/MsPacman.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MsPacman.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MsPacman.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/MsPacman.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/MsPacman.cpp.s
 .PHONY : src/games/supported/MsPacman.cpp.s
 
 src/games/supported/NameThisGame.o: src/games/supported/NameThisGame.cpp.o
@@ -3892,9 +4286,9 @@ src/games/supported/NameThisGame.o: src/games/supported/NameThisGame.cpp.o
 
 # target to build an object file
 src/games/supported/NameThisGame.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/NameThisGame.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/NameThisGame.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/NameThisGame.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/NameThisGame.cpp.o
 .PHONY : src/games/supported/NameThisGame.cpp.o
 
 src/games/supported/NameThisGame.i: src/games/supported/NameThisGame.cpp.i
@@ -3903,9 +4297,9 @@ src/games/supported/NameThisGame.i: src/games/supported/NameThisGame.cpp.i
 
 # target to preprocess a source file
 src/games/supported/NameThisGame.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/NameThisGame.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/NameThisGame.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/NameThisGame.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/NameThisGame.cpp.i
 .PHONY : src/games/supported/NameThisGame.cpp.i
 
 src/games/supported/NameThisGame.s: src/games/supported/NameThisGame.cpp.s
@@ -3914,9 +4308,9 @@ src/games/supported/NameThisGame.s: src/games/supported/NameThisGame.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/NameThisGame.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/NameThisGame.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/NameThisGame.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/NameThisGame.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/NameThisGame.cpp.s
 .PHONY : src/games/supported/NameThisGame.cpp.s
 
 src/games/supported/Phoenix.o: src/games/supported/Phoenix.cpp.o
@@ -3925,9 +4319,9 @@ src/games/supported/Phoenix.o: src/games/supported/Phoenix.cpp.o
 
 # target to build an object file
 src/games/supported/Phoenix.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Phoenix.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Phoenix.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Phoenix.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Phoenix.cpp.o
 .PHONY : src/games/supported/Phoenix.cpp.o
 
 src/games/supported/Phoenix.i: src/games/supported/Phoenix.cpp.i
@@ -3936,9 +4330,9 @@ src/games/supported/Phoenix.i: src/games/supported/Phoenix.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Phoenix.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Phoenix.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Phoenix.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Phoenix.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Phoenix.cpp.i
 .PHONY : src/games/supported/Phoenix.cpp.i
 
 src/games/supported/Phoenix.s: src/games/supported/Phoenix.cpp.s
@@ -3947,9 +4341,9 @@ src/games/supported/Phoenix.s: src/games/supported/Phoenix.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Phoenix.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Phoenix.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Phoenix.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Phoenix.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Phoenix.cpp.s
 .PHONY : src/games/supported/Phoenix.cpp.s
 
 src/games/supported/Pitfall.o: src/games/supported/Pitfall.cpp.o
@@ -3958,9 +4352,9 @@ src/games/supported/Pitfall.o: src/games/supported/Pitfall.cpp.o
 
 # target to build an object file
 src/games/supported/Pitfall.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pitfall.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pitfall.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pitfall.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pitfall.cpp.o
 .PHONY : src/games/supported/Pitfall.cpp.o
 
 src/games/supported/Pitfall.i: src/games/supported/Pitfall.cpp.i
@@ -3969,9 +4363,9 @@ src/games/supported/Pitfall.i: src/games/supported/Pitfall.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Pitfall.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pitfall.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pitfall.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pitfall.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pitfall.cpp.i
 .PHONY : src/games/supported/Pitfall.cpp.i
 
 src/games/supported/Pitfall.s: src/games/supported/Pitfall.cpp.s
@@ -3980,9 +4374,9 @@ src/games/supported/Pitfall.s: src/games/supported/Pitfall.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Pitfall.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pitfall.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pitfall.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pitfall.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pitfall.cpp.s
 .PHONY : src/games/supported/Pitfall.cpp.s
 
 src/games/supported/Pong.o: src/games/supported/Pong.cpp.o
@@ -3991,9 +4385,9 @@ src/games/supported/Pong.o: src/games/supported/Pong.cpp.o
 
 # target to build an object file
 src/games/supported/Pong.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pong.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pong.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pong.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pong.cpp.o
 .PHONY : src/games/supported/Pong.cpp.o
 
 src/games/supported/Pong.i: src/games/supported/Pong.cpp.i
@@ -4002,9 +4396,9 @@ src/games/supported/Pong.i: src/games/supported/Pong.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Pong.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pong.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pong.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pong.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pong.cpp.i
 .PHONY : src/games/supported/Pong.cpp.i
 
 src/games/supported/Pong.s: src/games/supported/Pong.cpp.s
@@ -4013,9 +4407,9 @@ src/games/supported/Pong.s: src/games/supported/Pong.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Pong.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pong.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pong.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pong.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pong.cpp.s
 .PHONY : src/games/supported/Pong.cpp.s
 
 src/games/supported/Pooyan.o: src/games/supported/Pooyan.cpp.o
@@ -4024,9 +4418,9 @@ src/games/supported/Pooyan.o: src/games/supported/Pooyan.cpp.o
 
 # target to build an object file
 src/games/supported/Pooyan.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pooyan.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pooyan.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pooyan.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pooyan.cpp.o
 .PHONY : src/games/supported/Pooyan.cpp.o
 
 src/games/supported/Pooyan.i: src/games/supported/Pooyan.cpp.i
@@ -4035,9 +4429,9 @@ src/games/supported/Pooyan.i: src/games/supported/Pooyan.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Pooyan.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pooyan.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pooyan.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pooyan.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pooyan.cpp.i
 .PHONY : src/games/supported/Pooyan.cpp.i
 
 src/games/supported/Pooyan.s: src/games/supported/Pooyan.cpp.s
@@ -4046,9 +4440,9 @@ src/games/supported/Pooyan.s: src/games/supported/Pooyan.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Pooyan.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pooyan.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pooyan.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Pooyan.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Pooyan.cpp.s
 .PHONY : src/games/supported/Pooyan.cpp.s
 
 src/games/supported/PrivateEye.o: src/games/supported/PrivateEye.cpp.o
@@ -4057,9 +4451,9 @@ src/games/supported/PrivateEye.o: src/games/supported/PrivateEye.cpp.o
 
 # target to build an object file
 src/games/supported/PrivateEye.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/PrivateEye.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/PrivateEye.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/PrivateEye.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/PrivateEye.cpp.o
 .PHONY : src/games/supported/PrivateEye.cpp.o
 
 src/games/supported/PrivateEye.i: src/games/supported/PrivateEye.cpp.i
@@ -4068,9 +4462,9 @@ src/games/supported/PrivateEye.i: src/games/supported/PrivateEye.cpp.i
 
 # target to preprocess a source file
 src/games/supported/PrivateEye.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/PrivateEye.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/PrivateEye.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/PrivateEye.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/PrivateEye.cpp.i
 .PHONY : src/games/supported/PrivateEye.cpp.i
 
 src/games/supported/PrivateEye.s: src/games/supported/PrivateEye.cpp.s
@@ -4079,9 +4473,9 @@ src/games/supported/PrivateEye.s: src/games/supported/PrivateEye.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/PrivateEye.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/PrivateEye.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/PrivateEye.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/PrivateEye.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/PrivateEye.cpp.s
 .PHONY : src/games/supported/PrivateEye.cpp.s
 
 src/games/supported/QBert.o: src/games/supported/QBert.cpp.o
@@ -4090,9 +4484,9 @@ src/games/supported/QBert.o: src/games/supported/QBert.cpp.o
 
 # target to build an object file
 src/games/supported/QBert.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/QBert.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/QBert.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/QBert.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/QBert.cpp.o
 .PHONY : src/games/supported/QBert.cpp.o
 
 src/games/supported/QBert.i: src/games/supported/QBert.cpp.i
@@ -4101,9 +4495,9 @@ src/games/supported/QBert.i: src/games/supported/QBert.cpp.i
 
 # target to preprocess a source file
 src/games/supported/QBert.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/QBert.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/QBert.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/QBert.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/QBert.cpp.i
 .PHONY : src/games/supported/QBert.cpp.i
 
 src/games/supported/QBert.s: src/games/supported/QBert.cpp.s
@@ -4112,9 +4506,9 @@ src/games/supported/QBert.s: src/games/supported/QBert.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/QBert.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/QBert.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/QBert.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/QBert.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/QBert.cpp.s
 .PHONY : src/games/supported/QBert.cpp.s
 
 src/games/supported/RiverRaid.o: src/games/supported/RiverRaid.cpp.o
@@ -4123,9 +4517,9 @@ src/games/supported/RiverRaid.o: src/games/supported/RiverRaid.cpp.o
 
 # target to build an object file
 src/games/supported/RiverRaid.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RiverRaid.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RiverRaid.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RiverRaid.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RiverRaid.cpp.o
 .PHONY : src/games/supported/RiverRaid.cpp.o
 
 src/games/supported/RiverRaid.i: src/games/supported/RiverRaid.cpp.i
@@ -4134,9 +4528,9 @@ src/games/supported/RiverRaid.i: src/games/supported/RiverRaid.cpp.i
 
 # target to preprocess a source file
 src/games/supported/RiverRaid.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RiverRaid.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RiverRaid.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RiverRaid.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RiverRaid.cpp.i
 .PHONY : src/games/supported/RiverRaid.cpp.i
 
 src/games/supported/RiverRaid.s: src/games/supported/RiverRaid.cpp.s
@@ -4145,9 +4539,9 @@ src/games/supported/RiverRaid.s: src/games/supported/RiverRaid.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/RiverRaid.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RiverRaid.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RiverRaid.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RiverRaid.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RiverRaid.cpp.s
 .PHONY : src/games/supported/RiverRaid.cpp.s
 
 src/games/supported/RoadRunner.o: src/games/supported/RoadRunner.cpp.o
@@ -4156,9 +4550,9 @@ src/games/supported/RoadRunner.o: src/games/supported/RoadRunner.cpp.o
 
 # target to build an object file
 src/games/supported/RoadRunner.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RoadRunner.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RoadRunner.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RoadRunner.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RoadRunner.cpp.o
 .PHONY : src/games/supported/RoadRunner.cpp.o
 
 src/games/supported/RoadRunner.i: src/games/supported/RoadRunner.cpp.i
@@ -4167,9 +4561,9 @@ src/games/supported/RoadRunner.i: src/games/supported/RoadRunner.cpp.i
 
 # target to preprocess a source file
 src/games/supported/RoadRunner.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RoadRunner.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RoadRunner.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RoadRunner.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RoadRunner.cpp.i
 .PHONY : src/games/supported/RoadRunner.cpp.i
 
 src/games/supported/RoadRunner.s: src/games/supported/RoadRunner.cpp.s
@@ -4178,9 +4572,9 @@ src/games/supported/RoadRunner.s: src/games/supported/RoadRunner.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/RoadRunner.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RoadRunner.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RoadRunner.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RoadRunner.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RoadRunner.cpp.s
 .PHONY : src/games/supported/RoadRunner.cpp.s
 
 src/games/supported/RoboTank.o: src/games/supported/RoboTank.cpp.o
@@ -4189,9 +4583,9 @@ src/games/supported/RoboTank.o: src/games/supported/RoboTank.cpp.o
 
 # target to build an object file
 src/games/supported/RoboTank.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RoboTank.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RoboTank.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RoboTank.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RoboTank.cpp.o
 .PHONY : src/games/supported/RoboTank.cpp.o
 
 src/games/supported/RoboTank.i: src/games/supported/RoboTank.cpp.i
@@ -4200,9 +4594,9 @@ src/games/supported/RoboTank.i: src/games/supported/RoboTank.cpp.i
 
 # target to preprocess a source file
 src/games/supported/RoboTank.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RoboTank.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RoboTank.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RoboTank.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RoboTank.cpp.i
 .PHONY : src/games/supported/RoboTank.cpp.i
 
 src/games/supported/RoboTank.s: src/games/supported/RoboTank.cpp.s
@@ -4211,9 +4605,9 @@ src/games/supported/RoboTank.s: src/games/supported/RoboTank.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/RoboTank.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RoboTank.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RoboTank.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/RoboTank.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/RoboTank.cpp.s
 .PHONY : src/games/supported/RoboTank.cpp.s
 
 src/games/supported/Seaquest.o: src/games/supported/Seaquest.cpp.o
@@ -4222,9 +4616,9 @@ src/games/supported/Seaquest.o: src/games/supported/Seaquest.cpp.o
 
 # target to build an object file
 src/games/supported/Seaquest.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Seaquest.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Seaquest.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Seaquest.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Seaquest.cpp.o
 .PHONY : src/games/supported/Seaquest.cpp.o
 
 src/games/supported/Seaquest.i: src/games/supported/Seaquest.cpp.i
@@ -4233,9 +4627,9 @@ src/games/supported/Seaquest.i: src/games/supported/Seaquest.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Seaquest.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Seaquest.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Seaquest.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Seaquest.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Seaquest.cpp.i
 .PHONY : src/games/supported/Seaquest.cpp.i
 
 src/games/supported/Seaquest.s: src/games/supported/Seaquest.cpp.s
@@ -4244,10 +4638,43 @@ src/games/supported/Seaquest.s: src/games/supported/Seaquest.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Seaquest.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Seaquest.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Seaquest.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Seaquest.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Seaquest.cpp.s
 .PHONY : src/games/supported/Seaquest.cpp.s
+
+src/games/supported/SirLancelot.o: src/games/supported/SirLancelot.cpp.o
+
+.PHONY : src/games/supported/SirLancelot.o
+
+# target to build an object file
+src/games/supported/SirLancelot.cpp.o:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/SirLancelot.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/SirLancelot.cpp.o
+.PHONY : src/games/supported/SirLancelot.cpp.o
+
+src/games/supported/SirLancelot.i: src/games/supported/SirLancelot.cpp.i
+
+.PHONY : src/games/supported/SirLancelot.i
+
+# target to preprocess a source file
+src/games/supported/SirLancelot.cpp.i:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/SirLancelot.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/SirLancelot.cpp.i
+.PHONY : src/games/supported/SirLancelot.cpp.i
+
+src/games/supported/SirLancelot.s: src/games/supported/SirLancelot.cpp.s
+
+.PHONY : src/games/supported/SirLancelot.s
+
+# target to generate assembly for a file
+src/games/supported/SirLancelot.cpp.s:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/SirLancelot.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/SirLancelot.cpp.s
+.PHONY : src/games/supported/SirLancelot.cpp.s
 
 src/games/supported/Skiing.o: src/games/supported/Skiing.cpp.o
 
@@ -4255,9 +4682,9 @@ src/games/supported/Skiing.o: src/games/supported/Skiing.cpp.o
 
 # target to build an object file
 src/games/supported/Skiing.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Skiing.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Skiing.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Skiing.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Skiing.cpp.o
 .PHONY : src/games/supported/Skiing.cpp.o
 
 src/games/supported/Skiing.i: src/games/supported/Skiing.cpp.i
@@ -4266,9 +4693,9 @@ src/games/supported/Skiing.i: src/games/supported/Skiing.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Skiing.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Skiing.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Skiing.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Skiing.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Skiing.cpp.i
 .PHONY : src/games/supported/Skiing.cpp.i
 
 src/games/supported/Skiing.s: src/games/supported/Skiing.cpp.s
@@ -4277,9 +4704,9 @@ src/games/supported/Skiing.s: src/games/supported/Skiing.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Skiing.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Skiing.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Skiing.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Skiing.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Skiing.cpp.s
 .PHONY : src/games/supported/Skiing.cpp.s
 
 src/games/supported/Solaris.o: src/games/supported/Solaris.cpp.o
@@ -4288,9 +4715,9 @@ src/games/supported/Solaris.o: src/games/supported/Solaris.cpp.o
 
 # target to build an object file
 src/games/supported/Solaris.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Solaris.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Solaris.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Solaris.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Solaris.cpp.o
 .PHONY : src/games/supported/Solaris.cpp.o
 
 src/games/supported/Solaris.i: src/games/supported/Solaris.cpp.i
@@ -4299,9 +4726,9 @@ src/games/supported/Solaris.i: src/games/supported/Solaris.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Solaris.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Solaris.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Solaris.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Solaris.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Solaris.cpp.i
 .PHONY : src/games/supported/Solaris.cpp.i
 
 src/games/supported/Solaris.s: src/games/supported/Solaris.cpp.s
@@ -4310,9 +4737,9 @@ src/games/supported/Solaris.s: src/games/supported/Solaris.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Solaris.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Solaris.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Solaris.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Solaris.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Solaris.cpp.s
 .PHONY : src/games/supported/Solaris.cpp.s
 
 src/games/supported/SpaceInvaders.o: src/games/supported/SpaceInvaders.cpp.o
@@ -4321,9 +4748,9 @@ src/games/supported/SpaceInvaders.o: src/games/supported/SpaceInvaders.cpp.o
 
 # target to build an object file
 src/games/supported/SpaceInvaders.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/SpaceInvaders.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/SpaceInvaders.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/SpaceInvaders.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/SpaceInvaders.cpp.o
 .PHONY : src/games/supported/SpaceInvaders.cpp.o
 
 src/games/supported/SpaceInvaders.i: src/games/supported/SpaceInvaders.cpp.i
@@ -4332,9 +4759,9 @@ src/games/supported/SpaceInvaders.i: src/games/supported/SpaceInvaders.cpp.i
 
 # target to preprocess a source file
 src/games/supported/SpaceInvaders.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/SpaceInvaders.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/SpaceInvaders.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/SpaceInvaders.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/SpaceInvaders.cpp.i
 .PHONY : src/games/supported/SpaceInvaders.cpp.i
 
 src/games/supported/SpaceInvaders.s: src/games/supported/SpaceInvaders.cpp.s
@@ -4343,9 +4770,9 @@ src/games/supported/SpaceInvaders.s: src/games/supported/SpaceInvaders.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/SpaceInvaders.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/SpaceInvaders.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/SpaceInvaders.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/SpaceInvaders.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/SpaceInvaders.cpp.s
 .PHONY : src/games/supported/SpaceInvaders.cpp.s
 
 src/games/supported/StarGunner.o: src/games/supported/StarGunner.cpp.o
@@ -4354,9 +4781,9 @@ src/games/supported/StarGunner.o: src/games/supported/StarGunner.cpp.o
 
 # target to build an object file
 src/games/supported/StarGunner.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/StarGunner.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/StarGunner.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/StarGunner.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/StarGunner.cpp.o
 .PHONY : src/games/supported/StarGunner.cpp.o
 
 src/games/supported/StarGunner.i: src/games/supported/StarGunner.cpp.i
@@ -4365,9 +4792,9 @@ src/games/supported/StarGunner.i: src/games/supported/StarGunner.cpp.i
 
 # target to preprocess a source file
 src/games/supported/StarGunner.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/StarGunner.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/StarGunner.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/StarGunner.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/StarGunner.cpp.i
 .PHONY : src/games/supported/StarGunner.cpp.i
 
 src/games/supported/StarGunner.s: src/games/supported/StarGunner.cpp.s
@@ -4376,9 +4803,9 @@ src/games/supported/StarGunner.s: src/games/supported/StarGunner.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/StarGunner.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/StarGunner.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/StarGunner.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/StarGunner.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/StarGunner.cpp.s
 .PHONY : src/games/supported/StarGunner.cpp.s
 
 src/games/supported/Tennis.o: src/games/supported/Tennis.cpp.o
@@ -4387,9 +4814,9 @@ src/games/supported/Tennis.o: src/games/supported/Tennis.cpp.o
 
 # target to build an object file
 src/games/supported/Tennis.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tennis.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tennis.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tennis.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tennis.cpp.o
 .PHONY : src/games/supported/Tennis.cpp.o
 
 src/games/supported/Tennis.i: src/games/supported/Tennis.cpp.i
@@ -4398,9 +4825,9 @@ src/games/supported/Tennis.i: src/games/supported/Tennis.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Tennis.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tennis.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tennis.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tennis.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tennis.cpp.i
 .PHONY : src/games/supported/Tennis.cpp.i
 
 src/games/supported/Tennis.s: src/games/supported/Tennis.cpp.s
@@ -4409,9 +4836,9 @@ src/games/supported/Tennis.s: src/games/supported/Tennis.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Tennis.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tennis.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tennis.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tennis.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tennis.cpp.s
 .PHONY : src/games/supported/Tennis.cpp.s
 
 src/games/supported/Tetris.o: src/games/supported/Tetris.cpp.o
@@ -4420,9 +4847,9 @@ src/games/supported/Tetris.o: src/games/supported/Tetris.cpp.o
 
 # target to build an object file
 src/games/supported/Tetris.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tetris.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tetris.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tetris.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tetris.cpp.o
 .PHONY : src/games/supported/Tetris.cpp.o
 
 src/games/supported/Tetris.i: src/games/supported/Tetris.cpp.i
@@ -4431,9 +4858,9 @@ src/games/supported/Tetris.i: src/games/supported/Tetris.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Tetris.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tetris.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tetris.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tetris.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tetris.cpp.i
 .PHONY : src/games/supported/Tetris.cpp.i
 
 src/games/supported/Tetris.s: src/games/supported/Tetris.cpp.s
@@ -4442,9 +4869,9 @@ src/games/supported/Tetris.s: src/games/supported/Tetris.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Tetris.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tetris.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tetris.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tetris.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tetris.cpp.s
 .PHONY : src/games/supported/Tetris.cpp.s
 
 src/games/supported/TimePilot.o: src/games/supported/TimePilot.cpp.o
@@ -4453,9 +4880,9 @@ src/games/supported/TimePilot.o: src/games/supported/TimePilot.cpp.o
 
 # target to build an object file
 src/games/supported/TimePilot.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/TimePilot.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/TimePilot.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/TimePilot.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/TimePilot.cpp.o
 .PHONY : src/games/supported/TimePilot.cpp.o
 
 src/games/supported/TimePilot.i: src/games/supported/TimePilot.cpp.i
@@ -4464,9 +4891,9 @@ src/games/supported/TimePilot.i: src/games/supported/TimePilot.cpp.i
 
 # target to preprocess a source file
 src/games/supported/TimePilot.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/TimePilot.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/TimePilot.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/TimePilot.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/TimePilot.cpp.i
 .PHONY : src/games/supported/TimePilot.cpp.i
 
 src/games/supported/TimePilot.s: src/games/supported/TimePilot.cpp.s
@@ -4475,10 +4902,76 @@ src/games/supported/TimePilot.s: src/games/supported/TimePilot.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/TimePilot.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/TimePilot.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/TimePilot.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/TimePilot.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/TimePilot.cpp.s
 .PHONY : src/games/supported/TimePilot.cpp.s
+
+src/games/supported/Trondead.o: src/games/supported/Trondead.cpp.o
+
+.PHONY : src/games/supported/Trondead.o
+
+# target to build an object file
+src/games/supported/Trondead.cpp.o:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Trondead.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Trondead.cpp.o
+.PHONY : src/games/supported/Trondead.cpp.o
+
+src/games/supported/Trondead.i: src/games/supported/Trondead.cpp.i
+
+.PHONY : src/games/supported/Trondead.i
+
+# target to preprocess a source file
+src/games/supported/Trondead.cpp.i:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Trondead.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Trondead.cpp.i
+.PHONY : src/games/supported/Trondead.cpp.i
+
+src/games/supported/Trondead.s: src/games/supported/Trondead.cpp.s
+
+.PHONY : src/games/supported/Trondead.s
+
+# target to generate assembly for a file
+src/games/supported/Trondead.cpp.s:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Trondead.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Trondead.cpp.s
+.PHONY : src/games/supported/Trondead.cpp.s
+
+src/games/supported/Turmoil.o: src/games/supported/Turmoil.cpp.o
+
+.PHONY : src/games/supported/Turmoil.o
+
+# target to build an object file
+src/games/supported/Turmoil.cpp.o:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Turmoil.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Turmoil.cpp.o
+.PHONY : src/games/supported/Turmoil.cpp.o
+
+src/games/supported/Turmoil.i: src/games/supported/Turmoil.cpp.i
+
+.PHONY : src/games/supported/Turmoil.i
+
+# target to preprocess a source file
+src/games/supported/Turmoil.cpp.i:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Turmoil.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Turmoil.cpp.i
+.PHONY : src/games/supported/Turmoil.cpp.i
+
+src/games/supported/Turmoil.s: src/games/supported/Turmoil.cpp.s
+
+.PHONY : src/games/supported/Turmoil.s
+
+# target to generate assembly for a file
+src/games/supported/Turmoil.cpp.s:
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Turmoil.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Turmoil.cpp.s
+.PHONY : src/games/supported/Turmoil.cpp.s
 
 src/games/supported/Tutankham.o: src/games/supported/Tutankham.cpp.o
 
@@ -4486,9 +4979,9 @@ src/games/supported/Tutankham.o: src/games/supported/Tutankham.cpp.o
 
 # target to build an object file
 src/games/supported/Tutankham.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tutankham.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tutankham.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tutankham.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tutankham.cpp.o
 .PHONY : src/games/supported/Tutankham.cpp.o
 
 src/games/supported/Tutankham.i: src/games/supported/Tutankham.cpp.i
@@ -4497,9 +4990,9 @@ src/games/supported/Tutankham.i: src/games/supported/Tutankham.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Tutankham.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tutankham.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tutankham.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tutankham.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tutankham.cpp.i
 .PHONY : src/games/supported/Tutankham.cpp.i
 
 src/games/supported/Tutankham.s: src/games/supported/Tutankham.cpp.s
@@ -4508,9 +5001,9 @@ src/games/supported/Tutankham.s: src/games/supported/Tutankham.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Tutankham.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tutankham.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tutankham.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Tutankham.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Tutankham.cpp.s
 .PHONY : src/games/supported/Tutankham.cpp.s
 
 src/games/supported/UpNDown.o: src/games/supported/UpNDown.cpp.o
@@ -4519,9 +5012,9 @@ src/games/supported/UpNDown.o: src/games/supported/UpNDown.cpp.o
 
 # target to build an object file
 src/games/supported/UpNDown.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/UpNDown.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/UpNDown.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/UpNDown.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/UpNDown.cpp.o
 .PHONY : src/games/supported/UpNDown.cpp.o
 
 src/games/supported/UpNDown.i: src/games/supported/UpNDown.cpp.i
@@ -4530,9 +5023,9 @@ src/games/supported/UpNDown.i: src/games/supported/UpNDown.cpp.i
 
 # target to preprocess a source file
 src/games/supported/UpNDown.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/UpNDown.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/UpNDown.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/UpNDown.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/UpNDown.cpp.i
 .PHONY : src/games/supported/UpNDown.cpp.i
 
 src/games/supported/UpNDown.s: src/games/supported/UpNDown.cpp.s
@@ -4541,9 +5034,9 @@ src/games/supported/UpNDown.s: src/games/supported/UpNDown.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/UpNDown.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/UpNDown.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/UpNDown.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/UpNDown.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/UpNDown.cpp.s
 .PHONY : src/games/supported/UpNDown.cpp.s
 
 src/games/supported/Venture.o: src/games/supported/Venture.cpp.o
@@ -4552,9 +5045,9 @@ src/games/supported/Venture.o: src/games/supported/Venture.cpp.o
 
 # target to build an object file
 src/games/supported/Venture.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Venture.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Venture.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Venture.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Venture.cpp.o
 .PHONY : src/games/supported/Venture.cpp.o
 
 src/games/supported/Venture.i: src/games/supported/Venture.cpp.i
@@ -4563,9 +5056,9 @@ src/games/supported/Venture.i: src/games/supported/Venture.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Venture.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Venture.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Venture.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Venture.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Venture.cpp.i
 .PHONY : src/games/supported/Venture.cpp.i
 
 src/games/supported/Venture.s: src/games/supported/Venture.cpp.s
@@ -4574,9 +5067,9 @@ src/games/supported/Venture.s: src/games/supported/Venture.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Venture.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Venture.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Venture.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Venture.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Venture.cpp.s
 .PHONY : src/games/supported/Venture.cpp.s
 
 src/games/supported/VideoPinball.o: src/games/supported/VideoPinball.cpp.o
@@ -4585,9 +5078,9 @@ src/games/supported/VideoPinball.o: src/games/supported/VideoPinball.cpp.o
 
 # target to build an object file
 src/games/supported/VideoPinball.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/VideoPinball.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/VideoPinball.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/VideoPinball.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/VideoPinball.cpp.o
 .PHONY : src/games/supported/VideoPinball.cpp.o
 
 src/games/supported/VideoPinball.i: src/games/supported/VideoPinball.cpp.i
@@ -4596,9 +5089,9 @@ src/games/supported/VideoPinball.i: src/games/supported/VideoPinball.cpp.i
 
 # target to preprocess a source file
 src/games/supported/VideoPinball.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/VideoPinball.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/VideoPinball.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/VideoPinball.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/VideoPinball.cpp.i
 .PHONY : src/games/supported/VideoPinball.cpp.i
 
 src/games/supported/VideoPinball.s: src/games/supported/VideoPinball.cpp.s
@@ -4607,9 +5100,9 @@ src/games/supported/VideoPinball.s: src/games/supported/VideoPinball.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/VideoPinball.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/VideoPinball.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/VideoPinball.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/VideoPinball.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/VideoPinball.cpp.s
 .PHONY : src/games/supported/VideoPinball.cpp.s
 
 src/games/supported/WizardOfWor.o: src/games/supported/WizardOfWor.cpp.o
@@ -4618,9 +5111,9 @@ src/games/supported/WizardOfWor.o: src/games/supported/WizardOfWor.cpp.o
 
 # target to build an object file
 src/games/supported/WizardOfWor.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/WizardOfWor.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/WizardOfWor.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/WizardOfWor.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/WizardOfWor.cpp.o
 .PHONY : src/games/supported/WizardOfWor.cpp.o
 
 src/games/supported/WizardOfWor.i: src/games/supported/WizardOfWor.cpp.i
@@ -4629,9 +5122,9 @@ src/games/supported/WizardOfWor.i: src/games/supported/WizardOfWor.cpp.i
 
 # target to preprocess a source file
 src/games/supported/WizardOfWor.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/WizardOfWor.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/WizardOfWor.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/WizardOfWor.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/WizardOfWor.cpp.i
 .PHONY : src/games/supported/WizardOfWor.cpp.i
 
 src/games/supported/WizardOfWor.s: src/games/supported/WizardOfWor.cpp.s
@@ -4640,9 +5133,9 @@ src/games/supported/WizardOfWor.s: src/games/supported/WizardOfWor.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/WizardOfWor.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/WizardOfWor.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/WizardOfWor.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/WizardOfWor.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/WizardOfWor.cpp.s
 .PHONY : src/games/supported/WizardOfWor.cpp.s
 
 src/games/supported/YarsRevenge.o: src/games/supported/YarsRevenge.cpp.o
@@ -4651,9 +5144,9 @@ src/games/supported/YarsRevenge.o: src/games/supported/YarsRevenge.cpp.o
 
 # target to build an object file
 src/games/supported/YarsRevenge.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/YarsRevenge.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/YarsRevenge.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/YarsRevenge.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/YarsRevenge.cpp.o
 .PHONY : src/games/supported/YarsRevenge.cpp.o
 
 src/games/supported/YarsRevenge.i: src/games/supported/YarsRevenge.cpp.i
@@ -4662,9 +5155,9 @@ src/games/supported/YarsRevenge.i: src/games/supported/YarsRevenge.cpp.i
 
 # target to preprocess a source file
 src/games/supported/YarsRevenge.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/YarsRevenge.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/YarsRevenge.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/YarsRevenge.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/YarsRevenge.cpp.i
 .PHONY : src/games/supported/YarsRevenge.cpp.i
 
 src/games/supported/YarsRevenge.s: src/games/supported/YarsRevenge.cpp.s
@@ -4673,9 +5166,9 @@ src/games/supported/YarsRevenge.s: src/games/supported/YarsRevenge.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/YarsRevenge.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/YarsRevenge.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/YarsRevenge.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/YarsRevenge.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/YarsRevenge.cpp.s
 .PHONY : src/games/supported/YarsRevenge.cpp.s
 
 src/games/supported/Zaxxon.o: src/games/supported/Zaxxon.cpp.o
@@ -4684,9 +5177,9 @@ src/games/supported/Zaxxon.o: src/games/supported/Zaxxon.cpp.o
 
 # target to build an object file
 src/games/supported/Zaxxon.cpp.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Zaxxon.cpp.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Zaxxon.cpp.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Zaxxon.cpp.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Zaxxon.cpp.o
 .PHONY : src/games/supported/Zaxxon.cpp.o
 
 src/games/supported/Zaxxon.i: src/games/supported/Zaxxon.cpp.i
@@ -4695,9 +5188,9 @@ src/games/supported/Zaxxon.i: src/games/supported/Zaxxon.cpp.i
 
 # target to preprocess a source file
 src/games/supported/Zaxxon.cpp.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Zaxxon.cpp.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Zaxxon.cpp.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Zaxxon.cpp.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Zaxxon.cpp.i
 .PHONY : src/games/supported/Zaxxon.cpp.i
 
 src/games/supported/Zaxxon.s: src/games/supported/Zaxxon.cpp.s
@@ -4706,9 +5199,9 @@ src/games/supported/Zaxxon.s: src/games/supported/Zaxxon.cpp.s
 
 # target to generate assembly for a file
 src/games/supported/Zaxxon.cpp.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Zaxxon.cpp.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Zaxxon.cpp.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/games/supported/Zaxxon.cpp.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/games/supported/Zaxxon.cpp.s
 .PHONY : src/games/supported/Zaxxon.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -4744,9 +5237,9 @@ src/os_dependent/FSNodePOSIX.o: src/os_dependent/FSNodePOSIX.cxx.o
 
 # target to build an object file
 src/os_dependent/FSNodePOSIX.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/FSNodePOSIX.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/FSNodePOSIX.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/FSNodePOSIX.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/FSNodePOSIX.cxx.o
 .PHONY : src/os_dependent/FSNodePOSIX.cxx.o
 
 src/os_dependent/FSNodePOSIX.i: src/os_dependent/FSNodePOSIX.cxx.i
@@ -4755,9 +5248,9 @@ src/os_dependent/FSNodePOSIX.i: src/os_dependent/FSNodePOSIX.cxx.i
 
 # target to preprocess a source file
 src/os_dependent/FSNodePOSIX.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/FSNodePOSIX.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/FSNodePOSIX.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/FSNodePOSIX.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/FSNodePOSIX.cxx.i
 .PHONY : src/os_dependent/FSNodePOSIX.cxx.i
 
 src/os_dependent/FSNodePOSIX.s: src/os_dependent/FSNodePOSIX.cxx.s
@@ -4766,9 +5259,9 @@ src/os_dependent/FSNodePOSIX.s: src/os_dependent/FSNodePOSIX.cxx.s
 
 # target to generate assembly for a file
 src/os_dependent/FSNodePOSIX.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/FSNodePOSIX.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/FSNodePOSIX.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/FSNodePOSIX.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/FSNodePOSIX.cxx.s
 .PHONY : src/os_dependent/FSNodePOSIX.cxx.s
 
 src/os_dependent/OSystemUNIX.o: src/os_dependent/OSystemUNIX.cxx.o
@@ -4777,9 +5270,9 @@ src/os_dependent/OSystemUNIX.o: src/os_dependent/OSystemUNIX.cxx.o
 
 # target to build an object file
 src/os_dependent/OSystemUNIX.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/OSystemUNIX.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/OSystemUNIX.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/OSystemUNIX.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/OSystemUNIX.cxx.o
 .PHONY : src/os_dependent/OSystemUNIX.cxx.o
 
 src/os_dependent/OSystemUNIX.i: src/os_dependent/OSystemUNIX.cxx.i
@@ -4788,9 +5281,9 @@ src/os_dependent/OSystemUNIX.i: src/os_dependent/OSystemUNIX.cxx.i
 
 # target to preprocess a source file
 src/os_dependent/OSystemUNIX.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/OSystemUNIX.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/OSystemUNIX.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/OSystemUNIX.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/OSystemUNIX.cxx.i
 .PHONY : src/os_dependent/OSystemUNIX.cxx.i
 
 src/os_dependent/OSystemUNIX.s: src/os_dependent/OSystemUNIX.cxx.s
@@ -4799,9 +5292,9 @@ src/os_dependent/OSystemUNIX.s: src/os_dependent/OSystemUNIX.cxx.s
 
 # target to generate assembly for a file
 src/os_dependent/OSystemUNIX.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/OSystemUNIX.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/OSystemUNIX.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/OSystemUNIX.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/OSystemUNIX.cxx.s
 .PHONY : src/os_dependent/OSystemUNIX.cxx.s
 
 src/os_dependent/SettingsUNIX.o: src/os_dependent/SettingsUNIX.cxx.o
@@ -4810,9 +5303,9 @@ src/os_dependent/SettingsUNIX.o: src/os_dependent/SettingsUNIX.cxx.o
 
 # target to build an object file
 src/os_dependent/SettingsUNIX.cxx.o:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/SettingsUNIX.cxx.o
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/SettingsUNIX.cxx.o
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.o
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/SettingsUNIX.cxx.o
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/SettingsUNIX.cxx.o
 .PHONY : src/os_dependent/SettingsUNIX.cxx.o
 
 src/os_dependent/SettingsUNIX.i: src/os_dependent/SettingsUNIX.cxx.i
@@ -4821,9 +5314,9 @@ src/os_dependent/SettingsUNIX.i: src/os_dependent/SettingsUNIX.cxx.i
 
 # target to preprocess a source file
 src/os_dependent/SettingsUNIX.cxx.i:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/SettingsUNIX.cxx.i
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/SettingsUNIX.cxx.i
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.i
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/SettingsUNIX.cxx.i
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/SettingsUNIX.cxx.i
 .PHONY : src/os_dependent/SettingsUNIX.cxx.i
 
 src/os_dependent/SettingsUNIX.s: src/os_dependent/SettingsUNIX.cxx.s
@@ -4832,9 +5325,9 @@ src/os_dependent/SettingsUNIX.s: src/os_dependent/SettingsUNIX.cxx.s
 
 # target to generate assembly for a file
 src/os_dependent/SettingsUNIX.cxx.s:
-	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/SettingsUNIX.cxx.s
-	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/SettingsUNIX.cxx.s
 	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.s
+	$(MAKE) -f CMakeFiles/ale-bin.dir/build.make CMakeFiles/ale-bin.dir/src/os_dependent/SettingsUNIX.cxx.s
+	$(MAKE) -f CMakeFiles/ale-lib.dir/build.make CMakeFiles/ale-lib.dir/src/os_dependent/SettingsUNIX.cxx.s
 .PHONY : src/os_dependent/SettingsUNIX.cxx.s
 
 # Help Target
@@ -4844,15 +5337,24 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... videoRecordingExample"
-	@echo "... ale-lib"
-	@echo "... ale-bin"
-	@echo "... edit_cache"
-	@echo "... ale-c-lib"
 	@echo "... sharedLibraryInterfaceExample"
+	@echo "... ale-c-lib"
+	@echo "... install"
+	@echo "... ale-bin"
+	@echo "... ale-lib"
+	@echo "... uninstall"
+	@echo "... edit_cache"
+	@echo "... videoRecordingExample"
+	@echo "... list_install_components"
+	@echo "... fifoInterfaceExample"
+	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... ale_python_interface/ale_c_wrapper.o"
 	@echo "... ale_python_interface/ale_c_wrapper.i"
 	@echo "... ale_python_interface/ale_c_wrapper.s"
+	@echo "... doc/examples/fifoInterfaceExample.o"
+	@echo "... doc/examples/fifoInterfaceExample.i"
+	@echo "... doc/examples/fifoInterfaceExample.s"
 	@echo "... doc/examples/sharedLibraryInterfaceExample.o"
 	@echo "... doc/examples/sharedLibraryInterfaceExample.i"
 	@echo "... doc/examples/sharedLibraryInterfaceExample.s"
@@ -5138,6 +5640,9 @@ help:
 	@echo "... src/games/supported/DemonAttack.o"
 	@echo "... src/games/supported/DemonAttack.i"
 	@echo "... src/games/supported/DemonAttack.s"
+	@echo "... src/games/supported/DonkeyKong.o"
+	@echo "... src/games/supported/DonkeyKong.i"
+	@echo "... src/games/supported/DonkeyKong.s"
 	@echo "... src/games/supported/DoubleDunk.o"
 	@echo "... src/games/supported/DoubleDunk.i"
 	@echo "... src/games/supported/DoubleDunk.s"
@@ -5153,9 +5658,15 @@ help:
 	@echo "... src/games/supported/Freeway.o"
 	@echo "... src/games/supported/Freeway.i"
 	@echo "... src/games/supported/Freeway.s"
+	@echo "... src/games/supported/Frogger.o"
+	@echo "... src/games/supported/Frogger.i"
+	@echo "... src/games/supported/Frogger.s"
 	@echo "... src/games/supported/Frostbite.o"
 	@echo "... src/games/supported/Frostbite.i"
 	@echo "... src/games/supported/Frostbite.s"
+	@echo "... src/games/supported/Galaxian.o"
+	@echo "... src/games/supported/Galaxian.i"
+	@echo "... src/games/supported/Galaxian.s"
 	@echo "... src/games/supported/Gopher.o"
 	@echo "... src/games/supported/Gopher.i"
 	@echo "... src/games/supported/Gopher.s"
@@ -5177,15 +5688,33 @@ help:
 	@echo "... src/games/supported/Kangaroo.o"
 	@echo "... src/games/supported/Kangaroo.i"
 	@echo "... src/games/supported/Kangaroo.s"
+	@echo "... src/games/supported/KeystoneKapers.o"
+	@echo "... src/games/supported/KeystoneKapers.i"
+	@echo "... src/games/supported/KeystoneKapers.s"
+	@echo "... src/games/supported/Kingkong.o"
+	@echo "... src/games/supported/Kingkong.i"
+	@echo "... src/games/supported/Kingkong.s"
+	@echo "... src/games/supported/Koolaid.o"
+	@echo "... src/games/supported/Koolaid.i"
+	@echo "... src/games/supported/Koolaid.s"
 	@echo "... src/games/supported/Krull.o"
 	@echo "... src/games/supported/Krull.i"
 	@echo "... src/games/supported/Krull.s"
 	@echo "... src/games/supported/KungFuMaster.o"
 	@echo "... src/games/supported/KungFuMaster.i"
 	@echo "... src/games/supported/KungFuMaster.s"
+	@echo "... src/games/supported/LaserGates.o"
+	@echo "... src/games/supported/LaserGates.i"
+	@echo "... src/games/supported/LaserGates.s"
+	@echo "... src/games/supported/LostLuggage.o"
+	@echo "... src/games/supported/LostLuggage.i"
+	@echo "... src/games/supported/LostLuggage.s"
 	@echo "... src/games/supported/MontezumaRevenge.o"
 	@echo "... src/games/supported/MontezumaRevenge.i"
 	@echo "... src/games/supported/MontezumaRevenge.s"
+	@echo "... src/games/supported/MrDo.o"
+	@echo "... src/games/supported/MrDo.i"
+	@echo "... src/games/supported/MrDo.s"
 	@echo "... src/games/supported/MsPacman.o"
 	@echo "... src/games/supported/MsPacman.i"
 	@echo "... src/games/supported/MsPacman.s"
@@ -5222,6 +5751,9 @@ help:
 	@echo "... src/games/supported/Seaquest.o"
 	@echo "... src/games/supported/Seaquest.i"
 	@echo "... src/games/supported/Seaquest.s"
+	@echo "... src/games/supported/SirLancelot.o"
+	@echo "... src/games/supported/SirLancelot.i"
+	@echo "... src/games/supported/SirLancelot.s"
 	@echo "... src/games/supported/Skiing.o"
 	@echo "... src/games/supported/Skiing.i"
 	@echo "... src/games/supported/Skiing.s"
@@ -5243,6 +5775,12 @@ help:
 	@echo "... src/games/supported/TimePilot.o"
 	@echo "... src/games/supported/TimePilot.i"
 	@echo "... src/games/supported/TimePilot.s"
+	@echo "... src/games/supported/Trondead.o"
+	@echo "... src/games/supported/Trondead.i"
+	@echo "... src/games/supported/Trondead.s"
+	@echo "... src/games/supported/Turmoil.o"
+	@echo "... src/games/supported/Turmoil.i"
+	@echo "... src/games/supported/Turmoil.s"
 	@echo "... src/games/supported/Tutankham.o"
 	@echo "... src/games/supported/Tutankham.i"
 	@echo "... src/games/supported/Tutankham.s"

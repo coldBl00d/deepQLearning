@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moonblade/workspace/project/interface/ale
+CMAKE_SOURCE_DIR = /home/moonblade/temp/j/Arcade-Learning-Environment
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moonblade/workspace/project/interface/ale
+CMAKE_BINARY_DIR = /home/moonblade/temp/j/Arcade-Learning-Environment
 
 # Include any dependencies generated for this target.
 include CMakeFiles/videoRecordingExample.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/videoRecordingExample.dir/flags.make
 
 CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.o: CMakeFiles/videoRecordingExample.dir/flags.make
 CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.o: doc/examples/videoRecordingExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.o -c /home/moonblade/workspace/project/interface/ale/doc/examples/videoRecordingExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/doc/examples/videoRecordingExample.cpp
 
 CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/doc/examples/videoRecordingExample.cpp > CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/doc/examples/videoRecordingExample.cpp > CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.i
 
 CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/doc/examples/videoRecordingExample.cpp -o CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/doc/examples/videoRecordingExample.cpp -o CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.s
 
 CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.o.requires:
 
@@ -88,16 +88,16 @@ videoRecordingExample_OBJECTS = \
 # External object files for target videoRecordingExample
 videoRecordingExample_EXTERNAL_OBJECTS =
 
-doc/examples/videoRecordingExample: CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.o
-doc/examples/videoRecordingExample: CMakeFiles/videoRecordingExample.dir/build.make
-doc/examples/videoRecordingExample: /usr/lib64/libSDLmain.a
-doc/examples/videoRecordingExample: /usr/lib64/libSDL.so
-doc/examples/videoRecordingExample: CMakeFiles/videoRecordingExample.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable doc/examples/videoRecordingExample"
+doc/examples/ale-videoRecordingExample: CMakeFiles/videoRecordingExample.dir/doc/examples/videoRecordingExample.cpp.o
+doc/examples/ale-videoRecordingExample: CMakeFiles/videoRecordingExample.dir/build.make
+doc/examples/ale-videoRecordingExample: /usr/lib64/libSDLmain.a
+doc/examples/ale-videoRecordingExample: /usr/lib64/libSDL.so
+doc/examples/ale-videoRecordingExample: CMakeFiles/videoRecordingExample.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable doc/examples/ale-videoRecordingExample"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/videoRecordingExample.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/videoRecordingExample.dir/build: doc/examples/videoRecordingExample
+CMakeFiles/videoRecordingExample.dir/build: doc/examples/ale-videoRecordingExample
 
 .PHONY : CMakeFiles/videoRecordingExample.dir/build
 
@@ -110,6 +110,6 @@ CMakeFiles/videoRecordingExample.dir/clean:
 .PHONY : CMakeFiles/videoRecordingExample.dir/clean
 
 CMakeFiles/videoRecordingExample.dir/depend:
-	cd /home/moonblade/workspace/project/interface/ale && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moonblade/workspace/project/interface/ale /home/moonblade/workspace/project/interface/ale /home/moonblade/workspace/project/interface/ale /home/moonblade/workspace/project/interface/ale /home/moonblade/workspace/project/interface/ale/CMakeFiles/videoRecordingExample.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moonblade/temp/j/Arcade-Learning-Environment && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moonblade/temp/j/Arcade-Learning-Environment /home/moonblade/temp/j/Arcade-Learning-Environment /home/moonblade/temp/j/Arcade-Learning-Environment /home/moonblade/temp/j/Arcade-Learning-Environment /home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles/videoRecordingExample.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/videoRecordingExample.dir/depend
 

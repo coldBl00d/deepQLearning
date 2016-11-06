@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.o"
-  "doc/examples/sharedLibraryInterfaceExample.pdb"
-  "doc/examples/sharedLibraryInterfaceExample"
+  "doc/examples/ale-sharedLibraryInterfaceExample.pdb"
+  "doc/examples/ale-sharedLibraryInterfaceExample"
 )
 
 # Per-language clean rules from dependency scanning.

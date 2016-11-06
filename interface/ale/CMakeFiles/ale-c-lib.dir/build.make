@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moonblade/workspace/project/interface/ale
+CMAKE_SOURCE_DIR = /home/moonblade/temp/j/Arcade-Learning-Environment
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moonblade/workspace/project/interface/ale
+CMAKE_BINARY_DIR = /home/moonblade/temp/j/Arcade-Learning-Environment
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ale-c-lib.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/ale-c-lib.dir/flags.make
 
 CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.o: ale_python_interface/ale_c_wrapper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.o -c /home/moonblade/workspace/project/interface/ale/ale_python_interface/ale_c_wrapper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/ale_python_interface/ale_c_wrapper.cpp
 
 CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/ale_python_interface/ale_c_wrapper.cpp > CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/ale_python_interface/ale_c_wrapper.cpp > CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.i
 
 CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/ale_python_interface/ale_c_wrapper.cpp -o CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/ale_python_interface/ale_c_wrapper.cpp -o CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.s
 
 CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/ale-c-lib.dir/ale_python_interface/ale_c_wrapper.cpp.o.provides.build
 
 CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.o: src/ale_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/ale_interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/ale_interface.cpp
 
 CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/ale_interface.cpp > CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/ale_interface.cpp > CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/ale_interface.cpp -o CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/ale_interface.cpp -o CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/ale-c-lib.dir/src/ale_interface.cpp.o.provides.build: CMakeFiles/ale-
 
 CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.o: src/common/ColourPalette.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/common/ColourPalette.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/ColourPalette.cpp
 
 CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/common/ColourPalette.cpp > CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/ColourPalette.cpp > CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/common/ColourPalette.cpp -o CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/ColourPalette.cpp -o CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/ale-c-lib.dir/src/common/ColourPalette.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.o: src/common/Constants.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/common/Constants.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/Constants.cpp
 
 CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/common/Constants.cpp > CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/Constants.cpp > CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/common/Constants.cpp -o CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/Constants.cpp -o CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/ale-c-lib.dir/src/common/Constants.cpp.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.o: src/common/Log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/common/Log.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/Log.cpp
 
 CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/common/Log.cpp > CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/Log.cpp > CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/common/Log.cpp -o CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/Log.cpp -o CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/ale-c-lib.dir/src/common/Log.cpp.o.provides.build: CMakeFiles/ale-c-l
 
 CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.o: src/common/ScreenExporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/common/ScreenExporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/ScreenExporter.cpp
 
 CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/common/ScreenExporter.cpp > CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/ScreenExporter.cpp > CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/common/ScreenExporter.cpp -o CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/ScreenExporter.cpp -o CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/ale-c-lib.dir/src/common/ScreenExporter.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.o: src/common/SoundExporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/common/SoundExporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/SoundExporter.cpp
 
 CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/common/SoundExporter.cpp > CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/SoundExporter.cpp > CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/common/SoundExporter.cpp -o CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/SoundExporter.cpp -o CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/ale-c-lib.dir/src/common/SoundExporter.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.o: src/common/SoundNull.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/common/SoundNull.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/SoundNull.cxx
 
 CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/common/SoundNull.cxx > CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/SoundNull.cxx > CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/common/SoundNull.cxx -o CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/SoundNull.cxx -o CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/ale-c-lib.dir/src/common/SoundNull.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.o: src/common/SoundSDL.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/common/SoundSDL.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/SoundSDL.cxx
 
 CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/common/SoundSDL.cxx > CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/SoundSDL.cxx > CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/common/SoundSDL.cxx -o CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/SoundSDL.cxx -o CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.o.requires:
 
@@ -275,16 +275,16 @@ CMakeFiles/ale-c-lib.dir/src/common/SoundSDL.cxx.o.provides.build: CMakeFiles/al
 
 CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.o: src/common/display_screen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/common/display_screen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/display_screen.cpp
 
 CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/common/display_screen.cpp > CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/display_screen.cpp > CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/common/display_screen.cpp -o CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/common/display_screen.cpp -o CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.o.requires:
 
@@ -299,16 +299,16 @@ CMakeFiles/ale-c-lib.dir/src/common/display_screen.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.o: src/controllers/ale_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/controllers/ale_controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/controllers/ale_controller.cpp
 
 CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/controllers/ale_controller.cpp > CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/controllers/ale_controller.cpp > CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/controllers/ale_controller.cpp -o CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/controllers/ale_controller.cpp -o CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.o.requires:
 
@@ -323,16 +323,16 @@ CMakeFiles/ale-c-lib.dir/src/controllers/ale_controller.cpp.o.provides.build: CM
 
 CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.o: src/controllers/fifo_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/controllers/fifo_controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/controllers/fifo_controller.cpp
 
 CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/controllers/fifo_controller.cpp > CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/controllers/fifo_controller.cpp > CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/controllers/fifo_controller.cpp -o CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/controllers/fifo_controller.cpp -o CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.o.requires:
 
@@ -347,16 +347,16 @@ CMakeFiles/ale-c-lib.dir/src/controllers/fifo_controller.cpp.o.provides.build: C
 
 CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.o: src/controllers/rlglue_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/controllers/rlglue_controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/controllers/rlglue_controller.cpp
 
 CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/controllers/rlglue_controller.cpp > CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/controllers/rlglue_controller.cpp > CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/controllers/rlglue_controller.cpp -o CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/controllers/rlglue_controller.cpp -o CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.o.requires:
 
@@ -371,16 +371,16 @@ CMakeFiles/ale-c-lib.dir/src/controllers/rlglue_controller.cpp.o.provides.build:
 
 CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.o: src/emucore/unzip.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.o   -c /home/moonblade/workspace/project/interface/ale/src/emucore/unzip.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.o   -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/unzip.c
 
 CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/unzip.c > CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/unzip.c > CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/unzip.c -o CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/unzip.c -o CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.o.requires:
 
@@ -395,16 +395,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/unzip.c.o.provides.build: CMakeFiles/ale-c-
 
 CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.o: src/emucore/AtariVox.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/AtariVox.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/AtariVox.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/AtariVox.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/AtariVox.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/AtariVox.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/AtariVox.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.o.requires:
 
@@ -419,16 +419,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/AtariVox.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.o: src/emucore/Booster.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Booster.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Booster.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Booster.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Booster.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Booster.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Booster.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.o.requires:
 
@@ -443,16 +443,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Booster.cxx.o.provides.build: CMakeFiles/al
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.o: src/emucore/Cart.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Cart.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Cart.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Cart.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.o.requires:
 
@@ -467,16 +467,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Cart.cxx.o.provides.build: CMakeFiles/ale-c
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.o: src/emucore/Cart0840.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Cart0840.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart0840.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Cart0840.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart0840.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Cart0840.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart0840.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.o.requires:
 
@@ -491,16 +491,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Cart0840.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.o: src/emucore/Cart2K.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Cart2K.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart2K.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Cart2K.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart2K.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Cart2K.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart2K.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.o.requires:
 
@@ -515,16 +515,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Cart2K.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.o: src/emucore/Cart3E.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Cart3E.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart3E.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Cart3E.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart3E.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Cart3E.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart3E.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.o.requires:
 
@@ -539,16 +539,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Cart3E.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.o: src/emucore/Cart3F.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Cart3F.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart3F.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Cart3F.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart3F.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Cart3F.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart3F.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.o.requires:
 
@@ -563,16 +563,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Cart3F.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.o: src/emucore/Cart4A50.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Cart4A50.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart4A50.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Cart4A50.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart4A50.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Cart4A50.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart4A50.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.o.requires:
 
@@ -587,16 +587,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Cart4A50.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.o: src/emucore/Cart4K.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Cart4K.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart4K.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Cart4K.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart4K.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Cart4K.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Cart4K.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.o.requires:
 
@@ -611,16 +611,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Cart4K.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.o: src/emucore/CartAR.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartAR.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartAR.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartAR.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartAR.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartAR.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartAR.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.o.requires:
 
@@ -635,16 +635,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartAR.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.o: src/emucore/CartCV.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartCV.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartCV.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartCV.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartCV.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartCV.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartCV.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.o.requires:
 
@@ -659,16 +659,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartCV.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.o: src/emucore/CartDPC.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartDPC.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartDPC.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartDPC.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartDPC.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartDPC.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartDPC.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.o.requires:
 
@@ -683,16 +683,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartDPC.cxx.o.provides.build: CMakeFiles/al
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.o: src/emucore/CartE0.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartE0.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartE0.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartE0.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartE0.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartE0.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartE0.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.o.requires:
 
@@ -707,16 +707,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartE0.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.o: src/emucore/CartE7.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartE7.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartE7.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartE7.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartE7.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartE7.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartE7.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.o.requires:
 
@@ -731,16 +731,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartE7.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.o: src/emucore/CartF4.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartF4.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF4.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartF4.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF4.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartF4.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF4.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.o.requires:
 
@@ -755,16 +755,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartF4.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.o: src/emucore/CartF4SC.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartF4SC.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF4SC.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartF4SC.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF4SC.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartF4SC.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF4SC.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.o.requires:
 
@@ -779,16 +779,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartF4SC.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.o: src/emucore/CartF6.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartF6.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF6.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartF6.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF6.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartF6.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF6.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.o.requires:
 
@@ -803,16 +803,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartF6.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.o: src/emucore/CartF6SC.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartF6SC.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF6SC.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartF6SC.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF6SC.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartF6SC.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF6SC.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.o.requires:
 
@@ -827,16 +827,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartF6SC.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.o: src/emucore/CartF8.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartF8.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF8.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartF8.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF8.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartF8.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF8.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.o.requires:
 
@@ -851,16 +851,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartF8.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.o: src/emucore/CartF8SC.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartF8SC.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF8SC.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartF8SC.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF8SC.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartF8SC.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartF8SC.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.o.requires:
 
@@ -875,16 +875,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartF8SC.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.o: src/emucore/CartFASC.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartFASC.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartFASC.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartFASC.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartFASC.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartFASC.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartFASC.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.o.requires:
 
@@ -899,16 +899,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartFASC.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.o: src/emucore/CartFE.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartFE.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartFE.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartFE.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartFE.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartFE.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartFE.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.o.requires:
 
@@ -923,16 +923,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartFE.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.o: src/emucore/CartMB.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartMB.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartMB.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartMB.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartMB.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartMB.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartMB.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.o.requires:
 
@@ -947,16 +947,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartMB.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.o: src/emucore/CartMC.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartMC.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartMC.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartMC.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartMC.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartMC.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartMC.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.o.requires:
 
@@ -971,16 +971,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartMC.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.o: src/emucore/CartUA.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/CartUA.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartUA.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/CartUA.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartUA.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/CartUA.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/CartUA.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.o.requires:
 
@@ -995,16 +995,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/CartUA.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.o: src/emucore/Console.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Console.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Console.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Console.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Console.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Console.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Console.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.o.requires:
 
@@ -1019,16 +1019,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Console.cxx.o.provides.build: CMakeFiles/al
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.o: src/emucore/Control.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Control.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Control.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Control.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Control.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Control.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Control.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.o.requires:
 
@@ -1043,16 +1043,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Control.cxx.o.provides.build: CMakeFiles/al
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.o: src/emucore/Deserializer.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Deserializer.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Deserializer.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Deserializer.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Deserializer.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Deserializer.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Deserializer.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.o.requires:
 
@@ -1067,16 +1067,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Deserializer.cxx.o.provides.build: CMakeFil
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.o: src/emucore/Driving.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Driving.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Driving.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Driving.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Driving.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Driving.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Driving.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.o.requires:
 
@@ -1091,16 +1091,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Driving.cxx.o.provides.build: CMakeFiles/al
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.o: src/emucore/Event.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Event.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Event.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Event.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Event.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Event.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Event.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.o.requires:
 
@@ -1115,16 +1115,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Event.cxx.o.provides.build: CMakeFiles/ale-
 
 CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.o: src/emucore/FSNode.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/FSNode.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/FSNode.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/FSNode.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/FSNode.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/FSNode.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/FSNode.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.o.requires:
 
@@ -1139,16 +1139,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/FSNode.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.o: src/emucore/Joystick.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Joystick.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Joystick.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Joystick.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Joystick.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Joystick.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Joystick.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.o.requires:
 
@@ -1163,16 +1163,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Joystick.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.o: src/emucore/Keyboard.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Keyboard.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Keyboard.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Keyboard.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Keyboard.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Keyboard.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Keyboard.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.o.requires:
 
@@ -1187,16 +1187,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Keyboard.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.o: src/emucore/M6532.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/M6532.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/M6532.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/M6532.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/M6532.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/M6532.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/M6532.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.o.requires:
 
@@ -1211,16 +1211,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/M6532.cxx.o.provides.build: CMakeFiles/ale-
 
 CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.o: src/emucore/MD5.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/MD5.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/MD5.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/MD5.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/MD5.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/MD5.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/MD5.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.o.requires:
 
@@ -1235,16 +1235,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/MD5.cxx.o.provides.build: CMakeFiles/ale-c-
 
 CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.o: src/emucore/MediaSrc.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/MediaSrc.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/MediaSrc.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/MediaSrc.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/MediaSrc.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/MediaSrc.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/MediaSrc.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.o.requires:
 
@@ -1259,16 +1259,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/MediaSrc.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.o: src/emucore/OSystem.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/OSystem.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/OSystem.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/OSystem.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/OSystem.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/OSystem.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/OSystem.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.o.requires:
 
@@ -1283,16 +1283,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/OSystem.cxx.o.provides.build: CMakeFiles/al
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.o: src/emucore/Paddles.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Paddles.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Paddles.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Paddles.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Paddles.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Paddles.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Paddles.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.o.requires:
 
@@ -1307,16 +1307,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Paddles.cxx.o.provides.build: CMakeFiles/al
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.o: src/emucore/Props.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Props.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Props.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Props.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Props.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Props.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Props.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.o.requires:
 
@@ -1331,16 +1331,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Props.cxx.o.provides.build: CMakeFiles/ale-
 
 CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.o: src/emucore/PropsSet.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/PropsSet.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/PropsSet.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/PropsSet.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/PropsSet.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/PropsSet.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/PropsSet.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.o.requires:
 
@@ -1355,16 +1355,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/PropsSet.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.o: src/emucore/Random.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Random.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Random.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Random.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Random.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Random.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Random.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.o.requires:
 
@@ -1379,16 +1379,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Random.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.o: src/emucore/Serializer.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Serializer.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Serializer.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Serializer.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Serializer.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Serializer.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Serializer.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.o.requires:
 
@@ -1403,16 +1403,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Serializer.cxx.o.provides.build: CMakeFiles
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.o: src/emucore/Settings.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Settings.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Settings.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Settings.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Settings.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Settings.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Settings.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.o.requires:
 
@@ -1427,16 +1427,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Settings.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.o: src/emucore/SpeakJet.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/SpeakJet.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/SpeakJet.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/SpeakJet.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/SpeakJet.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/SpeakJet.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/SpeakJet.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.o.requires:
 
@@ -1451,16 +1451,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/SpeakJet.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.o: src/emucore/Switches.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/Switches.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Switches.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/Switches.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Switches.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/Switches.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/Switches.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.o.requires:
 
@@ -1475,16 +1475,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/Switches.cxx.o.provides.build: CMakeFiles/a
 
 CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.o: src/emucore/TIA.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/TIA.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/TIA.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/TIA.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/TIA.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/TIA.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/TIA.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.o.requires:
 
@@ -1499,16 +1499,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/TIA.cxx.o.provides.build: CMakeFiles/ale-c-
 
 CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.o: src/emucore/TIASnd.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/TIASnd.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/TIASnd.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/TIASnd.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/TIASnd.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/TIASnd.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/TIASnd.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.o.requires:
 
@@ -1523,16 +1523,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/TIASnd.cxx.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.o: src/emucore/m6502/src/Device.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/Device.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/Device.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/Device.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/Device.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/Device.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/Device.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.o.requires:
 
@@ -1547,16 +1547,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/Device.cxx.o.provides.build: CMak
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.o: src/emucore/m6502/src/M6502.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/M6502.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/M6502.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/M6502.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/M6502.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/M6502.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/M6502.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.o.requires:
 
@@ -1571,16 +1571,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502.cxx.o.provides.build: CMake
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.o: src/emucore/m6502/src/M6502Hi.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/M6502Hi.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/M6502Hi.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/M6502Hi.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/M6502Hi.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/M6502Hi.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/M6502Hi.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.o.requires:
 
@@ -1595,16 +1595,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Hi.cxx.o.provides.build: CMa
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.o: src/emucore/m6502/src/M6502Low.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/M6502Low.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/M6502Low.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/M6502Low.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/M6502Low.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/M6502Low.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/M6502Low.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.o.requires:
 
@@ -1619,16 +1619,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/M6502Low.cxx.o.provides.build: CM
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.o: src/emucore/m6502/src/NullDev.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/NullDev.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/NullDev.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/NullDev.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/NullDev.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/NullDev.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/NullDev.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.o.requires:
 
@@ -1643,16 +1643,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/NullDev.cxx.o.provides.build: CMa
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.o: src/emucore/m6502/src/System.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/System.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/System.cxx
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/System.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/System.cxx > CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/emucore/m6502/src/System.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/emucore/m6502/src/System.cxx -o CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.o.requires:
 
@@ -1667,16 +1667,16 @@ CMakeFiles/ale-c-lib.dir/src/emucore/m6502/src/System.cxx.o.provides.build: CMak
 
 CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.o: src/environment/ale_state.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/environment/ale_state.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/environment/ale_state.cpp
 
 CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/environment/ale_state.cpp > CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/environment/ale_state.cpp > CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/environment/ale_state.cpp -o CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/environment/ale_state.cpp -o CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.o.requires:
 
@@ -1691,16 +1691,16 @@ CMakeFiles/ale-c-lib.dir/src/environment/ale_state.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.o: src/environment/phosphor_blend.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/environment/phosphor_blend.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/environment/phosphor_blend.cpp
 
 CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/environment/phosphor_blend.cpp > CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/environment/phosphor_blend.cpp > CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/environment/phosphor_blend.cpp -o CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/environment/phosphor_blend.cpp -o CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.o.requires:
 
@@ -1715,16 +1715,16 @@ CMakeFiles/ale-c-lib.dir/src/environment/phosphor_blend.cpp.o.provides.build: CM
 
 CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.o: src/environment/stella_environment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/environment/stella_environment.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/environment/stella_environment.cpp
 
 CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/environment/stella_environment.cpp > CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/environment/stella_environment.cpp > CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/environment/stella_environment.cpp -o CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/environment/stella_environment.cpp -o CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.o.requires:
 
@@ -1739,16 +1739,16 @@ CMakeFiles/ale-c-lib.dir/src/environment/stella_environment.cpp.o.provides.build
 
 CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.o: src/games/RomSettings.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/RomSettings.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/RomSettings.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/RomSettings.cpp > CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/RomSettings.cpp > CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/RomSettings.cpp -o CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/RomSettings.cpp -o CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.o.requires:
 
@@ -1763,16 +1763,16 @@ CMakeFiles/ale-c-lib.dir/src/games/RomSettings.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.o: src/games/RomUtils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/RomUtils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/RomUtils.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/RomUtils.cpp > CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/RomUtils.cpp > CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/RomUtils.cpp -o CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/RomUtils.cpp -o CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.o.requires:
 
@@ -1787,16 +1787,16 @@ CMakeFiles/ale-c-lib.dir/src/games/RomUtils.cpp.o.provides.build: CMakeFiles/ale
 
 CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.o: src/games/Roms.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/Roms.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/Roms.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/Roms.cpp > CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/Roms.cpp > CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/Roms.cpp -o CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/Roms.cpp -o CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.o.requires:
 
@@ -1811,16 +1811,16 @@ CMakeFiles/ale-c-lib.dir/src/games/Roms.cpp.o.provides.build: CMakeFiles/ale-c-l
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.o: src/games/supported/AirRaid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/AirRaid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/AirRaid.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/AirRaid.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/AirRaid.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/AirRaid.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/AirRaid.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.o.requires:
 
@@ -1835,16 +1835,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/AirRaid.cpp.o.provides.build: CMake
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.o: src/games/supported/Alien.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Alien.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Alien.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Alien.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Alien.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Alien.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Alien.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.o.requires:
 
@@ -1859,16 +1859,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Alien.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.o: src/games/supported/Amidar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Amidar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Amidar.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Amidar.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Amidar.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Amidar.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Amidar.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.o.requires:
 
@@ -1883,16 +1883,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Amidar.cpp.o.provides.build: CMakeF
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.o: src/games/supported/Assault.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Assault.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Assault.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Assault.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Assault.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Assault.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Assault.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.o.requires:
 
@@ -1907,16 +1907,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Assault.cpp.o.provides.build: CMake
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.o: src/games/supported/Asterix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Asterix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Asterix.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Asterix.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Asterix.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Asterix.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Asterix.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.o.requires:
 
@@ -1931,16 +1931,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Asterix.cpp.o.provides.build: CMake
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.o: src/games/supported/Asteroids.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Asteroids.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Asteroids.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Asteroids.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Asteroids.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Asteroids.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Asteroids.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.o.requires:
 
@@ -1955,16 +1955,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Asteroids.cpp.o.provides.build: CMa
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.o: src/games/supported/Atlantis.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Atlantis.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Atlantis.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Atlantis.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Atlantis.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Atlantis.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Atlantis.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.o.requires:
 
@@ -1979,16 +1979,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Atlantis.cpp.o.provides.build: CMak
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.o: src/games/supported/BankHeist.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/BankHeist.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/BankHeist.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/BankHeist.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/BankHeist.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/BankHeist.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/BankHeist.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.o.requires:
 
@@ -2003,16 +2003,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/BankHeist.cpp.o.provides.build: CMa
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.o: src/games/supported/BattleZone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/BattleZone.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/BattleZone.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/BattleZone.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/BattleZone.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/BattleZone.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/BattleZone.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.o.requires:
 
@@ -2027,16 +2027,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/BattleZone.cpp.o.provides.build: CM
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.o: src/games/supported/BeamRider.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/BeamRider.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/BeamRider.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/BeamRider.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/BeamRider.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/BeamRider.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/BeamRider.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.o.requires:
 
@@ -2051,16 +2051,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/BeamRider.cpp.o.provides.build: CMa
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.o: src/games/supported/Berzerk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Berzerk.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Berzerk.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Berzerk.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Berzerk.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Berzerk.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Berzerk.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.o.requires:
 
@@ -2075,16 +2075,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Berzerk.cpp.o.provides.build: CMake
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.o: src/games/supported/Bowling.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Bowling.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Bowling.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Bowling.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Bowling.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Bowling.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Bowling.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.o.requires:
 
@@ -2099,16 +2099,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Bowling.cpp.o.provides.build: CMake
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.o: src/games/supported/Boxing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Boxing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Boxing.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Boxing.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Boxing.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Boxing.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Boxing.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.o.requires:
 
@@ -2123,16 +2123,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Boxing.cpp.o.provides.build: CMakeF
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.o: src/games/supported/Breakout.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Breakout.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Breakout.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Breakout.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Breakout.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Breakout.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Breakout.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.o.requires:
 
@@ -2147,16 +2147,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Breakout.cpp.o.provides.build: CMak
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.o: src/games/supported/Carnival.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Carnival.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Carnival.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Carnival.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Carnival.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Carnival.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Carnival.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.o.requires:
 
@@ -2171,16 +2171,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Carnival.cpp.o.provides.build: CMak
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.o: src/games/supported/Centipede.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Centipede.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Centipede.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Centipede.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Centipede.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Centipede.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Centipede.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.o.requires:
 
@@ -2195,16 +2195,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Centipede.cpp.o.provides.build: CMa
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.o: src/games/supported/ChopperCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/ChopperCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/ChopperCommand.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/ChopperCommand.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/ChopperCommand.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/ChopperCommand.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/ChopperCommand.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.o.requires:
 
@@ -2219,16 +2219,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/ChopperCommand.cpp.o.provides.build
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.o: src/games/supported/CrazyClimber.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/CrazyClimber.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/CrazyClimber.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/CrazyClimber.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/CrazyClimber.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/CrazyClimber.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/CrazyClimber.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.o.requires:
 
@@ -2243,16 +2243,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.o.provides.build: 
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.o: src/games/supported/Defender.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Defender.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Defender.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Defender.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Defender.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Defender.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Defender.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.o.requires:
 
@@ -2267,16 +2267,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.o.provides.build: CMak
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.o: src/games/supported/DemonAttack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/DemonAttack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/DemonAttack.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/DemonAttack.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/DemonAttack.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/DemonAttack.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/DemonAttack.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.o.requires:
 
@@ -2289,18 +2289,42 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.o.provides: CMakeFi
 CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.o
 
 
+CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
+CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o: src/games/supported/DonkeyKong.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/DonkeyKong.cpp
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/DonkeyKong.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.i
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/DonkeyKong.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.s
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o.requires:
+
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o.requires
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o.provides: CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o.provides.build
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o.provides
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o
+
+
 CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.o: src/games/supported/DoubleDunk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/DoubleDunk.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/DoubleDunk.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/DoubleDunk.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/DoubleDunk.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/DoubleDunk.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/DoubleDunk.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.o.requires:
 
@@ -2315,16 +2339,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.o.provides.build: CM
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.o: src/games/supported/ElevatorAction.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/ElevatorAction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/ElevatorAction.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/ElevatorAction.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/ElevatorAction.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/ElevatorAction.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/ElevatorAction.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.o.requires:
 
@@ -2339,16 +2363,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.o.provides.build
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.o: src/games/supported/Enduro.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Enduro.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Enduro.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Enduro.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Enduro.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Enduro.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Enduro.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.o.requires:
 
@@ -2363,16 +2387,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.o.provides.build: CMakeF
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.o: src/games/supported/FishingDerby.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/FishingDerby.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/FishingDerby.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/FishingDerby.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/FishingDerby.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/FishingDerby.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/FishingDerby.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.o.requires:
 
@@ -2387,16 +2411,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.o.provides.build: 
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.o: src/games/supported/Freeway.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Freeway.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Freeway.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Freeway.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Freeway.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Freeway.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Freeway.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.o.requires:
 
@@ -2409,18 +2433,42 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.o.provides: CMakeFiles/
 CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.o
 
 
+CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
+CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o: src/games/supported/Frogger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Frogger.cpp
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Frogger.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.i
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Frogger.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.s
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o.requires:
+
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o.requires
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o.provides: CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o.provides.build
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o.provides
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o
+
+
 CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.o: src/games/supported/Frostbite.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Frostbite.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Frostbite.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Frostbite.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Frostbite.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Frostbite.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Frostbite.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.o.requires:
 
@@ -2433,18 +2481,42 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.o.provides: CMakeFile
 CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.o
 
 
+CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
+CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o: src/games/supported/Galaxian.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Galaxian.cpp
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Galaxian.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.i
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Galaxian.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.s
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o.requires:
+
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o.requires
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o.provides: CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o.provides.build
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o.provides
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o
+
+
 CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.o: src/games/supported/Gopher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Gopher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Gopher.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Gopher.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Gopher.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Gopher.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Gopher.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.o.requires:
 
@@ -2459,16 +2531,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.o.provides.build: CMakeF
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.o: src/games/supported/Gravitar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Gravitar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Gravitar.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Gravitar.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Gravitar.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Gravitar.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Gravitar.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.o.requires:
 
@@ -2483,16 +2555,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.o.provides.build: CMak
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.o: src/games/supported/Hero.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Hero.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Hero.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Hero.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Hero.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Hero.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Hero.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.o.requires:
 
@@ -2507,16 +2579,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.o: src/games/supported/IceHockey.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/IceHockey.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/IceHockey.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/IceHockey.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/IceHockey.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/IceHockey.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/IceHockey.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.o.requires:
 
@@ -2531,16 +2603,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/IceHockey.cpp.o.provides.build: CMa
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.o: src/games/supported/JamesBond.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/JamesBond.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/JamesBond.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/JamesBond.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/JamesBond.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/JamesBond.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/JamesBond.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.o.requires:
 
@@ -2555,16 +2627,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.o.provides.build: CMa
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.o: src/games/supported/JourneyEscape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/JourneyEscape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/JourneyEscape.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/JourneyEscape.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/JourneyEscape.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/JourneyEscape.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/JourneyEscape.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.o.requires:
 
@@ -2579,16 +2651,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.o.provides.build:
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.o: src/games/supported/Kangaroo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Kangaroo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Kangaroo.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Kangaroo.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Kangaroo.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Kangaroo.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Kangaroo.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.o.requires:
 
@@ -2601,18 +2673,90 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.o.provides: CMakeFiles
 CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.o
 
 
+CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
+CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o: src/games/supported/KeystoneKapers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/KeystoneKapers.cpp
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/KeystoneKapers.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.i
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/KeystoneKapers.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.s
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o.requires:
+
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o.requires
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o.provides: CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o.provides.build
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o.provides
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o
+
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
+CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o: src/games/supported/Kingkong.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Kingkong.cpp
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Kingkong.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.i
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Kingkong.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.s
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o.requires:
+
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o.requires
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o.provides: CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o.provides.build
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o.provides
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o
+
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
+CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o: src/games/supported/Koolaid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Koolaid.cpp
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Koolaid.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.i
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Koolaid.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.s
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o.requires:
+
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o.requires
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o.provides: CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o.provides.build
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o.provides
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o
+
+
 CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.o: src/games/supported/Krull.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Krull.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Krull.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Krull.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Krull.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Krull.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Krull.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.o.requires:
 
@@ -2627,16 +2771,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.o: src/games/supported/KungFuMaster.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/KungFuMaster.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/KungFuMaster.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/KungFuMaster.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/KungFuMaster.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/KungFuMaster.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/KungFuMaster.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.o.requires:
 
@@ -2649,18 +2793,66 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.o.provides: CMakeF
 CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.o
 
 
+CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
+CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o: src/games/supported/LaserGates.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/LaserGates.cpp
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/LaserGates.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.i
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/LaserGates.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.s
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o.requires:
+
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o.requires
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o.provides: CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o.provides.build
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o.provides
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o
+
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
+CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o: src/games/supported/LostLuggage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/LostLuggage.cpp
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/LostLuggage.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.i
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/LostLuggage.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.s
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o.requires:
+
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o.requires
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o.provides: CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o.provides.build
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o.provides
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o
+
+
 CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.o: src/games/supported/MontezumaRevenge.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/MontezumaRevenge.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/MontezumaRevenge.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/MontezumaRevenge.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/MontezumaRevenge.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/MontezumaRevenge.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/MontezumaRevenge.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.o.requires:
 
@@ -2673,18 +2865,42 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.o.provides: CM
 CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.o
 
 
+CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
+CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o: src/games/supported/MrDo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/MrDo.cpp
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/MrDo.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.i
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/MrDo.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.s
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o.requires:
+
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o.requires
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o.provides: CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o.provides.build
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o.provides
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o
+
+
 CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.o: src/games/supported/MsPacman.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/MsPacman.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/MsPacman.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/MsPacman.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/MsPacman.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/MsPacman.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/MsPacman.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.o.requires:
 
@@ -2699,16 +2915,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.o.provides.build: CMak
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.o: src/games/supported/NameThisGame.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/NameThisGame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/NameThisGame.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/NameThisGame.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/NameThisGame.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/NameThisGame.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/NameThisGame.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.o.requires:
 
@@ -2723,16 +2939,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.o.provides.build: 
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.o: src/games/supported/Phoenix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Phoenix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Phoenix.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Phoenix.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Phoenix.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Phoenix.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Phoenix.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.o.requires:
 
@@ -2747,16 +2963,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.o.provides.build: CMake
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.o: src/games/supported/Pitfall.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Pitfall.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Pitfall.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Pitfall.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Pitfall.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Pitfall.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Pitfall.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.o.requires:
 
@@ -2771,16 +2987,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Pitfall.cpp.o.provides.build: CMake
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.o: src/games/supported/Pong.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Pong.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Pong.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Pong.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Pong.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Pong.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Pong.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.o.requires:
 
@@ -2795,16 +3011,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Pong.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.o: src/games/supported/Pooyan.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Pooyan.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Pooyan.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Pooyan.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Pooyan.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Pooyan.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Pooyan.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.o.requires:
 
@@ -2819,16 +3035,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Pooyan.cpp.o.provides.build: CMakeF
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.o: src/games/supported/PrivateEye.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/PrivateEye.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/PrivateEye.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/PrivateEye.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/PrivateEye.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/PrivateEye.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/PrivateEye.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.o.requires:
 
@@ -2843,16 +3059,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/PrivateEye.cpp.o.provides.build: CM
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.o: src/games/supported/QBert.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/QBert.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/QBert.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/QBert.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/QBert.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/QBert.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/QBert.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.o.requires:
 
@@ -2867,16 +3083,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/QBert.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.o: src/games/supported/RiverRaid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/RiverRaid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/RiverRaid.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/RiverRaid.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/RiverRaid.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/RiverRaid.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/RiverRaid.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.o.requires:
 
@@ -2891,16 +3107,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/RiverRaid.cpp.o.provides.build: CMa
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.o: src/games/supported/RoadRunner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/RoadRunner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/RoadRunner.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/RoadRunner.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/RoadRunner.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/RoadRunner.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/RoadRunner.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.o.requires:
 
@@ -2915,16 +3131,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.o.provides.build: CM
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.o: src/games/supported/RoboTank.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/RoboTank.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/RoboTank.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/RoboTank.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/RoboTank.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/RoboTank.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/RoboTank.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.o.requires:
 
@@ -2939,16 +3155,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.o.provides.build: CMak
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.o: src/games/supported/Seaquest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Seaquest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Seaquest.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Seaquest.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Seaquest.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Seaquest.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Seaquest.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.o.requires:
 
@@ -2961,18 +3177,42 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.o.provides: CMakeFiles
 CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.o
 
 
+CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
+CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o: src/games/supported/SirLancelot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/SirLancelot.cpp
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/SirLancelot.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.i
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/SirLancelot.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.s
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o.requires:
+
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o.requires
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o.provides: CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o.provides.build
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o.provides
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o
+
+
 CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.o: src/games/supported/Skiing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Skiing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Skiing.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Skiing.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Skiing.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Skiing.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Skiing.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.o.requires:
 
@@ -2987,16 +3227,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.o.provides.build: CMakeF
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.o: src/games/supported/Solaris.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Solaris.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Solaris.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Solaris.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Solaris.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Solaris.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Solaris.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.o.requires:
 
@@ -3011,16 +3251,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.o.provides.build: CMake
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.o: src/games/supported/SpaceInvaders.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/SpaceInvaders.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/SpaceInvaders.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/SpaceInvaders.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/SpaceInvaders.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/SpaceInvaders.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/SpaceInvaders.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.o.requires:
 
@@ -3035,16 +3275,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.o.provides.build:
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.o: src/games/supported/StarGunner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/StarGunner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/StarGunner.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/StarGunner.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/StarGunner.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/StarGunner.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/StarGunner.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.o.requires:
 
@@ -3059,16 +3299,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/StarGunner.cpp.o.provides.build: CM
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.o: src/games/supported/Tennis.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Tennis.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Tennis.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Tennis.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Tennis.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Tennis.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Tennis.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.o.requires:
 
@@ -3083,16 +3323,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.o.provides.build: CMakeF
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.o: src/games/supported/Tetris.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Tetris.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Tetris.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Tetris.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Tetris.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Tetris.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Tetris.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.o.requires:
 
@@ -3107,16 +3347,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.o.provides.build: CMakeF
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.o: src/games/supported/TimePilot.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/TimePilot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/TimePilot.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/TimePilot.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/TimePilot.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/TimePilot.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/TimePilot.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.o.requires:
 
@@ -3129,18 +3369,66 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.o.provides: CMakeFile
 CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.o
 
 
+CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
+CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o: src/games/supported/Trondead.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Trondead.cpp
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Trondead.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.i
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Trondead.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.s
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o.requires:
+
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o.requires
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o.provides: CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o.provides.build
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o.provides
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o
+
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
+CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o: src/games/supported/Turmoil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Turmoil.cpp
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Turmoil.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.i
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Turmoil.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.s
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o.requires:
+
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o.requires
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o.provides: CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ale-c-lib.dir/build.make CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o.provides.build
+.PHONY : CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o.provides
+
+CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o.provides.build: CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o
+
+
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.o: src/games/supported/Tutankham.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Tutankham.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Tutankham.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Tutankham.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Tutankham.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Tutankham.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Tutankham.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.o.requires:
 
@@ -3155,16 +3443,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.o.provides.build: CMa
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.o: src/games/supported/UpNDown.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/UpNDown.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/UpNDown.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/UpNDown.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/UpNDown.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/UpNDown.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/UpNDown.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.o.requires:
 
@@ -3179,16 +3467,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.o.provides.build: CMake
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.o: src/games/supported/Venture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Venture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Venture.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Venture.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Venture.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Venture.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Venture.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.o.requires:
 
@@ -3203,16 +3491,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.o.provides.build: CMake
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.o: src/games/supported/VideoPinball.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/VideoPinball.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/VideoPinball.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/VideoPinball.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/VideoPinball.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/VideoPinball.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/VideoPinball.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.o.requires:
 
@@ -3227,16 +3515,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/VideoPinball.cpp.o.provides.build: 
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.o: src/games/supported/WizardOfWor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/WizardOfWor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/WizardOfWor.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/WizardOfWor.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/WizardOfWor.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/WizardOfWor.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/WizardOfWor.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.o.requires:
 
@@ -3251,16 +3539,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/WizardOfWor.cpp.o.provides.build: C
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.o: src/games/supported/YarsRevenge.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/YarsRevenge.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/YarsRevenge.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/YarsRevenge.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/YarsRevenge.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/YarsRevenge.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/YarsRevenge.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.o.requires:
 
@@ -3275,16 +3563,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/YarsRevenge.cpp.o.provides.build: C
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.o: src/games/supported/Zaxxon.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.o -c /home/moonblade/workspace/project/interface/ale/src/games/supported/Zaxxon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Zaxxon.cpp
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/games/supported/Zaxxon.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Zaxxon.cpp > CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.i
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/games/supported/Zaxxon.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/games/supported/Zaxxon.cpp -o CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.s
 
 CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.o.requires:
 
@@ -3299,16 +3587,16 @@ CMakeFiles/ale-c-lib.dir/src/games/supported/Zaxxon.cpp.o.provides.build: CMakeF
 
 CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.o: src/external/TinyMT/tinymt32.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.o   -c /home/moonblade/workspace/project/interface/ale/src/external/TinyMT/tinymt32.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.o   -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/external/TinyMT/tinymt32.c
 
 CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/external/TinyMT/tinymt32.c > CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/external/TinyMT/tinymt32.c > CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.i
 
 CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/external/TinyMT/tinymt32.c -o CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/external/TinyMT/tinymt32.c -o CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.s
 
 CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.o.requires:
 
@@ -3323,16 +3611,16 @@ CMakeFiles/ale-c-lib.dir/src/external/TinyMT/tinymt32.c.o.provides.build: CMakeF
 
 CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.o: src/os_dependent/SettingsUNIX.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/os_dependent/SettingsUNIX.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/os_dependent/SettingsUNIX.cxx
 
 CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/os_dependent/SettingsUNIX.cxx > CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/os_dependent/SettingsUNIX.cxx > CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/os_dependent/SettingsUNIX.cxx -o CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/os_dependent/SettingsUNIX.cxx -o CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.o.requires:
 
@@ -3347,16 +3635,16 @@ CMakeFiles/ale-c-lib.dir/src/os_dependent/SettingsUNIX.cxx.o.provides.build: CMa
 
 CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.o: src/os_dependent/OSystemUNIX.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/os_dependent/OSystemUNIX.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/os_dependent/OSystemUNIX.cxx
 
 CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/os_dependent/OSystemUNIX.cxx > CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/os_dependent/OSystemUNIX.cxx > CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/os_dependent/OSystemUNIX.cxx -o CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/os_dependent/OSystemUNIX.cxx -o CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.o.requires:
 
@@ -3371,16 +3659,16 @@ CMakeFiles/ale-c-lib.dir/src/os_dependent/OSystemUNIX.cxx.o.provides.build: CMak
 
 CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.o: CMakeFiles/ale-c-lib.dir/flags.make
 CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.o: src/os_dependent/FSNodePOSIX.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.o -c /home/moonblade/workspace/project/interface/ale/src/os_dependent/FSNodePOSIX.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/src/os_dependent/FSNodePOSIX.cxx
 
 CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/src/os_dependent/FSNodePOSIX.cxx > CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/src/os_dependent/FSNodePOSIX.cxx > CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.i
 
 CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/src/os_dependent/FSNodePOSIX.cxx -o CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/src/os_dependent/FSNodePOSIX.cxx -o CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.s
 
 CMakeFiles/ale-c-lib.dir/src/os_dependent/FSNodePOSIX.cxx.o.requires:
 
@@ -3488,12 +3776,15 @@ ale__c__lib_OBJECTS = \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.o" \
+"CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.o" \
+"CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.o" \
+"CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.o" \
@@ -3501,9 +3792,15 @@ ale__c__lib_OBJECTS = \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.o" \
+"CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o" \
+"CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o" \
+"CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.o" \
+"CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o" \
+"CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.o" \
+"CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.o" \
@@ -3516,6 +3813,7 @@ ale__c__lib_OBJECTS = \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.o" \
+"CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.o" \
@@ -3523,6 +3821,8 @@ ale__c__lib_OBJECTS = \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.o" \
+"CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o" \
+"CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.o" \
 "CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.o" \
@@ -3631,12 +3931,15 @@ ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/C
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.o
+ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.o
+ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.o
+ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.o
@@ -3644,9 +3947,15 @@ ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/I
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.o
+ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o
+ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o
+ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.o
+ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o
+ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.o
+ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.o
@@ -3659,6 +3968,7 @@ ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/R
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.o
+ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.o
@@ -3666,6 +3976,8 @@ ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/S
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.o
+ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o
+ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.o
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.o
@@ -3681,7 +3993,7 @@ ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/build.make
 ale_python_interface/libale_c.so: /usr/lib64/libSDLmain.a
 ale_python_interface/libale_c.so: /usr/lib64/libSDL.so
 ale_python_interface/libale_c.so: CMakeFiles/ale-c-lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Linking CXX shared library ale_python_interface/libale_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Linking CXX shared library ale_python_interface/libale_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ale-c-lib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -3782,12 +4094,15 @@ CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/CrazyClimber.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Defender.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/DemonAttack.cpp.o.requires
+CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/DonkeyKong.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/DoubleDunk.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/ElevatorAction.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Enduro.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/FishingDerby.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Freeway.cpp.o.requires
+CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Frogger.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Frostbite.cpp.o.requires
+CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Galaxian.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Gopher.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Gravitar.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Hero.cpp.o.requires
@@ -3795,9 +4110,15 @@ CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/JamesBond.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/JourneyEscape.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Kangaroo.cpp.o.requires
+CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/KeystoneKapers.cpp.o.requires
+CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Kingkong.cpp.o.requires
+CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Koolaid.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Krull.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/KungFuMaster.cpp.o.requires
+CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/LaserGates.cpp.o.requires
+CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/LostLuggage.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/MontezumaRevenge.cpp.o.requires
+CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/MrDo.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/MsPacman.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/NameThisGame.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Phoenix.cpp.o.requires
@@ -3810,6 +4131,7 @@ CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/RoadRunner.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/RoboTank.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Seaquest.cpp.o.requires
+CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/SirLancelot.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Skiing.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Solaris.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/SpaceInvaders.cpp.o.requires
@@ -3817,6 +4139,8 @@ CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Tennis.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Tetris.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/TimePilot.cpp.o.requires
+CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Trondead.cpp.o.requires
+CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Turmoil.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Tutankham.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/UpNDown.cpp.o.requires
 CMakeFiles/ale-c-lib.dir/requires: CMakeFiles/ale-c-lib.dir/src/games/supported/Venture.cpp.o.requires
@@ -3836,6 +4160,6 @@ CMakeFiles/ale-c-lib.dir/clean:
 .PHONY : CMakeFiles/ale-c-lib.dir/clean
 
 CMakeFiles/ale-c-lib.dir/depend:
-	cd /home/moonblade/workspace/project/interface/ale && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moonblade/workspace/project/interface/ale /home/moonblade/workspace/project/interface/ale /home/moonblade/workspace/project/interface/ale /home/moonblade/workspace/project/interface/ale /home/moonblade/workspace/project/interface/ale/CMakeFiles/ale-c-lib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moonblade/temp/j/Arcade-Learning-Environment && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moonblade/temp/j/Arcade-Learning-Environment /home/moonblade/temp/j/Arcade-Learning-Environment /home/moonblade/temp/j/Arcade-Learning-Environment /home/moonblade/temp/j/Arcade-Learning-Environment /home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles/ale-c-lib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ale-c-lib.dir/depend
 

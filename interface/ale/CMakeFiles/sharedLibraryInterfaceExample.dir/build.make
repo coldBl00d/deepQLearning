@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moonblade/workspace/project/interface/ale
+CMAKE_SOURCE_DIR = /home/moonblade/temp/j/Arcade-Learning-Environment
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moonblade/workspace/project/interface/ale
+CMAKE_BINARY_DIR = /home/moonblade/temp/j/Arcade-Learning-Environment
 
 # Include any dependencies generated for this target.
 include CMakeFiles/sharedLibraryInterfaceExample.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/sharedLibraryInterfaceExample.dir/flags.make
 
 CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.o: CMakeFiles/sharedLibraryInterfaceExample.dir/flags.make
 CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.o: doc/examples/sharedLibraryInterfaceExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.o -c /home/moonblade/workspace/project/interface/ale/doc/examples/sharedLibraryInterfaceExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.o -c /home/moonblade/temp/j/Arcade-Learning-Environment/doc/examples/sharedLibraryInterfaceExample.cpp
 
 CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/workspace/project/interface/ale/doc/examples/sharedLibraryInterfaceExample.cpp > CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moonblade/temp/j/Arcade-Learning-Environment/doc/examples/sharedLibraryInterfaceExample.cpp > CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.i
 
 CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/workspace/project/interface/ale/doc/examples/sharedLibraryInterfaceExample.cpp -o CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moonblade/temp/j/Arcade-Learning-Environment/doc/examples/sharedLibraryInterfaceExample.cpp -o CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.s
 
 CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.o.requires:
 
@@ -88,16 +88,16 @@ sharedLibraryInterfaceExample_OBJECTS = \
 # External object files for target sharedLibraryInterfaceExample
 sharedLibraryInterfaceExample_EXTERNAL_OBJECTS =
 
-doc/examples/sharedLibraryInterfaceExample: CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.o
-doc/examples/sharedLibraryInterfaceExample: CMakeFiles/sharedLibraryInterfaceExample.dir/build.make
-doc/examples/sharedLibraryInterfaceExample: /usr/lib64/libSDLmain.a
-doc/examples/sharedLibraryInterfaceExample: /usr/lib64/libSDL.so
-doc/examples/sharedLibraryInterfaceExample: CMakeFiles/sharedLibraryInterfaceExample.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/moonblade/workspace/project/interface/ale/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable doc/examples/sharedLibraryInterfaceExample"
+doc/examples/ale-sharedLibraryInterfaceExample: CMakeFiles/sharedLibraryInterfaceExample.dir/doc/examples/sharedLibraryInterfaceExample.cpp.o
+doc/examples/ale-sharedLibraryInterfaceExample: CMakeFiles/sharedLibraryInterfaceExample.dir/build.make
+doc/examples/ale-sharedLibraryInterfaceExample: /usr/lib64/libSDLmain.a
+doc/examples/ale-sharedLibraryInterfaceExample: /usr/lib64/libSDL.so
+doc/examples/ale-sharedLibraryInterfaceExample: CMakeFiles/sharedLibraryInterfaceExample.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable doc/examples/ale-sharedLibraryInterfaceExample"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sharedLibraryInterfaceExample.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/sharedLibraryInterfaceExample.dir/build: doc/examples/sharedLibraryInterfaceExample
+CMakeFiles/sharedLibraryInterfaceExample.dir/build: doc/examples/ale-sharedLibraryInterfaceExample
 
 .PHONY : CMakeFiles/sharedLibraryInterfaceExample.dir/build
 
@@ -110,6 +110,6 @@ CMakeFiles/sharedLibraryInterfaceExample.dir/clean:
 .PHONY : CMakeFiles/sharedLibraryInterfaceExample.dir/clean
 
 CMakeFiles/sharedLibraryInterfaceExample.dir/depend:
-	cd /home/moonblade/workspace/project/interface/ale && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moonblade/workspace/project/interface/ale /home/moonblade/workspace/project/interface/ale /home/moonblade/workspace/project/interface/ale /home/moonblade/workspace/project/interface/ale /home/moonblade/workspace/project/interface/ale/CMakeFiles/sharedLibraryInterfaceExample.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moonblade/temp/j/Arcade-Learning-Environment && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moonblade/temp/j/Arcade-Learning-Environment /home/moonblade/temp/j/Arcade-Learning-Environment /home/moonblade/temp/j/Arcade-Learning-Environment /home/moonblade/temp/j/Arcade-Learning-Environment /home/moonblade/temp/j/Arcade-Learning-Environment/CMakeFiles/sharedLibraryInterfaceExample.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/sharedLibraryInterfaceExample.dir/depend
 

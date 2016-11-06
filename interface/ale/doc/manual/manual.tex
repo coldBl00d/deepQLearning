@@ -422,13 +422,13 @@ is preserved.
 This functionality is provided in the fifo, shared library and CTypes interfaces. The shared
 library interface additionally provides state cloning/restoring capabilities.
 
-\subsection{Colour Averaging}
+\subsection{Color Averaging}
 
 Many Atari 2600 games display objects on alternating frames (sometimes even less frequently).
-This can be an issue for agents that do not consider the whole screen history. By default, 
-\emph{colour averaging} is not enabled. If enabled, the environment output (as observed by agents)
-is a weighted blend of the last two frames. This behaviour can be turned on using the
-command--line argument \verb+-color_averaging+ (or the \verb+setBool+ function).
+This can be an issue for agents that do not consider the whole screen history.
+By default, \emph{color averaging} is not enabled, that is, the environment output is the actual frame from the emulator.
+If enabled, the environment output (as observed by agents) is a weighted blend of the last two frames.
+This behaviour can be turned on using the command--line argument \verb+-color_averaging+ (or the \verb+setBool+ function).
 
 \subsection{Action Repeat Stochasticity}
 
@@ -697,15 +697,20 @@ clear.
   
   \verb+const ALEScreen &getScreen()+: Returns a matrix containing the current game screen.
   
-  \verb+void getScreenGrayscale(pixel_t *grayscale_output_buffer)+: This method should receive an
-  array of length width $\times$ height (generally $160 \times 210 = 33,600$) and then it will fill this array
-  with the grayscale colours
+  \verb+void getScreenGrayscale(std::vector<unsigned char>& grayscale_output_buffer)+: \\
+  This method fills the given vector with a grayscale version of the current screen, provided
+  in row-major order (typically yielding $210 \times 160 = 33,600$ entries). The vector is
+  resized as needed. For efficiency it is recommended to initialize the vector beforehand, to 
+  make sure an allocation is not performed at each time step. Note that the grayscale value
+  corresponds to the pixel's \emph{luminance}; for more details, consult the web.
   
-  \verb+void getScreenRGB(pixel_t *output_rgb_buffer)+: This method should receive an array of length 
-  $3 \times$ width $\times$ height (generally $3 \times 160 \times 210 = 100,800$) and then it will fill this
-  array with the RGB colours. The first positions contain the red colours, followed by the green colours
-  and then the blue colours
- 
+  \verb+void getScreenRGB(std::vector<unsigned char>& output_rgb_buffer)+:\\ 
+  This method fills the given vector with a RGB version of the current screen, provided
+  in row, column, then colour channel order (typically yielding $210 \times 160 \times 3 = 
+  100,800$ entries). The colour channels themselves are, in order: R, G, B. For example, \verb#output_rgb_buffer[(160 * 3) * 1 + 52 * 3 + 1]# corresponds to the 2nd row, 53rd column pixel's green
+  value. The vector is resized as needed. Still, for efficiency it is recommended to initialize
+  the vector beforehand, to make sure an allocation is not performed at each time step.
+  
   \verb+const ALERAM &getRAM()+: Returns a vector containing current RAM content (byte-level).
   
   \verb+void saveState()+: Saves the current state of the system if one wants to be able to recover 
