@@ -1,0 +1,19 @@
+\begin{thebibliography}{1}
+
+\bibitem{deepmind}
+D.~S. A. G. I. A. D. W. M.~R. Volodymyr~Mnih, Koray~Kavukcuoglu, ``Playing
+  atari with deep reinforcement learning,'' Dec 2013.
+
+\bibitem{nervana}
+``Demystifying deep reinforcement learning.''
+  https://www.nervanasys.com/demystifying-deep-reinforcement-learning/.
+
+\bibitem{pong}
+``Deep reinforcement learning: Pong from pixels.''
+  http://karpathy.github.io/2016/05/31/rl/.
+
+\bibitem{qlearning}
+``q-learning path-finding-q-learning-tutorial.''
+  http://mnemstudio.org/path-finding-q-learning-tutorial.htm.
+
+\end{thebibliography}
