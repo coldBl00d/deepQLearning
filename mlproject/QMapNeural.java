@@ -29,6 +29,14 @@ public class QMapNeural implements QMap{
 		network.calcError(out);
 		network.learn();
 	}
+	public void update(int[] state,double[] values){
+		double[] dState = new double[stateSize];
+		for(int i=0;i<stateSize;i++)
+			dState[i] = ((double)state[i])/2;
+		network.computeOutputs(dState);
+		network.calcError(values);
+		network.learn();	
+	}	
 	double[] computeOutputs(double[] in){
 		return network.computeOutputs(in);
 	}
