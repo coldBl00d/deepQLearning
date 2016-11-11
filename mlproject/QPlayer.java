@@ -45,6 +45,14 @@ public class QPlayer{
 		Random random = new Random();
 		double qMax = -1;
 		double[] qValues = qMap.get(state);
+		if(qValues==null){
+			qValues = new double[board.getSize()*board.getSize()];
+			for(int i=0;i<board.getSize();i++)
+				for(int j=0;j<board.getSize();j++){
+					qValues[i*board.getSize()+j] = findReward(new Position(i,j));
+				}
+			qMap.update(state,qValues);
+		}
 		for(int i=0;i<board.getSize();i++){
 			for(int j=0;j<board.getSize();j++){
 				if(board.isBlank(i,j)){

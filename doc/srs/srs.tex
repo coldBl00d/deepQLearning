@@ -1,0 +1,318 @@
+% This file was converted to LaTeX by Writer2LaTeX ver. 1.0.2
+% see http://writer2latex.sourceforge.net for more info
+\documentclass[twoside,letterpaper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{color}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=SYSTEMS AND SOFTWARE REQUIREMENTS SPECIFICATION (SSRS) TEMPLATE, pdfauthor=Clinton Jeffery, pdfsubject=, pdfkeywords=}
+\usepackage[pdftex]{graphicx}
+% Outline numbering
+\setcounter{secnumdepth}{5}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+\renewcommand\thesubsubsection{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+\renewcommand\theparagraph{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}}
+\renewcommand\thesubparagraph{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}.\arabic{subparagraph}}
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\makeatother
+% Page layout (geometry)
+\setlength\voffset{-1in}
+\setlength\hoffset{-1in}
+\setlength\topmargin{0.5in}
+\setlength\oddsidemargin{1in}
+\setlength\evensidemargin{1in}
+\setlength\textheight{8.278in}
+\setlength\textwidth{6.5in}
+\setlength\footskip{0.561in}
+\setlength\headheight{0.5in}
+\setlength\headsep{0.461in}
+% Footnote rule
+\setlength{\skip\footins}{0.0469in}
+\renewcommand\footnoterule{\vspace*{-0.0071in}\setlength\leftskip{0pt}\setlength\rightskip{0pt plus 1fil}\noindent\textcolor{black}{\rule{0.25\columnwidth}{0.0071in}}\vspace*{0.0398in}}
+% Pages styles
+\makeatletter
+\newcommand\ps@Standard{
+  \renewcommand\@oddhead{\selectlanguage{english}\rmfamily\color{black} College Of Engineering, Trivandrum\hfill \hfill Project SRS}
+  \renewcommand\@evenhead{\@oddhead}
+  \renewcommand\@oddfoot{\foreignlanguage{english}{\textcolor{black}{SRS Page }}\foreignlanguage{english}{\textcolor{black}{\thepage{}}}}
+  \renewcommand\@evenfoot{\@oddfoot}
+  \renewcommand\thepage{\arabic{page}}
+}
+\newcommand\ps@Convertviii{
+  \renewcommand\@oddhead{}
+  \renewcommand\@evenhead{\@oddhead}
+  \renewcommand\@oddfoot{}
+  \renewcommand\@evenfoot{\@oddfoot}
+  \renewcommand\thepage{\arabic{page}}
+}
+\newcommand\ps@Convertvii{
+  \renewcommand\@oddhead{}
+  \renewcommand\@evenhead{\@oddhead}
+  \renewcommand\@oddfoot{}
+  \renewcommand\@evenfoot{\@oddfoot}
+  \renewcommand\thepage{\arabic{page}}
+}
+\newcommand\ps@Convertvi{
+  \renewcommand\@oddhead{}
+  \renewcommand\@evenhead{\@oddhead}
+  \renewcommand\@oddfoot{}
+  \renewcommand\@evenfoot{\@oddfoot}
+  \renewcommand\thepage{\arabic{page}}
+}
+\newcommand\ps@Convertv{
+  \renewcommand\@oddhead{}
+  \renewcommand\@evenhead{\@oddhead}
+  \renewcommand\@oddfoot{}
+  \renewcommand\@evenfoot{\@oddfoot}
+  \renewcommand\thepage{\arabic{page}}
+}
+\newcommand\ps@Convertiv{
+  \renewcommand\@oddhead{}
+  \renewcommand\@evenhead{\@oddhead}
+  \renewcommand\@oddfoot{}
+  \renewcommand\@evenfoot{\@oddfoot}
+  \renewcommand\thepage{\arabic{page}}
+}
+\newcommand\ps@Convertii{
+  \renewcommand\@oddhead{}
+  \renewcommand\@evenhead{\@oddhead}
+  \renewcommand\@oddfoot{}
+  \renewcommand\@evenfoot{\@oddfoot}
+  \renewcommand\thepage{\arabic{page}}
+}
+\newcommand\ps@FirstPage{
+  \renewcommand\@oddhead{}
+  \renewcommand\@evenhead{\@oddhead}
+  \renewcommand\@oddfoot{}
+  \renewcommand\@evenfoot{\@oddfoot}
+  \renewcommand\thepage{\arabic{page}}
+}
+\makeatother
+\pagestyle{Standard}
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+% footnotes configuration
+\makeatletter
+\renewcommand\thefootnote{\arabic{footnote}}
+\makeatother
+\title{SOFTWARE REQUIREMENT SPECIFICATION}
+\author{Kevin Joseph, Jayadeep K M, Mohammed. Nisham}
+\date{\today}
+\begin{document}
+
+\clearpage{\centering\selectlanguage{english}\bfseries\color{black}
+SOFTWARE \ REQUIREMENTS SPECIFICATION (SRS) FOR 
+\par}
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+Decision making using Reinforced Deep Learning
+\par}
+
+
+\bigskip
+
+\centering
+\includegraphics[width=3cm]{images/logo.jpg}
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+\today
+\par}
+
+
+\bigskip
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+Prepared for:
+\par}
+
+{\centering\selectlanguage{english}\color{black}
+Btech Project Interim Evaluation
+\par}
+
+
+\bigskip
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+Prepared by:
+\par}
+
+{\centering\selectlanguage{english}\color{black}
+Kevin Joseph, Jayadeep K.M. , Mohd. Nisham
+\par}
+\bigskip
+{\centering\selectlanguage{english}\bfseries\color{black}
+Guide:
+\par}
+
+{\centering\selectlanguage{english}\color{black}
+Vipin Vasu\\
+vipin@cet.ac.in\\
+\par}
+\bigskip
+{\centering\selectlanguage{english}\bfseries\color{black}
+College Of Engineering, Trivandrum
+\par}
+
+\clearpage{\centering\selectlanguage{english}\bfseries\color{black}
+\par}
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+TABLE OF CONTENTS
+\par}
+
+
+\bigskip
+
+{\selectlanguage{english}\bfseries\color{black}
+Section\ \ Page}
+
+\setcounter{tocdepth}{9}
+\renewcommand\contentsname{}
+\tableofcontents
+
+\bigskip
+
+\clearpage\clearpage\setcounter{page}{1}\pagestyle{Convertii}
+\section[Introduction]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+Introduction}
+{\selectlanguage{english}\color{black}
+\foreignlanguage{english}{{The project is aimed at creating a deep learning model capable of taking high-dimensional data as input and taking a particular action as output. The major part of the model is a Neural Network, trained using Q-learning. To demonstrate the model we use the model to play multiple games taking the visual pixel data as input.}}\foreignlanguage{english}{ \ }}
+
+\subsection[IDENTIFICATION]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+IDENTIFICATION}
+{\selectlanguage{english}\color{black}
+The software system being considered for development is referred to as Samantha. \ Samantha will serve as a decision making AI in places where the environment is given as input in the form of high-dimensional unstructured data.\ This is a new project effort, so the
+version under development is version 0.1.}
+
+\subsection[PURPOSE]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+PURPOSE}
+{\selectlanguage{english}\color{black}
+The project will serve as a decision making AI in places where the environment is given as input in the form of high-dimensional unstructured data. For example it can be used for automated power control in IOT Home/office environment. In such a scenario it will learn the patterns present in the environment and corresponding actions being taken and then will replicate it.}
+
+\subsection[SCOPE]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+SCOPE}
+
+{\selectlanguage{english}\color{black}
+The project will be demonstrated using multiple graphical games, the game screens will be given as input to the program. Initially the it will play like a dumb player, but after each episode it will play better and better till it converges to the best possible game play. The program will mimic the way a human learns to make decisions in a new environment.}
+
+\subsection[DEFINITIONS, ACRONYMS, AND
+ABBREVIATIONS]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+DEFINITIONS, ACRONYMS, AND ABBREVIATIONS}
+\bigskip
+
+\begin{flushleft}
+\tablehead{}
+\begin{supertabular}{|m{1.3587599in}|m{5.00806in}|}
+\hline
+\centering \selectlanguage{english}\bfseries\color{black} Term or
+Acronym &
+\centering\arraybslash \selectlanguage{english}\bfseries\color{black}
+Definition\\\hline
+\selectlanguage{english}\color{black} Alpha test &
+\selectlanguage{english}\color{black} Limited release(s) to selected,
+outside testers\\\hline
+\selectlanguage{english}\color{black} Beta test &
+\selectlanguage{english}\color{black} Limited release(s) to cooperating
+customers wanting early access to developing systems\\\hline
+\selectlanguage{english}\color{black} Final test &
+\selectlanguage{english}\color{black} aka, Acceptance test, release of
+full functionality to customer for approval\\\hline
+\selectlanguage{english}\color{black} DFD &
+\selectlanguage{english}\color{black} Data Flow Diagram\\\hline
+\selectlanguage{english}\color{black} SDD &
+\selectlanguage{english}\color{black} Software Design Document, aka SDS,
+Software Design Specification\\\hline
+\selectlanguage{english}\color{black} SRS &
+\selectlanguage{english}\color{black} Software Requirements
+Specification\\\hline
+\selectlanguage{english}\color{black} NN &
+\selectlanguage{english}\color{black} Neural Network
+Specification\\\hline
+\selectlanguage{english}\color{black} MDP &
+\selectlanguage{english}\color{black} Markov Decision Process
+Specification\\\hline
+
+\end{supertabular}
+\end{flushleft}
+\subsection[REFERENCES]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+REFERENCES}
+\nocite{*} 
+{\selectlanguage{english}\color{black}
+\bibliography{bibl}
+\bibliographystyle{ieeetr}
+\clearpage\section[OVERALL
+DESCRIPTION]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+OVERALL DESCRIPTION}
+
+{\selectlanguage{english}\color{black}
+The project is aimed at creating a human like learning model that is able to learn from data similar to audio-visual data. The input will be 256X256 pixel screens of simple atari games. The idea is to observe the game state and make decisions based on expected rewards, some actions may result in an instant reward, some sequence of actions may result in a future reward, for both these cases the program must observe and modify an NN to do the best action next time. It must also consider taking random actions initially inorder to learn, later the confidence of actions must increase causing random moves ton decrease and finally the program should converge to a best player state.}
+\subsection[PRODUCT
+PERSPECTIVE]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+PRODUCT PERSPECTIVE}
+
+
+{\selectlanguage{english}\color{black}
+The practical use of this project can be seen in applicaations where decisions need to be made on the basis of a complex environment represented in the form of large amounts of sensory data. Examples are IOT homes, automated vehicles, stock market. It is evident in these application that it may not be possible to provide a defined feature set making it impossible to use normal machine learning approaches that make predictions based on the values of a predefined feature set, such an algorithm is only good if the feature set is good. This project takes the whole data instead and forms a relavent feature set by itself.}
+
+\subsection[PRODUCT
+FUNCTIONS]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+PRODUCT FUNCTIONS}
+{\selectlanguage{english}\color{black}
+\begin{itemize}
+      \item It should be able to play multiple games without any change in the architecture or algorithm.
+      \item It should converge in a finite number of episodes.
+      \item It should approximate best action even in states it has not encountered before.
+      \item It should learn by playing the game repetitively without user intervention.
+      \item It should have an generic interface with the game both on the input and the control end (Atari Learning Environment).
+  \end{itemize}
+}
+
+\subsection[USER
+CHARACTERISTICS]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+USER CHARACTERISTICS}
+
+{\selectlanguage{english}\color{black}
+The users of this program are developers who need to include a decision making AI in their application. Users must be experts in their domain and must have a clear idea of which part of their data represent environment states, number of controls,etc}
+
+\subsection[CONSTRAINTS]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+CONSTRAINTS}
+
+{\selectlanguage{english}\color{black}
+\begin{itemize}
+      \item Processor performance.
+      \item Game Speed.
+  \end{itemize}}
+
+
+
+\clearpage\setcounter{page}{1}\pagestyle{Convertv}
+\subsection[SYSTEM
+FEATURES]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+SYSTEM FEATURES}
+{\selectlanguage{english}\color{black}
+The project views the game as an MDP with a sequence of actions, rewards and states. Every state has a set of valid actions and each action leads to a new state, some actions result in a reward and some result in future rewards. A NN is used to output a quality value for each action and the best action is found. In the training phase the best action may not always be chosen, this is done inorder to solve the exploration-exploitation problem.\\ 
+The above process must be repeated till the player converges. This must happen in a finite number of episodes in a finite amount of time. The algorithm must act as a blackbox algorithm and must be able to play multiple games with same set of controls without any modifications.
+}
+\end{document}

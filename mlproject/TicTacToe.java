@@ -7,8 +7,8 @@ public class TicTacToe{
 		Board board = new Board(3);
 		QPlayer x = new QPlayer(board,Mark.x);
 		QPlayer o = new QPlayer(board,Mark.o);
-		// x.setQMap(new QMapNeural(3));
-		// o.setQMap(new QMapArray(3));
+		x.setQMap(new QMapNeural(3));
+		o.setQMap(new QMapNeural(3));
 		int testSize = 500000;
 		for(int i=0;i<testSize;i++){
 			board.clear();
@@ -39,8 +39,8 @@ public class TicTacToe{
 		QPlayer.increaseProb();
 		System.out.println();
 		Test test = new Test(x);
-		test.testNeural((QMapNeural) o.getQMap());
-		test.testNeural((QMapNeural) x.getQMap());
+		// test.testNeural((QMapNeural) o.getQMap());
+		// test.testNeural((QMapNeural) x.getQMap());
 		while(true)
 			test.testQ();
 	}
