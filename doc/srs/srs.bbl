@@ -16,4 +16,9 @@ D.~S. A. G. I. A. D. W. M.~R. Volodymyr~Mnih, Koray~Kavukcuoglu, ``Playing
 ``q-learning path-finding-q-learning-tutorial.''
   http://mnemstudio.org/path-finding-q-learning-tutorial.htm.
 
+\bibitem{bellemare13arcade}
+M.~G. {Bellemare}, Y.~{Naddaf}, J.~{Veness}, and M.~{Bowling}, ``The arcade
+  learning environment: An evaluation platform for general agents,'' {\em
+  Journal of Artificial Intelligence Research}, vol.~47, pp.~253--279, 06 2013.
+
 \end{thebibliography}

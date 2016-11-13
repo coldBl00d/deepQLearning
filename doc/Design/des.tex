@@ -14,7 +14,7 @@
 \usepackage{cite}
 \usepackage{etoolbox}
 \usepackage{textcomp}
-\usepackage{textgreek}
+% \usepackage{textgreek}
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 \hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=SYSTEMS AND SOFTWARE REQUIREMENTS SPECIFICATION (SSRS) TEMPLATE, pdfauthor=Clinton Jeffery, pdfsubject=, pdfkeywords=}
 \usepackage[pdftex]{graphicx}
@@ -305,7 +305,7 @@ Q-learning attempts to solve the credit assignment problem it propagates rewards
 \bigskip
 Firstly observe, that when a Q-table or Q-network is initialized randomly, then its predictions are initially random as well. If we pick an action with the highest Q-value, the action will be random and the agent performs crude exploration. As a Q-function converges, it returns more consistent Q-values and the amount of exploration decreases. So one could say, that Q-learning incorporates the exploration as part of the algorithm. But this exploration is greedy, it settles with the first effective strategy it finds.\\
 \bigskip
-A simple and effective fix for the above problem is \textepsilon greedy exploration with probability \textepsilon choose a random action, otherwise go with the greedy action with the highest Q-value. In their system DeepMind actually decreases \textepsilon over time from 1 to 0.1 in the beginning the system makes completely random moves to explore the state space maximally, and then it settles down to a fixed exploration rate.\\
+A simple and effective fix for the above problem is greedy exploration with probability choose a random action, otherwise go with the greedy action with the highest Q-value. In their system DeepMind actually decreases over time from 1 to 0.1 in the beginning the system makes completely random moves to explore the state space maximally, and then it settles down to a fixed exploration rate.\\
 }
 
 \subsection[Deep Q-Algorithm]{\selectlanguage{english}\rmfamily\bfseries\color{black}

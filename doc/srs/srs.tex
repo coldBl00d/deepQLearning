@@ -43,53 +43,11 @@
 % Pages styles
 \makeatletter
 \newcommand\ps@Standard{
-  \renewcommand\@oddhead{\selectlanguage{english}\rmfamily\color{black} College Of Engineering, Trivandrum\hfill \hfill Project SRS}
-  \renewcommand\@evenhead{\@oddhead}
-  \renewcommand\@oddfoot{\foreignlanguage{english}{\textcolor{black}{SRS Page }}\foreignlanguage{english}{\textcolor{black}{\thepage{}}}}
-  \renewcommand\@evenfoot{\@oddfoot}
-  \renewcommand\thepage{\arabic{page}}
-}
-\newcommand\ps@Convertviii{
-  \renewcommand\@oddhead{}
-  \renewcommand\@evenhead{\@oddhead}
-  \renewcommand\@oddfoot{}
-  \renewcommand\@evenfoot{\@oddfoot}
-  \renewcommand\thepage{\arabic{page}}
-}
-\newcommand\ps@Convertvii{
-  \renewcommand\@oddhead{}
-  \renewcommand\@evenhead{\@oddhead}
-  \renewcommand\@oddfoot{}
-  \renewcommand\@evenfoot{\@oddfoot}
-  \renewcommand\thepage{\arabic{page}}
-}
-\newcommand\ps@Convertvi{
-  \renewcommand\@oddhead{}
-  \renewcommand\@evenhead{\@oddhead}
-  \renewcommand\@oddfoot{}
-  \renewcommand\@evenfoot{\@oddfoot}
-  \renewcommand\thepage{\arabic{page}}
-}
-\newcommand\ps@Convertv{
-  \renewcommand\@oddhead{}
-  \renewcommand\@evenhead{\@oddhead}
-  \renewcommand\@oddfoot{}
-  \renewcommand\@evenfoot{\@oddfoot}
-  \renewcommand\thepage{\arabic{page}}
-}
-\newcommand\ps@Convertiv{
-  \renewcommand\@oddhead{}
-  \renewcommand\@evenhead{\@oddhead}
-  \renewcommand\@oddfoot{}
-  \renewcommand\@evenfoot{\@oddfoot}
-  \renewcommand\thepage{\arabic{page}}
-}
-\newcommand\ps@Convertii{
-  \renewcommand\@oddhead{}
-  \renewcommand\@evenhead{\@oddhead}
-  \renewcommand\@oddfoot{}
-  \renewcommand\@evenfoot{\@oddfoot}
-  \renewcommand\thepage{\arabic{page}}
+  % \renewcommand\@oddhead{\selectlanguage{english}\rmfamily\color{black} College Of Engineering, Trivandrum\hfill \hfill Project SRS}
+  % \renewcommand\@evenhead{\@oddhead}
+  % \renewcommand\@oddfoot{\foreignlanguage{english}{\textcolor{black}{SRS }}\foreignlanguage{english}{\textcolor{black}{\thepage{}}}}
+  % \renewcommand\@evenfoot{\@oddfoot}
+  \renewcommand\thepage{\roman{page}}
 }
 \newcommand\ps@FirstPage{
   \renewcommand\@oddhead{}
@@ -159,7 +117,7 @@ Prepared by:
 \par}
 
 {\centering\selectlanguage{english}\color{black}
-Kevin Joseph, Jayadeep K.M. , Mohd. Nisham
+Kevin Joseph, Jayadeep K M, Mohammed Nisham K
 \par}
 \bigskip
 {\centering\selectlanguage{english}\bfseries\color{black}
@@ -193,10 +151,11 @@ Section\ \ Page}
 \tableofcontents
 
 \bigskip
-
-\clearpage\clearpage\setcounter{page}{1}\pagestyle{Convertii}
-\section[Introduction]{\selectlanguage{english}\rmfamily\bfseries\color{black}
-Introduction}
+\flushleft
+\clearpage\clearpage\setcounter{page}{1}
+\pagenumbering{arabic}
+\section[INTRODUCTION]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+INTRODUCTION}
 {\selectlanguage{english}\color{black}
 \foreignlanguage{english}{{The project is aimed at creating a deep learning model capable of taking high-dimensional data as input and taking a particular action as output. The major part of the model is a Neural Network, trained using Q-learning. To demonstrate the model we use the model to play multiple games taking the visual pixel data as input.}}\foreignlanguage{english}{ \ }}
 
@@ -220,7 +179,6 @@ The project will be demonstrated using multiple graphical games, the game screen
 \subsection[DEFINITIONS, ACRONYMS, AND
 ABBREVIATIONS]{\selectlanguage{english}\rmfamily\bfseries\color{black}
 DEFINITIONS, ACRONYMS, AND ABBREVIATIONS}
-\bigskip
 
 \begin{flushleft}
 \tablehead{}
@@ -237,7 +195,7 @@ outside testers\\\hline
 \selectlanguage{english}\color{black} Limited release(s) to cooperating
 customers wanting early access to developing systems\\\hline
 \selectlanguage{english}\color{black} Final test &
-\selectlanguage{english}\color{black} aka, Acceptance test, release of
+\selectlanguage{english}\color{black} Acceptance test, release of
 full functionality to customer for approval\\\hline
 \selectlanguage{english}\color{black} DFD &
 \selectlanguage{english}\color{black} Data Flow Diagram\\\hline
@@ -248,11 +206,9 @@ Software Design Specification\\\hline
 \selectlanguage{english}\color{black} Software Requirements
 Specification\\\hline
 \selectlanguage{english}\color{black} NN &
-\selectlanguage{english}\color{black} Neural Network
-Specification\\\hline
+\selectlanguage{english}\color{black} Neural Network\\\hline
 \selectlanguage{english}\color{black} MDP &
-\selectlanguage{english}\color{black} Markov Decision Process
-Specification\\\hline
+\selectlanguage{english}\color{black} Markov Decision Process\\\hline
 
 \end{supertabular}
 \end{flushleft}
@@ -262,12 +218,12 @@ REFERENCES}
 {\selectlanguage{english}\color{black}
 \bibliography{bibl}
 \bibliographystyle{ieeetr}
-\clearpage\section[OVERALL
+\section[OVERALL
 DESCRIPTION]{\selectlanguage{english}\rmfamily\bfseries\color{black}
 OVERALL DESCRIPTION}
 
 {\selectlanguage{english}\color{black}
-The project is aimed at creating a human like learning model that is able to learn from data similar to audio-visual data. The input will be 256X256 pixel screens of simple atari games. The idea is to observe the game state and make decisions based on expected rewards, some actions may result in an instant reward, some sequence of actions may result in a future reward, for both these cases the program must observe and modify an NN to do the best action next time. It must also consider taking random actions initially inorder to learn, later the confidence of actions must increase causing random moves ton decrease and finally the program should converge to a best player state.}
+The project is aimed at creating a human like learning model that is able to learn from data similar to audio-visual data. The input will be 256x256 pixel screens of simple atari games. The idea is to observe the game state and make decisions based on expected rewards, some actions may result in an instant reward, some sequence of actions may result in a future reward, for both these cases the program must observe and modify an NN to do the best action next time. It must also consider taking random actions initially inorder to learn, later the confidence of actions must increase causing random moves ton decrease and finally the program should converge to a best player state.}
 \subsection[PRODUCT
 PERSPECTIVE]{\selectlanguage{english}\rmfamily\bfseries\color{black}
 PRODUCT PERSPECTIVE}
@@ -307,12 +263,13 @@ CONSTRAINTS}
 
 
 
-\clearpage\setcounter{page}{1}\pagestyle{Convertv}
+\clearpage
 \subsection[SYSTEM
 FEATURES]{\selectlanguage{english}\rmfamily\bfseries\color{black}
 SYSTEM FEATURES}
 {\selectlanguage{english}\color{black}
-The project views the game as an MDP with a sequence of actions, rewards and states. Every state has a set of valid actions and each action leads to a new state, some actions result in a reward and some result in future rewards. A NN is used to output a quality value for each action and the best action is found. In the training phase the best action may not always be chosen, this is done inorder to solve the exploration-exploitation problem.\\ 
+The project views the game as an MDP with a sequence of actions, rewards and states. Every state has a set of valid actions and each action leads to a new state, some actions result in a reward and some result in future rewards. ANN is used to output a quality value for each action and the best action is found. In the training phase the best action may not always be chosen, this is done inorder to solve the exploration-exploitation problem.\\ 
 The above process must be repeated till the player converges. This must happen in a finite number of episodes in a finite amount of time. The algorithm must act as a blackbox algorithm and must be able to play multiple games with same set of controls without any modifications.
 }
+
 \end{document}
