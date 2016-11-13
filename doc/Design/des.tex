@@ -13,6 +13,7 @@
 \usepackage{hyperref}
 \usepackage{cite}
 \usepackage{etoolbox}
+\usepackage{cite}
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 \hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=SYSTEMS AND SOFTWARE REQUIREMENTS SPECIFICATION (SSRS) TEMPLATE, pdfauthor=Clinton Jeffery, pdfsubject=, pdfkeywords=}
 \usepackage[pdftex]{graphicx}
@@ -68,6 +69,7 @@
 \author{Kevin Joseph, Jayadeep K M, Mohammed. Nisham}
 \date{\today}
 \begin{document}
+\nocite{*}
 
 \clearpage{\centering\selectlanguage{english}\bfseries\color{black}
 DESIGN DOCUMENT
@@ -318,4 +320,16 @@ Class Diagram}
 \includegraphics[width=15cm]{images/jpeg.jpg}\\
 \end{centering}
 }
+\subsection[Applications:]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+Applications:}
+This method can be used wherever a decision has to be made based on an environment defined by an unstructured high dimensional dataset. Some such applications as the following:
+\begin{itemize}
+\item Home IOT systems and Home assistants \cite{IOT}
+\item Network Security Systems \cite{network}
+\item Stock Market \cite{stock}
+\item Gaming Systems \cite{Go}
+\end{itemize}
+\section{References: }
+\bibliography{bibl}
+\bibliographystyle{ieeetr}
 \end{document}
