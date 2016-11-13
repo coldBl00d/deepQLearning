@@ -25,8 +25,6 @@
 \select@language {english}
 \select@language {english}
 \select@language {english}
-\select@language {english}
-\select@language {english}
 \contentsline {section}{\numberline {1}INTRODUCTION}{1}{section.1}
 \select@language {english}
 \select@language {english}
