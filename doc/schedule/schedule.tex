@@ -8,7 +8,8 @@
 \usepackage{cite}
 \usepackage{acro}
 \begin{document}
-
+\nocite{*}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 \begin{titlepage}
 	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
 	\center % Center everything on the page
@@ -22,7 +23,7 @@
 
 	%	TITLE SECTION
 	\HRule \\[0.4cm]
-	{ \huge \bfseries Project Dairy}\\[0.4cm] % Title of your document
+	{ \huge \bfseries Project Schedule}\\[0.4cm] % Title of your document
 	\HRule \\[1.5cm]
 
 	%	AUTHOR SECTION
@@ -52,18 +53,30 @@
 \end{titlepage}
 \color{white}..\\
 \color{black}
-\formatdate{14}{10}{2016} : Started working on the project, created git repo.
-\\\\
-\formatdate{20}{10}{2016} -
-\formatdate{25}{10}{2016} : Created prototype of Tic-Tac-Toe game using basic q learning, in cpp. Unbeatable opponent by 10000 episodes.
-\\\\
-\formatdate{26}{10}{2016} : Ported code to java, split into multiple files for easier upkeep. BugFix in reward function. Started working on deep Q network class. Converted Qmap to interface for easier switching between neural network and array. 
-\\\\
-\formatdate{27}{10}{2016} : Qmap initialise with zero bug fixed. Added test function for neural network
-\\\\
-\formatdate{6}{11}{2016} : Added Arcade Learning Environment for interface with atari gaming environment, and to get parameters of the game like action set, reward, life, score etc.
-\\\\
-\formatdate{8}{11}{2016} : Implementation converted to python for prototype testing of ale, Ale interfacing with python working. Found python to be slow, decided on continuing with java
-\\\\
+\section{Schedule}
+\textbf{\formatdate{17}{11}{2016} - \formatdate{24}{11}{2016}} : 
+\begin{itemize}
+	\item \textbf{Complete XO with neural}
+	\begin{itemize}
+		\item study neural network \cite{k}
+		\item study online neural networks ( reinforced learning ) \cite{k}
+		\item \formatdate{23}{11}{2016} : Meet and discuss \cite{k}\cite{n}\cite{j}
+		\item build and fix phase \cite{j}
+	\end{itemize}
+	\item \textbf{Structure for Arcade Gaming}
+	\begin{itemize}
+		\item ALE Interface to java (done on \formatdate{6}{11}{2016}) \cite{n}
+		\item Read docs of ale \cite{n}
+		\item Skeleton code to run game from java controller \cite{n}
+		\item \formatdate{23}{11}{2016} : Meet and discuss \cite{k}\cite{n}\cite{j}
+		\item Class design improvements for better working \cite{n}\cite{k}\cite{j}
+		\item Finalise class structure for interface \cite{n}\cite{j}
+	\end{itemize}
+\end{itemize}
 
+
+\clearpage
+\section{Story Assignments}
+\bibliography{auth}
+\bibliographystyle{abstract}
 \end{document}
