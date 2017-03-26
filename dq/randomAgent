@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ -z $1 ]; then
+    python2.7 src/main.py --display_screen true roms/breakout.bin
+else
+    python2.7 src/main.py --display_screen true $1
+fi
