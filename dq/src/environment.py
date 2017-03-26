@@ -87,7 +87,7 @@ class ALEEnvironment(Environment):
                 not self.life_lost or    # `reset` called in a middle of episode
                 self.ale.game_over()    # all lives are lost
         ):
-        self.ale.reset_game()
+            self.ale.reset_game()
         self.life_lost = False
 
     def act(self, action):
