@@ -15,7 +15,7 @@ beginfig(1);
     "+getScreen()",
     "+Lost()",
     "+getAction()");
-    topToBottom(50)(environment, aleEnvironment);
+    topToBottom(100)(environment, aleEnvironment);
     drawObjects(aleEnvironment);
     clink(inheritance)(aleEnvironment, environment);
 
@@ -36,17 +36,43 @@ beginfig(1);
     "+play()"
     );
 
-    leftToRight(50)(environment, agent);
+    leftToRight(30)(environment, agent);
 
 
     Class.plotter("Plotter")("values")
     ("+updateValues()");
-    leftToRight(50)(agent, plotter);
+    leftToRight(30)(agent, plotter);
 
-    drawObjects(agent);
-    drawObjects(plotter);
+    Class.dqn("DeepQNetwork")(
+        "+action",
+        "+batchSize",
+        "+minReward",
+        "+maxReward",
+        "+backend"
+    )(
+        "+update network()",
+        "+train()",
+        "+predict()",
+        "+load()",
+        "+save()"
+    );
+    leftToRight(30)(aleEnvironment, dqn);
+
+    Class.mry("ReplayMemory")(
+        "+actions",
+        "+rewards",
+        "+screens"
+    )(
+        "+add()",
+        "+getState()"
+    );
+    leftToRight(30)(dqn, mry);
+
+    drawObjects(agent, plotter, dqn, mry);
 
     clink(associationUni)(agent, plotter);
+    clink(associationUni)(agent, dqn);
     clink(associationUni)(agent, environment);
+    clink(associationUni)(agent, mry);
 endfig;
 end

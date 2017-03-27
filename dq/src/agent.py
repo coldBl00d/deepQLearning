@@ -37,5 +37,4 @@ class Agent(object):
     def playRandom(self,steps):
         for i in xrange(steps):
             action, reward, screen, terminal = self.step(1)
-            logger.info(reward)
             self.plotter.updatePlot(reward)
