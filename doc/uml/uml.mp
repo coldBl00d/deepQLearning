@@ -5,7 +5,7 @@ beginfig(1);
     ("+restart()",
     "+act()",
     "+getScreen()",
-    "+Lost()",
+    "+isTerminal()",
     "+getAction()");
     drawObjects(environment);
 
@@ -13,7 +13,7 @@ beginfig(1);
     ("+restart()",
     "+act()",
     "+getScreen()",
-    "+Lost()",
+    "+isTerminal()",
     "+getAction()");
     topToBottom(100)(environment, aleEnvironment);
     drawObjects(aleEnvironment);
