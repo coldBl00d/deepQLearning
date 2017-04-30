@@ -1,0 +1,12 @@
+game=$1
+if [ -z $game ]
+then
+	game='breakout'
+fi
+	
+if [ $game == 'breakout' ]
+then
+	python src/main.py --play_games 2 --display_scree true --maxY 15 --load_weights snapshots/breakout_50.prm roms/breakout.bin 
+else
+	python src/main.py --play_games 2 --display_scree true --maxY 15 --load_weights snapshots/space_invaders_8.prm roms/space_invaders.bin 
+fi

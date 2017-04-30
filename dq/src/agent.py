@@ -62,7 +62,7 @@ class Agent:
       # choose highest Q-value of first state
       action = np.argmax(qvalues[0])
       maxQVal = max(qvalues[0]);
-      self.plotter.updatePlot(maxQVal);
+      # self.plotter.updatePlot(maxQVal);
       logger.debug("Predicted action = %d" % action)
 
     # perform the action
