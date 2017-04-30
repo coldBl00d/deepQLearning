@@ -1,6 +1,7 @@
 import random
 import logging
 import numpy as np
+from plotter import Plotter
 logger = logging.getLogger(__name__)
 from state_buffer import StateBuffer
 
@@ -25,6 +26,8 @@ class Agent:
     self.target_steps = args.target_steps
 
     self.callback = None
+
+    self.plotter = Plotter(ylabel="Q Value")
 
   def _restartRandom(self):
     self.env.restart()
@@ -58,6 +61,8 @@ class Agent:
       assert len(qvalues[0]) == self.num_actions
       # choose highest Q-value of first state
       action = np.argmax(qvalues[0])
+      maxQVal = max(qvalues[0]);
+      self.plotter.updatePlot(maxQVal);
       logger.debug("Predicted action = %d" % action)
 
     # perform the action

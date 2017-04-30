@@ -1,4 +1,8 @@
 from environment import ALEEnvironment
+from replay_memory import ReplayMemory
+from deepqnetwork import DeepQNetwork
+from agent import Agent
+from statistics import Statistics
 import logging
 logging.basicConfig(format='%(asctime)s %(message)s')
 from agent import Agent
@@ -83,6 +87,68 @@ if args.environment == 'ale':
     logger.info("Using ALE Environment")
 else:
     assert False, "Unknown environment" + args.environment
-agent = Agent(env, args)
-env.setMode('test')
-agent.playRandom(sys.maxint)
+
+mem = ReplayMemory(args.replay_size, args)
+net = DeepQNetwork(env.numActions(), args)
+agent = Agent(env, mem, net, args)
+stats = Statistics(agent, net, mem, env, args)
+
+
+if args.load_weights:
+  logger.info("Loading weights from %s" % args.load_weights)
+  net.load_weights(args.load_weights)
+
+if args.play_games:
+  logger.info("Playing for %d game(s)" % args.play_games)
+  # Set env mode test so that loss of life is not considered as terminal
+  env.setMode('test')
+  stats.reset()
+  agent.play(args.play_games)
+  stats.write(0, "play")
+  if args.visualization_file:
+    from visualization import visualize
+    # use states recorded during gameplay. NB! Check buffer size, that it can accomodate one game!
+    states = [agent.mem.getState(i) for i in xrange(agent.history_length, agent.mem.current - agent.random_starts)]
+    logger.info("Collected %d game states" % len(states))
+    import numpy as np
+    states = np.array(states)
+    states = states / 255.
+    visualize(net.model, states, args.visualization_filters, args.visualization_file)
+  sys.exit()
+
+if args.random_steps:
+  # populate replay memory with random steps
+  logger.info("Populating replay memory with %d random moves" % args.random_steps)
+  # Set env mode test so that loss of life is considered as terminal
+  env.setMode('train')
+  stats.reset()
+  agent.play_random(args.random_steps)
+  stats.write(0, "random")
+
+# loop over epochs
+for epoch in xrange(args.start_epoch, args.epochs):
+  logger.info("Epoch #%d" % (epoch + 1))
+
+  if args.train_steps:
+    logger.info(" Training for %d steps" % args.train_steps)
+    # Set env mode test so that loss of life is considered as terminal
+    env.setMode('train')
+    stats.reset()
+    agent.train(args.train_steps, epoch)
+    stats.write(epoch + 1, "train")
+
+    if args.save_weights_prefix:
+      filename = args.save_weights_prefix + "_%d.prm" % (epoch + 1)
+      logger.info("Saving weights to %s" % filename)
+      net.save_weights(filename)
+
+  if args.test_steps:
+    logger.info(" Testing for %d steps" % args.test_steps)
+    # Set env mode test so that loss of life is not considered as terminal
+    env.setMode('test')
+    stats.reset()
+    agent.test(args.test_steps, epoch)
+    stats.write(epoch + 1, "test")
+
+stats.close()
+logger.info("All done")
