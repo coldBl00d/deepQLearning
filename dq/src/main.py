@@ -25,6 +25,16 @@ envarg.add_argument("--screen_height", type=int, default=84, help="Screen height
 envarg.add_argument("--record_screen_path", help="Record game screens under this path. Subfolder for each game is created.")
 envarg.add_argument("--record_sound_filename", help="Record game sound in this file.")
 
+netarg = parser.add_argument_group('Deep Q-learning network')
+netarg.add_argument("--learning_rate", type=float, default=0.00025, help="Learning rate.")
+netarg.add_argument("--discount_rate", type=float, default=0.99, help="Discount rate for future rewards.")
+netarg.add_argument("--batch_size", type=int, default=32, help="Batch size for neural network.")
+netarg.add_argument("--decay_rate", type=float, default=0.95, help="Decay rate for RMSProp algorithm.")
+netarg.add_argument("--clip_error", type=float, default=1, help="Clip error term in update between this number and its negative.")
+netarg.add_argument("--min_reward", type=float, default=-1, help="Minimum reward.")
+netarg.add_argument("--max_reward", type=float, default=1, help="Maximum reward.")
+netarg.add_argument("--batch_norm", type=str2bool, default=False, help="Use batch normalization in all layers.")
+
 comarg = parser.add_argument_group('Common')
 comarg.add_argument("--random_seed", type=int, help="Random seed for repeatable experiments.")
 comarg.add_argument("--log_level", choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"], default="INFO", help="Log level.")
