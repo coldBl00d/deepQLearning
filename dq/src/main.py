@@ -53,6 +53,7 @@ antarg.add_argument("--exploration_rate_test", type=float, default=0.05, help="E
 antarg.add_argument("--train_frequency", type=int, default=4, help="Perform training after this many game steps.")
 antarg.add_argument("--train_repeat", type=int, default=1, help="Number of times to sample minibatch during training.")
 antarg.add_argument("--target_steps", type=int, default=10000, help="Copy main network to target network after this many game steps.")
+antarg.add_argument("--maxY", type=int, default=100, help="Max y val for plot.")
 antarg.add_argument("--random_starts", type=int, default=30, help="Perform max this number of dummy actions after game restart, to produce more random game dynamics.")
 
 memarg = parser.add_argument_group('Replay memory')
