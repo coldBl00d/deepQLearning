@@ -1,0 +1,31 @@
+\documentclass[twoside,letterpaper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{color}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{etoolbox}
+\usepackage{cite}
+\usepackage{acro}
+\include{helpers/acronyms}
+
+\begin{document}
+	\pagenumbering{roman}
+	
+	\tableofcontents
+	\newpage
+	\listoffigures
+	\newpage
+	\printacronyms[include-classes=abbrev,name=Abbreviations]
+	\newpage
+
+	\pagenumbering{arabic}
+	\section{abc}
+		asdf \ac{rest}
+\end{document}
