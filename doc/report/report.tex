@@ -24,7 +24,7 @@
 \begin{document}
 
 	\begin{titlepage}
-		\center % Center everything on the page
+		\begin{centering}
 		 
 		%	HEADING SECTIONS
 		\textbf{\textit{\large{B.Tech Project Report}}}\\[0.5cm]
@@ -49,6 +49,7 @@
 		\textsc{Kerala}\\
 		\textsc{May 2017}\\
 		\vfill % Fill the rest of the page with whitespace
+		\end{centering}
 	\end{titlepage}
 
 	\begin{titlepage}
@@ -58,7 +59,7 @@
 
 		\end{centering}
 
-		\large{This is to certify that the thesis entitled ``Decsion making using deep reinforcement learning'' is a bonafide record of the major project done by \textbf{Jayadeep K M} (Roll No 13400030), \textbf{Kevin Joseph} (Roll No 13400032), and \textbf{Mohammed Nisham K} (Roll No 13400038) under my supervision and guidance, in partial fulfilment for the award of the Degree of Bachelor of Technology in Computer Science and Engineering from the University of Kerala for the year 2017.}\\[1.5cm]
+		\large{This is to certify that the thesis entitled ``Decision making using deep reinforcement learning'' is a bonafide record of the major project done by \textbf{Jayadeep K M} (Roll No 13400030), \textbf{Kevin Joseph} (Roll No 13400032) and \textbf{Mohammed Nisham K} (Roll No 13400038) under my supervision and guidance, in partial fulfilment for the award of the Degree of Bachelor of Technology in Computer Science and Engineering from the University of Kerala for the year 2017.}\\[1.5cm]
 
 		\begin{minipage}{0.4\textwidth}
 		\begin{flushleft}
@@ -85,7 +86,20 @@
 		\vfill % Fill the rest of the page with whitespace
 	\end{titlepage}
 
+	% TODO Ack before this
 	\pagenumbering{roman}
+	\begin{abstract}
+		Creating a general purpose AI has been an area of research since the beginning of computers and programming. Reinforcement learning is a major step towards a general purpose AI. \\
+
+		This project is aimed at creating a program that can learn to make decisions in an environment that is defined by a high-dimensional input, and has sparce and time delayed rewards for these actions. Such programs can be useful in problems where decsion must be made based on high dimensional sensory input such as camera feed. This project uses Q-learning algorithm to assign a quality value to each action in a state of the environment. \\
+
+		Atari games are used to demonstrate this approach, by training the program to play breakout game for upto 50 epochs and observing performance improvement. The trained neural network was saved and tested at the end of every epoch. The performance parameters like average q-value, average reward, games per epoch were also saved. The performace parameters showed a clear rise in performace for breakout (50 epochs) and space invaders (8 epochs). \\
+
+		The project has applications in the field of IOT, security, gaming, stock market analysis and traffic control systems. Any system that can be modelled as an environment with actions and rewards can be trained using this algorithm.
+
+	\end{abstract}
+
+	\newpage
 	
 	\tableofcontents
 	\newpage

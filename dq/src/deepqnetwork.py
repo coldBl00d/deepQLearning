@@ -36,7 +36,7 @@ class DeepQNetwork:
     # prepare tensors once and reuse them
     self.input_shape = (self.history_length,) + self.screen_dim + (self.batch_size,)
     self.input = self.be.empty(self.input_shape)
-    self.input.lshape = self.input_shape # HACK: needed for convolutional networks
+    self.input.lshape = self.input_shape # HACK for convolutional networks
     self.targets = self.be.empty((self.num_actions, self.batch_size))
 
     # create model

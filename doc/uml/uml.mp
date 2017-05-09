@@ -23,6 +23,7 @@ beginfig(1);
     "+env",
     "+plotter",
     "+mem",
+    "+callback",
     "+buf",
     "+dqn",
     "+action",
@@ -36,12 +37,26 @@ beginfig(1);
     "+play()"
     );
 
-    leftToRight(30)(environment, agent);
+    leftToRight(90)(environment, agent);
 
 
     Class.plotter("Plotter")("values")
     ("+updateValues()");
     leftToRight(30)(agent, plotter);
+
+    Class.statistics("Statistics")(
+        "+csvfile",
+        "+net",
+        "+agent"
+    )(
+        "+reset()",
+        "+on_step()",
+        "+on_train()",
+        "+write()",
+        "+close()"
+    );
+    leftToRight(30)(aleEnvironment, statistics);
+
 
     Class.dqn("DeepQNetwork")(
         "+action",
@@ -56,7 +71,7 @@ beginfig(1);
         "+load()",
         "+save()"
     );
-    leftToRight(30)(aleEnvironment, dqn);
+    leftToRight(30)(statistics, dqn);
 
     Class.mry("ReplayMemory")(
         "+actions",
@@ -68,11 +83,23 @@ beginfig(1);
     );
     leftToRight(30)(dqn, mry);
 
-    drawObjects(agent, plotter, dqn, mry);
+    Class.sbuf("StateBuffer")(
+        "+buffer"
+    )(
+        "+add()",
+        "+getState()",
+        "+getStateMinibatch()",
+        "+reset()"
+    );
+    leftToRight(30)(mry, sbuf);
+
+    drawObjects(agent, plotter, dqn, mry, sbuf, statistics);
 
     clink(associationUni)(agent, plotter);
     clink(associationUni)(agent, dqn);
     clink(associationUni)(agent, environment);
     clink(associationUni)(agent, mry);
+    clink(associationUni)(agent, sbuf);
+    clink(associationUni)(agent, statistics);
 endfig;
 end

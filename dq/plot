@@ -1,0 +1,12 @@
+game=$1
+if [ -z $game ]
+then
+	game='breakout'
+fi
+	
+if [ $game == 'breakout' ]
+then
+	python src/plot.py results/breakout.csv
+else
+	python src/plot.py results/space_invaders.csv
+fi
