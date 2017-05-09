@@ -111,15 +111,6 @@ if args.play_games:
   stats.reset()
   agent.play(args.play_games)
   stats.write(0, "play")
-  if args.visualization_file:
-    from visualization import visualize
-    # use states recorded during gameplay. NB! Check buffer size, that it can accomodate one game!
-    states = [agent.mem.getState(i) for i in xrange(agent.history_length, agent.mem.current - agent.random_starts)]
-    logger.info("Collected %d game states" % len(states))
-    import numpy as np
-    states = np.array(states)
-    states = states / 255.
-    visualize(net.model, states, args.visualization_filters, args.visualization_file)
   sys.exit()
 
 if args.random_steps:
