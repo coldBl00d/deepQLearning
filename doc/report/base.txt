@@ -1,0 +1,50 @@
+Abstract
+Creating a general purpose AI has been an area of research since the beginning of computers and programming as we know it.
+Reinforcment learning is a major step towards that goal of a general purpose AI, this project is aimed at creating a program that
+can learn to make decisions in an environment that is defined by a high dimensional set of parameters(audio visual data). Such a program can be useful in problems where decisions must be made based on high dimensional sensory input such as camera video feed.
+Applications include home IOT systems, security systems, stock market, traffic contol system, gaming systems etc.
+This project uses the Q-learning algorithm, that uses experience replay to assign a quality value to ech action is a given state of the environment. The quality values are assigned based on a reinforcement signal(reward signal) that is read from the environment, this reward signal maybe delayed, noisy and sparse. The quality function is represented using a neural network that is trained using the reward signal .
+We used atari games to demonstrate this approach, by training the program to play the breakout game for upto 50 epochs and observing the performance improvement. This is done using the atari learning environment module that allows the program to interact with the game environment at an abstraction level that allows it to use the same agent to play multiple games with no change in the algorithm.
+The trained neural network was saved and tested at the end of every epoch. The performance parameters like average q-value, average reward, games per epoch were also saved. The performance parameters showed a clear rise in performance for breakout(epoch 1-50) and spaceinvaders(epoch 1-8).
+
+
+1.Introduction
+	1.1. Motivation and Overview
+	Learning to control agents directly from high-dimensional sensory inputs like vision and speech is one of the long-standing challenges of Artificial Intelligence and Machine Learning. Most successful AI applications have relied on hand-crafted features combined with linear value functions or policy representations. Clearly, the performance of such systems heavily relies on the quality of the feature representation.
+
+	Recent advances in deep learning have made it possible to extract high-level features from raw sensory data, leading to breakthroughs in computer vision and speech recognition. These methods utilise a range of neural network architectures, including convolutional networks, multilayer perceptrons, restricted Boltzmann machines and recurrent neural networks, and have exploited both supervised and unsupervised learning.
+	
+	However the main advantage of Reinforcement Learning is that it does't need huge amounts of hand-labelled data and does not depend too much on the feaute representation. It learns from a reward signal that maybe delayed, noisy and sparse. The delay between actions and the rewards, which maybe thousands of timesteps seems like a particularly hard problem in RL when compared to direct association between action and reward in supervised learning. Another issue is that most problems consider all the data samples independent of each other, but in this case we need to consider the fact that the reward at the end of a game is not just the result of the last action but the result of the sequence of actions from the start of the game.
+
+	This project is aimed at using a Convolution Neural Network along with the Q-learning algorithm to solve the above problems and make decisions based on video input from the atari learning environment. Our goal is to create a single neural network agent that is able to successfully learn to play atleast 2 games with no change in agent algorithm. The network was not provided with any game-specific information or hand-designed visual features, and was not privy to then internal state of the emulator, it learned from nothing but the video input, the reward and terminal signals, and the set of possible actions just as a human player would.
+	1.2 Literature Survey
+		*Deep Mind Paper
+		*Convnet.js
+		*Proof of Q function convergence
+		//
+
+
+2. Materials and Methodology
+	2.1. Algorithms
+		2.1.1. Q-Learning
+			//full description with pseudocode
+		2.1.2. Deep Q-Learning
+			//Neural Net
+			//Convolution Neural Net
+	2.2. Program Development
+		2.2.1. System Description
+		2.2.2. Class diagram
+		2.2.3. Small Explanation of code
+
+
+3. Results and Discussions
+	3.1. Screenshots from specified epochs
+	3.2. Description of observed strategy learning
+	3.3. Graph of collected data
+
+
+4. Conclusions and Suggestions for further work
+	4.1. Conclusion
+	4.2. Further Work
+		//gamification of problems
+		//traffic light example
