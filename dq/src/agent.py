@@ -27,7 +27,7 @@ class Agent:
 
     self.callback = None
 
-    self.plotter = Plotter(ylabel="Q Value")
+    self.plotter = Plotter(args ,ylabel="Q Value")
 
   def _restartRandom(self):
     self.env.restart()
