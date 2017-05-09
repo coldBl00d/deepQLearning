@@ -1,0 +1,34 @@
+1.Introduction
+	1.1. Motivation and Overview
+		//step towards general purpose AI, blah blah
+	1.2 Literature Survey
+		*Deep Mind Paper
+		*Convnet.js
+		*Proof of Q function convergence
+		//
+
+
+2. Materials and Methodology
+	2.1. Algorithms
+		2.1.1. Q-Learning
+			//full descriptipn with pseudocode
+		2.1.2. Deep Q-Learning
+			//Neural Net
+			//Convolution Neural Net
+	2.2. Program Development
+		2.2.1. System Description
+		2.2.2. Class diagram
+		2.2.3. Small Explanation of code
+
+
+3. Results and Discussions
+	3.1. Screenshots from specified epochs
+	3.2. Description of observed strategy learning
+	3.3. Graph of collected data
+
+
+4. Conclusions and Suggestions for further work
+	4.1. Conclusion
+	4.2. Further Work
+		//gamification of problems
+		//traffic light example
