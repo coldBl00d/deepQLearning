@@ -70,6 +70,12 @@ mainarg.add_argument("--load_weights", help="Load network from file.")
 mainarg.add_argument("--save_weights_prefix", help="Save network to given file. Epoch and extension will be appended.")
 mainarg.add_argument("--csv_file", help="Write training progress to this file.")
 
+plotArg = parser.add_argument_group('Plotter')
+plotArg.add_argument("--plot", type=str2bool, default=False, help="Whether it should plot or not")
+plotArg.add_argument("--sample", type=float, default=0.1, help="sampling interval")
+plotArg.add_argument("--time_window", type=float, default=10., help="timing window")
+plotArg.add_argument("--plot_size", type=tuple, default=(600, 350), help="size of window")
+
 comarg = parser.add_argument_group('Common')
 comarg.add_argument("--random_seed", type=int, help="Random seed for repeatable experiments.")
 comarg.add_argument("--log_level", choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"], default="INFO", help="Log level.")
