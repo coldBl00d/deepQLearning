@@ -17,6 +17,7 @@
 
 \include{helpers/acronyms}
 \DeclareGraphicsRule{*}{mps}{*}{}
+\newcommand{\mparagraph}[1]{\paragraph{#1}\mbox{}\\}
 
 % Commands
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines
@@ -174,9 +175,39 @@
 			\subsubsection{Code Overview}
 
 	\section{Results and Discussions}
+		The results of the training sessions were saved in a csv file in increments of 1 epoch or 25000 steps. Important parameters of the epoch like steps, number of games, average reward, mean cost, average q value etc are saved for three phases, training, test and random.
+
+
 		\subsection{Description of observed strategies}
+			\mparagraph{Breakout}
+				Before training the system plays randomly, \emph{ie} chooses an action at random. 
+
+				After one epoch the system adopts a simple strategy, to move to the left of the screen and stay there, an approach that assures a minimum score of two before defeat.
+
+				After ten epochs the system plays like a human player, moving the paddle in response to the ball and dropping it occasionally.
+
+				At fifty epochs, the play is significantly better occasionally resorting to the top strategy of tunnelling to the top of the screen from the edge.
+
+			\mparagraph{Space Invaders}
+				Space Invaders was trained for 8 epochs to prove that the algorithm can be used to train and play multiple games without any alterations proving the general purposse nature of it. At 8 epochs the game is played as a human would hitting the targets accurately enough and a consistent score in the range of 400 to 800 is obtained by the system.
+
 		\subsection{Screenshots}
 		\subsection{Result Visualization}
+			The results stored in csv files were plotted as a graph for visualization using matplotlib python module. Training of atari breakout was done for 50 epochs (65 hours). It  adopts visibly better strategies on later epochs. The training of space invaders was done for 8 epochs (10 hours), gameplay after 8 epochs was akin to a human player without any alteration to the algorithm, thus proving the general purpose nature of the algorithm.
+
+			\begin{figure}[!h]
+				\begin{centering}
+					\includegraphics[width=15cm]{images/breakout.png}
+					\caption{Breakout results for 50 epochs.}
+				\end{centering}
+			\end{figure}			
+			
+			\begin{figure}[!h]
+				\begin{centering}
+					\includegraphics[width=15cm]{images/space_invaders.png}
+					\caption{Space Invaders results for 8 epochs.}
+				\end{centering}
+			\end{figure}			
 
 	\section{Further Work}
 		\subsection{Gamification of Problem}
@@ -206,7 +237,7 @@
 
 				\begin{figure}[!h]
 					\begin{centering}
-						\includegraphics[width=15cm]{images/traffic1.png}
+						\includegraphics[width=10cm]{images/traffic1.png}
 						\caption{Empty Intersection.}
 					\end{centering}
 				\end{figure}
@@ -214,7 +245,7 @@
 				
 				\begin{figure}[!h]
 					\begin{centering}
-						\includegraphics[width=15cm]{images/traffic2.png}
+						\includegraphics[width=10cm]{images/traffic2.png}
 						\caption{Intersection with Vehicles.}
 					\end{centering}
 				\end{figure}
@@ -222,7 +253,7 @@
 				
 				\begin{figure}[!h]
 					\begin{centering}
-						\includegraphics[width=15cm]{images/traffic3.png}
+						\includegraphics[width=10cm]{images/traffic3.png}
 						\caption{Generation of Simplified Input.}
 					\end{centering}
 				\end{figure}
@@ -230,7 +261,7 @@
 				
 				\begin{figure}[!h]
 					\begin{centering}
-						\includegraphics[width=15cm]{images/traffic4.png}
+						\includegraphics[width=10cm]{images/traffic4.png}
 						\caption{Simplified Input.}
 					\end{centering}
 				\end{figure}
