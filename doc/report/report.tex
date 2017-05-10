@@ -275,10 +275,43 @@
 						\caption{UML Class Diagram.}
 					\end{centering}
 				\end{figure}
-			\subsubsection{Code Overview}
+
+		\subsection{Code Overview}
+			The code for the project is open on github. https://github.com/devilsangel/deepQLearning
+
+			\subsubsection{Environment}
+				The environment is an interface that is used to control the environment of the game. It gives the actions that can be peformed at any given time, gets the current state of the system, act a particular action on the system and return the reward if there is one. It also alerts the agent when a terminal state is reached.
+
+				The ALEEnvironment is the class that implements the environment interface. The structure was made so that different environments could be used interchangably with minimal change to the code. Other environments like gym environment can be used to implement the interface as well.
+
+			\subsubsection{Agent}
+				Agent class is the crux of the system. Which has variables of all other class types. In train mode, the system trains based on the qvalues provided by the deepQNetwork occasionally correcting it when rewards approach. After every step of the game, a callback to statisctics on step function is called. During training the loss of a life or the end of the game is treated as terminal states. Exploration rate controls whether exploration or exploitation is chosen. 
+
+				In test mode, a given no of games are played, here the statebuffer is used to disallow contamination of trained data. Here only the end of the game is taken as a terminal state.
+
+				In random mode, random actions are given to the system and the output observed.
+
+			\subsubsection{Plotter}
+				The plotter class uses python libraries to plot the data saved about each epoch as a graph. Visualising the important data metrics like average score and qvalue of each epoch, which can be used to evaluate the performance of the training.
+
+				It also serves the function of plotting the maximum qvalue of the current screen live during play.
+			
+			\subsubsection{Statistics}
+				The statistics class embeds itself as a callback in the agent class. The agent calls the on step method after every step of the game. If the game reaches a terminal state, the values like average score, no of games etc are updated in the statistics class.
+
+				When the epoch ends, the write method is called which appends the calculated data to the csv file.
+
+			\subsubsection{DeepQNetwork}
+				An abstraction layer over Neon, a deep learning library from Nervana Systems. It Models the Network, finds the Q values associated with a state of the system, and does updation of weights based on reward and a random minibatch. The reward is used to refine the discounted future reward of the minibatch.
+
+			\subsubsection{Replay Memory}
+				For training the states, actions, screens and rewards need to be saved. These can be added to the replay memory using the add method. When a reward is obtained, a minibuffer is selected with the current state at the index position. This minibuffer is used for training the system.
+
+			\subsubsection{State Buffer}
+				During testing and play, the replay memory is not necessary, so a stripped down version of it, storing only the states of the system is used. This has the added advantage of ensuring that the data from testing does not pollute the training data.
 
 	\section{Results and Discussions}
-		The results of the training sessions were saved in a csv file in increments of 1 epoch or 25000 steps. Important parameters of the epoch like steps, number of games, average reward, mean cost, average q value etc are saved for three phases, training, test and random.
+		The results of the training sessions were saved in a csv file in increments of 1 epoch or 250000 steps. Important parameters of the epoch like steps, number of games, average reward, mean cost, average q value etc are saved for three phases, training, test and random.
 
 
 		\subsection{Description of observed strategies}
@@ -294,7 +327,6 @@
 			\mparagraph{Space Invaders}
 				Space Invaders was trained for 8 epochs to prove that the algorithm can be used to train and play multiple games without any alterations proving the general purposse nature of it. At 8 epochs the game is played as a human would hitting the targets accurately enough and a consistent score in the range of 400 to 800 is obtained by the system.
 
-		\subsection{Screenshots}
 		\subsection{Result Visualization}
 			The results stored in csv files were plotted as a graph for visualization using matplotlib python module. Training of atari breakout was done for 50 epochs (65 hours). It  adopts visibly better strategies on later epochs. The training of space invaders was done for 8 epochs (10 hours), gameplay after 8 epochs was akin to a human player without any alteration to the algorithm, thus proving the general purpose nature of the algorithm.
 
