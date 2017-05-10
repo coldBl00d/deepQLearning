@@ -123,7 +123,7 @@ class DeepQNetwork:
     # make copy of prestate Q-values as targets
     targets = preq.asnumpyarray().copy()
 
-    # clip rewards between -1 and 1
+
     rewards = np.clip(rewards, self.min_reward, self.max_reward)
 
     # update Q-value targets for actions taken

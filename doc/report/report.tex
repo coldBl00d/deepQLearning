@@ -394,7 +394,9 @@
 
 				The bottleneck is the non scalability of the current architecture, which could be tentatively solved if parallel neural networks are introduced. Parallel neural networks are still in its infancy and outside the scope of this project.
 	\section{Conclusion}
+		It is clear from the results that the presented model can used in applications with high dimensional sensory input. They also show that the algorithm will eventually converge to an optimal policy. Real world problems can be modelled as an environment with reward and actions, and plugged into the algorithm.
 
+		Lack of processing power was observed as a pertinent limitation. The deepLearning library, Neon is optimized for Nvidia Maxwell Graphic Processing Units and its performance is very low on CPUs and pre-maxwell GPUs. We experimented training on GeForce GT 735M, Jetson TX1 board, and an i3 desktop CPU, the best among these was the GT 735M which took 77 mins per epoch.
 
 
 	\newpage
