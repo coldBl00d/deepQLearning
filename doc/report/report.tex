@@ -121,7 +121,7 @@
 			This project is aimed at using a Convolution Neural Network along with the Q-learning algorithm to solve the above problems and make decisions based on video input from the Atari Learning Environment. Our goal is to create a single neural network agent that is able to successfully learn to play atleast 2 games with no change in agent algorithm. The network was not provided with any game-specific information or hand-designed visual features, and was not privy to then internal state of the emulator, it learned from nothing but the video input, the reward and terminal signals, and the set of possible actions just as a human player would.
 
 		\subsection{Background and Literature Survey}
-			\paragraph{Deep Mind and Reinforcement Learning}
+			\mparagraph{Deep Mind and Reinforcement Learning}
 
 				The presented method and algorithm was first presented in a paper by a company Deep Mind which was later aquired by Google. The paper presented the algorithm as a general purpose RL algorithm that could play seven of the atari 2600 games, it showed human level play in four and super human play in three of them.
 				Consider the game Breakout. In this game you control a paddle at the bottom of the screen and have to bounce the ball back to clear all the bricks in the upper half of the screen. Each time you hit a brick, it disappears and your score increases you get a reward.
@@ -144,12 +144,12 @@
 
 	\section{Materials and Methodology}
 		\subsection{Algorithms}
-			\subsection{Markov Decision Process}
+			\subsubsection{Markov Decision Process}
 				Suppose you are an agent, situated in an environment (e.g. Breakout game). The environment is in a certain state (e.g. location of the paddle, location and direction of the ball, existence of every brick and so on). The agent can perform certain actions in the environment (e.g. move the paddle to the left or to the right). These actions sometimes result in a reward (e.g. increase in score). Actions transform the environment and lead to a new state, where the agent can perform another action, and so on. The rules for how you choose those actions are called policy. The environment in general is stochastic, which means the next state may be somewhat random (e.g. when you lose a ball and launch a new one, it goes towards a random direction).
 				\begin{figure}[!ht]
 					\begin{centering}
 						\includegraphics[width=10cm]{../Design/images/mdp.png}\\
-						\caption{Breakout screens.}
+						\caption{Markov Decision Process.}
 					\end{centering}
 				\end{figure}
 				The set of states and actions, together with rules for transitioning from one state to another, make up a Markov decision process. One episode of this process (e.g. one game) forms a finite sequence of states, actions and rewards:
@@ -159,9 +159,112 @@
 				\end{centering}
 
 				Here s$_{i}$ represents the state, ai is the action and ri+1 is the reward after performing the action. The episode ends with terminal state sn (e.g. game over screen). A Markov decision process relies on the Markov assumption, that the probability of the next state si+1 depends only on current state si and action ai, but not on preceding states or actions.
+			\subsubsection{Discounted Future Reward}
+				To perform well in the long-term, we need to take into account not only the immediate rewards, but also the future rewards we are going to get. How should we go about that?
+
+				Given one run of the Markov decision process, we can easily calculate the total reward for one episode:\\
+				\begin{centering}
+				\includegraphics[width=5cm]{../Design/images/dfr.png}\\
+				\end{centering}
+				Given that, the total future reward from time point t onward can be expressed as:\\
+				\begin{centering}
+				\includegraphics[width=7cm]{../Design/images/dfr2.png}\\
+				\end{centering}
+				But because our environment is stochastic, we can never be sure, if we will get the same rewards the next time we perform the same actions. The more into the future we go, the more it may diverge. For that reason it is common to use discounted future reward instead:\\
+				\begin{centering}
+				\includegraphics[width=9cm]{../Design/images/dfr3.png}\\
+				\end{centering}
+				Here Y is the discount factor between 0 and 1 the more into the future the reward is, the less we take it into consideration. It is easy to see, that discounted future reward at time step t can be expressed in terms of the same thing at time step t+1:\\
+				\begin{centering}
+				\includegraphics[width=10cm]{../Design/images/dfr4.png}\\
+				\end{centering}
+				If we set the discount factor Y=0, then our strategy will be short sighted and we rely only on the immediate rewards. If we want to balance between immediate and future rewards, we should set discount factor to something like Y=0.9. If our environment is deterministic and the same actions always result in same rewards, then we can set discount factor Y=1.\\
+
+				A good strategy for an agent would be to always choose an action that maximizes the (discounted) future reward.
 			\subsubsection{Q-Learning}
+				In Q-learning we define a function Q(s, a) representing the maximum discounted future reward when we perform action a in state s, and continue optimally from that point on.
+
+				\begin{centering}
+				\includegraphics[width=5cm]{../Design/images/q.png}\\
+				\end{centering}
+				The way to think about Q(s, a) is that it is the best possible score at the end of the game after performing action a in state s. It is called Qfunction, because it represents the quality of a certain action in a given state.
+
+				This may sound like quite a puzzling definition. How can we estimate the score at the end of game, if we know just the current state and action, and not the actions and rewards coming after that? We really cant. But as a theoretical construct we can assume existence of such a function. Just close your eyes and repeat to yourself five times: Q(s, a) exists, Q(s, a) exists, . Feel it?
+
+				If youre still not convinced, then consider what the implications of having such a function would be. Suppose you are in state and pondering whether you should take action a or b. You want to select the action that results in the highest score at the end of game. Once you have the magical Q-function, the answer becomes really simple pick the action with the highest Q value!
+
+				\begin{centering}
+				\includegraphics[width=5cm]{../Design/images/q2.png}\\
+				\end{centering}
+
+				The above policy, the rule how we choose an action in each state.
+				OK, how do we get that Q function then? Lets focus on just one transition <s, a, r, s>. Just like with discounted future rewards in the previous section, we can express the Q value of state s and action a in terms of the Q value of the next state s.
+
+				\begin{centering}
+				\includegraphics[width=5cm]{../Design/images/q3.png}\\
+				\end{centering}
+
+				This is called the Bellman equation. If you think about it, it is quite logical maximum future reward for this state and action is the immediate reward plus maximum future reward for the next state.
+				The main idea in Q-learning is that we can iteratively approximate the Q-function using the Bellman equation. In the simplest case the Q-function is implemented as a table, with states as rows and actions as columns. The gist of the Q learning algorithm is as simple as the following:
+
+				\begin{centering}
+				\includegraphics[width=10cm]{../Design/images/q4.png}\\
+				\end{centering}
+			\subsubsection{Q Learning to Deep Q Network}
+				Although a simple game with small number of states like tic tac toe can be easily implemented using a Q table data structure, the same approach does not work for an Atari game.
+
+				The state of the environment in the Breakout game can be defined by the location of the paddle, location and direction of the ball and the presence or absence of each individual brick. But for something more universal, the obvious choice is screen pixels. They implicitly contain all of the relevant information about the game situation, except for the speed and direction of the ball. Two consecutive screens would have these covered as well.\\
+
+				Taking our input of 84x84x4 pixels, In greyscale each pixel can have 128 values (atari could only emulate 128 colours), This would mean that the number of states is 128$^{84x84x4}$ which is more than the no of stars in the universe. Hence representing it in a Q table is out of the question.
+
+				Since there are a lot of states, repetitions of states are very rare, Q table does poorly on states that it has never encountered before, While a neural network will give us an approximate value for an unknown state based on its current learning. 
+
+				The time complexity of both Q table and Neural network remain the same at O(1) after completion of training, Although neural network might be a bit slower on account of the forward propagation it has to complete.
+
+
+				Thus a shift from Q table approach to Deep Q network is done for the reasons
+				\begin{itemize}
+				\item Space complexity is containable even when number of states is very large
+				\item Better approximation in un-encountered states
+				\item Faster training with lesser data
+				\end{itemize}
 			\subsubsection{Deep Q-Learning}
-				\paragraph{Neural Networks}
+				\mparagraph{Convolution Neural Networks}
+					Neural networks are exceptionally good at coming up with good features for highly structured data. We could represent our Q function with a neural network, that takes the state (four game screens) and action as input and outputs the corresponding Q value. Alternatively we could take only game screens as input and output the Q-value for each possible action. This approach has the advantage, that if we want to perform a Q value update or pick the action with the highest Q value, we only have to do one forward pass through the network and have all Q values for all actions available immediately.
+
+					Considering the fact that our input is an image input, we use a convolutional neural network. A convolutional network neuron functions similar to an optic neuron in the human brain. Each neuron instead of looking over the whole image, looks over only a small neighbourhood, and the combined effect of all the neurons performs the expected function.
+
+					\begin{figure}[!ht]
+						\begin{centering}
+							\includegraphics[width=10cm]{../Design/images/deep.png}\\
+							\caption{Two Possible models for Network.}
+						\end{centering}
+					\end{figure}
+
+					\begin{figure}[!ht]
+						\begin{centering}
+							\includegraphics[width=10cm]{../Design/images/deep2.png}\\
+							\caption{Network Design.}
+						\end{centering}
+					\end{figure}
+
+					\begin{figure}[!ht]
+						\begin{centering}
+							\includegraphics[width=10cm]{../Design/images/deep4.png}\\
+							\caption{Layer Representation}
+						\end{centering}
+					\end{figure}
+		\subsection{Atari 2600}
+		The Atari 2600 (or Atari VCS before 1982) is a home video game console released on September 11, 1977, by Atari, Inc. It is credited with popularizing the use of microprocessor-based hardware and ROM cartridges containing game code, a format first used with the Fairchild Channel F video game console in 1976. This format contrasts with the older model of having non-microprocessor dedicated hardware, which could only play the games that were physically built into the unit.
+
+		The console was originally sold as the Atari VCS, an abbreviation for Video Computer System. Following the release of the Atari 5200 in 1982, the VCS was renamed to the ``Atari 2600'', after the unit's Atari part number, CX2600. The 2600 was typically bundled with two joystick controllers, a conjoined pair of paddle controllers, and a game cartridge: initially Combat, and later Pac-Man.
+		\subsubsection{Controls}
+		The Atari 2600 comes with a joystick controller consisting of a d-pad joystick and a fire button. The joystick can move in 8 different direction and the fire button can be pressed with or without joystick movement, those along with no-move present the 18 valid controls available in Atari.
+
+		\subsubsection{Screen}
+		Atari emulator consists of a 160x192 pixel screen, (though mostly it is converted into a square for use), The small input size can be further reduced by converting the screen to greyscale and decreasing image resolution to 84x84 pixels, Transient data is included by including multiple screens (4). 
+
+		Thus the atari games are perfect for deep learning due to their small input size (84x84x4) and small output size (18) which works well with a deep neural network.
 
 		\subsection{Program Development}
 			\subsubsection{System Description}
