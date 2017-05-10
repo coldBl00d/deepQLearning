@@ -159,6 +159,7 @@
 			If all of the criterions are met and a gamified version of the real world problem is made, then it can be quite easily given to a deep reinforcement learning system for optimisation and then later used in real life after training.
 
 		\subsection{Traffic Light Control}
+				A sample real world problem that could be solved using reinforced learning.
 			\subsubsection{Problem}
 				There is an intersection of two roads, and four traffic lights control the traffic in it, each controlling one road. The control of the traffic light should be given to an \ac{ai} for optimum traffic flow through the intersection. To design a system that can be used to train this \ac{ai}. 
 
@@ -208,20 +209,18 @@
 					\setlength\itemsep{0em}
 					\item Red
 					\item Orange
-					\item Green in the Right, Left, Straight direction or any combination of it.
+					\item Green in the Right, Left or Straight direction or any combination of it.
 				\end{itemize}
 
 				Orange can be eliminated by making it mandatory for transitions between Green and Red. Green has seven states (not to be confused with state of the system found from the input) it can be in for all the combinations. Since only Green or Red can be active at a given time, the total no of states for a single traffic light is 8.
 
-				The intersection consists of 4 traffic lights, operating independantly (No constraints to its operation) making the total no of actions the system can take to $8^4$ = 4096 actions.
+				The intersection consists of 4 traffic lights, operating independantly (No constraints to its operation) making the total no of actions the system can take to $8^4$ \emph{ie} 4096 actions.
 
 				Thus at every state of the system, it can decide between 4096 actions to take.
 			\subsubsection{Reward}
 				The no of vehicles that pass through the intersection in a time interval or the throughput of the intersection can be taken as a rudimentary reward function.
 
-				To avoid any traffic signals that might incur collisions, any collisions detected are penalised with a negative reward.
-
-				This still presents the problem of starvation \emph{ie.} a low amount of vehicles could wait for green indefinitely. It can be solved by aging the throughput negatively, which makes the throughput reward smaller and finally negative the longer it waits.
+				To avoid any traffic signals that might incur collisions, any collisions detected are penalised with a negative reward. This still presents the problem of starvation \emph{ie.} a low amount of vehicles could wait for green indefinitely. It can be solved by aging the throughput negatively, which makes the throughput reward smaller and finally negative the longer it waits.
 			\subsubsection{Scalability}
 				The system proposed could be implemented on a larger scale, like a town or city. But in the current form of neural networks, adding a single traffic light to an existing system makes retraining the entire system a requirement. As the number of intersections increase, the number of actions rise exponentially. Thus making their efficient implementation a problem.
 
