@@ -40,14 +40,20 @@ beginfig(1);
     leftToRight(90)(environment, agent);
 
 
-    Class.plotter("Plotter")("values")
-    ("+updateValues()");
+    Class.plotter("Plotter")(
+    "values"
+    )(
+     "+updateValues()",
+     "+generatePlot()"
+    );
     leftToRight(30)(agent, plotter);
 
     Class.statistics("Statistics")(
         "+csvfile",
         "+net",
-        "+agent"
+        "+agent",
+        "+mem",
+        "+env",
     )(
         "+reset()",
         "+on_step()",
@@ -76,10 +82,12 @@ beginfig(1);
     Class.mry("ReplayMemory")(
         "+actions",
         "+rewards",
-        "+screens"
+        "+screens",
+        "+terminals"
     )(
         "+add()",
-        "+getState()"
+        "+getState()",
+        "+getMiniBatch()"
     );
     leftToRight(20)(dqn, mry);
 

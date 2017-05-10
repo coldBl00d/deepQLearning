@@ -1,17 +1,16 @@
-\documentclass[twoside,letterpaper]{article}
+\documentclass[a4paper,11pt]{article}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
-\usepackage{amsmath}
-\usepackage{amssymb,amsfonts,textcomp}
-\usepackage{color}
-\usepackage{array}
-\usepackage{supertabular}
-\usepackage{hhline}
+% \usepackage{amsmath}
+% \usepackage{amssymb,amsfonts,textcomp}
+% \usepackage{color}
+% \usepackage{array}
+% \usepackage{supertabular}
+% \usepackage{hhline}
 \usepackage{hyperref}
 \usepackage{cite}
-\usepackage{etoolbox}
-\usepackage{cite}
+% \usepackage{etoolbox}
 \usepackage{acro}
 \usepackage{graphicx}
 \usepackage[nodayofweek]{datetime}
@@ -89,6 +88,7 @@
 
 	% TODO Ack before this
 	\pagenumbering{roman}
+	
 	\begin{abstract}
 		Creating a general purpose AI has been an area of research since the beginning of computers and programming. Reinforcement learning is a major step towards a general purpose AI. \\
 
@@ -99,14 +99,12 @@
 		The project has applications in the field of IOT, security, gaming, stock market analysis and traffic control systems. Any system that can be modelled as an environment with actions and rewards can be trained using this algorithm.
 
 	\end{abstract}
-	\newpage
 	
+	\newpage
 	\tableofcontents
 	\newpage
-
 	\listoffigures
 	\newpage
-
 	\printacronyms[include-classes=abbrev,name=Abbreviations]
 	\newpage
 
@@ -122,7 +120,8 @@
 			This project is aimed at using a Convolution Neural Network along with the Q-learning algorithm to solve the above problems and make decisions based on video input from the Atari Learning Environment. Our goal is to create a single neural network agent that is able to successfully learn to play atleast 2 games with no change in agent algorithm. The network was not provided with any game-specific information or hand-designed visual features, and was not privy to then internal state of the emulator, it learned from nothing but the video input, the reward and terminal signals, and the set of possible actions just as a human player would.
 
 		\subsection{Literature Survey}
-			
+			\paragraph{Deep Mind}
+
 	\section{Materials and Methodology}
 		\subsection{Algorithms}
 			\subsubsection{Q-Learning}
@@ -132,7 +131,7 @@
 		\subsection{Program Development}
 			\subsubsection{System Description}
 			\subsubsection{Class Diagram}
-				\begin{figure}[ht]
+				\begin{figure}[!h]
 					\begin{centering}
 						\includegraphics[width=15cm]{../uml/uml.1}
 						\caption{UML Class Diagram.}
@@ -147,15 +146,93 @@
 
 	\section{Further Work}
 		\subsection{Gamification of Problem}
+			Solving real world problems can be achieved using Deep Reinforcement Learning. The following points are to be considered to convert a real world problem into a deep learning optimisation problem:
+			\begin{itemize}
+				\setlength\itemsep{0em}
+				\item The problem is to be modelled as a game.
+				\item The game should include an environment which has a finite set of actions.
+				\item High dimensional input to the environment should be available as input and savable as a state.
+				\item State of the system should change according to the actions performed on it.
+				\item The environment should occasionally give off rewards in response to its current state or action performed.
+			\end{itemize}
+
+			If all of the criterions are met and a gamified version of the real world problem is made, then it can be quite easily given to a deep reinforcement learning system for optimisation and then later used in real life after training.
+
 		\subsection{Traffic Light Control}
 			\subsubsection{Problem}
-			\subsubsection{Minimal Input}
-			\subsubsection{Reward and Action set}
-			\subsubsection{Scalability}
+				There is an intersection of two roads, and four traffic lights control the traffic in it, each controlling one road. The control of the traffic light should be given to an \ac{ai} for optimum traffic flow through the intersection. To design a system that can be used to train this \ac{ai}. 
 
+			\subsubsection{Minimal Input}
+				Traffic camera images at four different directions are taken as input to the system, mulitple images are taken to incorporate movement of the vehicles. Even though the system could work with the raw images, it would be impossible to train the system in the real world. So a simulation is required to train it. But in a simulation output images cannot be generated as complex as real video stream. 
+
+				The solution is to simplify the input to the system, and to simulate the output in this simplified version. The approach taken is to convert the vehicles into white rectangles in a black canvas, and the intersection as a line. Thus white rectangles passing over the line will be taken for rewards and any intersection of rectangles will be interpreted as a crash. The rectangles are easier to simulate given the actions to be performed.
+
+				To make the simulation closer to reality, delay between the signal turning green and the first car moving can be given. Contraction and elongation of traffic at stop and start can also be simulated.
+
+				\begin{figure}[!h]
+					\begin{centering}
+						\includegraphics[width=15cm]{images/traffic1.png}
+						\caption{Empty Intersection.}
+					\end{centering}
+				\end{figure}
+
+				
+				\begin{figure}[!h]
+					\begin{centering}
+						\includegraphics[width=15cm]{images/traffic2.png}
+						\caption{Intersection with Vehicles.}
+					\end{centering}
+				\end{figure}
+
+				
+				\begin{figure}[!h]
+					\begin{centering}
+						\includegraphics[width=15cm]{images/traffic3.png}
+						\caption{Generation of Simplified Input.}
+					\end{centering}
+				\end{figure}
+
+				
+				\begin{figure}[!h]
+					\begin{centering}
+						\includegraphics[width=15cm]{images/traffic4.png}
+						\caption{Simplified Input.}
+					\end{centering}
+				\end{figure}
+
+
+
+			\subsubsection{Action set}
+				At any instant, any of the traffic lights can be any of the following:
+				\begin{itemize}
+					\setlength\itemsep{0em}
+					\item Red
+					\item Orange
+					\item Green in the Right, Left, Straight direction or any combination of it.
+				\end{itemize}
+
+				Orange can be eliminated by making it mandatory for transitions between Green and Red. Green has seven states (not to be confused with state of the system found from the input) it can be in for all the combinations. Since only Green or Red can be active at a given time, the total no of states for a single traffic light is 8.
+
+				The intersection consists of 4 traffic lights, operating independantly (No constraints to its operation) making the total no of actions the system can take to $8^4$ = 4096 actions.
+
+				Thus at every state of the system, it can decide between 4096 actions to take.
+			\subsubsection{Reward}
+				The no of vehicles that pass through the intersection in a time interval or the throughput of the intersection can be taken as a rudimentary reward function.
+
+				To avoid any traffic signals that might incur collisions, any collisions detected are penalised with a negative reward.
+
+				This still presents the problem of starvation \emph{ie.} a low amount of vehicles could wait for green indefinitely. It can be solved by aging the throughput negatively, which makes the throughput reward smaller and finally negative the longer it waits.
+			\subsubsection{Scalability}
+				The system proposed could be implemented on a larger scale, like a town or city. But in the current form of neural networks, adding a single traffic light to an existing system makes retraining the entire system a requirement. As the number of intersections increase, the number of actions rise exponentially. Thus making their efficient implementation a problem.
+
+				The bottleneck is the non scalability of the current architecture, which could be tentatively solved if parallel neural networks are introduced. Parallel neural networks are still in its infancy and outside the scope of this project.
 	\section{Conclusion}
 
 
 
+	\newpage
+	\nocite{*}
+	\bibliography{helpers/bibliography}
+	\bibliographystyle{ieeetr}
 
 \end{document}
