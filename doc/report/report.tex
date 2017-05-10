@@ -119,11 +119,45 @@
 
 			This project is aimed at using a Convolution Neural Network along with the Q-learning algorithm to solve the above problems and make decisions based on video input from the Atari Learning Environment. Our goal is to create a single neural network agent that is able to successfully learn to play atleast 2 games with no change in agent algorithm. The network was not provided with any game-specific information or hand-designed visual features, and was not privy to then internal state of the emulator, it learned from nothing but the video input, the reward and terminal signals, and the set of possible actions just as a human player would.
 
-		\subsection{Literature Survey}
-			\paragraph{Deep Mind}
+		\subsection{Background and Literature Survey}
+			\paragraph{Deep Mind and Reinforcement Learning}
+
+				The presented method and algorithm was first presented in a paper by a company Deep Mind which was later aquired by Google. The paper presented the algorithm as a general purpose RL algorithm that could play seven of the atari 2600 games, it showed human level play in four and super human play in three of them.
+				Consider the game Breakout. In this game you control a paddle at the bottom of the screen and have to bounce the ball back to clear all the bricks in the upper half of the screen. Each time you hit a brick, it disappears and your score increases you get a reward.
+
+				\begin{figure}[!ht]
+					\begin{centering}
+						\includegraphics[width=10cm]{../Design/images/breakout.png}\\
+						\caption{Breakout screens.}
+					\end{centering}
+				\end{figure}
+				Suppose you want to teach a neural network to play this game. Input to your network would be screen images, and output would be one of four actions left, right, do nothing or fire to launch the ball. It would make sense to treat it as a classification problem for each game screen you have to decide, Which action to take. Sounds straightforward, Sure, but then you need training examples, and a lots of them. Of course you could go and record game sessions using expert players, but thats not really how we learn. We dont need somebody to tell us a million times which move to choose at each screen. We just need occasional feedback that we did the right thing and can then figure out everything else ourselves.
+
+				This is the task reinforcement learning tries to solve. Reinforcement learning lies somewhere in between supervised and unsupervised learning. Whereas in supervised learning one has a target label for each training example and in unsupervised learning one has no labels at all, in reinforcement learning one has sparse and time-delayed labels, the rewards. Based only on those rewards the agent has to learn to behave in the environment.
+
+				While the idea is quite intuitive, in practice there are numerous challenges. For example when you hit a brick and score a reward in the Breakout game, it often has nothing to do with the actions (paddle movements) you did just before getting the reward. All the hard work was already done, when you positioned the paddle correctly and bounced the ball back. This is called the credit assignment problem i.e., which of the preceding actions was responsible for getting the reward and to what extent.
+
+				Once you have figured out a strategy to collect a certain number of rewards, should you stick with it or experiment with something that could result in even bigger rewards? In the above Breakout game a simple strategy is to move to the left edge and wait there. When launched, the ball tends to fly left more often than right and you will easily score about 10 points before you die. Will you be satisfied with this or do you want more? This is called the explore-exploit dilemma should you exploit the known working strategy or explore other, possibly better strategies.
+
+				Reinforcement learning is an important model of how we (and all animals in general) learn. Praise from our parents, grades in school, salary at work these are all examples of rewards. Credit assignment problems and exploration exploitation dilemmas come up every day both in business and in relationships. Thats why it is important to study this problem, and games form a wonderful sandbox for trying out new approaches.
 
 	\section{Materials and Methodology}
 		\subsection{Algorithms}
+			\subsection{Markov Decision Process}
+				Suppose you are an agent, situated in an environment (e.g. Breakout game). The environment is in a certain state (e.g. location of the paddle, location and direction of the ball, existence of every brick and so on). The agent can perform certain actions in the environment (e.g. move the paddle to the left or to the right). These actions sometimes result in a reward (e.g. increase in score). Actions transform the environment and lead to a new state, where the agent can perform another action, and so on. The rules for how you choose those actions are called policy. The environment in general is stochastic, which means the next state may be somewhat random (e.g. when you lose a ball and launch a new one, it goes towards a random direction).
+				\begin{figure}[!ht]
+					\begin{centering}
+						\includegraphics[width=10cm]{../Design/images/mdp.png}\\
+						\caption{Breakout screens.}
+					\end{centering}
+				\end{figure}
+				The set of states and actions, together with rules for transitioning from one state to another, make up a Markov decision process. One episode of this process (e.g. one game) forms a finite sequence of states, actions and rewards:
+
+				\begin{centering}
+				\includegraphics[width=10cm]{../Design/images/mdp2.png}\\
+				\end{centering}
+
+				Here s$_{i}$ represents the state, ai is the action and ri+1 is the reward after performing the action. The episode ends with terminal state sn (e.g. game over screen). A Markov decision process relies on the Markov assumption, that the probability of the next state si+1 depends only on current state si and action ai, but not on preceding states or actions.
 			\subsubsection{Q-Learning}
 			\subsubsection{Deep Q-Learning}
 				\paragraph{Neural Networks}
