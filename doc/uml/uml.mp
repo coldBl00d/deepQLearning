@@ -55,7 +55,7 @@ beginfig(1);
         "+write()",
         "+close()"
     );
-    leftToRight(30)(aleEnvironment, statistics);
+    leftToRight(20)(aleEnvironment, statistics);
 
 
     Class.dqn("DeepQNetwork")(
@@ -71,7 +71,7 @@ beginfig(1);
         "+load()",
         "+save()"
     );
-    leftToRight(30)(statistics, dqn);
+    leftToRight(20)(statistics, dqn);
 
     Class.mry("ReplayMemory")(
         "+actions",
@@ -81,7 +81,7 @@ beginfig(1);
         "+add()",
         "+getState()"
     );
-    leftToRight(30)(dqn, mry);
+    leftToRight(20)(dqn, mry);
 
     Class.sbuf("StateBuffer")(
         "+buffer"
@@ -91,7 +91,7 @@ beginfig(1);
         "+getStateMinibatch()",
         "+reset()"
     );
-    leftToRight(30)(mry, sbuf);
+    leftToRight(20)(mry, sbuf);
 
     drawObjects(agent, plotter, dqn, mry, sbuf, statistics);
 

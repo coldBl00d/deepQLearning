@@ -17,9 +17,10 @@
 \usepackage[nodayofweek]{datetime}
 
 \include{helpers/acronyms}
+\DeclareGraphicsRule{*}{mps}{*}{}
 
 % Commands
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines
 
 \begin{document}
 
@@ -80,8 +81,8 @@
 		\end{minipage}\\[1.0cm]
 
 		\begin{flushleft}
-		Place: \\
-		Date: \\
+		Place: Trivandrum\\
+		Date:  11-05-2017\\
 		\end{flushleft}
 		\vfill % Fill the rest of the page with whitespace
 	\end{titlepage}
@@ -98,17 +99,63 @@
 		The project has applications in the field of IOT, security, gaming, stock market analysis and traffic control systems. Any system that can be modelled as an environment with actions and rewards can be trained using this algorithm.
 
 	\end{abstract}
-
 	\newpage
 	
 	\tableofcontents
 	\newpage
+
 	\listoffigures
 	\newpage
+
 	\printacronyms[include-classes=abbrev,name=Abbreviations]
 	\newpage
 
 	\pagenumbering{arabic}
-	\section{abc}
-		asdf \ac{rest}
+	\section{Introduction}
+		\subsection{Motivation and Overview}
+			Learning to control agents directly from high-dimensional sensory inputs like vision and speech is one of the long-standing challenges of Artificial Intelligence and Machine Learning. Most successful \ac{ai} applications have relied on hand-crafted features combined with linear value functions or policy representations. Clearly, the performance of such systems heavily relies on the quality of the feature representation.
+
+			Recent advances in deep learning have made it possible to extract high-level features from raw sensory data, leading to breakthroughs in computer vision and speech recognition. These methods utilise a range of neural network architectures, including convolutional networks, multilayer perceptrons, restricted Boltzmann machines and recurrent neural networks, and have exploited both supervised and unsupervised learning.
+	
+			However the main advantage of Reinforcement Learning is that it does't need huge amounts of hand-labelled data and does not depend too much on the feature representation. It learns from a reward signal that maybe delayed, noisy and sparse. The delay between actions and the rewards, which maybe thousands of timesteps seems like a particularly hard problem in \ac{rl} when compared to direct association between action and reward in supervised learning. Another issue is that most problems consider all the data samples independent of each other, but in this case we need to consider the fact that the reward at the end of a session is not just the result of the last action but the result of the sequence of actions from the start of the session.
+
+			This project is aimed at using a Convolution Neural Network along with the Q-learning algorithm to solve the above problems and make decisions based on video input from the Atari Learning Environment. Our goal is to create a single neural network agent that is able to successfully learn to play atleast 2 games with no change in agent algorithm. The network was not provided with any game-specific information or hand-designed visual features, and was not privy to then internal state of the emulator, it learned from nothing but the video input, the reward and terminal signals, and the set of possible actions just as a human player would.
+
+		\subsection{Literature Survey}
+			
+	\section{Materials and Methodology}
+		\subsection{Algorithms}
+			\subsubsection{Q-Learning}
+			\subsubsection{Deep Q-Learning}
+				\paragraph{Neural Networks}
+
+		\subsection{Program Development}
+			\subsubsection{System Description}
+			\subsubsection{Class Diagram}
+				\begin{figure}[ht]
+					\begin{centering}
+						\includegraphics[width=15cm]{../uml/uml.1}
+						\caption{UML Class Diagram.}
+					\end{centering}
+				\end{figure}
+			\subsubsection{Code Overview}
+
+	\section{Results and Discussions}
+		\subsection{Description of observed strategies}
+		\subsection{Screenshots}
+		\subsection{Result Visualization}
+
+	\section{Further Work}
+		\subsection{Gamification of Problem}
+		\subsection{Traffic Light Control}
+			\subsubsection{Problem}
+			\subsubsection{Minimal Input}
+			\subsubsection{Reward and Action set}
+			\subsubsection{Scalability}
+
+	\section{Conclusion}
+
+
+
+
 \end{document}
