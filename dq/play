@@ -1,4 +1,7 @@
 game=$1
+shift
+episode=$1
+shift
 if [ -z $game ]
 then
 	game='breakout'
@@ -6,7 +9,7 @@ fi
 	
 if [ $game == 'breakout' ]
 then
-	python src/main.py --play_games 2 --display_scree true --load_weights snapshots/breakout_$2.prm roms/breakout.bin 
+	python2 src/main.py --play_games 2 --display_scree true --load_weights snapshots/breakout_$episode.prm roms/breakout.bin $*
 else
-	python src/main.py --play_games 2 --display_scree true --load_weights snapshots/space_invaders_$2.prm roms/space_invaders.bin 
+	python2 src/main.py --play_games 2 --display_scree true --load_weights snapshots/space_invaders_$episode.prm roms/space_invaders.bin $*
 fi
