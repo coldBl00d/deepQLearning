@@ -2,15 +2,8 @@
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
-% \usepackage{amsmath}
-% \usepackage{amssymb,amsfonts,textcomp}
-% \usepackage{color}
-% \usepackage{array}
-% \usepackage{supertabular}
-% \usepackage{hhline}
 \usepackage{hyperref}
 \usepackage{cite}
-% \usepackage{etoolbox}
 \usepackage{acro}
 \usepackage{graphicx}
 \usepackage[nodayofweek]{datetime}
@@ -36,9 +29,9 @@
 
 		\large{Submitted by}\\[0.5cm]
 
-		\textbf{Jayadeep K M     (Roll No 13400030)}\\
-		\textbf{Kevin Joseph     (Roll No 13400032)}\\
-		\textbf{Mohammed Nisham K     (Roll No 13400038)}\\[1.5cm]
+		\textbf{Jayadeep K M}\\
+		\textbf{Kevin Joseph}\\
+		\textbf{Mohammed Nisham K}\\[1.5cm]
 		
 		{Under the guidance of}\\[0.25cm]
 		\large{Mr. Vipin Vasu A V}\\[0.5cm]
@@ -52,48 +45,6 @@
 		\vfill % Fill the rest of the page with whitespace
 		\end{centering}
 	\end{titlepage}
-
-	\begin{titlepage}
-		\begin{centering}
-			\textsc{\Large{College of Engineering, Trivandrum}}\\
-			\textsc{\large{Department of Computer Science and Engineering}}\\[0.5cm]
-
-			\textbf{\textit{\LARGE\textsc{{certificate}}}}\\[0.5cm]
-			\includegraphics[width=5cm]{images/logo.jpg}\\
-
-		\end{centering}
-
-		\large{This is to certify that the thesis entitled ``Decision making using deep reinforcement learning'' is a bonafide record of the major project done by \textbf{Jayadeep K M} (Roll No 13400030), \textbf{Kevin Joseph} (Roll No 13400032) and \textbf{Mohammed Nisham K} (Roll No 13400038) under my supervision and guidance, in partial fulfilment for the award of the Degree of Bachelor of Technology in Computer Science and Engineering from the University of Kerala for the year 2017.}\\[1.5cm]
-
-		\begin{minipage}{0.5\textwidth}
-		\begin{flushleft}
-		\begin{centering} \large
-			\large{Mrs. Liji}\\
-			\small{\textit{\textbf{Professor and Head}}}\\
-			\small{\textit{\textbf{Dept. of Computer Science and Engineering}}}\\
-		\end{centering}
-		\end{flushleft}
-		\end{minipage}
-		~
-		\begin{minipage}{0.5\textwidth}
-		\begin{centering} \large
-		\large{Mr. Vipin Vasu A V}\\
-		\small{(Guide)}\\
-		\small{\textit{\textbf{Asst. Professor}}}\\
-		\small{\textit{\textbf{Dept. of Computer Science and Engineering}}}\\[1.5cm]
-
-		\end{centering}
-		\end{minipage}\\[1.0cm]
-
-		\begin{flushleft}
-		Place: Trivandrum\\
-		Date:  11-05-2017\\
-		\end{flushleft}
-		\vfill % Fill the rest of the page with whitespace
-	\end{titlepage}
-
-	% TODO Ack before this
-	\pagenumbering{roman}
 	
 	\begin{abstract}
 		Creating a general purpose AI has been an area of research since the beginning of computers and programming. Reinforcement learning is a major step towards a general purpose AI. \\
@@ -109,12 +60,6 @@
 	\newpage
 	\tableofcontents
 	\newpage
-	\listoffigures
-	\newpage
-	\printacronyms[include-classes=abbrev,name=Abbreviations]
-	\newpage
-
-	\pagenumbering{arabic}
 	\section{Introduction}
 		\subsection{Motivation and Overview}
 			Learning to control agents directly from high-dimensional sensory inputs like vision and speech is one of the long-standing challenges of Artificial Intelligence and Machine Learning. Most successful \ac{ai} applications have relied on hand-crafted features combined with linear value functions or policy representations. Clearly, the performance of such systems heavily relies on the quality of the feature representation.
@@ -147,7 +92,6 @@
 
 				Reinforcement learning is an important model of how we (and all animals in general) learn. Praise from our parents, grades in school, salary at work these are all examples of rewards. Credit assignment problems and exploration exploitation dilemmas come up every day both in business and in relationships. Thats why it is important to study this problem, and games form a wonderful sandbox for trying out new approaches.
 
-	\newpage
 	\section{Materials and Methodology}
 		\subsection{Algorithms}
 			\subsubsection{Markov Decision Process}
@@ -195,65 +139,17 @@
 				\end{centering}
 				The way to think about Q(s, a) is that it is the best possible score at the end of the game after performing action a in state s. It is called Qfunction, because it represents the quality of a certain action in a given state.
 
-				This may sound like quite a puzzling definition. How can we estimate the score at the end of game, if we know just the current state and action, and not the actions and rewards coming after that? We really cant. But as a theoretical construct we can assume existence of such a function. Just close your eyes and repeat to yourself five times: Q(s, a) exists, Q(s, a) exists, . Feel it?
-
-				If youre still not convinced, then consider what the implications of having such a function would be. Suppose you are in state and pondering whether you should take action a or b. You want to select the action that results in the highest score at the end of game. Once you have the magical Q-function, the answer becomes really simple pick the action with the highest Q value!
-
 				\begin{centering}
 				\includegraphics[width=5cm]{../Design/images/q2.png}\\
 				\end{centering}
 
-				The above policy, the rule how we choose an action in each state.
-				OK, how do we get that Q function then? Lets focus on just one transition <s, a, r, s>. Just like with discounted future rewards in the previous section, we can express the Q value of state s and action a in terms of the Q value of the next state s.
-
-				\begin{centering}
-				\includegraphics[width=5cm]{../Design/images/q3.png}\\
-				\end{centering}
-
-				This is called the Bellman equation. If you think about it, it is quite logical maximum future reward for this state and action is the immediate reward plus maximum future reward for the next state.
 				The main idea in Q-learning is that we can iteratively approximate the Q-function using the Bellman equation. In the simplest case the Q-function is implemented as a table, with states as rows and actions as columns. The gist of the Q learning algorithm is as simple as the following:
 
 				\begin{centering}
 				\includegraphics[width=10cm]{../Design/images/q4.png}\\
 				\end{centering}
-			\subsubsection{Q Learning to Deep Q Network}
-				Although a simple game with small number of states like tic tac toe can be easily implemented using a Q table data structure, the same approach does not work for an Atari game.
-
-				The state of the environment in the Breakout game can be defined by the location of the paddle, location and direction of the ball and the presence or absence of each individual brick. But for something more universal, the obvious choice is screen pixels. They implicitly contain all of the relevant information about the game situation, except for the speed and direction of the ball. Two consecutive screens would have these covered as well.\\
-
-				Taking our input of 84x84x4 pixels, In greyscale each pixel can have 128 values (atari could only emulate 128 colours), This would mean that the number of states is 128$^{84x84x4}$ which is more than the no of stars in the universe. Hence representing it in a Q table is out of the question.
-
-				Since there are a lot of states, repetitions of states are very rare, Q table does poorly on states that it has never encountered before, While a neural network will give us an approximate value for an unknown state based on its current learning. 
-
-				The time complexity of both Q table and Neural network remain the same at O(1) after completion of training, Although neural network might be a bit slower on account of the forward propagation it has to complete.
-
-
-				Thus a shift from Q table approach to Deep Q network is done for the reasons
-				\begin{itemize}
-				\item Space complexity is containable even when number of states is very large
-				\item Better approximation in un-encountered states
-				\item Faster training with lesser data
-				\end{itemize}
 			\subsubsection{Deep Q-Learning}
-				\mparagraph{Convolution Neural Networks}
-					Neural networks are exceptionally good at coming up with good features for highly structured data. We could represent our Q function with a neural network, that takes the state (four game screens) and action as input and outputs the corresponding Q value. Alternatively we could take only game screens as input and output the Q-value for each possible action. This approach has the advantage, that if we want to perform a Q value update or pick the action with the highest Q value, we only have to do one forward pass through the network and have all Q values for all actions available immediately.
-
-					Considering the fact that our input is an image input, we use a convolutional neural network. A convolutional network neuron functions similar to an optic neuron in the human brain. Each neuron instead of looking over the whole image, looks over only a small neighbourhood, and the combined effect of all the neurons performs the expected function.
-
-					\begin{figure}[!ht]
-						\begin{centering}
-							\includegraphics[width=10cm]{../Design/images/deep.png}\\
-							\caption{Two Possible models for Network.}
-						\end{centering}
-					\end{figure}
-
-					\begin{figure}[!ht]
-						\begin{centering}
-							\includegraphics[width=10cm]{../Design/images/deep2.png}\\
-							\caption{Network Design.}
-						\end{centering}
-					\end{figure}
-
+				\mparagraph{Neural structure}
 					\begin{figure}[!ht]
 						\begin{centering}
 							\includegraphics[width=10cm]{../Design/images/deep4.png}\\
@@ -263,60 +159,8 @@
 		\subsection{Atari 2600}
 		The Atari 2600 (or Atari VCS before 1982) is a home video game console released on September 11, 1977, by Atari, Inc. It is credited with popularizing the use of microprocessor-based hardware and ROM cartridges containing game code, a format first used with the Fairchild Channel F video game console in 1976. This format contrasts with the older model of having non-microprocessor dedicated hardware, which could only play the games that were physically built into the unit.
 
-		The console was originally sold as the Atari VCS, an abbreviation for Video Computer System. Following the release of the Atari 5200 in 1982, the VCS was renamed to the ``Atari 2600'', after the unit's Atari part number, CX2600. The 2600 was typically bundled with two joystick controllers, a conjoined pair of paddle controllers, and a game cartridge: initially Combat, and later Pac-Man.
-		\subsubsection{Controls}
-		The Atari 2600 comes with a joystick controller consisting of a d-pad joystick and a fire button. The joystick can move in 8 different direction and the fire button can be pressed with or without joystick movement, those along with no-move present the 18 valid controls available in Atari.
-
-		\subsubsection{Screen}
-		Atari emulator consists of a 160x192 pixel screen, (though mostly it is converted into a square for use), The small input size can be further reduced by converting the screen to greyscale and decreasing image resolution to 84x84 pixels, Transient data is included by including multiple screens (4). 
-
 		Thus the atari games are perfect for deep learning due to their small input size (84x84x4) and small output size (18) which works well with a deep neural network.
-		
-		\newpage
-		\subsection{Program Development}
-			\subsubsection{Class Diagram}
-				\begin{figure}[!h]
-					\begin{centering}
-						\includegraphics[width=15cm]{../uml/uml.1}\\
-						\caption{UML Class Diagram.}
-					\end{centering}
-				\end{figure}
 
-		\subsection{Code Overview}
-			The code for the project is open on github. https://github.com/devilsangel/deepQLearning
-
-			\subsubsection{Environment}
-				The environment is an interface that is used to control the environment of the game. It gives the actions that can be peformed at any given time, gets the current state of the system, act a particular action on the system and return the reward if there is one. It also alerts the agent when a terminal state is reached.
-
-				The ALEEnvironment is the class that implements the environment interface. The structure was made so that different environments could be used interchangably with minimal change to the code. Other environments like gym environment can be used to implement the interface as well.
-
-			\subsubsection{Agent}
-				Agent class is the crux of the system. Which has variables of all other class types. In train mode, the system trains based on the qvalues provided by the deepQNetwork occasionally correcting it when rewards approach. After every step of the game, a callback to statisctics on step function is called. During training the loss of a life or the end of the game is treated as terminal states. Exploration rate controls whether exploration or exploitation is chosen. 
-
-				In test mode, a given no of games are played, here the statebuffer is used to disallow contamination of trained data. Here only the end of the game is taken as a terminal state.
-
-				In random mode, random actions are given to the system and the output observed.
-
-			\subsubsection{Plotter}
-				The plotter class uses python libraries to plot the data saved about each epoch as a graph. Visualising the important data metrics like average score and qvalue of each epoch, which can be used to evaluate the performance of the training.
-
-				It also serves the function of plotting the maximum qvalue of the current screen live during play.
-			
-			\subsubsection{Statistics}
-				The statistics class embeds itself as a callback in the agent class. The agent calls the on step method after every step of the game. If the game reaches a terminal state, the values like average score, no of games etc are updated in the statistics class.
-
-				When the epoch ends, the write method is called which appends the calculated data to the csv file.
-
-			\subsubsection{DeepQNetwork}
-				An abstraction layer over Neon, a deep learning library from Nervana Systems. It Models the Network, finds the Q values associated with a state of the system, and does updation of weights based on reward and a random minibatch. The reward is used to refine the discounted future reward of the minibatch.
-
-			\subsubsection{Replay Memory}
-				For training the states, actions, screens and rewards need to be saved. These can be added to the replay memory using the add method. When a reward is obtained, a minibuffer is selected with the current state at the index position. This minibuffer is used for training the system.
-
-			\subsubsection{State Buffer}
-				During testing and play, the replay memory is not necessary, so a stripped down version of it, storing only the states of the system is used. This has the added advantage of ensuring that the data from testing does not pollute the training data.
-
-	\newpage
 	\section{Results and Discussions}
 		The results of the training sessions were saved in a csv file in increments of 1 epoch or 250000 steps. Important parameters of the epoch like steps, number of games, average reward, mean cost, average q value etc are saved for three phases, training, test and random.
 
@@ -351,7 +195,6 @@
 				\end{centering}
 			\end{figure}			
 
-	\newpage
 	\section{Further Work}
 		\subsection{Gamification of Problem}
 			Solving real world problems can be achieved using Deep Reinforcement Learning. The following points are to be considered to convert a real world problem into a deep learning optimisation problem:
@@ -433,12 +276,8 @@
 				The system proposed could be implemented on a larger scale, like a town or city. But in the current form of neural networks, adding a single traffic light to an existing system makes retraining the entire system a requirement. As the number of intersections increase, the number of actions rise exponentially. Thus making their efficient implementation a problem.
 
 				The bottleneck is the non scalability of the current architecture, which could be tentatively solved if parallel neural networks are introduced. Parallel neural networks are still in its infancy and outside the scope of this project.
-	\newpage
 	\section{Conclusion}
 		It is clear from the results that the presented model can used in applications with high dimensional sensory input. They also show that the algorithm will eventually converge to an optimal policy. Real world problems can be modelled as an environment with reward and actions, and plugged into the algorithm.
-
-		Lack of processing power was observed as a pertinent limitation. The deepLearning library, Neon is optimized for Nvidia Maxwell Graphic Processing Units and its performance is very low on CPUs and pre-maxwell GPUs. We experimented training on GeForce GT 735M, Jetson TX1 board, and an i3 desktop CPU, the best among these was the GT 735M which took 77 mins per epoch.
-
 
 	\newpage
 	\nocite{*}
