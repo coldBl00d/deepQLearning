@@ -2,16 +2,10 @@
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
-% \usepackage{amsmath}
-% \usepackage{amssymb,amsfonts,textcomp}
-% \usepackage{color}
-% \usepackage{array}
-% \usepackage{supertabular}
 \usepackage{float}
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{cite}
-% \usepackage{etoolbox}
 \usepackage{acro}
 \usepackage{graphicx}
 \usepackage[nodayofweek]{datetime}
@@ -112,7 +106,6 @@
 	\listoffigures
 	\newpage
 	\printacronyms[include-classes=abbrev,name=Abbreviations]
-	\newpage
 
 	\pagenumbering{arabic}
 	\chapter{Introduction}
@@ -125,7 +118,6 @@
 
 			This project is aimed at using a Convolution Neural Network along with the Q-learning algorithm to solve the above problems and make decisions based on video input from the Atari Learning Environment. Our goal is to create a single neural network agent that is able to successfully learn to play atleast 2 games with no change in agent algorithm. The network was not provided with any game-specific information or hand-designed visual features, and was not privy to then internal state of the emulator, it learned from nothing but the video input, the reward and terminal signals, and the set of possible actions just as a human player would.
 
-	\newpage
 	\chapter{Background and Literature Survey}
 		\section{Deep Mind and Reinforcement Learning}
 
@@ -148,7 +140,6 @@
 
 			Reinforcement learning is an important model of how we (and all animals in general) learn. Praise from our parents, grades in school, salary at work these are all examples of rewards. Credit assignment problems and exploration exploitation dilemmas come up every day both in business and in relationships. Thats why it is important to study this problem, and games form a wonderful sandbox for trying out new approaches.
 
-	\newpage
 	\chapter{Materials and Methodology}
 		\section{Algorithms}
 			\subsection{Markov Decision Process}
@@ -319,7 +310,6 @@ until terminated
 			\subsection{State Buffer}
 				During testing and play, the replay memory is not necessary, so a stripped down version of it, storing only the states of the system is used. This has the added advantage of ensuring that the data from testing does not pollute the training data.
 
-	\newpage
 	\chapter{Results and Discussions}
 		The results of the training sessions were saved in a csv file in increments of 1 epoch or 250000 steps. Important parameters of the epoch like steps, number of games, average reward, mean cost, average q value etc are saved for three phases, training, test and random.
 
@@ -406,7 +396,6 @@ until terminated
 
 
 
-	\newpage
 	\chapter{Further Work}
 		\section{Gamification of Problem}
 			Solving real world problems can be achieved using Deep Reinforcement Learning. The following points are to be considered to convert a real world problem into a deep learning optimisation problem:
@@ -488,7 +477,6 @@ until terminated
 				The system proposed could be implemented on a larger scale, like a town or city. But in the current form of neural networks, adding a single traffic light to an existing system makes retraining the entire system a requirement. As the number of intersections increase, the number of actions rise exponentially. Thus making their efficient implementation a problem.
 
 				The bottleneck is the non scalability of the current architecture, which could be tentatively solved if parallel neural networks are introduced. Parallel neural networks are still in its infancy and outside the scope of this project.
-	\newpage
 	\chapter{Conclusion}
 		It is clear from the results that the presented model can used in applications with high dimensional sensory input. They also show that the algorithm will eventually converge to an optimal policy. Real world problems can be modelled as an environment with reward and actions, and plugged into the algorithm.
 
