@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,11pt]{report}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
@@ -7,7 +7,7 @@
 % \usepackage{color}
 % \usepackage{array}
 % \usepackage{supertabular}
-% \usepackage{hhline}
+\usepackage{float}
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{cite}
@@ -18,7 +18,6 @@
 
 \include{helpers/acronyms}
 \DeclareGraphicsRule{*}{mps}{*}{}
-\newcommand{\mparagraph}[1]{\paragraph{#1}\mbox{}\\}
 
 % Commands
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines
@@ -116,8 +115,8 @@
 	\newpage
 
 	\pagenumbering{arabic}
-	\section{Introduction}
-		\subsection{Motivation and Overview}
+	\chapter{Introduction}
+		\section{Motivation and Overview}
 			Learning to control agents directly from high-dimensional sensory inputs like vision and speech is one of the long-standing challenges of Artificial Intelligence and Machine Learning. Most successful \ac{ai} applications have relied on hand-crafted features combined with linear value functions or policy representations. Clearly, the performance of such systems heavily relies on the quality of the feature representation.
 
 			Recent advances in deep learning have made it possible to extract high-level features from raw sensory data, leading to breakthroughs in computer vision and speech recognition. These methods utilise a range of neural network architectures, including convolutional networks, multilayer perceptrons, restricted Boltzmann machines and recurrent neural networks, and have exploited both supervised and unsupervised learning.
@@ -126,32 +125,33 @@
 
 			This project is aimed at using a Convolution Neural Network along with the Q-learning algorithm to solve the above problems and make decisions based on video input from the Atari Learning Environment. Our goal is to create a single neural network agent that is able to successfully learn to play atleast 2 games with no change in agent algorithm. The network was not provided with any game-specific information or hand-designed visual features, and was not privy to then internal state of the emulator, it learned from nothing but the video input, the reward and terminal signals, and the set of possible actions just as a human player would.
 
-		\subsection{Background and Literature Survey}
-			\mparagraph{Deep Mind and Reinforcement Learning}
+	\newpage
+	\chapter{Background and Literature Survey}
+		\section{Deep Mind and Reinforcement Learning}
 
-				The presented method and algorithm was first presented in a paper by a company Deep Mind which was later aquired by Google. The paper presented the algorithm as a general purpose RL algorithm that could play seven of the atari 2600 games, it showed human level play in four and super human play in three of them.
-				Consider the game Breakout. In this game you control a paddle at the bottom of the screen and have to bounce the ball back to clear all the bricks in the upper half of the screen. Each time you hit a brick, it disappears and your score increases you get a reward.
+			The presented method and algorithm was first presented in a paper by a company Deep Mind which was later aquired by Google. The paper presented the algorithm as a general purpose RL algorithm that could play seven of the atari 2600 games, it showed human level play in four and super human play in three of them.
+			Consider the game Breakout. In this game you control a paddle at the bottom of the screen and have to bounce the ball back to clear all the bricks in the upper half of the screen. Each time you hit a brick, it disappears and your score increases you get a reward.
 
-				\begin{figure}[!ht]
-					\begin{centering}
-						\includegraphics[width=10cm]{../Design/images/breakout.png}\\
-						\caption{Breakout screens.}
-					\end{centering}
-				\end{figure}
-				Suppose you want to teach a neural network to play this game. Input to your network would be screen images, and output would be one of four actions left, right, do nothing or fire to launch the ball. It would make sense to treat it as a classification problem for each game screen you have to decide, Which action to take. Sounds straightforward, Sure, but then you need training examples, and a lots of them. Of course you could go and record game sessions using expert players, but thats not really how we learn. We dont need somebody to tell us a million times which move to choose at each screen. We just need occasional feedback that we did the right thing and can then figure out everything else ourselves.
+			\begin{figure}[!ht]
+				\begin{centering}
+					\includegraphics[width=10cm]{../Design/images/breakout.png}\\
+					\caption{Breakout screens.}
+				\end{centering}
+			\end{figure}
+			Suppose you want to teach a neural network to play this game. Input to your network would be screen images, and output would be one of four actions left, right, do nothing or fire to launch the ball. It would make sense to treat it as a classification problem for each game screen you have to decide, Which action to take. Sounds straightforward, Sure, but then you need training examples, and a lots of them. Of course you could go and record game sessions using expert players, but thats not really how we learn. We dont need somebody to tell us a million times which move to choose at each screen. We just need occasional feedback that we did the right thing and can then figure out everything else ourselves.
 
-				This is the task reinforcement learning tries to solve. Reinforcement learning lies somewhere in between supervised and unsupervised learning. Whereas in supervised learning one has a target label for each training example and in unsupervised learning one has no labels at all, in reinforcement learning one has sparse and time-delayed labels, the rewards. Based only on those rewards the agent has to learn to behave in the environment.
+			This is the task reinforcement learning tries to solve. Reinforcement learning lies somewhere in between supervised and unsupervised learning. Whereas in supervised learning one has a target label for each training example and in unsupervised learning one has no labels at all, in reinforcement learning one has sparse and time-delayed labels, the rewards. Based only on those rewards the agent has to learn to behave in the environment.
 
-				While the idea is quite intuitive, in practice there are numerous challenges. For example when you hit a brick and score a reward in the Breakout game, it often has nothing to do with the actions (paddle movements) you did just before getting the reward. All the hard work was already done, when you positioned the paddle correctly and bounced the ball back. This is called the credit assignment problem i.e., which of the preceding actions was responsible for getting the reward and to what extent.
+			While the idea is quite intuitive, in practice there are numerous challenges. For example when you hit a brick and score a reward in the Breakout game, it often has nothing to do with the actions (paddle movements) you did just before getting the reward. All the hard work was already done, when you positioned the paddle correctly and bounced the ball back. This is called the credit assignment problem i.e., which of the preceding actions was responsible for getting the reward and to what extent.
 
-				Once you have figured out a strategy to collect a certain number of rewards, should you stick with it or experiment with something that could result in even bigger rewards? In the above Breakout game a simple strategy is to move to the left edge and wait there. When launched, the ball tends to fly left more often than right and you will easily score about 10 points before you die. Will you be satisfied with this or do you want more? This is called the explore-exploit dilemma should you exploit the known working strategy or explore other, possibly better strategies.
+			Once you have figured out a strategy to collect a certain number of rewards, should you stick with it or experiment with something that could result in even bigger rewards? In the above Breakout game a simple strategy is to move to the left edge and wait there. When launched, the ball tends to fly left more often than right and you will easily score about 10 points before you die. Will you be satisfied with this or do you want more? This is called the explore-exploit dilemma should you exploit the known working strategy or explore other, possibly better strategies.
 
-				Reinforcement learning is an important model of how we (and all animals in general) learn. Praise from our parents, grades in school, salary at work these are all examples of rewards. Credit assignment problems and exploration exploitation dilemmas come up every day both in business and in relationships. Thats why it is important to study this problem, and games form a wonderful sandbox for trying out new approaches.
+			Reinforcement learning is an important model of how we (and all animals in general) learn. Praise from our parents, grades in school, salary at work these are all examples of rewards. Credit assignment problems and exploration exploitation dilemmas come up every day both in business and in relationships. Thats why it is important to study this problem, and games form a wonderful sandbox for trying out new approaches.
 
 	\newpage
-	\section{Materials and Methodology}
-		\subsection{Algorithms}
-			\subsubsection{Markov Decision Process}
+	\chapter{Materials and Methodology}
+		\section{Algorithms}
+			\subsection{Markov Decision Process}
 				Suppose you are an agent, situated in an environment (e.g. Breakout game). The environment is in a certain state (e.g. location of the paddle, location and direction of the ball, existence of every brick and so on). The agent can perform certain actions in the environment (e.g. move the paddle to the left or to the right). These actions sometimes result in a reward (e.g. increase in score). Actions transform the environment and lead to a new state, where the agent can perform another action, and so on. The rules for how you choose those actions are called policy. The environment in general is stochastic, which means the next state may be somewhat random (e.g. when you lose a ball and launch a new one, it goes towards a random direction).
 				\begin{figure}[!ht]
 					\begin{centering}
@@ -165,7 +165,7 @@
 				\[ s_0,a_0,r_1,s_1,a_1,r_2,s_2, ... ,s_{n-1},a_{n-1},r_n,s_n\]
 
 				Here s$_{i}$ represents the state, a$_i$ is the action and r$_{i+1}$ is the reward after performing the action. The episode ends with terminal state sn (e.g. game over screen). A Markov decision process relies on the Markov assumption, that the probability of the next state si+1 depends only on current state si and action ai, but not on preceding states or actions.
-			\subsubsection{Discounted Future Reward}
+			\subsection{Discounted Future Reward}
 				To perform well in the long-term, we need to take into account not only the immediate rewards, but also the future rewards we are going to get. How should we go about that?
 
 				Given one run of the Markov decision process, we can easily calculate the total reward for one episode:
@@ -187,7 +187,7 @@
 				If we set the discount factor Y=0, then our strategy will be short sighted and we rely only on the immediate rewards. If we want to balance between immediate and future rewards, we should set discount factor to something like Y=0.9. If our environment is deterministic and the same actions always result in same rewards, then we can set discount factor $\gamma$=1.
 
 				A good strategy for an agent would be to always choose an action that maximizes the (discounted) future reward.
-			\subsubsection{Q-Learning}
+			\subsection{Q-Learning}
 				In Q-learning we define a function Q(s, a) representing the maximum discounted future reward when we perform action a in state s, and continue optimally from that point on.
 
 				\[ Q(s_t, a_t) = max R_{t+1}\]
@@ -219,7 +219,7 @@ repeat
 until terminated
 				\end{lstlisting}
 
-			\subsubsection{Q Learning to Deep Q Network}
+			\subsection{Q Learning to Deep Q Network}
 				Although a simple game with small number of states like tic tac toe can be easily implemented using a Q table data structure, the same approach does not work for an Atari game.
 
 				The state of the environment in the Breakout game can be defined by the location of the paddle, location and direction of the ball and the presence or absence of each individual brick. But for something more universal, the obvious choice is screen pixels. They implicitly contain all of the relevant information about the game situation, except for the speed and direction of the ball. Two consecutive screens would have these covered as well.\\
@@ -237,8 +237,8 @@ until terminated
 				\item Better approximation in un-encountered states
 				\item Faster training with lesser data
 				\end{itemize}
-			\subsubsection{Deep Q-Learning}
-				\mparagraph{Convolution Neural Networks}
+			\subsection{Deep Q-Learning}
+				\subsubsection{Convolution Neural Networks}
 					Neural networks are exceptionally good at coming up with good features for highly structured data. We could represent our Q function with a neural network, that takes the state (four game screens) and action as input and outputs the corresponding Q value. Alternatively we could take only game screens as input and output the Q-value for each possible action. This approach has the advantage, that if we want to perform a Q value update or pick the action with the highest Q value, we only have to do one forward pass through the network and have all Q values for all actions available immediately.
 
 					Considering the fact that our input is an image input, we use a convolutional neural network. A convolutional network neuron functions similar to an optic neuron in the human brain. Each neuron instead of looking over the whole image, looks over only a small neighbourhood, and the combined effect of all the neurons performs the expected function.
@@ -263,69 +263,69 @@ until terminated
 							\caption{Layer Representation}
 						\end{centering}
 					\end{figure}
-		\subsection{Atari 2600}
+		\section{Atari 2600}
 		The Atari 2600 (or Atari VCS before 1982) is a home video game console released on September 11, 1977, by Atari, Inc. It is credited with popularizing the use of microprocessor-based hardware and ROM cartridges containing game code, a format first used with the Fairchild Channel F video game console in 1976. This format contrasts with the older model of having non-microprocessor dedicated hardware, which could only play the games that were physically built into the unit.
 
 		The console was originally sold as the Atari VCS, an abbreviation for Video Computer System. Following the release of the Atari 5200 in 1982, the VCS was renamed to the ``Atari 2600'', after the unit's Atari part number, CX2600. The 2600 was typically bundled with two joystick controllers, a conjoined pair of paddle controllers, and a game cartridge: initially Combat, and later Pac-Man.
-		\subsubsection{Controls}
+		\subsection{Controls}
 		The Atari 2600 comes with a joystick controller consisting of a d-pad joystick and a fire button. The joystick can move in 8 different direction and the fire button can be pressed with or without joystick movement, those along with no-move present the 18 valid controls available in Atari.
 
-		\subsubsection{Screen}
+		\subsection{Screen}
 		Atari emulator consists of a 160x192 pixel screen, (though mostly it is converted into a square for use), The small input size can be further reduced by converting the screen to greyscale and decreasing image resolution to 84x84 pixels, Transient data is included by including multiple screens (4). 
 
 		Thus the atari games are perfect for deep learning due to their small input size (84x84x4) and small output size (18) which works well with a deep neural network.
 		
 		\newpage
-		\subsection{Program Development}
-			\subsubsection{Class Diagram}
-				\begin{figure}[!htb]
+		\section{Program Development}
+			\subsection{Class Diagram}
+				\begin{figure}[H]
 					\begin{centering}
 						\includegraphics[width=15cm]{../uml/uml.1}\\
 						\caption{UML Class Diagram.}
 					\end{centering}
 				\end{figure}
 
-		\subsection{Code Overview}
+		\section{Code Overview}
 			The code for the project is open on github. https://github.com/devilsangel/deepQLearning
 
-			\subsubsection{Environment}
+			\subsection{Environment}
 				The environment is an interface that is used to control the environment of the game. It gives the actions that can be peformed at any given time, gets the current state of the system, act a particular action on the system and return the reward if there is one. It also alerts the agent when a terminal state is reached.
 
 				The ALEEnvironment is the class that implements the environment interface. The structure was made so that different environments could be used interchangably with minimal change to the code. Other environments like gym environment can be used to implement the interface as well.
 
-			\subsubsection{Agent}
+			\subsection{Agent}
 				Agent class is the crux of the system. Which has variables of all other class types. In train mode, the system trains based on the qvalues provided by the deepQNetwork occasionally correcting it when rewards approach. After every step of the game, a callback to statisctics on step function is called. During training the loss of a life or the end of the game is treated as terminal states. Exploration rate controls whether exploration or exploitation is chosen. 
 
 				In test mode, a given no of games are played, here the statebuffer is used to disallow contamination of trained data. Here only the end of the game is taken as a terminal state.
 
 				In random mode, random actions are given to the system and the output observed.
 
-			\subsubsection{Plotter}
+			\subsection{Plotter}
 				The plotter class uses python libraries to plot the data saved about each epoch as a graph. Visualising the important data metrics like average score and qvalue of each epoch, which can be used to evaluate the performance of the training.
 
 				It also serves the function of plotting the maximum qvalue of the current screen live during play.
 			
-			\subsubsection{Statistics}
+			\subsection{Statistics}
 				The statistics class embeds itself as a callback in the agent class. The agent calls the on step method after every step of the game. If the game reaches a terminal state, the values like average score, no of games etc are updated in the statistics class.
 
 				When the epoch ends, the write method is called which appends the calculated data to the csv file.
 
-			\subsubsection{DeepQNetwork}
+			\subsection{DeepQNetwork}
 				An abstraction layer over Neon, a deep learning library from Nervana Systems. It Models the Network, finds the Q values associated with a state of the system, and does updation of weights based on reward and a random minibatch. The reward is used to refine the discounted future reward of the minibatch.
 
-			\subsubsection{Replay Memory}
+			\subsection{Replay Memory}
 				For training the states, actions, screens and rewards need to be saved. These can be added to the replay memory using the add method. When a reward is obtained, a minibuffer is selected with the current state at the index position. This minibuffer is used for training the system.
 
-			\subsubsection{State Buffer}
+			\subsection{State Buffer}
 				During testing and play, the replay memory is not necessary, so a stripped down version of it, storing only the states of the system is used. This has the added advantage of ensuring that the data from testing does not pollute the training data.
 
 	\newpage
-	\section{Results and Discussions}
+	\chapter{Results and Discussions}
 		The results of the training sessions were saved in a csv file in increments of 1 epoch or 250000 steps. Important parameters of the epoch like steps, number of games, average reward, mean cost, average q value etc are saved for three phases, training, test and random.
 
 
-		\subsection{Description of observed strategies}
-			\mparagraph{Breakout}
+		\section{Description of observed strategies}
+			\subsubsection{Breakout}
 				Before training the system plays randomly, \emph{ie} chooses an action at random. 
 
 				After one epoch the system adopts a simple strategy, to move to the left of the screen and stay there, an approach that assures a minimum score of two before defeat.
@@ -334,29 +334,81 @@ until terminated
 
 				At fifty epochs, the play is significantly better occasionally resorting to the top strategy of tunnelling to the top of the screen from the edge.
 
-			\mparagraph{Space Invaders}
+			\subsubsection{Space Invaders}
 				Space Invaders was trained for 8 epochs to prove that the algorithm can be used to train and play multiple games without any alterations proving the general purposse nature of it. At 8 epochs the game is played as a human would hitting the targets accurately enough and a consistent score in the range of 400 to 800 is obtained by the system.
 
-		\subsection{Result Visualization}
-			The results stored in csv files were plotted as a graph for visualization using matplotlib python module. Training of atari breakout was done for 50 epochs (65 hours). It  adopts visibly better strategies on later epochs. The training of space invaders was done for 8 epochs (10 hours), gameplay after 8 epochs was akin to a human player without any alteration to the algorithm, thus proving the general purpose nature of the algorithm.
+		\section{Result Visualization}
 
-			\begin{figure}[!htb]
+			The results stored in csv files were plotted as a graph for visualization using matplotlib python module. Training was done for 50 epochs (65 hours). The games adopt visibly better strategies on later epochs. Space Invaders was trained with the same algorithm without any change, thus proving the general purpose nature of the algorithm.
+			
+			\newpage
+			\subsubsection{Breakout}
+
+			\begin{figure}[H]
 				\begin{centering}
-					\includegraphics[width=15cm]{images/breakout.png}
-					\caption{Breakout results for 50 epochs.}
+					\includegraphics[width=15cm]{images/breakout_1_average_reward.png}
+					\caption{Average Reward per epoch - Breakout.}
 				\end{centering}
 			\end{figure}			
 			
-			\begin{figure}[!htb]
+			\begin{figure}[H]
 				\begin{centering}
-					\includegraphics[width=15cm]{images/space_invaders.png}
-					\caption{Space Invaders results for 8 epochs.}
+					\includegraphics[width=15cm]{images/breakout_2_meanq.png}
+					\caption{Mean Q Value per epoch - Breakout.}
 				\end{centering}
 			\end{figure}			
+			
+			\begin{figure}[H]
+				\begin{centering}
+					\includegraphics[width=15cm]{images/breakout_3_nrgames.png}
+					\caption{No of games per epoch - Breakout.}
+				\end{centering}
+			\end{figure}			
+			
+			\begin{figure}[H]
+				\begin{centering}
+					\includegraphics[width=15cm]{images/breakout_4_averageloss.png}
+					\caption{Average loss per epoch - Breakout.}
+				\end{centering}
+			\end{figure}			
+			
+			\newpage
+			\subsubsection{Space Invaders}
+
+			\begin{figure}[H]
+				\begin{centering}
+					\includegraphics[width=15cm]{images/space_1_average_reward.png}
+					\caption{Average Reward per epoch - Space Invaders.}
+				\end{centering}
+			\end{figure}			
+			
+			\begin{figure}[H]
+				\begin{centering}
+					\includegraphics[width=15cm]{images/space_2_meanq.png}
+					\caption{Mean Q Value per epoch - Space Invaders.}
+				\end{centering}
+			\end{figure}			
+			
+			\begin{figure}[H]
+				\begin{centering}
+					\includegraphics[width=15cm]{images/space_3_nrgames.png}
+					\caption{No of games per epoch - Space Invaders.}
+				\end{centering}
+			\end{figure}			
+			
+			\begin{figure}[H]
+				\begin{centering}
+					\includegraphics[width=15cm]{images/space_4_averageloss.png}
+					\caption{Average loss per epoch - Space Invaders.}
+				\end{centering}
+			\end{figure}			
+			
+
+
 
 	\newpage
-	\section{Further Work}
-		\subsection{Gamification of Problem}
+	\chapter{Further Work}
+		\section{Gamification of Problem}
 			Solving real world problems can be achieved using Deep Reinforcement Learning. The following points are to be considered to convert a real world problem into a deep learning optimisation problem:
 			\begin{itemize}
 				\setlength\itemsep{0em}
@@ -369,19 +421,19 @@ until terminated
 
 			If all of the criterions are met and a gamified version of the real world problem is made, then it can be quite easily given to a deep reinforcement learning system for optimisation and then later used in real life after training.
 
-		\subsection{Traffic Light Control}
+		\section{Traffic Light Control}
 				A sample real world problem that could be solved using reinforced learning.
-			\subsubsection{Problem}
+			\subsection{Problem}
 				There is an intersection of two roads, and four traffic lights control the traffic in it, each controlling one road. The control of the traffic light should be given to an \ac{ai} for optimum traffic flow through the intersection. To design a system that can be used to train this \ac{ai}. 
 
-			\subsubsection{Minimal Input}
+			\subsection{Minimal Input}
 				Traffic camera images at four different directions are taken as input to the system, mulitple images are taken to incorporate movement of the vehicles. Even though the system could work with the raw images, it would be impossible to train the system in the real world. So a simulation is required to train it. But in a simulation output images cannot be generated as complex as real video stream. 
 
 				The solution is to simplify the input to the system, and to simulate the output in this simplified version. The approach taken is to convert the vehicles into white rectangles in a black canvas, and the intersection as a line. Thus white rectangles passing over the line will be taken for rewards and any intersection of rectangles will be interpreted as a crash. The rectangles are easier to simulate given the actions to be performed.
 
 				To make the simulation closer to reality, delay between the signal turning green and the first car moving can be given. Contraction and elongation of traffic at stop and start can also be simulated.
 
-				\begin{figure}[!htb]
+				\begin{figure}[H]
 					\begin{centering}
 						\includegraphics[width=10cm]{images/traffic1.png}
 						\caption{Empty Intersection.}
@@ -389,7 +441,7 @@ until terminated
 				\end{figure}
 
 				
-				\begin{figure}[!htb]
+				\begin{figure}[H]
 					\begin{centering}
 						\includegraphics[width=10cm]{images/traffic2.png}
 						\caption{Intersection with Vehicles.}
@@ -397,7 +449,7 @@ until terminated
 				\end{figure}
 
 				
-				\begin{figure}[!htb]
+				\begin{figure}[H]
 					\begin{centering}
 						\includegraphics[width=10cm]{images/traffic3.png}
 						\caption{Generation of Simplified Input.}
@@ -405,7 +457,7 @@ until terminated
 				\end{figure}
 
 				
-				\begin{figure}[!htb]
+				\begin{figure}[H]
 					\begin{centering}
 						\includegraphics[width=10cm]{images/traffic4.png}
 						\caption{Simplified Input.}
@@ -414,7 +466,7 @@ until terminated
 
 
 
-			\subsubsection{Action set}
+			\subsection{Action set}
 				At any instant, any of the traffic lights can be any of the following:
 				\begin{itemize}
 					\setlength\itemsep{0em}
@@ -428,16 +480,16 @@ until terminated
 				The intersection consists of 4 traffic lights, operating independantly (No constraints to its operation) making the total no of actions the system can take to $8^4$ \emph{ie} 4096 actions.
 
 				Thus at every state of the system, it can decide between 4096 actions to take.
-			\subsubsection{Reward}
+			\subsection{Reward}
 				The no of vehicles that pass through the intersection in a time interval or the throughput of the intersection can be taken as a rudimentary reward function.
 
 				To avoid any traffic signals that might incur collisions, any collisions detected are penalised with a negative reward. This still presents the problem of starvation \emph{ie.} a low amount of vehicles could wait for green indefinitely. It can be solved by aging the throughput negatively, which makes the throughput reward smaller and finally negative the longer it waits.
-			\subsubsection{Scalability}
+			\subsection{Scalability}
 				The system proposed could be implemented on a larger scale, like a town or city. But in the current form of neural networks, adding a single traffic light to an existing system makes retraining the entire system a requirement. As the number of intersections increase, the number of actions rise exponentially. Thus making their efficient implementation a problem.
 
 				The bottleneck is the non scalability of the current architecture, which could be tentatively solved if parallel neural networks are introduced. Parallel neural networks are still in its infancy and outside the scope of this project.
 	\newpage
-	\section{Conclusion}
+	\chapter{Conclusion}
 		It is clear from the results that the presented model can used in applications with high dimensional sensory input. They also show that the algorithm will eventually converge to an optimal policy. Real world problems can be modelled as an environment with reward and actions, and plugged into the algorithm.
 
 		Lack of processing power was observed as a pertinent limitation. The deepLearning library, Neon is optimized for Nvidia Maxwell Graphic Processing Units and its performance is very low on CPUs and pre-maxwell GPUs. We experimented training on GeForce GT 735M, Jetson TX1 board, and an i3 desktop CPU, the best among these was the GT 735M which took 77 mins per epoch.
