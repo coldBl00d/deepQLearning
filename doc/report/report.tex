@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{report}
+\documentclass[a4paper,12pt]{report}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
@@ -33,7 +33,7 @@
 
 		\textbf{Jayadeep K M     (13400030)}\\
 		\textbf{Kevin Joseph     (13400032)}\\
-		\textbf{Mohammed Nisham K     (13400038)}\\[1.5cm]
+		\textbf{Mohammed Nisham K     (13400038)}\\[0.7cm]
 		
 		{under the guidance of}\\[0.25cm]
 		\large{Mr. Vipin Vasu A V}\\[0.5cm]
@@ -62,23 +62,24 @@
 		\large{This is to certify that the report entitled ``Decision making using deep reinforcement learning'' is a bonafide record of the project work done by \textbf{Jayadeep K M} (13400030), \textbf{Kevin Joseph} (13400032) and \textbf{Mohammed Nisham K} (13400038) under my supervision and guidance, in partial fulfilment for the award of the degree of Bachelor of Technology in Computer Science and Engineering from the University of Kerala in the year 2017.}\\[1.5cm]
 		\end{sloppypar}
 
-		\begin{minipage}{0.5\textwidth}
+		\begin{minipage}{0.4\textwidth}
 		\begin{flushleft}
-		\begin{centering} \large
-			\large{Mrs. Liji}\\
-			\small{\textit{\textbf{Professor and Head}}}\\
-			\small{\textit{\textbf{Dept. of Computer Science and Engineering}}}\\
-		\end{centering}
-		\end{flushleft}
-		\end{minipage}
-		~
-		\begin{minipage}{0.5\textwidth}
 		\begin{centering} \large
 		\large{Mr. Vipin Vasu A V}\\
 		\small{(Guide)}\\
 		\small{\textit{\textbf{Asst. Professor}}}\\
 		\small{\textit{\textbf{Dept. of Computer Science and Engineering}}}\\[1.5cm]
 
+		\end{centering}
+		
+		\end{flushleft}
+		\end{minipage}
+		~
+		\begin{minipage}{0.5\textwidth}
+		\begin{centering} \large
+			\large{Mrs. Liji P I}\\
+			\small{\textit{\textbf{Professor and Head}}}\\
+			\small{\textit{\textbf{Dept. of Computer Science and Engineering}}}\\
 		\end{centering}
 		\end{minipage}\\[1.0cm]
 
@@ -117,9 +118,9 @@
 
 			Recent advances in deep learning have made it possible to extract high-level features from raw sensory data, leading to breakthroughs in computer vision and speech recognition. These methods utilise a range of neural network architectures, including convolutional networks, multilayer perceptrons, restricted Boltzmann machines and recurrent neural networks, and have exploited both supervised and unsupervised learning.
 	
-			However the main advantage of Reinforcement Learning is that it does't need huge amounts of hand-labelled data and does not depend too much on the feature representation. It learns from a reward signal that maybe delayed, noisy and sparse. The delay between actions and the rewards, which maybe thousands of timesteps seems like a particularly hard problem in \ac{rl} when compared to direct association between action and reward in supervised learning. Another issue is that most problems consider all the data samples independent of each other, but in this case we need to consider the fact that the reward at the end of a session is not just the result of the last action but the result of the sequence of actions from the start of the session.
+			However the main advantage of Reinforcement Learning is that it does't need huge amounts of hand labelled data and does not depend too much on the feature representation. It learns from a reward signal that maybe delayed, noisy and sparse. The delay between actions and the rewards, which maybe thousands of timesteps seems like a particularly hard problem in \ac{rl} when compared to direct association between action and reward in supervised learning. Another issue is that most problems consider all the data samples independent of each other, but in this case we need to consider the fact that the reward at the end of a session is not just the result of the last action but the result of the sequence of actions from the start of the session\cite{deepmind}.
 
-			This project is aimed at using a Convolution Neural Network along with the Q-learning algorithm to solve the above problems and make decisions based on video input from the Atari Learning Environment. Our goal is to create a single neural network agent that is able to successfully learn to play atleast 2 games with no change in agent algorithm. The network was not provided with any game-specific information or hand-designed visual features, and was not privy to then internal state of the emulator, it learned from nothing but the video input, the reward and terminal signals, and the set of possible actions just as a human player would.
+			This project is aimed at using a Convolution Neural Network along with the Q-learning algorithm to solve the above problems and make decisions based on video input from the Atari Learning Environment. Our goal is to create a single neural network agent that is able to successfully learn to play atleast 2 games with no change in agent algorithm. The network was not provided with any game-specific information or hand-designed visual features, and was not privy to then internal state of the emulator, it learned from nothing but the video input, the reward and terminal signals, and the set of possible actions just as a human player would.\\
 
 			In the second chapter we discuss about the background of Deep Mind and Reinforced learning. We also discuss about the importance and advantages of decision making algorithm using reinforced learning. In the third chapter, the materials and methodologies used for the project is discussed. It includes the Algorithms used in the project, Structure of neural networks, Interface used for demonstration and code review of the project. In the fourth chapter the results of the algorithm are analyzed by plotting graphs of Atari Breakout and Space Invaders. The fifth chapter discuss about how we can extend this work and implement the algorithm on a real world scenario by taking an example of Traffic Light Control. The fifth and final chapter concludes the project.
 
@@ -127,8 +128,8 @@
 	\chapter{Background and Literature Survey}
 		\section{Deep Mind and Reinforcement Learning}
 
-			The presented method and algorithm was first presented in a paper by a company Deep Mind which was later aquired by Google. The paper presented the algorithm as a general purpose RL algorithm that could play seven of the atari 2600 games, it showed human level play in four and super human play in three of them.
-			Consider the game Breakout. In this game you control a paddle at the bottom of the screen and have to bounce the ball back to clear all the bricks in the upper half of the screen. Each time you hit a brick, it disappears and your score increases you get a reward.
+			The presented method and algorithm was first presented in a paper by a company Deep Mind which was later aquired by Google. The paper presented the algorithm as a general purpose RL algorithm that could play seven of the atari 2600 games, it showed human level play in four and super human play in three of them\cite{deepmind}.
+			When we consider the game breakout, you control a paddle at the bottom of the screen and have to bounce the ball back to clear all the bricks in the upper half of the screen. Each time you hit a brick, it disappears and your score increases you get a reward.
 
 			\begin{figure}[!ht]
 				\begin{centering}
@@ -140,9 +141,9 @@
 
 			This is the task reinforcement learning tries to solve. Reinforcement learning lies somewhere in between supervised and unsupervised learning. Whereas in supervised learning one has a target label for each training example and in unsupervised learning one has no labels at all, in reinforcement learning one has sparse and time-delayed labels, the rewards. Based only on those rewards the agent has to learn to behave in the environment.
 
-			While the idea is quite intuitive, in practice there are numerous challenges. For example when you hit a brick and score a reward in the Breakout game, it often has nothing to do with the actions (paddle movements) you did just before getting the reward. All the hard work was already done, when you positioned the paddle correctly and bounced the ball back. This is called the credit assignment problem i.e., which of the preceding actions was responsible for getting the reward and to what extent.
+			While the idea is quite intuitive, in practice there are numerous challenges. For example when you hit a brick and score a reward in the Breakout game, it often has nothing to do with the actions (paddle movements) you did just before getting the reward. All the hard work was already done, when you positioned the paddle correctly and bounced the ball back. This is called the credit assignment problem i.e., which of the preceding actions was responsible for getting the reward and to what extent\cite{nervana}\cite{pong}.
 
-			Once you have figured out a strategy to collect a certain number of rewards, should you stick with it or experiment with something that could result in even bigger rewards? In the above Breakout game a simple strategy is to move to the left edge and wait there. When launched, the ball tends to fly left more often than right and you will easily score about 10 points before you die. Will you be satisfied with this or do you want more? This is called the explore-exploit dilemma should you exploit the known working strategy or explore other, possibly better strategies.
+			Once you have figured out a strategy to collect a certain number of rewards, should you stick with it or experiment with something that could result in even bigger rewards? In the above Breakout game a simple strategy is to move to the left edge and wait there. When launched, the ball tends to fly left more often than right and you will easily score about 10 points before you die. Will you be satisfied with this or do you want more? This is called the explore-exploit dilemma should you exploit the known working strategy or explore other, possibly better strategies\cite{nervana}\cite{pong}.
 
 			Reinforcement learning is an important model of how we (and all animals in general) learn. Praise from our parents, grades in school, salary at work these are all examples of rewards. Credit assignment problems and exploration exploitation dilemmas come up every day both in business and in relationships. Thats why it is important to study this problem, and games form a wonderful sandbox for trying out new approaches.
 
@@ -152,8 +153,8 @@
 				Suppose you are an agent, situated in an environment (e.g. Breakout game). The environment is in a certain state (e.g. location of the paddle, location and direction of the ball, existence of every brick and so on). The agent can perform certain actions in the environment (e.g. move the paddle to the left or to the right). These actions sometimes result in a reward (e.g. increase in score). Actions transform the environment and lead to a new state, where the agent can perform another action, and so on. The rules for how you choose those actions are called policy. The environment in general is stochastic, which means the next state may be somewhat random (e.g. when you lose a ball and launch a new one, it goes towards a random direction).
 				\begin{figure}[!ht]
 					\begin{centering}
-						\includegraphics[width=10cm]{../Design/images/mdp.png}\\
-						\caption{Markov Decision Process.}
+						\includegraphics[width=15cm]{../Design/images/mdp.png}\\
+						\caption{Markov Decision Process\cite{nervana}.}
 					\end{centering}
 				\end{figure}
 
@@ -243,7 +244,7 @@ until terminated
 					\begin{figure}[!ht]
 						\begin{centering}
 							\includegraphics[width=10cm]{../Design/images/deep.png}\\
-							\caption{Two Possible models for Network.}
+							\caption{Two Possible models for Network\cite{nervana}.}
 						\end{centering}
 					\end{figure}
 
@@ -257,7 +258,7 @@ until terminated
 					\begin{figure}[!ht]
 						\begin{centering}
 							\includegraphics[width=10cm]{../Design/images/deep4.png}\\
-							\caption{Layer Representation}
+							\caption{Layer Representation\cite{pong}.}
 						\end{centering}
 					\end{figure}
 		\section{Atari 2600}
@@ -288,7 +289,7 @@ until terminated
 			\subsection{Environment}
 				The environment is an interface that is used to control the environment of the game. It gives the actions that can be peformed at any given time, gets the current state of the system, act a particular action on the system and return the reward if there is one. It also alerts the agent when a terminal state is reached.
 
-				The ALEEnvironment is the class that implements the environment interface. The structure was made so that different environments could be used interchangably with minimal change to the code. Other environments like gym environment can be used to implement the interface as well.
+				The \ac{ale} Environment is the class that implements the environment interface. The structure was made so that different environments could be used interchangably with minimal change to the code. Other environments like gym environment can be used to implement the interface as well.
 
 			\subsection{Agent}
 				Agent class is the crux of the system. Which has variables of all other class types. In train mode, the system trains based on the qvalues provided by the deepQNetwork occasionally correcting it when rewards approach. After every step of the game, a callback to statisctics on step function is called. During training the loss of a life or the end of the game is treated as terminal states. Exploration rate controls whether exploration or exploitation is chosen. 
@@ -320,18 +321,7 @@ until terminated
 		The results of the training sessions were saved in a csv file in increments of 1 epoch or 250000 steps. Important parameters of the epoch like steps, number of games, average reward, mean cost, average q value etc are saved for three phases, training, test and random.
 
 
-		\section{Description of observed strategies}
-			\subsubsection{Breakout}
-				Before training the system plays randomly, \emph{ie} chooses an action at random. 
 
-				After one epoch the system adopts a simple strategy, to move to the left of the screen and stay there, an approach that assures a minimum score of two before defeat.
-
-				After ten epochs the system plays like a human player, moving the paddle in response to the ball and dropping it occasionally.
-
-				At fifty epochs, the play is significantly better occasionally resorting to the top strategy of tunnelling to the top of the screen from the edge.
-
-			\subsubsection{Space Invaders}
-				Space Invaders was trained for 8 epochs to prove that the algorithm can be used to train and play multiple games without any alterations proving the general purposse nature of it. At 8 epochs the game is played as a human would hitting the targets accurately enough and a consistent score in the range of 400 to 800 is obtained by the system.
 
 		\section{Result Visualization}
 
@@ -399,7 +389,26 @@ until terminated
 				\end{centering}
 			\end{figure}			
 			
+		\section{Description of observed strategies}
+			\subsubsection{Breakout}
+				Before training the system plays randomly, \emph{ie} chooses an action at random. 
 
+				After one epoch the system adopts a simple strategy, to move to the left of the screen and stay there, an approach that assures a minimum score of two before defeat.
+
+				After ten epochs the system plays like a human player, moving the paddle in response to the ball and dropping it occasionally.
+
+				At fifty epochs, the play is significantly better occasionally resorting to the top strategy of tunnelling to the top of the screen from the edge.
+
+			\subsubsection{Space Invaders}
+				Space Invaders was trained for 8 epochs to prove that the algorithm can be used to train and play multiple games without any alterations proving the general purposse nature of it. At 8 epochs the game is played as a human would hitting the targets accurately enough and a consistent score in the range of 400 to 800 is obtained by the system.
+			\subsection{General Observations}
+				We can observe the following in the graphs shown above:
+				\begin{itemize}
+				\item The average reward shows a general increasing trend as the agent learns.
+				\item The mean Q-value increases as the rewards get propogated more into the steps far from the terminal states.
+				\item Each epoch consists of 250,000 steps. Initially a dumb agent plays many games in each epochs, but as the agent learns, the number of terminal states (number of games) decreases.
+				\item The average loss of the neural network also decreases as the agent learns.
+		\end{itemize}
 
 
 	\chapter{Further Work}
@@ -484,7 +493,7 @@ until terminated
 
 				The bottleneck is the non scalability of the current architecture, which could be tentatively solved if parallel neural networks are introduced. Parallel neural networks are still in its infancy and outside the scope of this project.
 	\chapter{Conclusion}
-		It is clear from the results that the presented model can used in applications with high dimensional sensory input. They also show that the algorithm will eventually converge to an optimal policy. Real world problems can be modelled as an environment with reward and actions, and plugged into the algorithm.
+		It is clear from the results that the presented model can used in applications with high dimensional sensory input\cite{stock}\cite{network}\cite{IOT}\cite{Go}. They also show that the algorithm will eventually converge to an optimal policy. Real world problems can be modelled as an environment with reward and actions, and plugged into the algorithm.
 
 		Lack of processing power was observed as a pertinent limitation. The deepLearning library, Neon is optimized for Nvidia Maxwell Graphic Processing Units and its performance is very low on CPUs and pre-maxwell GPUs. We experimented training on GeForce GT 735M, Jetson TX1 board, and an i3 desktop CPU, the best among these was the GT 735M which took 77 mins per epoch.
 
@@ -493,5 +502,20 @@ until terminated
 	\nocite{*}
 	\bibliography{helpers/bibliography}
 	\bibliographystyle{ieeetr}
-
+\appendix
+	\chapter{Readme and System Specifications}
+		\section{Readme}
+		The project can be setup and executed on an Ubuntu system. The following are the pre-requisites:
+		\begin{itemize}
+				\item Neon (https://github.com/NervanaSystems/neon)
+				\item \ac{ale} (http://www.arcadelearningenvironment.org/)
+				\item Numpy (Python Library)
+		\end{itemize}
+		The project can be executed on a virtual environment on which neon is installed. The \textbf{train} file can be executed to train agent, \textbf{resume} can be used to resume training from a pre-saved state. 
+		\section{System Specification}
+		The neon library is igh optimized for high performance on Maxwell GPUs. An optimal system for training could include:
+		\begin{itemize}
+				\item GPU: Geforce GTX titan X
+				\item RAM: 8GB
+		\end{itemize}
 \end{document}
